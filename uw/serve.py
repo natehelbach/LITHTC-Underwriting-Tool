@@ -1,4 +1,7 @@
-"""Local web app: edit inputs in the browser, recalculate, see results.
+"""Web app: edit inputs in the browser, recalculate, see results.
+
+Stateless: every POST carries the full set of inputs from the form, so the same
+handler runs locally and as a Vercel Python function (api/index.py).
 
     python -m uw.serve            # http://localhost:8765
 """
@@ -16,7 +19,6 @@ from uw.report import render
 DEAL = "site8"
 BASE = Inputs.load(DEAL)
 SNAP = Snapshot.load(DEAL)
-state = {"inputs": BASE.copy()}
 
 
 def coerce(text: str, base):
@@ -35,40 +37,42 @@ def coerce(text: str, base):
     return text
 
 
-def changed_keys(inputs: Inputs) -> set[str]:
-    return {k for k, v in inputs.values.items() if v != BASE.values[k]}
+def inputs_from_form(form: dict[str, list[str]]) -> Inputs:
+    new = BASE.copy()
+    for key, (val, *_) in form.items():
+        if key in new.values and not isinstance(BASE.values[key], dt.datetime):
+            new[key] = coerce(val, BASE.values[key])
+    return new
+
+
+def page(inputs: Inputs) -> bytes:
+    res = run_model(inputs, DEAL, fallback=SNAP)
+    changed = {k for k, v in inputs.values.items() if v != BASE.values[k]}
+    # The Excel cross-check only means something for the unchanged base case.
+    return render(res, SNAP if not changed else None, editable=True, changed=changed).encode()
 
 
 class Handler(BaseHTTPRequestHandler):
-    def _page(self):
-        inputs = state["inputs"]
-        res = run_model(inputs, DEAL, fallback=SNAP)
-        changed = changed_keys(inputs)
-        body = render(res, SNAP if not changed else None, editable=True, changed=changed).encode()
-        self.send_response(200)
-        self.send_header("Content-Type", "text/html; charset=utf-8")
+    def _send(self, status: int, body: bytes, ctype="text/html; charset=utf-8"):
+        self.send_response(status)
+        self.send_header("Content-Type", ctype)
+        self.send_header("Cache-Control", "no-store")
         self.end_headers()
         self.wfile.write(body)
 
     def do_GET(self):
-        q = urllib.parse.parse_qs(urllib.parse.urlparse(self.path).query)
-        if self.path.startswith("/favicon"):
-            self.send_response(404)
-            self.end_headers()
+        if urllib.parse.urlparse(self.path).path != "/":
+            self._send(404, b"Not found", "text/plain")
             return
-        if "reset" in q:
-            state["inputs"] = BASE.copy()
-        self._page()
+        self._send(200, page(BASE))
 
     def do_POST(self):
         length = int(self.headers.get("Content-Length", 0))
         form = urllib.parse.parse_qs(self.rfile.read(length).decode(), keep_blank_values=True)
-        new = state["inputs"].copy()
-        for key, (val, *_) in form.items():
-            if key in new.values and not isinstance(BASE.values[key], dt.datetime):
-                new[key] = coerce(val, BASE.values[key])
-        state["inputs"] = new
-        self._page()
+        try:
+            self._send(200, page(inputs_from_form(form)))
+        except Exception as e:  # noqa: BLE001 - show the user what failed
+            self._send(400, f"Could not calculate with these inputs: {e}".encode(), "text/plain")
 
     def log_message(self, *a):
         pass

@@ -34,3 +34,11 @@ checked on its own (other tabs served from Excel), then the whole model is run i
 Python and compared to Excel. Places where the Excel logic looks wrong are kept
 for parity and marked `# EXCEL-QUIRK:` in the code, so they can be fixed
 deliberately once the port is complete.
+
+## Hosting (Vercel)
+
+`api/index.py` serves the same app as `python -m uw.serve` as a Vercel Python
+function; `vercel.json` routes every path to it. The app is stateless: each
+Recalculate posts the full input set, so nothing is stored between requests.
+Connect the GitHub repo in Vercel (Add New → Project → Import) with the default
+settings (Framework Preset: Other, no build command). Every push to `main` deploys.

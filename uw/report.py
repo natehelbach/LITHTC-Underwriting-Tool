@@ -112,7 +112,7 @@ def render(res: ModelResult, snap: Snapshot | None = None, editable: bool = Fals
             cell = esc(v)
         sections.setdefault(r["section"], []).append(f"<tr><td>{esc(label)}</td><td class=n>{cell}</td></tr>")
     inputs_html = ("<form method=post action='/'><button>Recalculate</button> "
-                   "<a class=muted href='/?reset=1'>reset to base case</a>" if editable else "") + "".join(
+                   "<a class=muted href='/'>reset to base case</a>" if editable else "") + "".join(
         f"<details><summary>{esc(s)} <span class=muted>({len(rows)})</span></summary>"
         f"<table class=inputs><tbody>{''.join(rows)}</tbody></table></details>"
         for s, rows in sections.items()) + ("</form>" if editable else "")
