@@ -16,6 +16,8 @@ def main(argv: list[str]) -> int:
     if "--model" in argv:
         res = run_model(Inputs.load(), fallback=snap)
         print(f"model: {res.iterations} iterations, converged={res.converged}")
+        for sheet, err in res.errors.items():
+            print(f"  ERROR in {sheet}: {err}")
         bad = 0
         for sheet, cells in res.sheets.items():
             mism = [(a, v, snap.get(sheet, a)) for a, v in cells.items()

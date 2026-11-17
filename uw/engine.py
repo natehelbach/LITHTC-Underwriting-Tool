@@ -256,9 +256,17 @@ class ModelResult:
     iterations: int
     converged: bool
     fallback_reads: set[tuple[str, str]]
+    fallback: "Snapshot | None" = None
+    errors: dict[str, str] = field(default_factory=dict)
 
     def get(self, sheet: str, addr: str):
-        return self.sheets.get(sheet, {}).get(addr.replace("$", ""))
+        addr = addr.replace("$", "")
+        if sheet in self.sheets:
+            return self.sheets[sheet].get(addr)
+        if self.fallback is not None:          # tab not ported yet: Excel value
+            self.fallback_reads.add((sheet, addr))
+            return self.fallback.get(sheet, addr)
+        return None
 
 
 ORDER = [  # calculation order; the loop iterates until values stop changing
@@ -274,15 +282,22 @@ ORDER = [  # calculation order; the loop iterates until values stop changing
 
 
 def run_model(inputs: Inputs, deal: str = "site8", max_iter: int = 200, tol: float = 0.005,
-              fallback: Snapshot | None = None) -> ModelResult:
+              fallback: Snapshot | None = None, seed: Snapshot | None = None) -> ModelResult:
     """Iterate every ported tab to a fixed point.
 
     Tabs without a module yet are read from `fallback` (the Excel snapshot) and
     recorded in `fallback_reads`, so the report can show what is still Excel-sourced.
+
+    The circular tabs need a starting point, exactly as in Excel, where iterative
+    calculation always starts from the values already in the cells. `seed` (default:
+    the fallback snapshot) provides that first guess; the loop then converges to the
+    fixed point implied by `inputs`, whatever the seed was.
     """
+    seed = seed if seed is not None else fallback
     reg = registry()
     order = [s for s in ORDER if s in reg] + sorted(s for s in reg if s not in ORDER)
-    results: dict[str, dict[str, Any]] = {s: {} for s in order}
+    results: dict[str, dict[str, Any]] = {
+        s: dict(seed.data.get(s, {})) if seed is not None else {} for s in order}
     fallback_reads: set[tuple[str, str]] = set()
 
     def resolve(sheet, addr):
@@ -292,10 +307,19 @@ def run_model(inputs: Inputs, deal: str = "site8", max_iter: int = 200, tol: flo
         return fallback.get(sheet, addr) if fallback else None
 
     converged, it = False, 0
+    errors: dict[str, str] = {}
     for it in range(1, max_iter + 1):
         delta = 0.0
+        errors.clear()
         for s in order:
-            new = reg[s]().compute(Ctx(inputs, resolve))
+            try:
+                new = reg[s]().compute(Ctx(inputs, resolve))
+            except Exception as e:  # noqa: BLE001
+                # Early passes see blank upstream cells (e.g. a #DIV/0! on an empty
+                # loan balance). Keep last values and retry; must clear by convergence.
+                errors[s] = f"{type(e).__name__}: {e}"
+                delta = math.inf
+                continue
             old = results[s]
             for a, v in new.items():
                 o = old.get(a)
@@ -304,7 +328,9 @@ def run_model(inputs: Inputs, deal: str = "site8", max_iter: int = 200, tol: flo
                 elif v != o:
                     delta = math.inf
             results[s] = new
-        if delta <= tol:
+        if delta <= tol and not errors:
             converged = True
             break
-    return ModelResult(inputs, results, it, converged, fallback_reads)
+    res = ModelResult(inputs, results, it, converged, fallback_reads, fallback)
+    res.errors = dict(errors)
+    return res

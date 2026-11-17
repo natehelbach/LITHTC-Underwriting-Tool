@@ -1,0 +1,565 @@
+{
+ "source": "2BR Comps (typed cells)",
+ "rows": [
+  {
+   "row": 9,
+   "building": "Enclave at Warner Center",
+   "address": "6710 Variel Ave",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 1123,
+   "rent": 2877,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/iIbEFjjefOX5H0WlX4Z0MyN-mBcBzelR-kRWFkomFHM/102/diega-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.redfin.com/CA/Canoga-Park/Enclave-at-Warner-Center/apartment/40155994",
+   "second_bath": "N"
+  },
+  {
+   "row": 10,
+   "building": "Listing near 6333 Canoga Ave, Woodland Hills #e95c",
+   "address": "Listing near 6333 Canoga Ave, Woodland Hills #e95c",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 962,
+   "rent": 3063,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/iIbEFjjefOX5H0WlX4Z0MyN-mBcBzelR-kRWFkomFHM/102/diega-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.craigslist.org/view/d/canoga-park-vibrant-living-meets-cozy/ktkC1PPP9D9M9JHyU9Eaq8",
+   "second_bath": "N"
+  },
+  {
+   "row": 11,
+   "building": "The Kitt at Warner Center",
+   "address": "21200 Kittridge St",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 1109,
+   "rent": 3175,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/e-TQ5fE2je0iWS_sunUjT5R5e9odUg6TEYYTI85NaIo/102/broadway-towers-san-diego-ca-living-space-with-huge-windows.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.apartments.com/mx3h5dl/",
+   "second_bath": "N"
+  },
+  {
+   "row": 12,
+   "building": "6825 Alabama Ave",
+   "address": "6825 Alabama Ave",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 846,
+   "rent": 2488,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/dLKqoV34O3GkzE98X34bx26S3DzhvH2Io7RJJ1N8Gvo/102/pinnacle-on-the-park-san-diego-ca-interior-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.apartments.com/6p45ylr/",
+   "second_bath": "N"
+  },
+  {
+   "row": 13,
+   "building": "6950 Remmet Ave",
+   "address": "6950 Remmet Ave",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 1064,
+   "rent": 3000,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/WMdibGNU08bj1qlDl9w18xRDEugAjHFtRiSbVIe4DOo/102/alx-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.apartments.com/xl0hg6m/",
+   "second_bath": "N"
+  },
+  {
+   "row": 14,
+   "building": "7018 Alabama Ave Apt 203",
+   "address": "7018 Alabama Ave Apt 203",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 950,
+   "rent": 2595,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/rIzUm5Q8nuQTvpvqtlUzvVvQrXBDSLOZSVJ_QaJNsiU/102/concert-residences-san-diego-ca-kitchen.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.redfin.com/CA/Canoga-Park/7018-Alabama-Ave-91303/unit-203/home/202661710",
+   "second_bath": "N"
+  },
+  {
+   "row": 15,
+   "building": "7231 Vassar Ave",
+   "address": "7231 Vassar Ave",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 1050,
+   "rent": 2345,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/R8Tm89tGXJegcBPOfcIrv6AkGblWw-xvuNRrRvBxx6w/102/griffis-east-village-san-diego-ca-griffis-east-village-reno-model-living-r.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.apartments.com/v6ngqgg/",
+   "second_bath": "N"
+  },
+  {
+   "row": 16,
+   "building": "Located in Woodland Hills, 2/bd, Main Pool Heated All Year",
+   "address": "Located in Woodland Hills, 2/bd, Main Pool Heated All Year",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 1255,
+   "rent": 3280,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/I614SI5z_y_6cMatyUpa8KPrW3UzWS4MW05Dul_HkIY/102/arrive-625-broadway-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.craigslist.org/view/d/woodland-hills-located-in-woodland/js1gUJTUkucsKxCF8iRtUT",
+   "second_bath": "N"
+  },
+  {
+   "row": 17,
+   "building": "The 6800",
+   "address": "6800 Variel Ave",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 1428,
+   "rent": 3548,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/IM0o9093tUsyRzuCQJZZtBCwyCJWl7NNAnQRqsJFhA0/102/k1-apartments-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.redfin.com/CA/Canoga-Park/The-6800/apartment/17491370",
+   "second_bath": "N"
+  },
+  {
+   "row": 18,
+   "building": "22136 Hart St",
+   "address": "22136 Hart St",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 998,
+   "rent": 2700,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/2DNnbs7N-vzoJPxKzK6G6zR3Skuf50aFqcDE4_lUPOU/102/the-wyatt-makers-quarter-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.redfin.com/CA/Canoga-Park/22136-Hart-St-91303/home/179647540",
+   "second_bath": "N"
+  },
+  {
+   "row": 19,
+   "building": "6532 Shoup Ave",
+   "address": "6532 Shoup Ave",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 798,
+   "rent": 2750,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/Kd0O6Qyn-3e_5HlkPlRhcjC45NbBdNi58l3DG1XkKn4/102/tenthg-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.redfin.com/CA/Canoga-Park/6532-Shoup-Ave-91307/home/188575657",
+   "second_bath": "N"
+  },
+  {
+   "row": 20,
+   "building": "6820 Remmet Ave",
+   "address": "6820 Remmet Ave",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 900,
+   "rent": 2600,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/cnDClf7Eu5fKxx53nh25Tjw7PajX3oTDusdB4Sy6DVE/102/13th-market-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.apartments.com/wcdks2j/",
+   "second_bath": "N"
+  },
+  {
+   "row": 21,
+   "building": "6858 Shoup Ave Unit 6858",
+   "address": "6858 Shoup Ave Unit 6858",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 1000,
+   "rent": 3295,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/P0qzusa7WJmpRvc_7klAMD2DsAjMyXHiIvn_75k0Z_k/102/spire-san-diego-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.redfin.com/CA/West-Hills/6858-Shoup-Ave-91307/unit-6858/apartment/206017372",
+   "second_bath": "N"
+  },
+  {
+   "row": 22,
+   "building": "7032",
+   "address": "7032 Remmet Ave",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 1016,
+   "rent": 2495,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/f6s5TJR6nbYYGPHJNuLA-ZglA6HPAuNmK2sJpN_VYkE/102/strata-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.zumper.com/apartment-buildings/p555168/7032-canoga-park-los-angeles-ca",
+   "second_bath": "N"
+  },
+  {
+   "row": 23,
+   "building": "7049 Alabama Ave",
+   "address": "7049 Alabama Ave",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 710,
+   "rent": 2400,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/okf9_9avql46DA-9AK9YnAyj2dXAL66SVY85BYMNi_I/102/market-street-village-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.redfin.com/CA/Canoga-Park/7049-Alabama-Ave-91303/home/3962553",
+   "second_bath": "N"
+  },
+  {
+   "row": 24,
+   "building": "7233 Loma Verde Ave",
+   "address": "7233 Loma Verde Ave",
+   "plan": "2BR",
+   "include": "Y",
+   "rent": 2250,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/81Vc7kCrYwI72YLXH3tzS0eS9bgehjsrckcdWDrOfLI/102/radian-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.redfin.com/CA/Canoga-Park/7233-Loma-Verde-Ave-91303/apartment/3736265",
+   "second_bath": "N"
+  },
+  {
+   "row": 25,
+   "building": "7316 Owensmouth Ave",
+   "address": "7316 Owensmouth Ave",
+   "plan": "2BR",
+   "include": "Y",
+   "rent": 2450,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/uGYNUxjNFgxh2jMYutI6ByST0e6a8pgfDx7pf24k9Mw/102/the-minn-apartments-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.apartments.com/xfxqylp/",
+   "second_bath": "N"
+  },
+  {
+   "row": 26,
+   "building": "Independence Apartments",
+   "address": "6738 Independence Ave",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 1025,
+   "rent": 2299,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/mE6hp5fqWMNkUfCcb24cpPW2i5Z-oBGOwEEkLH80UcU/102/city-view-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.redfin.com/CA/Canoga-Park/Independence-Apartments/apartment/4016346",
+   "second_bath": "N"
+  },
+  {
+   "row": 27,
+   "building": "Variel Apartments",
+   "address": "7307 Variel Ave",
+   "plan": "2BR",
+   "include": "Y",
+   "sf": 1000,
+   "rent": 2095,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/jtxTMJzeY57u2jbI7cTVgiDmTkNZaAi7D83Z6uKR-WM/102/f11-east-village-san-diego-ca-floor-to-ceiling-windows-in-select-apart.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.apartments.com/241yb98/",
+   "second_bath": "N"
+  },
+  {
+   "row": 28,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/MnZ8uq0HSWBuWtBdBt13QRxCg1VO8y6Vw-ISD0s5k_Y/102/800-broadway-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/800-broadway-san-diego-ca/0ryg2g0/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 29,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/nxRx9hnd4R7oABU3pXEsZiEAKrNbS8Qn4ObA697iC2w/102/urbana-rental-flats-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/urbana-rental-flats-san-diego-ca/ljvv98g/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 30,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/zdhtR0Ag4oWPoGt05rUu1iL6xsYzmSjPrPvi2nxqbqM/102/the-artisan-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/the-artisan-san-diego-ca/zd2drxy/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 31,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/GFEzwpfWmJouiAeQTheAIPvyPfzyzTWJYUqAdNHz1xs/102/idea1-apartments-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/idea1-apartments-san-diego-ca/gep1y5x/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 32,
+   "photo": {
+    "url": "https://www.apartments.com/the-rey-san-diego-ca/wj0hpsh/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/the-rey-san-diego-ca/wj0hpsh/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 33,
+   "photo": {
+    "url": "https://www.apartments.com/city-villas-apartments-san-diego-ca/6esnmcv/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/city-villas-apartments-san-diego-ca/6esnmcv/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 34,
+   "photo": {
+    "url": "https://www.apartments.com/modera-san-diego-san-diego-ca/vkmsvpf/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/modera-san-diego-san-diego-ca/vkmsvpf/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 35,
+   "photo": {
+    "url": "https://www.apartments.com/1150-j-st-san-diego-ca-unit-205/h9w8vl2/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/1150-j-st-san-diego-ca-unit-205/h9w8vl2/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 36,
+   "photo": {
+    "url": "https://www.apartments.com/palm-terrace-apartments-san-diego-ca/ft9r92s/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/palm-terrace-apartments-san-diego-ca/ft9r92s/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 37,
+   "photo": {
+    "url": "https://www.apartments.com/bridgeview-apartments-san-diego-ca/kxgdx19/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/bridgeview-apartments-san-diego-ca/kxgdx19/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 38,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/htK_O-xpUh2ID1RcJoyzzERebcUf1p47R_k6ESVJhHQ/117/3020-c-st-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/3020-c-st-san-diego-ca/dfbe2zh/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 39,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/3C7MTsnKIyCTiPJ-GflaYGZgLYnr0cVL_yq5sE_sw8Q/117/1233-1235-29th-st-unit-1235-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/1233-1235-29th-st-san-diego-ca-unit-1235/x4nsmxp/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 40,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/Z-BUFNnd3LJsTN5rolZQjxxC8oC1ytn4gx1DZ0gZ6xc/117/3042-3048-broadway-unit-3042-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/3042-3048-broadway-san-diego-ca-unit-3042/0wkjj53/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 41,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/Xes0vbjSOfeV4of1EEKaTdd1XNX3EOB8k_8YLUDXBdY/117/2941-c-st-unit-467-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/2941-c-st-san-diego-ca-unit-467/ykkt5dt/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 42,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/T3evIMwgAFp_E6f27kp9qWWWtGwgOLTKGyfRx_aH9zU/102/south-park-place-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/south-park-place-san-diego-ca/pe5r4ws/",
+    "label": "Listing"
+   }
+  }
+ ],
+ "labels": {
+  "B5": "2-Bedroom Rent Comps ",
+  "B8": "Building",
+  "C8": "Address",
+  "D8": "Distance to Site (mi)",
+  "E8": "Plan / Unit",
+  "F8": "Include in Avg (Y/N)",
+  "G8": "SF (Avg)",
+  "H8": "Market Rent ($/mo)",
+  "I8": "Special / Concession",
+  "J8": "Free Rent (months)",
+  "K8": "One-Time Credit ($)",
+  "L8": "Lease Term (mo)",
+  "M8": "Concession ($/mo)",
+  "N8": "Effective Rent ($/mo)",
+  "O8": "Concession %",
+  "P8": "Amenity Premium ($/mo)",
+  "Q8": "Base Unit Rent ($/mo)",
+  "R8": "Market $/SF",
+  "S8": "Effective $/SF",
+  "T8": "Base $/SF",
+  "U8": "Building Photo",
+  "V8": "Floor Plan",
+  "W8": "Leasing Phone",
+  "X8": "Class (Best Guess)",
+  "Y8": "2nd Bath? (Y/N)",
+  "Z8": "2nd Bath Premium ($/mo)",
+  "AA8": "Comp Total Amenity Premium ($/mo)",
+  "AB8": "Subject Amenity Premium ($/mo)",
+  "AC8": "Adjusted Rent to Subject: amenity x location ($/mo)",
+  "AD8": "Adjusted $/SF",
+  "AE8": "Neighborhood",
+  "AF8": "Location Score",
+  "AG8": "Location Multiplier",
+  "AH8": "Amenity-Adjusted Rent, pre-location ($/mo)"
+ }
+}

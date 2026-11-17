@@ -100,8 +100,8 @@ def criteria(crit):
         for op in (">=", "<=", "<>", ">", "<", "="):
             if crit.startswith(op):
                 rhs = crit[len(op):]
-                try:
-                    num = float(rhs)
+                try:  # Excel accepts percent criteria such as ">30%"
+                    num = float(rhs[:-1]) / 100 if rhs.endswith("%") else float(rhs)
                 except ValueError:
                     num = None
                 def f(v, op=op, rhs=rhs, num=num):

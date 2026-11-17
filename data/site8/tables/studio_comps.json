@@ -1,0 +1,522 @@
+{
+ "source": "Studio Comps (typed cells)",
+ "rows": [
+  {
+   "row": 9,
+   "building": "Enclave at Warner Center",
+   "address": "6710 Variel Ave",
+   "plan": "Studio",
+   "include": "Y",
+   "sf": 609,
+   "rent": 2097,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/iIbEFjjefOX5H0WlX4Z0MyN-mBcBzelR-kRWFkomFHM/102/diega-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.redfin.com/CA/Canoga-Park/Enclave-at-Warner-Center/apartment/40155994"
+  },
+  {
+   "row": 10,
+   "building": "Pendant on Topanga",
+   "address": "7322 Topanga Canyon Blvd",
+   "plan": "Studio",
+   "include": "Y",
+   "sf": 480,
+   "rent": 2075,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/nxRx9hnd4R7oABU3pXEsZiEAKrNbS8Qn4ObA697iC2w/102/urbana-rental-flats-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.apartments.com/m3q9hll/"
+  },
+  {
+   "row": 11,
+   "building": "7810 Topanga Canyon Blvd",
+   "address": "7810 Topanga Canyon Blvd",
+   "plan": "Studio",
+   "include": "Y",
+   "sf": 226,
+   "rent": 1453,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/2DNnbs7N-vzoJPxKzK6G6zR3Skuf50aFqcDE4_lUPOU/102/the-wyatt-makers-quarter-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.apartments.com/bmfpfr8/"
+  },
+  {
+   "row": 12,
+   "building": "Milwood Apt Homes",
+   "address": "6822 Milwood Ave",
+   "plan": "Studio",
+   "include": "Y",
+   "sf": 475,
+   "rent": 1462,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/dcAycqO-rz9rtRmW0iwrVHiHREKnccWiOBDJblm0jgg/102/entrada-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.apartments.com/w6jpxtk/"
+  },
+  {
+   "row": 13,
+   "building": "6810 N Milwood Ave Unit 09",
+   "address": "6810 N Milwood Ave Unit 09",
+   "plan": "Studio",
+   "include": "Y",
+   "sf": 400,
+   "rent": 1421,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/Kd0O6Qyn-3e_5HlkPlRhcjC45NbBdNi58l3DG1XkKn4/102/tenthg-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.redfin.com/CA/Canoga-Park/6810-N-Milwood-Ave-91303/unit-09/apartment/201093065"
+  },
+  {
+   "row": 14,
+   "building": "7052 Remmet Ave Apt 8",
+   "address": "7052 Remmet Ave Apt 8",
+   "plan": "Studio",
+   "include": "Y",
+   "rent": 1495,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/MnZ8uq0HSWBuWtBdBt13QRxCg1VO8y6Vw-ISD0s5k_Y/102/800-broadway-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.redfin.com/CA/Canoga-Park/7052-Remmet-Ave-91303/unit-8/home/200988549"
+  },
+  {
+   "row": 15,
+   "building": "7236 Remmet Ave",
+   "address": "7236 Remmet Ave",
+   "plan": "Studio",
+   "include": "Y",
+   "sf": 450,
+   "rent": 1550,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/WMdibGNU08bj1qlDl9w18xRDEugAjHFtRiSbVIe4DOo/102/alx-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.apartments.com/7bn33vx/"
+  },
+  {
+   "row": 16,
+   "building": "7259 Jordan Ave",
+   "address": "7259 Jordan Ave",
+   "plan": "Studio",
+   "include": "Y",
+   "sf": 450,
+   "rent": 1395,
+   "special": "None shown",
+   "free_months": 0,
+   "one_time_credit": 0,
+   "lease_term": 12.0184615384615,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/R8Tm89tGXJegcBPOfcIrv6AkGblWw-xvuNRrRvBxx6w/102/griffis-east-village-san-diego-ca-griffis-east-village-reno-model-living-r.jpg",
+    "label": "Photo"
+   },
+   "listing": "https://www.redfin.com/CA/Canoga-Park/7259-Jordan-Ave-91303/apartment/3730675"
+  },
+  {
+   "row": 17,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/I614SI5z_y_6cMatyUpa8KPrW3UzWS4MW05Dul_HkIY/102/arrive-625-broadway-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/arrive-625-broadway-san-diego-ca/g3s1m5y/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 18,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/IM0o9093tUsyRzuCQJZZtBCwyCJWl7NNAnQRqsJFhA0/102/k1-apartments-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/k1-apartments-san-diego-ca/d0mqjxh/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 19,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/cnDClf7Eu5fKxx53nh25Tjw7PajX3oTDusdB4Sy6DVE/102/13th-market-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/13th-market-san-diego-ca/1jrs277/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 20,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/okf9_9avql46DA-9AK9YnAyj2dXAL66SVY85BYMNi_I/102/market-street-village-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/market-street-village-san-diego-ca/z2fxxfx/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 21,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/uGYNUxjNFgxh2jMYutI6ByST0e6a8pgfDx7pf24k9Mw/102/the-minn-apartments-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/the-minn-apartments-san-diego-ca/12clpm4/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 22,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/jtxTMJzeY57u2jbI7cTVgiDmTkNZaAi7D83Z6uKR-WM/102/f11-east-village-san-diego-ca-floor-to-ceiling-windows-in-select-apart.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/f11-east-village-san-diego-ca/r543wr2/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 23,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/zdhtR0Ag4oWPoGt05rUu1iL6xsYzmSjPrPvi2nxqbqM/102/the-artisan-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/the-artisan-san-diego-ca/zd2drxy/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 24,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/GFEzwpfWmJouiAeQTheAIPvyPfzyzTWJYUqAdNHz1xs/102/idea1-apartments-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/idea1-apartments-san-diego-ca/gep1y5x/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 25,
+   "photo": {
+    "url": "https://www.apartments.com/the-rey-san-diego-ca/wj0hpsh/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/the-rey-san-diego-ca/wj0hpsh/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 26,
+   "photo": {
+    "url": "https://www.apartments.com/city-villas-apartments-san-diego-ca/6esnmcv/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/city-villas-apartments-san-diego-ca/6esnmcv/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 27,
+   "photo": {
+    "url": "https://www.apartments.com/modera-san-diego-san-diego-ca/vkmsvpf/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/modera-san-diego-san-diego-ca/vkmsvpf/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 28,
+   "photo": {
+    "url": "https://www.apartments.com/830-park-blvd-san-diego-ca/nf0j6ep/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/830-park-blvd-san-diego-ca/nf0j6ep/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 29,
+   "photo": {
+    "url": "https://www.apartments.com/830-park-blvd-san-diego-ca/nf0j6ep/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/830-park-blvd-san-diego-ca/nf0j6ep/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 30,
+   "photo": {
+    "url": "https://www.apartments.com/studios435-san-diego-ca/4echzgh/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/studios435-san-diego-ca/4echzgh/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 31,
+   "photo": {
+    "url": "https://www.apartments.com/studios435-san-diego-ca/4echzgh/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/studios435-san-diego-ca/4echzgh/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 32,
+   "photo": {
+    "url": "https://www.apartments.com/studios435-san-diego-ca/4echzgh/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/studios435-san-diego-ca/4echzgh/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 33,
+   "photo": {
+    "url": "https://www.apartments.com/arlington-apartments-san-diego-ca/jq7tf57/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/arlington-apartments-san-diego-ca/jq7tf57/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 34,
+   "photo": {
+    "url": "https://www.apartments.com/wla-windsor-san-diego-ca/f7zpmrt/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/wla-windsor-san-diego-ca/f7zpmrt/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 35,
+   "photo": {
+    "url": "https://www.apartments.com/wla-windsor-san-diego-ca/f7zpmrt/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/wla-windsor-san-diego-ca/f7zpmrt/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 36,
+   "photo": {
+    "url": "https://www.apartments.com/wla-windsor-san-diego-ca/f7zpmrt/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/wla-windsor-san-diego-ca/f7zpmrt/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 37,
+   "photo": {
+    "url": "https://www.apartments.com/mbs-studios-san-diego-ca/fqer3vv/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/mbs-studios-san-diego-ca/fqer3vv/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 38,
+   "photo": {
+    "url": "https://www.apartments.com/sage-house-apartments-san-diego-ca/1sf7sv6/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/sage-house-apartments-san-diego-ca/1sf7sv6/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 39,
+   "photo": {
+    "url": "https://www.apartments.com/sage-house-apartments-san-diego-ca/1sf7sv6/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/sage-house-apartments-san-diego-ca/1sf7sv6/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 40,
+   "photo": {
+    "url": "https://www.apartments.com/peachtree-inn-fully-furnished-units-san-diego-ca/w2l227l/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/peachtree-inn-fully-furnished-units-san-diego-ca/w2l227l/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 41,
+   "photo": {
+    "url": "https://www.apartments.com/peachtree-inn-fully-furnished-units-san-diego-ca/w2l227l/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/peachtree-inn-fully-furnished-units-san-diego-ca/w2l227l/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 42,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/oebJ6q24Q0S_dhfnBbSslsCZJLpr2zRFChrXujHfu0U/102/estudios-de-stanson-san-diego-ca-interior-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/estudios-de-stanson-san-diego-ca/dhdt12k/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 43,
+   "photo": {
+    "url": "https://www.apartments.com/golden-glen-apartments-san-diego-ca/jzx9fy6/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/golden-glen-apartments-san-diego-ca/jzx9fy6/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 44,
+   "photo": {
+    "url": "https://www.apartments.com/2855-2865-a-st-san-diego-ca-92102-san-diego-ca/2f3kh5c/",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/2855-2865-a-st-san-diego-ca-92102-san-diego-ca/2f3kh5c/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 45,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/ki2lhUlVLTuAYEBaaACZOM_rHsccUndk1l1ENu7w5pY/117/2754-a-street-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/2754-a-street-san-diego-ca/hs3pwz2/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 46,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/5kWx9KTOVJ8Wwah5QZbB4ZA3qXneXWS_f5C2l7v_qec/117/2658-e-st-unit-26585-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/2658-e-st-san-diego-ca/ev989en/",
+    "label": "Listing"
+   }
+  },
+  {
+   "row": 47,
+   "photo": {
+    "url": "https://images1.apartments.com/i2/IB9EEcEgdbBeFF4-0fffzu1BQjEKafGpFC_6XuTYJNw/117/2744-treat-st-san-diego-ca-building-photo.jpg",
+    "label": "Photo"
+   },
+   "listing": {
+    "url": "https://www.apartments.com/2744-treat-st-san-diego-ca/e835bgq/",
+    "label": "Listing"
+   }
+  }
+ ],
+ "labels": {
+  "B5": "Studio Rent Comps",
+  "B8": "Building",
+  "C8": "Address",
+  "D8": "Distance to Site (mi)",
+  "E8": "Plan / Unit",
+  "F8": "Include in Avg (Y/N)",
+  "G8": "SF (Avg)",
+  "H8": "Market Rent ($/mo)",
+  "I8": "Special / Concession",
+  "J8": "Free Rent (months)",
+  "K8": "One-Time Credit ($)",
+  "L8": "Lease Term (mo)",
+  "M8": "Concession ($/mo)",
+  "N8": "Effective Rent ($/mo)",
+  "O8": "Concession %",
+  "P8": "Amenity Premium ($/mo)",
+  "Q8": "Base Unit Rent ($/mo)",
+  "R8": "Market $/SF",
+  "S8": "Effective $/SF",
+  "T8": "Base $/SF",
+  "U8": "Building Photo",
+  "V8": "Floor Plan",
+  "W8": "Leasing Phone",
+  "X8": "Class (Best Guess)",
+  "Y8": "Subject Amenity Premium ($/mo)",
+  "Z8": "Adjusted Rent to Subject: amenity x location ($/mo)",
+  "AA8": "Adjusted $/SF",
+  "AB8": "Neighborhood",
+  "AC8": "Location Score",
+  "AD8": "Location Multiplier",
+  "AE8": "Amenity-Adjusted Rent, pre-location ($/mo)"
+ }
+}

@@ -1,0 +1,2183 @@
+{
+ "source": "Amenity & Property Premiums (typed cells)",
+ "locations": [
+  {
+   "row": 87,
+   "building": "Enclave at Warner Center",
+   "address": "6710 Variel Ave",
+   "lat": 34.1919285,
+   "lon": -118.5921926,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 88,
+   "building": "Listing near 6333 Canoga Ave, Woodland Hills #e95c",
+   "address": "Listing near 6333 Canoga Ave, Woodland Hills #e95c",
+   "lat": 34.1848885696578,
+   "lon": -118.598120527884,
+   "coord_source": "Google Places"
+  },
+  {
+   "row": 89,
+   "building": "Pendant on Topanga",
+   "address": "7322 Topanga Canyon Blvd",
+   "lat": 34.203847,
+   "lon": -118.605495,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 90,
+   "building": "Sync on Canoga",
+   "address": "7019 Canoga Ave",
+   "lat": 34.1980967,
+   "lon": -118.5980572,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 91,
+   "building": "The Kitt at Warner Center",
+   "address": "21200 Kittridge St",
+   "lat": 34.190067,
+   "lon": -118.593965,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 92,
+   "building": "6551 De Soto Ave",
+   "address": "6551 De Soto Ave",
+   "lat": 34.189898,
+   "lon": -118.58902,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 93,
+   "building": "6825 Alabama Ave",
+   "address": "6825 Alabama Ave",
+   "lat": 34.194708,
+   "lon": -118.5997086,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 94,
+   "building": "6950 Remmet Ave",
+   "address": "6950 Remmet Ave",
+   "lat": 34.1969734,
+   "lon": -118.5999719,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 95,
+   "building": "7018 Alabama Ave Apt 203",
+   "address": "7018 Alabama Ave Apt 203",
+   "lat": 34.197964,
+   "lon": -118.5986744,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 96,
+   "building": "7124 N Farralone Ave",
+   "address": "7124 N Farralone Ave",
+   "lat": 34.199915,
+   "lon": -118.609741,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 97,
+   "building": "7231 Vassar Ave",
+   "address": "7231 Vassar Ave",
+   "lat": 34.202007,
+   "lon": -118.6048695,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 98,
+   "building": "7551 Jordan Ave",
+   "address": "7551 Jordan Ave",
+   "lat": 34.2079875,
+   "lon": -118.6033242,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 99,
+   "building": "7810 Topanga Canyon Blvd",
+   "address": "7810 Topanga Canyon Blvd",
+   "lat": 34.211902,
+   "lon": -118.605374,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 100,
+   "building": "Cambridge Court Apartments",
+   "address": "20954 Vanowen St",
+   "lat": 34.193439,
+   "lon": -118.5903347,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 101,
+   "building": "Located in Woodland Hills, 2/bd, Main Pool Heated All Year",
+   "address": "Located in Woodland Hills, 2/bd, Main Pool Heated All Year",
+   "lat": 34.1766992838924,
+   "lon": -118.615899981223,
+   "coord_source": "Google Places"
+  },
+  {
+   "row": 102,
+   "building": "Milwood Apt Homes",
+   "address": "6822 Milwood Ave",
+   "lat": 34.1946023,
+   "lon": -118.5939284,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 103,
+   "building": "The 6800",
+   "address": "6800 Variel Ave",
+   "lat": 34.1939878,
+   "lon": -118.5927204,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 104,
+   "building": "Warner Center Townhomes",
+   "address": "6737 De Soto Ave",
+   "lat": 34.1930996,
+   "lon": -118.5890995,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 105,
+   "building": "20954 Valerio St",
+   "address": "20954 Valerio St",
+   "lat": 34.2045188,
+   "lon": -118.5903453,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 106,
+   "building": "21715 Hart St",
+   "address": "21715 Hart St",
+   "lat": 34.1975553,
+   "lon": -118.602315,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 107,
+   "building": "22026 1/2 Saticoy St",
+   "address": "22026 1/2 Saticoy St",
+   "lat": 34.2080123,
+   "lon": -118.6068537,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 108,
+   "building": "22111 Victory Blvd",
+   "address": "22111 Victory Blvd",
+   "lat": 34.1867288,
+   "lon": -118.6087103,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 109,
+   "building": "22122 Saticoy St",
+   "address": "22122 Saticoy St",
+   "lat": 34.207986,
+   "lon": -118.60898,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 110,
+   "building": "22136 Hart St",
+   "address": "22136 Hart St",
+   "lat": 34.19715,
+   "lon": -118.6093626,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 111,
+   "building": "22149 Cohasset St",
+   "address": "22149 Cohasset St",
+   "lat": 34.206728,
+   "lon": -118.609803,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 112,
+   "building": "22149 Victory Blvd",
+   "address": "22149 Victory Blvd",
+   "lat": 34.1867567,
+   "lon": -118.6100733,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 113,
+   "building": "22349 Vanowen St",
+   "address": "22349 Vanowen St",
+   "lat": 34.1939828,
+   "lon": -118.6140682,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 114,
+   "building": "6458 Hanna Ave",
+   "address": "6458 Hanna Ave",
+   "lat": 34.188155,
+   "lon": -118.6067361,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 115,
+   "building": "6464 Glade Ave",
+   "address": "6464 Glade Ave",
+   "lat": 34.1882737,
+   "lon": -118.6077829,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 116,
+   "building": "6500 Glade Ave",
+   "address": "6500 Glade Ave",
+   "lat": 34.1885502,
+   "lon": -118.607772,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 117,
+   "building": "6532 Shoup Ave",
+   "address": "6532 Shoup Ave",
+   "lat": 34.1890118,
+   "lon": -118.6145115,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91307"
+  },
+  {
+   "row": 118,
+   "building": "6601 Farralone Ave",
+   "address": "6601 Farralone Ave",
+   "lat": 34.1901977,
+   "lon": -118.6105494,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 119,
+   "building": "6810 N Milwood Ave Unit 09",
+   "address": "6810 N Milwood Ave Unit 09",
+   "lat": 34.1943751,
+   "lon": -118.5940512,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 120,
+   "building": "6815 Remmet Ave",
+   "address": "6815 Remmet Ave",
+   "lat": 34.1946497,
+   "lon": -118.6005134,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 121,
+   "building": "6820 Remmet Ave",
+   "address": "6820 Remmet Ave",
+   "lat": 34.1945609,
+   "lon": -118.59963,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 122,
+   "building": "6858 Shoup Ave Unit 6858",
+   "address": "6858 Shoup Ave Unit 6858",
+   "lat": 34.1953315,
+   "lon": -118.6143805,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91307"
+  },
+  {
+   "row": 123,
+   "building": "6920 Loma Verde Ave",
+   "address": "6920 Loma Verde Ave",
+   "lat": 34.1961593,
+   "lon": -118.5892417,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 124,
+   "building": "7000-7002 Glade Ave 7002",
+   "address": "7000-7002 Glade Ave",
+   "lat": 34.1975274,
+   "lon": -118.6079041,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 125,
+   "building": "7032",
+   "address": "7032 Remmet Ave",
+   "lat": 34.1983633,
+   "lon": -118.5999616,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 126,
+   "building": "7049 Alabama Ave",
+   "address": "7049 Alabama Ave",
+   "lat": 34.1987798,
+   "lon": -118.599211,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 127,
+   "building": "7052 Remmet Ave Apt 8",
+   "address": "7052 Remmet Ave Apt 8",
+   "lat": 34.1989186,
+   "lon": -118.5999993,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 128,
+   "building": "7055 Alabama Ave",
+   "address": "7055 Alabama Ave",
+   "lat": 34.1989716,
+   "lon": -118.5992948,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 129,
+   "building": "7116 Milwood Ave",
+   "address": "7116 Milwood Ave",
+   "lat": 34.1997868,
+   "lon": -118.5940633,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 130,
+   "building": "7230 Independence Ave Apt 1",
+   "address": "7230 Independence Ave Apt 1",
+   "lat": 34.2021378,
+   "lon": -118.5904801,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 131,
+   "building": "7233 Loma Verde Ave",
+   "address": "7233 Loma Verde Ave",
+   "lat": 34.2022369,
+   "lon": -118.589895,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 132,
+   "building": "7236 Remmet Ave",
+   "address": "7236 Remmet Ave",
+   "lat": 34.202175,
+   "lon": -118.600017,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 133,
+   "building": "7248 Jordan Ave Apt 8",
+   "address": "7248 Jordan Ave Apt 8",
+   "lat": 34.2024284,
+   "lon": -118.6025056,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 134,
+   "building": "7249 Alabama Avenue",
+   "address": "7249 Alabama Ave",
+   "lat": 34.2025185,
+   "lon": -118.5993337,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 135,
+   "building": "7259 Jordan Ave",
+   "address": "7259 Jordan Ave",
+   "lat": 34.2026713,
+   "lon": -118.6032716,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 136,
+   "building": "7316 Owensmouth Ave",
+   "address": "7316 Owensmouth Ave",
+   "lat": 34.2034052,
+   "lon": -118.6012551,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 137,
+   "building": "Bella Vista At Warner Ridge",
+   "address": "Bella Vista At Warner Ridge",
+   "lat": 34.1819206482791,
+   "lon": -118.590593581329,
+   "coord_source": "Google Places"
+  },
+  {
+   "row": 138,
+   "building": "Carlyle Court Apartment Homes",
+   "address": "21217 Gault St",
+   "lat": 34.199768,
+   "lon": -118.595111,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 139,
+   "building": "De Soto Valley Apartments",
+   "address": "7242 De Soto Ave",
+   "lat": 34.2024573,
+   "lon": -118.587946,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 140,
+   "building": "Glade Apartments",
+   "address": "6670 Glade Ave",
+   "lat": 34.1923512,
+   "lon": -118.607946,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 141,
+   "building": "Independence Apartments",
+   "address": "6738 Independence Ave",
+   "lat": 34.1930922,
+   "lon": -118.5901075,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 142,
+   "building": "Jordan Apartments",
+   "address": "7240 Jordan Ave",
+   "lat": 34.2022199,
+   "lon": -118.6025623,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 143,
+   "building": "Variel Apartments",
+   "address": "7307 Variel Ave",
+   "lat": 34.203167,
+   "lon": -118.5931708,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 144,
+   "building": "Victory Townhomes",
+   "address": "22321 Victory Blvd",
+   "lat": 34.1867453,
+   "lon": -118.6129784,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 145,
+   "building": "Warner Court Villas",
+   "address": "6635 De Soto Ave",
+   "lat": 34.1910299,
+   "lon": -118.5894147,
+   "coord_source": "Google Places",
+   "neighborhood": "ZIP 91303"
+  },
+  {
+   "row": 146
+  }
+ ],
+ "amenity_columns": [
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q"
+ ],
+ "amenity_matrix": [
+  {
+   "row": 11,
+   "building": "Enclave at Warner Center",
+   "vintage": "2009",
+   "class": "A",
+   "amenity_listing": {
+    "url": "tel:+18582391697",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "row": 12,
+   "building": "Listing near 6333 Canoga Ave, Woodland Hills #e95c",
+   "vintage": "1977",
+   "class": "A",
+   "amenity_listing": {
+    "url": "tel:+16198708617",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1
+   ]
+  },
+  {
+   "row": 13,
+   "building": "Pendant on Topanga",
+   "vintage": "2024",
+   "class": "A",
+   "amenity_listing": {
+    "url": "tel:+16197730335",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 14,
+   "building": "Sync on Canoga",
+   "vintage": "1966",
+   "class": "A",
+   "amenity_listing": {
+    "url": "tel:+16197933076",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "row": 15,
+   "building": "The Kitt at Warner Center",
+   "vintage": "2006",
+   "class": "A",
+   "amenity_listing": {
+    "url": "tel:+16197933961",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1
+   ]
+  },
+  {
+   "row": 16,
+   "building": "6551 De Soto Ave",
+   "vintage": "1965",
+   "class": "B",
+   "amenity_listing": {
+    "url": "tel:+16193299490",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+   ]
+  },
+  {
+   "row": 17,
+   "building": "6825 Alabama Ave",
+   "vintage": "1983",
+   "class": "B",
+   "amenity_listing": {
+    "url": "tel:+16192920313",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 18,
+   "building": "6950 Remmet Ave",
+   "vintage": "1990",
+   "class": "B",
+   "amenity_listing": {
+    "url": "tel:+18582216613",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 19,
+   "building": "7018 Alabama Ave Apt 203",
+   "vintage": "2020",
+   "class": "B",
+   "amenity_listing": {
+    "url": "tel:+18582938243",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 20,
+   "building": "7124 N Farralone Ave",
+   "vintage": "2003",
+   "class": "B",
+   "amenity_listing": {
+    "url": "tel:+16195051962",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "row": 21,
+   "building": "7231 Vassar Ave",
+   "vintage": "1993",
+   "class": "B",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/entrada-san-diego-ca/peg5vbv/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 22,
+   "building": "7551 Jordan Ave",
+   "vintage": "2006",
+   "class": "B",
+   "amenity_listing": {
+    "url": "tel:+16193761335",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+   ]
+  },
+  {
+   "row": 23,
+   "building": "7810 Topanga Canyon Blvd",
+   "vintage": "1983",
+   "class": "B",
+   "amenity_listing": {
+    "url": "tel:+18582934835",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ]
+  },
+  {
+   "row": 24,
+   "building": "Cambridge Court Apartments",
+   "vintage": "1990",
+   "class": "B",
+   "amenity_listing": {
+    "url": "tel:+16195865313",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+   ]
+  },
+  {
+   "row": 25,
+   "building": "Located in Woodland Hills, 2/bd, Main Pool Heated All Year",
+   "vintage": "1960",
+   "class": "B",
+   "amenity_listing": {
+    "url": "tel:+16193938338",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 26,
+   "building": "Milwood Apt Homes",
+   "vintage": "1964",
+   "class": "B",
+   "amenity_listing": {
+    "url": "tel:+18582391008",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 27,
+   "building": "The 6800",
+   "vintage": "Older (est.)",
+   "class": "B",
+   "amenity_listing": {
+    "url": "tel:+18583579219",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 28,
+   "building": "Warner Center Townhomes",
+   "vintage": "2005",
+   "class": "B",
+   "amenity_listing": {
+    "url": "tel:+18587578588",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 29,
+   "building": "20954 Valerio St",
+   "vintage": "1987",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/900-f-street-san-diego-ca/6y1kx2v/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 30,
+   "building": "21715 Hart St",
+   "vintage": "1955",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+16196046056",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 31,
+   "building": "22026 1/2 Saticoy St",
+   "vintage": "1952",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+16197751854",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 32,
+   "building": "22111 Victory Blvd",
+   "vintage": "1954",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+16192576601",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 33,
+   "building": "22122 Saticoy St",
+   "vintage": "1947",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+18582640593",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 34,
+   "building": "22136 Hart St",
+   "vintage": "1955",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+16195142229",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 35,
+   "building": "22149 Cohasset St",
+   "vintage": "1948",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+16198321709",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 36,
+   "building": "22149 Victory Blvd",
+   "vintage": "1954",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+18887916413",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 37,
+   "building": "22349 Vanowen St",
+   "vintage": "1960",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+16194323495",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 38,
+   "building": "6458 Hanna Ave",
+   "vintage": "1954",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/1050-island-ave-san-diego-ca-unit-m2i-408/ykkb8pr/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 39,
+   "building": "6464 Glade Ave",
+   "vintage": "1954",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/south-park-place-san-diego-ca/pe5r4ws/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 40,
+   "building": "6500 Glade Ave",
+   "vintage": "1954",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/2941-c-st-san-diego-ca-unit-467/ykkt5dt/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ]
+  },
+  {
+   "row": 41,
+   "building": "6532 Shoup Ave",
+   "vintage": "1954",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/mondrian-studios-san-diego-ca/8ljwqv1/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "row": 42,
+   "building": "6601 Farralone Ave",
+   "vintage": "1958",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+16193048343",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 43,
+   "building": "6810 N Milwood Ave Unit 09",
+   "vintage": "1965",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+18582392516",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 44,
+   "building": "6815 Remmet Ave",
+   "vintage": "1986",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+16196043991",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 45,
+   "building": "6820 Remmet Ave",
+   "vintage": "1983",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+16193912749",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "row": 46,
+   "building": "6858 Shoup Ave Unit 6858",
+   "vintage": "1960",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+16193933804",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 47,
+   "building": "6920 Loma Verde Ave",
+   "vintage": "1979",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+18586302794",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1
+   ]
+  },
+  {
+   "row": 48,
+   "building": "7000-7002 Glade Ave 7002",
+   "vintage": "1952",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+16193939415",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 49,
+   "building": "7032",
+   "vintage": "1989",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+16199410519",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 50,
+   "building": "7049 Alabama Ave",
+   "vintage": "1937",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+18583024522",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 51,
+   "building": "7052 Remmet Ave Apt 8",
+   "vintage": "1980",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+16197752036",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 52,
+   "building": "7055 Alabama Ave",
+   "vintage": "1977",
+   "class": "C",
+   "amenity_listing": {
+    "url": "tel:+18582390898",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 53,
+   "building": "7116 Milwood Ave",
+   "vintage": "1949",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/estudios-de-stanson-san-diego-ca/dhdt12k/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "row": 54,
+   "building": "7230 Independence Ave Apt 1",
+   "vintage": "1964",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/golden-glen-apartments-san-diego-ca/jzx9fy6/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 55,
+   "building": "7233 Loma Verde Ave",
+   "vintage": "1988",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/2855-2865-a-st-san-diego-ca-92102-san-diego-ca/2f3kh5c/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 56,
+   "building": "7236 Remmet Ave",
+   "vintage": "1962",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/2754-a-street-san-diego-ca/hs3pwz2/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 57,
+   "building": "7248 Jordan Ave Apt 8",
+   "vintage": "1965",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/2658-e-st-san-diego-ca/ev989en/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 58,
+   "building": "7249 Alabama Avenue",
+   "vintage": "1953",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/2744-treat-st-san-diego-ca/e835bgq/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 59,
+   "building": "7259 Jordan Ave",
+   "vintage": "1961",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/palm-terrace-apartments-san-diego-ca/ft9r92s/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 60,
+   "building": "7316 Owensmouth Ave",
+   "vintage": "1952",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/bridgeview-apartments-san-diego-ca/kxgdx19/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 61,
+   "building": "Bella Vista At Warner Ridge",
+   "vintage": "Older (est.)",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/3167-market-san-diego-ca/5zkrstp/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 62,
+   "building": "Carlyle Court Apartment Homes",
+   "vintage": "1971",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/933-21st-st-san-diego-ca/vvs3fre/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 63,
+   "building": "De Soto Valley Apartments",
+   "vintage": "1967",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/2849-e-st-san-diego-ca-unit-1/1gczy17/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 64,
+   "building": "Glade Apartments",
+   "vintage": "1963",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/3020-c-st-san-diego-ca/dfbe2zh/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 65,
+   "building": "Independence Apartments",
+   "vintage": "1977",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/24205-e-st-san-diego-ca-unit-24205/57wndcq/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 66,
+   "building": "Jordan Apartments",
+   "vintage": "1985",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/1237-39-1239-33rd-st-san-diego-ca-unit-1237/j68tqy5/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 67,
+   "building": "Variel Apartments",
+   "vintage": "1957",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/2727-1-2-g-st-san-diego-ca/mj6hm1h/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 68,
+   "building": "Victory Townhomes",
+   "vintage": "1985",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/2625-1-2-e-st-san-diego-ca/xg541nm/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 69,
+   "building": "Warner Court Villas",
+   "vintage": "1962",
+   "class": "C",
+   "amenity_listing": {
+    "url": "https://www.apartments.com/1233-1235-29th-st-san-diego-ca-unit-1235/x4nsmxp/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "row": 70,
+   "amenity_listing": {
+    "url": "https://www.apartments.com/3042-3048-broadway-san-diego-ca-unit-3042/0wkjj53/",
+    "label": "Amenities"
+   },
+   "amenities": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  }
+ ],
+ "labels": {
+  "B5": "Amenity Premium Assumptions",
+  "B6": "Row 5 = assumed monthly rent premium per amenity (editable). Matrix = 1 if the building advertises the amenity, 0 if not advertised / unknown. Premium = SUMPRODUCT of row 5 and the flags. Columns Q-V: building class analysis and a link to each listing to verify amenities.",
+  "S7": "Rule-based: A if score ≥",
+  "U7": "C if score ≤",
+  "W7": "Score = amenity count + vintage points (2020s=4, 2010s=3, 2000s=2, 1990s=1, older/unknown=0)",
+  "B8": "Premium ($/mo) →",
+  "B10": "Building",
+  "D10": "In-Unit W/D",
+  "E10": "Pool",
+  "F10": "Fitness Center",
+  "G10": "Rooftop Deck / Terrace",
+  "H10": "Clubhouse / Lounge",
+  "I10": "Pet Amenities",
+  "J10": "EV Charging",
+  "K10": "Balcony / Patio",
+  "L10": "Package / Concierge",
+  "M10": "Controlled Access",
+  "N10": "Elevator",
+  "O10": "A/C",
+  "P10": "Smart Home Features",
+  "Q10": "Premium Finishes",
+  "R10": "Total Premium ($/mo)",
+  "S10": "Amenity Count (of 12)",
+  "T10": "Vintage (est.)",
+  "U10": "Rule-Based Class",
+  "V10": "Class (Best Guess)",
+  "W10": "Class Rationale",
+  "X10": "Amenity Listing (verify)",
+  "B73": "Building Class Criteria (best-guess framework)",
+  "B74": "A",
+  "D74": "Built or fully repositioned within ~10 years (strongest A: last 5 years); mid/high-rise; full amenity package (in-unit W/D, fitness, pool or rooftop deck, clubhouse/lounge, controlled access, package lockers, EV); premium finishes; rents at the top of the submarket; professional institutional management.",
+  "B75": "B",
+  "D75": "Roughly 10-30 years old, or newer but with a limited amenity set; well maintained; some shared amenities (fitness or pool) and in-unit W/D common; finishes dated but functional; rents mid-market, typically a discount to Class A.",
+  "B76": "C",
+  "D76": "Typically 30+ years old (often pre-1980 walk-ups, plexes, SROs, rear/half-address units); few or no amenities (shared or no laundry, street or limited parking); dated finishes and visible wear; rents well below Class A; often smaller local ownership.",
+  "B77": "Note",
+  "D77": "Class is a relative market convention, not an official rating - it varies by submarket. These are desk-based best guesses from listing cards, vintage estimates and rent level; confirm with a site visit or CoStar building rating before relying on them. 'Class (Best Guess)' (yellow) drives the comp tabs; 'Rule-Based Class' is only a cross-check.",
+  "B79": "Site & comp locations",
+  "B81": "Site & Comp Locations",
+  "B82": "Distance = straight-line (haversine) miles from the site. Blue cells are editable; 'Approximate' coordinates are estimates from the street address - verify before relying on them.",
+  "B84": "Site",
+  "C84": "21101 Victory Blvd, Canoga Park",
+  "F84": "Google Places",
+  "B86": "Building",
+  "C86": "Address",
+  "D86": "Latitude",
+  "E86": "Longitude",
+  "F86": "Coordinate Source",
+  "G86": "Distance to Site (mi)",
+  "H86": "Class (Best Guess)",
+  "I86": "Neighborhood",
+  "J86": "Location Score",
+  "K86": "Location Multiplier",
+  "B148": "Subject property amenities",
+  "B150": "Property Amenities",
+  "B152": "In-Unit W/D",
+  "C152": "Pool",
+  "D152": "Fitness Center",
+  "E152": "Rooftop Deck / Terrace",
+  "F152": "Clubhouse / Lounge",
+  "G152": "Pet Amenities",
+  "H152": "EV Charging",
+  "I152": "Balcony / Patio",
+  "J152": "Package / Concierge",
+  "K152": "Controlled Access",
+  "L152": "Elevator",
+  "M152": "Premium Finishes",
+  "N152": "2nd bath in 2br ",
+  "O152": "Studio / 1BR Total Premium ($/mo)",
+  "P152": "2BR Total Premium ($/mo)"
+ }
+}
