@@ -1,0 +1,16 @@
+B2: =MI_ProjectName&"  |  TOTAL PTS" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  TOTAL PTS'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+B5= 'Prez & other rehab priorities' | C5= 0 | D5= 20
+B6= 'NC Density & local incentives' | C6= 10 | D6= 0
+B7= 'Income restrictions' | C7= 20 | D7= 20
+B8= 'Rent restrictions' | C8= 10 | D8= 10
+B9= 'GP/PM experience' | C9= 10 | D9= 10
+B10= 'Housing type' | C10= 10 | D10= 0
+B11= 'Soft resources' | C11= 8 | D11= 8
+B12= 'RTP' | C12= 10 | D12= 10
+B13= 'AFFH' | C13= 10 | D13= 0
+B14= 'Service amenities' | C14= 10 | D14= 10
+B15= 'Cost containment' | C15= 12 | D15= 12
+B16= 'Site amenities' | C16= 10 | D16= 10
+C17: =SUM(C5:C16) -> 120 | D17: =SUM(D5:D16) -> 110
+C18= 'YOP'

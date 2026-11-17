@@ -1,0 +1,32 @@
+B2: =MI_ProjectName&"  |  SCORING SYSTEM" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  SCORING SYSTEM'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+E5= 'PUBLIC BENEFIT' | H5= 'STATE INVESTMENT'
+B6= 'ADJUSTED UNITS' | E6= 'UNIT PRODUCTION' | H6= 'RESOURCES'
+B7= 'Studio' | C7= 0.9 | E7= 'Adjusted Units' | F7= 50000 | H7= 'Allocated Bonds' | I7= 1
+B8= '1 Bedroom' | C8= 1 | E8= 'Maximum AMI' | F8= 0.8 | H8= 'State Tax Credits' | I8= 1
+B9= '2 Bedroom' | C9= 1.25 | H9= 'State Subsidy Loans' | I9= 0
+B10= '3 Bedroom' | C10= 1.5 | H10= 'Local Resources' | I10= 0
+B11= '4+ Bedroom' | C11= 1.75 | E11= 'RENT SAVINGS'
+E12= 'FMR %' | F12= 1
+E13= 'Minimum AMI' | F13= 0.4 | H13= 'ADJUSTMENTS'
+E14= '# of Years' | F14= 15 | H14= 'Prevailing Wages' | I14= 0.15
+E15= 'Rental Subsidy Assumed AMI' | F15= 0.3 | H15= 'Type I Density' | I15= 0.1
+H16= 'Type III Density' | I16= 0.05
+H17= 'Seismic/Environmental' | I17= 0.15
+E18= 'POPULATION' | H18= 'Basis Limit Delta %' | I18= 0.25
+E19= 'Homeless' | F19= 10000
+E20= 'Veterans' | F20= 10000 | G20= 'or'
+E21= 'Other Special Needs' | F21= 10000 | G21= 'or'
+E22= 'Extremely Low' | F22= 20000
+E26= 'LOCATION'
+E27= 'Revitalization' | F27= 20000
+E28= 'TOD Emphasis' | F28= 4000 | G28= 'x TCAC Points'
+E29= 'High Quality Transit' | F29= 25000
+E30= 'Walkable Amenities' | F30= 4000 | G30= 'x Qualifying Amenities'
+E32= 'Highest Resource' | F32= 30000
+E33= 'High Resource' | F33= 20000
+E34= 'Moderate Resource' | F34= 10000
+E35= 'Moderate Resource (Rapidly Changing)' | F35= 10000
+E36= 'HCD Neighborhood Change Maps' | F36= 30000
+E37= 'Low Resource' | F37= 0
+E38= 'High Segregation & Poverty' | F38= 0

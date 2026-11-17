@@ -1,0 +1,55 @@
+A1= 'Site 8: 21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303'
+A2= "Initial 4% LIHTC screen on the firm's underwriting model (339 15th St Rebuild), rerun Nov 5, 2026 with the per-unit market rent rule and reasonableness check. Inputs and sources: 'Site Assessment Inputs' tab."
+A3= 'Status: gap at 4 podium levels (($4.9M) market-capped, +$11.0M max); pencils at 3 podium levels (+$8.6M). Rent check: 15.7% below market per unit vs 22-23% at nearby awards; 3 rows flagged.'
+A5= 'Site' | C5= 'Source / status'
+A6= 'Address' | B6= '21101 Victory Blvd (Warner Square), Canoga Park, CA 91303; APN 2148-031-015' | C6= 'OM'
+A7= 'Lot / zoning' | B7= '65,916 SF (1.51 ac); (WC) Uptown-SN-RIO, Warner Center 2035; no height limit; TOC Tier 3' | C7= 'OM; broker'
+A8= 'Program modeled' | B8= '4-level podium + three 17-story towers (21 stories), 1,017 units (studio 400 / 1 BR 560 / 2 BR 720 SF), 711 spaces (0.70/unit)' | C8= 'Per instruction'
+A9= 'Rents' | B9= 'Lesser of max LIHTC rent (net UA) or 5-mile market rent per unit less 10% (TCAC/CDLAC minimum)' | C9= 'Team email, Nov 2026'
+A10= 'Market rent per unit' | B10= 'Studio $1,854 / 1 BR $1,986 / 2 BR $2,879; less 10% $1,668 / $1,787 / $2,591' | C10= 'Market Rent Survey (63 rows)'
+A11= 'Development cost' | B11= 'Per-SF inputs from 339 San Diego: structures + GC $239.50/SF of building area' | C11= 'Master Inputs rows 345-383'
+A12= 'HUD DDA / QCT' | B12= 'DDA: ZCTA 91303 on HUD 2027 list (effective Jan 1, 2027)' | C12= 'HUD DDA2027M.pdf; user map check'
+A14= 'Results ($0 land)' | B14= 'Market-capped rents' | C14= 'Max rents (reference)' | D14= 'Current model (live)'
+A15= 'Surplus / (gap)' | B15= -4892263.54319924 | C15= 11043373.5090992 | D15: ='Sources & Uses'!E58 -> -4892263.54330367
+A16= 'Units' | B16= 1017 | C16= 1017 | D16: =Program!E64 -> 1017
+A17= 'Total development cost' | B17= 349568088.780653 | C17= 349880393.899458 | D17: ='Sources & Uses'!E26 -> 349568088.780651
+A18= 'Cost per unit' | B18= 343724.767729256 | C18= 344031.852408513 | D18: ='Dev Budget'!E176 -> 343724.767729254
+A19= 'Permanent loan' | B19= 170796282.478416 | C19= 187044224.649519 | D19: ='Sources & Uses'!E47 -> 170796282.47831
+A20= 'Tax credit equity' | B20= 133838968.795869 | C20= 133838968.795869 | D20: ='Sources & Uses'!E46 -> 133838968.795869
+A21= 'Tax-exempt bonds' | B21= 90744000 | C21= 90744000 | D21: ='Sources & Uses'!E30 -> 90744000
+A22= 'Deferred developer fee' | B22= 40040573.9631686 | C22= 40040573.9631686 | D22: ='Sources & Uses'!E52 -> 40040573.9631686
+A23= 'CDLAC tiebreaker' | B23= 2.74567534067444 | C23= 2.74567534067444 | D23: ='CDLAC Score and Tiebreaker'!E145 -> 2.74567534067444
+A24= 'Annual rents, final' | B24= 21262329.192 | C24= 22783095 | D24: ='Rent Builder'!D48 -> 21262329.192
+A25= 'Parking ratio (spaces / unit)' | B25= 0.699115044247788 | D25: ='OpEx & Other Income'!E38/Program!E64 -> 0.699115044247788
+A26= 'Breakeven all-in hard cost, structures + GC ($/SF GBA; San Diego $239.50)' | B26= 230.395946415491 | C26= 260.054026533274
+A27= 'Blue = full model runs. Live column recalculates (saved with rent mode Adjusted).'
+A29= 'Rent reasonableness check (headline)' | B29= 'Units' | C29= 'SF' | D29= 'Our rent' | E29= 'Market / unit' | F29= '% below (unit)' | G29= 'Our $/SF' | H29= 'Market $/SF' | I29= '% below ($/SF)' | J29= 'Flag'
+A30= 'Studio 30% AMI' | B30= 89 | C30= 400 | D30= 850.35 | E30= 1853.75 | F30= 0.541281186783547 | G30= 2.125875 | H30= 3.70817421349336 | I30= 0.426705737755165
+A31= 'Studio 50% AMI' | B31= 13 | C31= 400 | D31= 1433.35 | E31= 1853.75 | F31= 0.226783546864464 | G31= 3.583375 | H31= 3.70817421349336 | I31= 0.0336551645926562
+A32= '1 BR 30% AMI' | B32= 1 | C32= 560 | D32= 903.55 | E32= 1986.04 | F32= 0.545049445126986 | G32= 1.61348214285714 | H32= 2.89932846715328 | I32= 0.443497981985689
+A33= '1 BR 50% AMI' | B33= 89 | C33= 560 | D33= 1528.55 | E33= 1986.04 | F33= 0.230352862983626 | G33= 2.72955357142857 | H33= 2.89932846715328 | I33= 0.0585566270424708
+A34= '1 BR 60% AMI' | B34= 420 | C34= 560 | D34= 1787.436 | E34= 1986.04 | F34= 0.0999999999999999 | G34= 3.19185 | H34= 2.89932846715328 | I34= -0.100892857142857 | J34= 'Rent risk (<15%)'
+A35= '1 BR 70% AMI' | B35= 286 | C35= 560 | D35= 1787.436 | E35= 1986.04 | F35= 0.0999999999999999 | G35= 3.19185 | H35= 2.89932846715328 | I35= -0.100892857142857 | J35= 'Rent risk (<15%)'
+A36= '2 BR 30% AMI' | B36= 12 | C36= 720 | D36= 1080.65 | E36= 2879.03846153846 | F36= 0.624648988043551 | G36= 1.50090277777778 | H36= 2.74281212594963 | I36= 0.452786881180158
+A37= '2 BR 70% AMI' | B37= 103 | C37= 720 | D37= 2579.65 | E37= 2879.03846153846 | F37= 0.103989045487943 | G37= 3.58284722222222 | H37= 2.74281212594963 | I37= -0.306267822110401 | J37= 'Rent risk (<15%)'
+A38= 'Project (weighted, restricted units)' | B38= 1013 | D38= 1749.12217769003 | E38= 2074.09650846685 | F38= 0.156682357571221 | G38= 3.11202185963187 | H38= 2.93452825884749 | I38= -0.0604845430434149
+A39= '8350 Reseda Blvd (CA-26-476): Northridge 91325, ~2.5 mi; 206 units, non-targeted, avg AMI 59.90%, May 2026' | F39= 0.22 | I39= 'not published'
+A40= 'Valleris on Ventura (CA-26-428): Woodland Hills 91364, ~2 mi; 96 units, May 2026' | F40= 0.23 | I40= 'not published'
+A41= "Result: per unit, project rents are 15.7% below market, below the 22-23% of the two nearest 2026 awards; per SF they are 6.0% above market because our units are smaller than the comps. Three rows (809 units) are under 15% below market. Award data: CDLAC/CTCAC staff reports, 'Average targeted affordability is X% below market comparables'."
+A43= 'Alternate cases (full runs)' | B43= 'Units' | C43= 'Market-capped' | D43= 'Max rents'
+A44= 'Headline, $0 land' | B44= 1017 | C44= -4892263.54319924 | D44= 11043373.5090992
+A45= 'At $9.0M land' | B45= 1017 | C45= -14622348.5413416 | D45= 1313963.02736688
+A46= 'At broker price $15.0M' | B46= 1017 | C46= -21109279.2415518 | D46= -5172507.56566513
+A47= 'Without DDA (2026 list)' | B47= 1017 | C47= -36721630.8348518 | D47= -20785947.8850855
+A48= '3 podium + 18 tower floors (0.49/unit)' | B48= 1077 | C48= 8648094.75565499 | D48= 25529393.7517701
+A49= '3 podium + 18, at $9.0M land' | B49= 1077 | C49= -1081384.90227187 | D49= 15800537.2142739
+A50= '2 podium + 19 tower floors (0.29/unit)' | B50= 1137 | C50= 22269559.3223354 | D50= 40089963.919966
+A51= 'Excluding the $900 Bella Vista 1 BR comp' | B51= 1017 | C51= -1276564.6658901 | D51= 11043373.5101553
+A52= 'Flagged rows reset to 15% below market (all types at 15%)' | B52= 1017 | C52= -15424779.4094868
+A53= 'All rows at 22% below market (award level, row by row)' | B53= 1017 | C53= -30380818.9030265
+A54= 'Before: market $/SF less 15% / 10% / 5% (Oct 25 rule), same unit sizes: ($42.5M) market-capped / +$11.0M max.'
+A56= 'Open items'
+A57= '1.' | B57= 'Flagged rows (1 BR 60% and 70%, 2 BR 70%; 809 units) sit only 10% below market. Decide whether to keep them or set rents from market knowledge (15% below market costs about $10.5M).'
+A58= '2.' | B58= 'Per SF our rents exceed market (560 SF 1 BR at $3.19 vs $2.90 comps). Larger units or more studios would lower the per-SF premium.'
+A59= '3.' | B59= 'Comp set mixes older Class C buildings (your rent builder) with newer Class A (Vert, Sofi, Symmetry); one $900 1 BR outlier is included.'
+A60= '4.' | B60= 'Bonds ($91M), tower fit, LA high-rise cost and Housing Element status remain open; DDA relies on the 2027 list.'

@@ -1,0 +1,73 @@
+B2: =MI_ProjectName&"  |  INITIAL SCREEN" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  INITIAL SCREEN'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+B5= 'things cannot link here past initial screening - move things to the assumptions tab'
+B7= 'Number of units' | C7: =Program!E64 -> 1017 | D7: =IF(C7>=200,"passes",IF(AND(C7<200,C7>=135),"maybe","fails")) -> 'passes'
+B8= 'Tiebreaker' | C8: ='CDLAC Score and Tiebreaker'!F129 -> 2.74567534067444 | D8: =IF(C8>MAX(M27:M30),"passes",IF(C8>AVERAGE(M27:M30),"maybe","fails")) -> 'fails' | F8= 'INTAKE'
+B9= 'Rent'
+B10= 'Studio' | C10: =IFERROR(_xlfn.MAXIFS('Unit Mix Summary'!$L:$L,'Unit Mix Summary'!$E:$E, "<>0",'Unit Mix Summary'!$D:$D,B10)/_xlfn.MAXIFS('Unit Mix Summary'!$H:$H,'Unit Mix Summary'!$E:$E, "<>0",'Unit Mix Summary'!$D:$D,B10),"n/a") -> 'n/a' | D10: =IF(ISNUMBER(C10),IF(C10<=(M18+'Rent Builder'!L17/'Rent Builder'!D17),"passes","fails"),"n/a") -> 'n/a'
+B11= '1 BR' | C11: =IFERROR(_xlfn.MAXIFS('Unit Mix Summary'!$L:$L,'Unit Mix Summary'!$E:$E, "<>0",'Unit Mix Summary'!$D:$D,B11)/_xlfn.MAXIFS('Unit Mix Summary'!$H:$H,'Unit Mix Summary'!$E:$E, "<>0",'Unit Mix Summary'!$D:$D,B11),"n/a") -> 'n/a' | D11: =IF(ISNUMBER(C11),IF(C11<=(M19+'Rent Builder'!L24/'Rent Builder'!D24),"passes","fails"),"n/a") -> 'n/a' | H11= 'Proceed (Y/N)' | K11= 'Proceed (Y/N)' | N11= 'Proceed (Y/N)' | Q11= 'Recommend (Y/N)'
+B12= '2 BR' | C12: =IFERROR(_xlfn.MAXIFS('Unit Mix Summary'!$L:$L,'Unit Mix Summary'!$E:$E, "<>0",'Unit Mix Summary'!$D:$D,B12)/_xlfn.MAXIFS('Unit Mix Summary'!$H:$H,'Unit Mix Summary'!$E:$E, "<>0",'Unit Mix Summary'!$D:$D,B12),"n/a") -> 'n/a' | D12: =IF(ISNUMBER(C12),IF(C12<=(M20+'rent builder' #REF!/'rent builder' #REF!),"passes","fails"),"n/a") -> '#VALUE!' | H12= 'Yes' | K12= 'Yes' | N12= 'Yes' | Q12= 'Yes'
+B13= 'Bonds less than 50%' | C13: ='Sources & Uses'!E30 -> 90744000 | D13: =IF(C13<=M34,"passes","fails") -> 'fails' | F13= 'Initial Screen - part 1' | H13= '>>>>>>>>' | I13= 'Initial Screen - part 2' | K13= '>>>>>>>>' | L13= 'Screen Check' | N13= '>>>>>>>>' | O13= 'Max Density check' | Q13= '>>>>>>>>'
+C15= 'Due Dilligence Flowchart' | F15= 'Site Address' | G15: ='Master Inputs'!$E$11 -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303' | I15= 'Step 1 - Site information map' | J15= 'Yes' | L15= 'Step 1 - Check and confirm broker items' | M15= 'Yes' | O15= 'Step 1 - Run Initial max potential density'
+F16= 'Step 1 - Google Map' | G16= 'Yes' | I16= 'Step 2 - Confirm Neighborhood Change and Opportunity' | J16: ='Master Inputs'!$E$337 -> 'Yes' | L16= 'Step 2 - Fill in any information missing from broker.' | M16= 'Yes' | O16= 'Density bonus option 1 strategy - 80% density bonus'
+F17= 'Step 2 - Confirm QCT / DDA' | G17: ='Master Inputs'!$E$176 -> 'DDA' | I17= 'Step 3 - Confirm Resource Type' | J17: ='Master Inputs'!$E$338 -> 'Low Resource' | L17= 'Step 3 - Spot check rent $/SF for studio, 1-bedroom, 2-bedroom.' | M17: =Sensitivities!C36 -> 0 | O17= 'Lot size' | P17: =G18 -> 65916
+F18= 'Step 3 - Confirm lot size' | G18: ='Master Inputs'!$E$30 -> 65916 | H18= 'Total = 79541' | I18= 'Step 4 - Environmental' | L18= '    Studio $/SF' | M18: =IFERROR(INDEX('Comps Summary'!$C$14:$E$14,MATCH("Studio",'Comps Summary'!$C$12:$E$12,0))*(1+$M$17),"n/a") -> 3.70817421349336 | O18= 'Acres' | P18: =P17/43560 -> 1.51322314049587
+F19= 'Step 4 - Land Cost Estimate ($/SF)' | G19= 0 | I19= 'Link 1' | J19= 'No' | L19= '    1-bedroom $/SF' | M19: =IFERROR(INDEX('Comps Summary'!$C$14:$E$14,MATCH("1 BR",'Comps Summary'!$C$12:$E$12,0))*(1+$M$17),"n/a") -> 2.89932846715328 | O19= 'Density' | P19: =J32 -> 1000
+F20= 'Step 5 - Option needed' | G20= 'Yes' | I20= 'Link 2' | J20= 'No' | L20= '    2-bedroom $/SF' | M20: =IFERROR(INDEX('Comps Summary'!$C$14:$E$14,MATCH("2 BR",'Comps Summary'!$C$12:$E$12,0))*(1+$M$17),"n/a") -> 2.74281212594963 | O20= 'Max units prior to FAR' | P20: =P18*P19 -> 1513.22314049587
+F21= 'Step 6 - ED 1 elligible?' | G21= 'No' | I21= 'Link 3' | J21= 'No' | L21= '    3-bedroom $/SF' | M21: =IFERROR(INDEX('Comps Summary'!$C$14:$E$14,MATCH("3 BR",'Comps Summary'!$C$12:$E$12,0))*(1+$M$17),"n/a") -> 'n/a' | O21= 'Density bonus' | P21= 0.8
+F22= 'Step 7 - Site information' | I22= 'link 4' | J22= 'No' | L22= '    Studio Average rent' | M22: =IFERROR(INDEX('Comps Summary'!$C$13:$E$13,MATCH("Studio",'Comps Summary'!$C$12:$E$12,0))*(1+$M$17),"n/a") -> 1853.75 | O22= 'Max units with density bonus option 1' | P22: =ROUNDUP((1+P21)*P20,0) -> 2724
+F23= 'Census Tract:' | G23: ='Master Inputs'!$E$18 -> 0 | I23= 'Step 5 - Confirm if Historic resource' | J23= 'No' | L23= '    1-bedroom Average rent' | M23: =IFERROR(INDEX('Comps Summary'!$C$13:$E$13,MATCH("1 BR",'Comps Summary'!$C$12:$E$12,0))*(1+$M$17),"n/a") -> 1986.04 | O23= 'Lot size' | P23: =P17 -> 65916 | R23= 'Solver sums' | S23= 'Avg SF of units' | T23= 'Large family minums'
+F24= "Assessor's Parcel Number(s):" | G24: ='Master Inputs'!$E$19 -> '2148-031-015' | L24= '    2-bedroom Average rent' | M24: =IFERROR(INDEX('Comps Summary'!$C$13:$E$13,MATCH("2 BR",'Comps Summary'!$C$12:$E$12,0))*(1+$M$17),"n/a") -> 2879.03846153846 | O24= 'FAR' | P24: =J33 -> 10 | Q24= 'Studio' | R24: =IFERROR('Rent Builder'!D12,) -> 400 | S24= 357
+G25: ='Master Inputs'!$E$20 -> 0 | I25= 'Step 6 - Confirm Specific plan / revitalization plan [link]' | J25= 'Yes' | L25= '    3-bedroom Average rent' | M25: =IFERROR(INDEX('Comps Summary'!$C$13:$E$13,MATCH("3 BR",'Comps Summary'!$C$12:$E$12,0))*(1+$M$17),"n/a") -> 'n/a' | O25= 'Max SF' | P25: =P24*P17 -> 659160 | Q25= '1 BR' | R25: ='Rent Builder'!D18 -> 560 | S25= 402 | T25= 'min 450'
+I26= 'Step 7 - Confirm Zoning District' | J26: ='Master Inputs'!$E$21 -> '(WC) Uptown-SN-RIO' | L26= 'Step 4 - Look-up historical scores of region for previous 2 rounds.' | O26= 'Available SF for units' | P26: =IF(P25<0,0,P25) -> 659160 | Q26= '2 BR' | R26: ='Rent Builder'!D25 -> None | S26= 850 | T26= 'min 700'
+I27= 'Step 8 - Confirm Housing Element [Link]' | J27= 'Yes' | L27= 'Highest score of 2025' | M27: =IF(G39="Large Family",SUMIFS(Adjustments!H:H,Adjustments!B:B,$G$37),SUMIFS(Adjustments!I:I,Adjustments!B:B,$G$37)) -> 3.313 | O27= 'Efficiency factor' | P27: =S31 -> 0.1225 | Q27= '3 BR' | R27: ='Rent Builder'!D30 -> None | S27= 1000 | T27= 'min 900'
+B28= ' ' | I28= 'Step 9 - Confirm max height (FAA regulated)' | J28= 165 | O28= 'SF for units' | P28: =(1-P27)*P26 -> 578412.9 | Q28= '4 BR' | R28: ='Rent Builder'!D36 -> None | S28= 1100 | T28= 'min 1100'
+I29= 'Step 10 - Confirm ground floor active space ht' | J29= 12 | O29= 'Average Unit size' | P29: =SUMPRODUCT(Program!E46:E50,Program!D46:D50)/SUM(Program!E46:E50) -> 284961.026653504
+F30= '*Federal Congressional District:' | G30: ='Master Inputs'!$E$22 -> '50' | I30= 'Step 11 - Confirm ground floor residential (if allowed but no height, use 10' | J30= 12 | O30= 'Number of units based on FAR max' | P30: =P28/P29 -> 2.02979651916862 | Q30= '<<< Waive' | S30= 'Solver (purely for test-fit check)'
+F31= '*State Assembly District:' | G31: ='Master Inputs'!$E$23 -> '77' | I31= 'Step 12 - Parking level height above 1st floor' | J31= 10 | L31= 'Step 5 - Look-up allocation availability of region.' | R31= 'efficiency' | S31= 0.1225 | T31= '14% baseline + buffer of 1 unit per floor'
+F32= '*State Senate District:' | G32: ='Master Inputs'!$E$24 -> '39' | I32= 'Step 13 - Confirm dwelling units per acre' | J32= 1000 | L32= '   1st round - geographic pool' | M32= 95000000 | O32= 'Most restrictive of FAR vs du/acre' | P32: =IF(AND(P22>0,P30=0),MAX(P30,P22),IF(AND(P22=0,P30>0),MAX(P30,P22),MIN(P30,P22))) -> 2.02979651916862 | R32= 'Lot coverage' | S32: ='Master Inputs'!$E$31 -> 0.586316886120994
+F33= 'Step 8 - select region' | I33= 'Step 14 - Confirm FAR max' | J33= 10 | L33= '   2nd round - geographic pool' | M33= 111000000
+F34= 'Geographic Area' | G34: ='Master Inputs'!$E$14 -> 'City of Los Angeles' | L34= '   3rd round - geographic pool' | M34: =IF(G39="Large Family",SUMIFS(Adjustments!F:F,Adjustments!B:B,$G$37),SUMIFS(Adjustments!G:G,Adjustments!B:B,$G$37)) -> 46157086 | O34= 'Density bonus option 2 strategy - unlimited density' | S34: =S32*G18 -> 38647.6638655514
+F35= 'CDLAC Region' | G35: ='Master Inputs'!$E$15 -> 'City of Los Angeles' | O35= 'Ground floor height' | P35: =IF($J$30>0,MIN($J$29:$J$30),$J$29) -> 12 | Q35= 'Parking ratio' | S35= 'override parking stories'
+F36= 'County' | G36: ='Master Inputs'!$E$13 -> 'Los Angeles' | O36= 'Floors of parking' | P36: =S36 -> 4 | Q36: ='OpEx & Other Income'!E38/SUM(Program!E46:E56) -> 0.350246305418719 | S36: ='Master Inputs'!$E$33 -> 4
+F37= 'City' | G37: ='Master Inputs'!$E$12 -> 'Los Angeles' | O37= 'Residential floors height' | P37: =IF(ISNUMBER($S$40),MIN(ROUND(($J$28-(P35*1)-J31*(ROUNDUP(P36,0)-1)+IF(J29=11,34,IF(J29=12,35,IF(J29>=13,36,33)))),0),$S$40-(P35*1)-J31*(ROUNDUP(P36,0)-1)),ROUND(($J$28-(P35*1)-J31*(ROUNDUP(P36,0)-1)+IF(J29=11,34,IF(J29=12,35,IF(J29>=13,36,33)))),0)) -> 158 | Q37= 'Ht check'
+F38= 'Opex  regions' | G38: ='Master Inputs'!$E$16 -> 'Los Angeles County' | O38= 'Number of residental floors' | P38: =IF(S38>0,S38,ROUND(P37/10,)) -> 17 | Q38: =P37/ROUND(P38,0) -> 9.29411764705882 | S38: ='Master Inputs'!$E$32 -> 17
+F39= 'Housing type' | G39: ='Master Inputs'!$E$17 -> 'At Risk and Non-Targeted1' | O39= 'Lot coverage' | P39: =S32 -> 0.586316886120994 | S39= 'Max height'
+G40: ='Master Inputs'!$E$339 -> 'Meets High Density Housing Requirement' | O40= 'Residential SF based on lot coverage' | P40: =IF(P32=0,0,P39*$P$17*P38) -> 657010.285714375 | S40= 'none'
+O41= 'Efficiency factor' | P41: =P27 -> 0.1225
+O42= 'SF for units' | P42: =(1-P41)*P40 -> 576526.525714364 | S42= 'Test-fit check numbers'
+O43= 'Average Unit size' | P43: =P29 -> 284961.026653504 | R43= 'SF quick check' | S43: =10302*16 -> 164832
+O44= 'Number of units based on FAR max' | P44: =P42/P43 -> 2.0231767567829 | R44= '# of units check' | S44: =18*16 -> 288 | T44: =S44+48 -> 336
+O45= 'Max units with density bonus option 1' | P45: =ROUNDUP(P44,0)*0+ROUND(P44,0) -> 2
+O47= 'Density bonus option 3 strategy - unlimited density - Prevailing wage, no CEQA - AB2011'
+O48= 'Ground floor height' | P48: =IF($J$30>0,MIN($J$29:$J$30),$J$29) -> 12
+O49= 'Residential floors height' | P49: =IF(ISNUMBER($S$40),MAX(MAX(ROUND((65-P48*P36),0),P37),$S$40-P48*P36),MAX(ROUND((65-P48*P36),0),P37)) -> 158 | Q49= 'Ht check'
+O50= 'Number of residental floors' | P50: =ROUND(P49/10,0) -> 16 | Q50: =P49/P50 -> 9.875
+O51= 'Lot coverage' | P51: =P39 -> 0.586316886120994
+O52= 'Residential SF based on lot coverage' | P52: =P51*$P$17*P50 -> 618362.621848823
+O53= 'Efficiency factor' | P53: =P41 -> 0.1225
+O54= 'SF for units' | P54: =(1-P53)*P52 -> 542613.200672342
+O55= 'Average Unit size' | P55: =P43 -> 284961.026653504
+O56= 'Number of units based on FAR max' | P56: =P54/P55 -> 1.90416635932509
+O57= 'Max units with density bonus option 1' | P57: =ROUNDUP(P56,0) -> 2
+O59= 'Max units - Standard Density bonus' | P59: =MAX(P45,P32) -> 2.02979651916862 | Q59= 'CEQA needed; No prevailing Wage'
+O60= 'Studio' | P60: =P$59*N62 -> 0.216774385542279
+O61= '1 BR' | P61: =P$59*N63 -> 1.81302213362634
+N62: =N67 -> 0.106796116504854 | O62= '2 BR' | P62: =P$59*N64 -> 0
+N63: =1-N62-N64 -> 0.893203883495146
+N64: =N69 -> 0 | O64= 'Max units - Prevailing Wage - No CEQA -  AB 2011' | P64: =P57 -> 2 | Q64= 'No CEQA needed; Prevailing Wage'
+O65= 'Studio' | P65: =P$64*N67 -> 0.213592233009708
+O66= '1 BR' | P66: =P$64*N68 -> 1.78640776699029
+N67: =S70 -> 0.106796116504854 | O67= '2 BR' | P67: =P$64*N69 -> 0
+N68: =1-N67-N69 -> 0.893203883495146
+O69= 'Max -Units' | P69: =P45 -> 2 | S69= 'override units' | T69= 'For family housing' | U69= 'For standard'
+O70= 'Studio' | P70: =P$69*S70 -> 0.213592233009708 | R70= 'studio' | S70= 0.106796116504854 | T70= 'max 20%' | U70= 'max 20%' | W70: =S70+S71 -> 0.892361111111111 | X70= 0.0158730158730159
+O71= '1 BR' | P71: =P$69*S71 -> 1.57112998921251 | Q71: =P71+48 -> 49.5711299892125 | R71= '1 BR' | S71: =1-S72-S70 -> 0.785564994606257 | T71= 'no limit' | U71= 'no limit' | X71= 0.884920634920635
+O72= '2 BR' | P72: =P$69*S72 -> 0.215277777777778 | R72= '2 BR' | S72: =(16*2-1)/S44 -> 0.107638888888889 | T72= 'min 25%' | U72= 'max 10%' | X72= 0.0873015873015873
+O73= '3 BR' | P73: =P$69*S73 -> 0 | R73= '3 BR' | S73= 0 | T73= 'min 25% max 30%' | X73= 0
+O74= '4 BR' | P74: =P$69*S74 -> 0 | R74= '4 BR' | S74= 0 | T74= 'max 10%' | X74= 0
+O76= 'Step 2 - Input into Standard Template v5' | P76= 'Yes'
+O77= 'Step 3 - Confirm project meets minimum critieria: Tiebreaker will be competitive to historical data, number of units, rent $/SF congruance with area.' | P77= 'Yes'
+O78= 'Step 4 - Assign probability of success to win.' | P78= 0.75
+O80= 'Description'
+O81: =CONCATENATE(P38+P36,"-story residential mixed-use buildling ","(",P38, "-stories of residential over ",P36, "-stories of parking)") -> '21-story residential mixed-use buildling (17-stories of residential over 4-stories of parking)'

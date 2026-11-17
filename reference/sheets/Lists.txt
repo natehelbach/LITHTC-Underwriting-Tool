@@ -1,0 +1,49 @@
+B2: =MI_ProjectName&"  |  LISTS" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  LISTS'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+B5= 'Yes' | C5= 'Yes' | D5= 0.04 | E5= 'QCT' | F5= 'Studio' | G5= 'Greater of Calculated / Federal Minimum' | H5= 'A' | I5= 'New Construction' | J5= 'Large Family' | K5= 'Hard Code' | P5= 'Other Toggles - Do NOT Edit'
+B6= 'No' | C6= 'No' | D6= 0.09 | E6= 'DDA' | F6= '1 Bedroom' | G6= 'Calculated (OpEx Builder)' | H6= 'B' | I6= 'Acquisition/Rehabilitation' | J6= 'Special Needs' | K6= 'Auto Calculated'
+B7= 'N/A - Not a California Project' | E7= 'N/A' | F7= '2 Bedroom' | G7= 'Federal Minimum' | H7= 'C' | I7= 'Rehabilitation Only' | J7= 'Single Room Occupancy' | P7= 'Acq Rehab' | Q7: =IF('Master Inputs'!$E$25="Acquisition/Rehabilitation","Yes","No") -> 'No'
+F8= '3 Bedroom' | H8= 'D' | I8= 'Adaptive Reuse' | J8= 'At-Risk' | P8= 'Special Needs' | Q8: =IF('Master Inputs'!$E$26="Special Needs","Yes","No") -> 'No'
+F9= '4 Bedroom' | J9= 'Seniors'
+B10= 'N/A' | J10= 'Rural Acquisition and/or Rehabilitation'
+B11= 'City of Los Angeles' | C11= 'City of Los Angeles' | P11= 'Studio' | Q11= 0.25 | R11= 0 | S11: =ROUNDUP(MIN(R11,'Unit Mix Summary'!$Z$49),0) -> 0
+B12= 'Balance of Los Angeles County' | C12= 'Balance of Los Angeles County' | P12= '1 bd' | Q12= 0 | R12= 0 | S12: =ROUNDUP(MIN(R12,('Unit Mix Summary'!$Z$49-S11)),0) -> 0
+B13= 'Central Valley Region' | C13= 'Central Valley Region: Fresno, Kern, Kings, Madera, Merced, San Joaquin, Stanislaus, and Tulare Counties' | P13= '2 bd' | Q13= 0.25 | R13= 0 | S13: =ROUNDUP(MIN(R13,('Unit Mix Summary'!$Z$49-SUM(S11:S12))),0) -> 0
+B14= 'San Diego County' | C14= 'San Diego County' | P14= '3 bd' | Q14= 0.25 | R14= 0 | S14: =ROUNDUP(MIN(R14,('Unit Mix Summary'!$Z$49-SUM(S11:S13))),0) -> 0
+B15= 'Inland Empire Region' | C15= 'Inland Empire Region: San Bernardino, Riverside, and Imperial Counties' | P15= '4 bd' | Q15: =0 -> 0 | R15: =0 -> 0 | S15: =ROUNDUP(MIN(R15,('Unit Mix Summary'!$Z$49-SUM(S11:S14))),0) -> 0
+B16= 'East Bay Region' | C16= 'East Bay Region: Alameda and Contra Costa Counties' | P16= 'Studio' | Q16= 0 | R16= 0 | S16: =ROUNDUP(MIN(R16,('Unit Mix Summary'!$Z$49-SUM(S11:S15))),0) -> 0
+B17= 'Orange County' | C17= 'Orange County' | P17= '1 bd' | Q17= 0 | R17= 0 | S17: =ROUNDUP(MIN(R17,('Unit Mix Summary'!$Z$49-SUM(S11:S16))),0) -> 0
+B18= 'South and West Bay Region' | C18= 'South and West Bay Region: San Mateo and Santa Clara Counties' | P18= '2 bd' | Q18= 0 | R18= 0 | S18: =ROUNDUP(MIN(R18,('Unit Mix Summary'!$Z$49-SUM(S11:S17))),0) -> 0
+B19= 'Capital Region' | C19= 'Capital Region: El Dorado, Placer, Sacramento, Sutter, Yuba, and Yolo Counties' | P19= '3 bd' | Q19= 0 | R19= 0 | S19: =ROUNDUP(MIN(R19,('Unit Mix Summary'!$Z$49-SUM(S11:S18))),0) -> 0
+B20= 'Central Coast Region' | C20= 'Central Coast Region: Monterey, San Luis Obispo, Santa Barbara, Santa Cruz, and Ventura Counties' | P20= '4 bd' | Q20: =0 -> 0 | R20: =0 -> 0 | S20: =ROUNDUP(MIN(R20,('Unit Mix Summary'!$Z$49-SUM(S11:S19))),0) -> 0
+B21= 'Northern Region' | C21= 'Northern Region: Butte, Marin, Napa, Shasta, Solano, and Sonoma Counties' | P21= 'Studio' | Q21= 0 | R21= 0 | S21: =ROUNDUP(MIN(R21,('Unit Mix Summary'!$Z$49-SUM(S11:S20))),0) -> 0
+B22= 'San Francisco County' | C22= 'San Francisco County' | P22= '1 bd' | Q22= 0 | R22= 0 | S22: =ROUNDUP(MIN(R22,('Unit Mix Summary'!$Z$49-SUM(S11:S21))),0) -> 0
+P23= '2 bd' | Q23= 0 | R23= 0 | S23: =ROUNDUP(MIN(R23,('Unit Mix Summary'!$Z$49-SUM(S11:S22))),0) -> 0
+B24= 'City of Los Angeles' | C24= 'City of Los Angeles' | P24= '3 bd' | Q24= 0 | R24= 0 | S24: =ROUNDUP(MIN(R24,('Unit Mix Summary'!$Z$49-SUM(S11:S23))),0) -> 0
+B25= 'Balance of Los Angeles County' | C25= 'Balance of Los Angeles County' | P25= '4 bd' | Q25: =0 -> 0 | R25: =0 -> 0 | S25: =ROUNDUP(MIN(R25,('Unit Mix Summary'!$Z$49-SUM(S11:S24))),0) -> 0
+B26= 'Bay Area' | C26= 'Bay Area ((Alameda, Contra Costa, Marin, San Francisco, San Mateo, Santa Clara, and Santa Cruz Counties)' | P26= 'Studio' | Q26= 0 | R26= 0 | S26: =ROUNDUP(MIN(R26,('Unit Mix Summary'!$Z$49-SUM(S11:S25))),0) -> 0
+B27= 'Coastal' | C27= 'Coastal (Monterey, Napa, Orange, San Benito, San Diego, San Luis Obispo, Santa Barbara, Sonoma, and Ventura Counties)' | P27= '1 bd' | Q27= 0 | R27= 0 | S27: =ROUNDUP(MIN(R27,('Unit Mix Summary'!$Z$49-SUM(S11:S26))),0) -> 0
+B28= 'Inland' | C28= 'Inland (Fresno, Imperial, Kern, Kings, Madera, Merced, Riverside, San Bernardino, Stanislaus, and Tulare Counties)' | P28= '2 bd' | Q28= 0 | R28= 0 | S28: =ROUNDUP(MIN(R28,('Unit Mix Summary'!$Z$49-SUM(S11:S27))),0) -> 0
+B29= 'Northern ' | C29= 'Northern (Butte, El Dorado, Placer, Sacramento, San Joaquin, Shasta, Solano, Sutter, Yuba, and Yolo Counties)' | P29= '3 bd' | Q29= 0 | R29= 0 | S29: =ROUNDUP(MIN(R29,('Unit Mix Summary'!$Z$49-SUM(S11:S28))),0) -> 0
+B30= 'N/A' | C30= 'N/A' | P30= '4 bd' | Q30: =0 -> 0 | R30: =0 -> 0 | S30: =ROUNDUP(MIN(R30,('Unit Mix Summary'!$Z$49-SUM(S11:S29))),0) -> 0
+P31= 'Studio' | Q31= 0 | R31= 0 | S31: =ROUNDUP(MIN(R31,('Unit Mix Summary'!$Z$49-SUM(S11:S30))),0) -> 0
+B32= 'Highest Resource' | P32= '1 bd' | Q32= 0 | R32= 0 | S32: =ROUNDUP(MIN(R32,('Unit Mix Summary'!$Z$49-SUM(S11:S31))),0) -> 0
+B33= 'High Resource' | P33= '2 bd' | Q33= 0 | R33= 0 | S33: =ROUNDUP(MIN(R33,('Unit Mix Summary'!$Z$49-SUM(S11:S32))),0) -> 0
+B34= 'Moderate Resource' | P34= '3 bd' | Q34= 0 | R34= 0 | S34: =ROUNDUP(MIN(R34,('Unit Mix Summary'!$Z$49-SUM(S11:S33))),0) -> 0
+B35= 'Low Resource' | P35= '4 bd' | Q35: =0 -> 0 | R35: =0 -> 0 | S35: =ROUNDUP(MIN(R35,('Unit Mix Summary'!$Z$49-SUM(S11:S34))),0) -> 0
+B36= 'Missing/Insufficient Data'
+B39= 'Corporation'
+B40= 'General Partnership'
+B41= 'Individual'
+B42= 'Joint Venture'
+B43= 'Limited Partnership'
+B44= 'Local Government'
+B45= 'Nonprofit Organization'
+B46= 'Other'
+B48= 'Large Family'
+B49= 'Senior'
+B50= 'Special Needs'
+B51= 'SRO'
+B52= 'Meets High Density Housing Requirement'
+B53= 'At-Risk Preservation or Other Rehab'
+B54= 'New construction but not a 9% Housing Type'

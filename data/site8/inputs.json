@@ -1,0 +1,2739 @@
+{
+ "source_workbook": "site8_source.xlsx",
+ "inputs": [
+  {
+   "row": 11,
+   "key": "project_name",
+   "section": "Project / Program",
+   "label": "Site address",
+   "segment": null,
+   "value": "21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303"
+  },
+  {
+   "row": 12,
+   "key": "city",
+   "section": "Project / Program",
+   "label": "City",
+   "segment": null,
+   "value": "Los Angeles"
+  },
+  {
+   "row": 13,
+   "key": "county",
+   "section": "Project / Program",
+   "label": "County",
+   "segment": null,
+   "value": "Los Angeles"
+  },
+  {
+   "row": 14,
+   "key": "tcac_geographic_area",
+   "section": "Project / Program",
+   "label": "TCAC geographic area",
+   "segment": null,
+   "value": "City of Los Angeles"
+  },
+  {
+   "row": 15,
+   "key": "cdlac_region",
+   "section": "Project / Program",
+   "label": "CDLAC region",
+   "segment": null,
+   "value": "City of Los Angeles"
+  },
+  {
+   "row": 16,
+   "key": "opex_region",
+   "section": "Project / Program",
+   "label": "OpEx region (federal minimum opex lookup)",
+   "segment": null,
+   "value": "Los Angeles County"
+  },
+  {
+   "row": 17,
+   "key": "housing_type",
+   "section": "Project / Program",
+   "label": "Housing type (CDLAC / opex lookup)",
+   "segment": null,
+   "value": "At Risk and Non-Targeted1"
+  },
+  {
+   "row": 18,
+   "key": "census_tract",
+   "section": "Project / Program",
+   "label": "Census tract",
+   "segment": null,
+   "value": null
+  },
+  {
+   "row": 19,
+   "key": "apn_1",
+   "section": "Project / Program",
+   "label": "APN #1",
+   "segment": null,
+   "value": "2148-031-015"
+  },
+  {
+   "row": 20,
+   "key": "apn_2",
+   "section": "Project / Program",
+   "label": "APN #2",
+   "segment": null,
+   "value": null
+  },
+  {
+   "row": 21,
+   "key": "zoning_district",
+   "section": "Project / Program",
+   "label": "Zoning district",
+   "segment": null,
+   "value": "(WC) Uptown-SN-RIO"
+  },
+  {
+   "row": 22,
+   "key": "federal_congressional_district",
+   "section": "Project / Program",
+   "label": "Federal congressional district",
+   "segment": null,
+   "value": "50"
+  },
+  {
+   "row": 23,
+   "key": "state_assembly_district",
+   "section": "Project / Program",
+   "label": "State assembly district",
+   "segment": null,
+   "value": "77"
+  },
+  {
+   "row": 24,
+   "key": "state_senate_district",
+   "section": "Project / Program",
+   "label": "State senate district",
+   "segment": null,
+   "value": "39"
+  },
+  {
+   "row": 25,
+   "key": "project_type",
+   "section": "Project / Program",
+   "label": "Project type (New Construction / Acq-Rehab / Rehab / Adaptive Reuse)",
+   "segment": null,
+   "value": "New Construction"
+  },
+  {
+   "row": 26,
+   "key": "tcac_housing_type",
+   "section": "Project / Program",
+   "label": "TCAC housing type",
+   "segment": null,
+   "value": "Large Family"
+  },
+  {
+   "row": 27,
+   "key": "land_cost_value",
+   "section": "Project / Program",
+   "label": "Land cost / value (acquisition price)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 28,
+   "key": "improvements_value",
+   "section": "Project / Program",
+   "label": "Improvements (building) value",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 29,
+   "key": "ground_lease",
+   "section": "Project / Program",
+   "label": "Ground lease?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 30,
+   "key": "lot_size",
+   "section": "Project / Program",
+   "label": "Lot size (SF)",
+   "segment": null,
+   "value": 65916
+  },
+  {
+   "row": 31,
+   "key": "lot_coverage_pct",
+   "section": "Project / Program",
+   "label": "Lot coverage %",
+   "segment": null,
+   "value": 0.586316886120994
+  },
+  {
+   "row": 32,
+   "key": "number_of_residential_floors",
+   "section": "Project / Program",
+   "label": "Number of residential floors (override)",
+   "segment": null,
+   "value": 17
+  },
+  {
+   "row": 33,
+   "key": "number_of_parking_floors",
+   "section": "Project / Program",
+   "label": "Number of parking floors (override)",
+   "segment": null,
+   "value": 4
+  },
+  {
+   "row": 34,
+   "key": "rooftop_sf",
+   "section": "Project / Program",
+   "label": "Rooftop SF (override)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 35,
+   "key": "amenity_sf",
+   "section": "Project / Program",
+   "label": "Amenity SF (override)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 36,
+   "key": "residential_sf_override",
+   "section": "Project / Program",
+   "label": "Residential SF override",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 37,
+   "key": "4th_floor_parking_sf",
+   "section": "Project / Program",
+   "label": "4th floor parking SF (override)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 38,
+   "key": "4th_floor_non_parking_sf",
+   "section": "Project / Program",
+   "label": "4th floor non-parking SF (override)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 39,
+   "key": "3rd_floor_parking_sf",
+   "section": "Project / Program",
+   "label": "3rd floor parking SF (override)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 40,
+   "key": "3rd_floor_non_parking_sf",
+   "section": "Project / Program",
+   "label": "3rd floor non-parking SF (override)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 41,
+   "key": "2nd_floor_parking_sf",
+   "section": "Project / Program",
+   "label": "2nd floor parking SF (override)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 42,
+   "key": "2nd_floor_non_parking_sf",
+   "section": "Project / Program",
+   "label": "2nd floor non-parking SF (override)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 43,
+   "key": "ground_floor_parking_sf",
+   "section": "Project / Program",
+   "label": "Ground floor parking SF (override)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 44,
+   "key": "ground_floor_non_parking_sf",
+   "section": "Project / Program",
+   "label": "Ground floor non-parking SF (less commercial & parking) (override)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 45,
+   "key": "non_residential_share_of_cost",
+   "section": "Project / Program",
+   "label": "Non-residential share of cost (cost apportionment)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 46,
+   "key": "parking_spaces",
+   "section": "Project / Program",
+   "label": "Parking spaces (override)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 47,
+   "key": "land_value_sf_of_lot",
+   "section": "Project / Program",
+   "label": "Land value $/SF of lot (land value = lot SF x this, if no override)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 48,
+   "key": "demo_required",
+   "section": "Project / Program",
+   "label": "Demo required (SF)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 49,
+   "key": "commercial_parking_stalls",
+   "section": "Project / Program",
+   "label": "Commercial parking stalls",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 52,
+   "key": "inc_class_a",
+   "section": "Market Comps / Filters",
+   "label": "Include Class A comps?",
+   "segment": null,
+   "value": "YES"
+  },
+  {
+   "row": 53,
+   "key": "inc_class_b",
+   "section": "Market Comps / Filters",
+   "label": "Include Class B comps?",
+   "segment": null,
+   "value": "YES"
+  },
+  {
+   "row": 54,
+   "key": "inc_class_c",
+   "section": "Market Comps / Filters",
+   "label": "Include Class C comps?",
+   "segment": null,
+   "value": "YES"
+  },
+  {
+   "row": 55,
+   "key": "comps_to_include",
+   "section": "Market Comps / Filters",
+   "label": "Comps to include (\"Include = Y only\" / \"All comps\")",
+   "segment": null,
+   "value": "Include = Y only"
+  },
+  {
+   "row": 56,
+   "key": "studio_comp_basis",
+   "section": "Market Comps / Filters",
+   "label": "Studio comp basis",
+   "segment": null,
+   "value": "Studio"
+  },
+  {
+   "row": 57,
+   "key": "studio_limit_basis",
+   "section": "Market Comps / Filters",
+   "label": "Studio LIHTC limit basis",
+   "segment": null,
+   "value": "Studio"
+  },
+  {
+   "row": 60,
+   "key": "rent_mode",
+   "section": "Rent Strategy",
+   "label": "Restricted rent mode",
+   "segment": null,
+   "value": "Adjusted"
+  },
+  {
+   "row": 61,
+   "key": "near_max_30",
+   "section": "Rent Strategy",
+   "label": "Near Max discount to LIHTC max",
+   "segment": "30% AMI",
+   "value": 0
+  },
+  {
+   "row": 62,
+   "key": "near_max_50",
+   "section": "Rent Strategy",
+   "label": "Near Max discount to LIHTC max",
+   "segment": "50% AMI",
+   "value": 0
+  },
+  {
+   "row": 63,
+   "key": "near_max_60",
+   "section": "Rent Strategy",
+   "label": "Near Max discount to LIHTC max",
+   "segment": "60% AMI",
+   "value": 0
+  },
+  {
+   "row": 64,
+   "key": "near_max_70",
+   "section": "Rent Strategy",
+   "label": "Near Max discount to LIHTC max",
+   "segment": "70% AMI",
+   "value": 0.05
+  },
+  {
+   "row": 65,
+   "key": "near_max_80",
+   "section": "Rent Strategy",
+   "label": "Near Max discount to LIHTC max",
+   "segment": "80% AMI",
+   "value": 0.1
+  },
+  {
+   "row": 68,
+   "key": "cuac_reduction_pct",
+   "section": "Rents / Utility Allowances",
+   "label": "CUAC reduction % (utility allowance haircut)",
+   "segment": null,
+   "value": 0.45
+  },
+  {
+   "row": 69,
+   "key": "residential_rent_escalation",
+   "section": "Rents / Utility Allowances",
+   "label": "Residential rent escalation",
+   "segment": null,
+   "value": 0.03
+  },
+  {
+   "row": 70,
+   "key": "pre_stabilization_trending_years",
+   "section": "Rents / Utility Allowances",
+   "label": "Pre-stabilization (2026) trending - years",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 71,
+   "key": "pre_stabilization_trending_rate",
+   "section": "Rents / Utility Allowances",
+   "label": "Pre-stabilization (2026) trending - rate",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 72,
+   "key": "post_award_trending_years",
+   "section": "Rents / Utility Allowances",
+   "label": "Post-award trending - years",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 73,
+   "key": "post_award_trending_rate",
+   "section": "Rents / Utility Allowances",
+   "label": "Post-award trending - rate",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 74,
+   "key": "residential_vacancy",
+   "section": "Rents / Utility Allowances",
+   "label": "Residential vacancy",
+   "segment": null,
+   "value": 0.05
+  },
+  {
+   "row": 75,
+   "key": "commercial_other_income_vacancy",
+   "section": "Rents / Utility Allowances",
+   "label": "Commercial / other-income vacancy",
+   "segment": null,
+   "value": 0.1
+  },
+  {
+   "row": 76,
+   "key": "manager_units_charged_rent",
+   "section": "Rents / Utility Allowances",
+   "label": "Manager units charged rent (count)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 77,
+   "key": "manager_unit_monthly_rent",
+   "section": "Rents / Utility Allowances",
+   "label": "Manager unit monthly rent",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 78,
+   "key": "rent_subsidy",
+   "section": "Rents / Utility Allowances",
+   "label": "Rent subsidy (year 1 $)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 81,
+   "key": "opex_basis",
+   "section": "Operations",
+   "label": "OpEx basis (greater of / calculated / federal minimum)",
+   "segment": null,
+   "value": "Greater of Calculated / Federal Minimum"
+  },
+  {
+   "row": 82,
+   "key": "building_type_for_federal_minimum_opex_lookup",
+   "section": "Operations",
+   "label": "Building type for federal minimum OpEx lookup (\"Elevator\")",
+   "segment": null,
+   "value": "Elevator"
+  },
+  {
+   "row": 83,
+   "key": "contingency",
+   "section": "Operations",
+   "label": "Contingency",
+   "segment": null,
+   "value": "5%"
+  },
+  {
+   "row": 84,
+   "key": "management_fee_pct_of_egi",
+   "section": "Operations",
+   "label": "Management fee % of EGI",
+   "segment": null,
+   "value": 0.03
+  },
+  {
+   "row": 85,
+   "key": "operating_expense_escalation",
+   "section": "Operations",
+   "label": "Operating expense escalation",
+   "segment": null,
+   "value": 0.03
+  },
+  {
+   "row": 86,
+   "key": "replacement_reserve_per_unit_per_year",
+   "section": "Operations",
+   "label": "Replacement reserve per unit per year",
+   "segment": null,
+   "value": 300
+  },
+  {
+   "row": 87,
+   "key": "real_estate_taxes",
+   "section": "Operations",
+   "label": "Real estate taxes (annual $)",
+   "segment": null,
+   "value": 48000
+  },
+  {
+   "row": 88,
+   "key": "real_estate_tax_escalation",
+   "section": "Operations",
+   "label": "Real estate tax escalation",
+   "segment": null,
+   "value": 0.02
+  },
+  {
+   "row": 89,
+   "key": "tenant_resident_services",
+   "section": "Operations",
+   "label": "Tenant / resident services (annual $)",
+   "segment": null,
+   "value": 32100,
+   "excel_formula": "=32100"
+  },
+  {
+   "row": 90,
+   "key": "trustee_fees",
+   "section": "Operations",
+   "label": "Trustee fees (annual $)",
+   "segment": null,
+   "value": 2500
+  },
+  {
+   "row": 93,
+   "key": "parking_rent",
+   "section": "Other Income",
+   "label": "Parking rent ($/space/month)",
+   "segment": null,
+   "value": 100
+  },
+  {
+   "row": 94,
+   "key": "parking_vacancy",
+   "section": "Other Income",
+   "label": "Parking vacancy",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 95,
+   "key": "antenna_leases",
+   "section": "Other Income",
+   "label": "Antenna leases (count)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 96,
+   "key": "antenna_base",
+   "section": "Other Income",
+   "label": "AT&T antenna rent - base ($/month, per 9/20/2023 offer tracker)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 97,
+   "key": "antenna_base_date",
+   "section": "Other Income",
+   "label": "AT&T antenna rent - base date",
+   "segment": null,
+   "value": {
+    "__date__": "2023-09-20T00:00:00"
+   }
+  },
+  {
+   "row": 98,
+   "key": "antenna_esc",
+   "section": "Other Income",
+   "label": "AT&T antenna rent - escalation per step",
+   "segment": null,
+   "value": 0.15
+  },
+  {
+   "row": 99,
+   "key": "antenna_esc_years",
+   "section": "Other Income",
+   "label": "AT&T antenna rent - years between escalations",
+   "segment": null,
+   "value": 5
+  },
+  {
+   "row": 100,
+   "key": "antenna_vacancy",
+   "section": "Other Income",
+   "label": "Antenna vacancy",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 101,
+   "key": "storage_units",
+   "section": "Other Income",
+   "label": "Storage units (override)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 102,
+   "key": "storage_rent",
+   "section": "Other Income",
+   "label": "Storage rent ($/unit/month)",
+   "segment": null,
+   "value": 40
+  },
+  {
+   "row": 103,
+   "key": "storage_vacancy",
+   "section": "Other Income",
+   "label": "Storage vacancy",
+   "segment": null,
+   "value": 0.25
+  },
+  {
+   "row": 104,
+   "key": "laundry_income",
+   "section": "Other Income",
+   "label": "Laundry income ($/unit/month)",
+   "segment": null,
+   "value": 10
+  },
+  {
+   "row": 105,
+   "key": "laundry_vacancy",
+   "section": "Other Income",
+   "label": "Laundry vacancy",
+   "segment": null,
+   "value": 0.05
+  },
+  {
+   "row": 106,
+   "key": "master_service_internet_income",
+   "section": "Other Income",
+   "label": "Master-service internet income ($/unit/month)",
+   "segment": null,
+   "value": 60
+  },
+  {
+   "row": 107,
+   "key": "internet_vacancy",
+   "section": "Other Income",
+   "label": "Internet vacancy",
+   "segment": null,
+   "value": 0.25
+  },
+  {
+   "row": 108,
+   "key": "commercial_rent_escalation",
+   "section": "Other Income",
+   "label": "Commercial rent escalation (applied to parking income)",
+   "segment": null,
+   "value": 0.03
+  },
+  {
+   "row": 109,
+   "key": "vending_machines",
+   "section": "Other Income",
+   "label": "Vending machines ($/unit/month)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 110,
+   "key": "vending_machines_vacancy",
+   "section": "Other Income",
+   "label": "Vending machines vacancy",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 111,
+   "key": "manager_unit_rubs_reimbursement",
+   "section": "Other Income",
+   "label": "Manager unit RUBS reimbursement ($/unit/month)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 112,
+   "key": "manager_unit_rubs_vacancy",
+   "section": "Other Income",
+   "label": "Manager unit RUBS vacancy",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 113,
+   "key": "annual_interest_income",
+   "section": "Other Income",
+   "label": "Annual interest income ($/unit/month)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 114,
+   "key": "interest_income_vacancy",
+   "section": "Other Income",
+   "label": "Interest income vacancy",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 115,
+   "key": "misc_income_applications_late_termination",
+   "section": "Other Income",
+   "label": "Misc income - applications, late, termination ($/unit/month)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 116,
+   "key": "misc_income_vacancy",
+   "section": "Other Income",
+   "label": "Misc income vacancy",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 119,
+   "key": "lease_up_months",
+   "section": "Leasing",
+   "label": "Lease-up period (months)",
+   "segment": null,
+   "value": 12
+  },
+  {
+   "row": 120,
+   "key": "lease_exp_30",
+   "section": "Leasing",
+   "label": "30% AMI lease-up curve exponent (labelled \"Cumulative % preleased\")",
+   "segment": null,
+   "value": 0.6
+  },
+  {
+   "row": 121,
+   "key": "conc_30",
+   "section": "Leasing",
+   "label": "30% AMI concession (months free on new leases)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 122,
+   "key": "lease_exp_50",
+   "section": "Leasing",
+   "label": "50% AMI lease-up curve exponent (labelled \"Cumulative % preleased\")",
+   "segment": null,
+   "value": 0.85
+  },
+  {
+   "row": 123,
+   "key": "conc_50",
+   "section": "Leasing",
+   "label": "50% AMI concession (months free on new leases)",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 124,
+   "key": "lease_exp_60",
+   "section": "Leasing",
+   "label": "60% AMI lease-up curve exponent (labelled \"Cumulative % preleased\")",
+   "segment": null,
+   "value": 1.25
+  },
+  {
+   "row": 125,
+   "key": "conc_60",
+   "section": "Leasing",
+   "label": "60% AMI concession (months free on new leases)",
+   "segment": null,
+   "value": 2
+  },
+  {
+   "row": 126,
+   "key": "lease_exp_70",
+   "section": "Leasing",
+   "label": "70% AMI lease-up curve exponent (labelled \"Cumulative % preleased\")",
+   "segment": null,
+   "value": 1.8
+  },
+  {
+   "row": 127,
+   "key": "conc_70",
+   "section": "Leasing",
+   "label": "70% AMI concession (months free on new leases)",
+   "segment": null,
+   "value": 2
+  },
+  {
+   "row": 128,
+   "key": "pre_opening_start_up_cost_month_2",
+   "section": "Leasing",
+   "label": "Pre-opening start-up cost, month -2",
+   "segment": null,
+   "value": -50000
+  },
+  {
+   "row": 129,
+   "key": "pre_opening_start_up_cost_month_1",
+   "section": "Leasing",
+   "label": "Pre-opening start-up cost, month -1",
+   "segment": null,
+   "value": -75000
+  },
+  {
+   "row": 130,
+   "key": "stab_occ",
+   "section": "Leasing",
+   "label": "Stabilization occupancy",
+   "segment": "Project-wide",
+   "value": 1
+  },
+  {
+   "row": 131,
+   "key": "lease_rent_basis",
+   "section": "Leasing",
+   "label": "Lease-up rent basis",
+   "segment": "Project-wide",
+   "value": "Per-unit"
+  },
+  {
+   "row": 132,
+   "key": "lease_rate_30",
+   "section": "Leasing",
+   "label": "Lease-up rate (share of leasing window to reach stabilization)",
+   "segment": "30% AMI",
+   "value": 0.25
+  },
+  {
+   "row": 133,
+   "key": "lease_lag_30",
+   "section": "Leasing",
+   "label": "Lease-up start lag (months)",
+   "segment": "30% AMI",
+   "value": 0
+  },
+  {
+   "row": 134,
+   "key": "lease_rate_50",
+   "section": "Leasing",
+   "label": "Lease-up rate (share of leasing window to reach stabilization)",
+   "segment": "50% AMI",
+   "value": 0.5
+  },
+  {
+   "row": 135,
+   "key": "lease_lag_50",
+   "section": "Leasing",
+   "label": "Lease-up start lag (months)",
+   "segment": "50% AMI",
+   "value": 0
+  },
+  {
+   "row": 136,
+   "key": "lease_rate_60",
+   "section": "Leasing",
+   "label": "Lease-up rate (share of leasing window to reach stabilization)",
+   "segment": "60% AMI",
+   "value": 0.75
+  },
+  {
+   "row": 137,
+   "key": "lease_lag_60",
+   "section": "Leasing",
+   "label": "Lease-up start lag (months)",
+   "segment": "60% AMI",
+   "value": 0
+  },
+  {
+   "row": 138,
+   "key": "lease_rate_70",
+   "section": "Leasing",
+   "label": "Lease-up rate (share of leasing window to reach stabilization)",
+   "segment": "70% AMI",
+   "value": 1
+  },
+  {
+   "row": 139,
+   "key": "lease_lag_70",
+   "section": "Leasing",
+   "label": "Lease-up start lag (months)",
+   "segment": "70% AMI",
+   "value": 0
+  },
+  {
+   "row": 140,
+   "key": "lease_rate_80",
+   "section": "Leasing",
+   "label": "Lease-up rate (share of leasing window to reach stabilization)",
+   "segment": "80% AMI",
+   "value": 1
+  },
+  {
+   "row": 141,
+   "key": "lease_exp_80",
+   "section": "Leasing",
+   "label": "Lease-up curve exponent",
+   "segment": "80% AMI",
+   "value": 1
+  },
+  {
+   "row": 142,
+   "key": "lease_lag_80",
+   "section": "Leasing",
+   "label": "Lease-up start lag (months)",
+   "segment": "80% AMI",
+   "value": 0
+  },
+  {
+   "row": 143,
+   "key": "conc_80",
+   "section": "Leasing",
+   "label": "Concessions (months free)",
+   "segment": "80% AMI",
+   "value": 0
+  },
+  {
+   "row": 144,
+   "key": "lease_rate_mkt",
+   "section": "Leasing",
+   "label": "Lease-up rate (share of leasing window to reach stabilization)",
+   "segment": "Market",
+   "value": 1
+  },
+  {
+   "row": 145,
+   "key": "lease_exp_mkt",
+   "section": "Leasing",
+   "label": "Lease-up curve exponent",
+   "segment": "Market",
+   "value": 1
+  },
+  {
+   "row": 146,
+   "key": "lease_lag_mkt",
+   "section": "Leasing",
+   "label": "Lease-up start lag (months)",
+   "segment": "Market",
+   "value": 0
+  },
+  {
+   "row": 147,
+   "key": "conc_mkt",
+   "section": "Leasing",
+   "label": "Concessions (months free)",
+   "segment": "Market",
+   "value": 0
+  },
+  {
+   "row": 150,
+   "key": "hard_cost_sf_rooftops",
+   "section": "Development Cost",
+   "label": "Hard cost $/SF - Rooftops",
+   "segment": null,
+   "value": 100
+  },
+  {
+   "row": 151,
+   "key": "hard_cost_sf_amenities",
+   "section": "Development Cost",
+   "label": "Hard cost $/SF - Amenities",
+   "segment": null,
+   "value": 305
+  },
+  {
+   "row": 152,
+   "key": "hard_cost_sf_residential",
+   "section": "Development Cost",
+   "label": "Hard cost $/SF - Residential",
+   "segment": null,
+   "value": 306
+  },
+  {
+   "row": 153,
+   "key": "hard_cost_sf_4th_floor_parking",
+   "section": "Development Cost",
+   "label": "Hard cost $/SF - 4th floor parking",
+   "segment": null,
+   "value": 100
+  },
+  {
+   "row": 154,
+   "key": "hard_cost_sf_4th_floor_non_parking",
+   "section": "Development Cost",
+   "label": "Hard cost $/SF - 4th floor non-parking",
+   "segment": null,
+   "value": 150
+  },
+  {
+   "row": 155,
+   "key": "hard_cost_sf_3rd_floor_parking",
+   "section": "Development Cost",
+   "label": "Hard cost $/SF - 3rd floor parking",
+   "segment": null,
+   "value": 100
+  },
+  {
+   "row": 156,
+   "key": "hard_cost_sf_3rd_floor_non_parking",
+   "section": "Development Cost",
+   "label": "Hard cost $/SF - 3rd floor non-parking",
+   "segment": null,
+   "value": 150
+  },
+  {
+   "row": 157,
+   "key": "hard_cost_sf_2nd_floor_parking",
+   "section": "Development Cost",
+   "label": "Hard cost $/SF - 2nd floor parking",
+   "segment": null,
+   "value": 100
+  },
+  {
+   "row": 158,
+   "key": "hard_cost_sf_2nd_floor_non_parking",
+   "section": "Development Cost",
+   "label": "Hard cost $/SF - 2nd floor non-parking",
+   "segment": null,
+   "value": 150
+  },
+  {
+   "row": 159,
+   "key": "hard_cost_sf_ground_floor_parking",
+   "section": "Development Cost",
+   "label": "Hard cost $/SF - Ground floor parking",
+   "segment": null,
+   "value": 150
+  },
+  {
+   "row": 160,
+   "key": "hard_cost_sf_ground_floor",
+   "section": "Development Cost",
+   "label": "Hard cost $/SF - Ground floor (less commercial & parking)",
+   "segment": null,
+   "value": 225
+  },
+  {
+   "row": 161,
+   "key": "gc_contingency_pct",
+   "section": "Development Cost",
+   "label": "GC contingency % (of H20:H24)",
+   "segment": null,
+   "value": 0.05
+  },
+  {
+   "row": 162,
+   "key": "hard_cost_contingency_pct",
+   "section": "Development Cost",
+   "label": "Hard cost contingency % (of construction less demo)",
+   "segment": null,
+   "value": 0.05
+  },
+  {
+   "row": 163,
+   "key": "soft_cost_contingency_pct",
+   "section": "Development Cost",
+   "label": "Soft cost contingency %",
+   "segment": null,
+   "value": 0.05
+  },
+  {
+   "row": 164,
+   "key": "constr_months",
+   "section": "Development Cost",
+   "label": "Construction period (months)",
+   "segment": null,
+   "value": 18
+  },
+  {
+   "row": 165,
+   "key": "capitalized_operating_reserve",
+   "section": "Development Cost",
+   "label": "Capitalized operating reserve (months of OpEx+reserves+DS)",
+   "segment": null,
+   "value": 3
+  },
+  {
+   "row": 166,
+   "key": "acquisition_closing_costs_pct",
+   "section": "Development Cost",
+   "label": "Acquisition closing costs %",
+   "segment": null,
+   "value": 0.0225
+  },
+  {
+   "row": 167,
+   "key": "property_tax_rate_during_construction",
+   "section": "Development Cost",
+   "label": "Property tax rate during construction",
+   "segment": null,
+   "value": 0.0125
+  },
+  {
+   "row": 168,
+   "key": "performance_bond_premium_pct_of_hard_cost",
+   "section": "Development Cost",
+   "label": "Performance bond premium % of hard cost",
+   "segment": null,
+   "value": 0.008
+  },
+  {
+   "row": 169,
+   "key": "builder_s_risk_insurance_pct",
+   "section": "Development Cost",
+   "label": "Builder's risk insurance %",
+   "segment": null,
+   "value": 0.006
+  },
+  {
+   "row": 170,
+   "key": "contractor_insurance_pct_of_hard_cost",
+   "section": "Development Cost",
+   "label": "Contractor insurance % of hard cost",
+   "segment": null,
+   "value": 0.006
+  },
+  {
+   "row": 171,
+   "key": "tcac_app_allocation_monitoring_fee_per_restricted_unit",
+   "section": "Development Cost",
+   "label": "TCAC app/allocation/monitoring fee per restricted unit",
+   "segment": null,
+   "value": 700
+  },
+  {
+   "row": 172,
+   "key": "marketing_leasing_cost_per_unit",
+   "section": "Development Cost",
+   "label": "Marketing / leasing cost per unit",
+   "segment": null,
+   "value": 1750
+  },
+  {
+   "row": 175,
+   "key": "credit_type",
+   "section": "LIHTC",
+   "label": "Credit type (4% / 9%)",
+   "segment": null,
+   "value": 0.04
+  },
+  {
+   "row": 176,
+   "key": "qct_dda_status",
+   "section": "LIHTC",
+   "label": "QCT / DDA status",
+   "segment": null,
+   "value": "DDA"
+  },
+  {
+   "row": 177,
+   "key": "federal_credit_price",
+   "section": "LIHTC",
+   "label": "Federal credit price ($/credit)",
+   "segment": null,
+   "value": 0.78
+  },
+  {
+   "row": 178,
+   "key": "state_credit_price",
+   "section": "LIHTC",
+   "label": "State credit price ($/credit)",
+   "segment": null,
+   "value": 0.82
+  },
+  {
+   "row": 179,
+   "key": "state_lihtc_available",
+   "section": "LIHTC",
+   "label": "State LIHTC available?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 180,
+   "key": "state_credit_pct_of_basis",
+   "section": "LIHTC",
+   "label": "State credit % of basis",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 181,
+   "key": "parking_excluded_from_eligible_basis",
+   "section": "LIHTC",
+   "label": "Parking excluded from eligible basis?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 182,
+   "key": "high_highest_resource_area",
+   "section": "LIHTC",
+   "label": "High / Highest Resource Area (TCAC/HCD map)?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 183,
+   "key": "tbl_boost_applies_state_or_federal_prevailing_wage",
+   "section": "LIHTC",
+   "label": "TBL boost applies: State or Federal prevailing wage?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 184,
+   "key": "tbl_boost_applies_labor_agreement",
+   "section": "LIHTC",
+   "label": "TBL boost applies: Labor agreement?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 185,
+   "key": "tbl_boost_applies_new_construction_with_structured_parking",
+   "section": "LIHTC",
+   "label": "TBL boost applies: New construction with structured parking?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 186,
+   "key": "tbl_boost_applies_day_care_center",
+   "section": "LIHTC",
+   "label": "TBL boost applies: Day care center?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 187,
+   "key": "tbl_boost_applies_100pct_special_needs",
+   "section": "LIHTC",
+   "label": "TBL boost applies: 100% special needs?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 188,
+   "key": "tbl_boost_applies_95pct_upper_floor_units_served_by_elevator",
+   "section": "LIHTC",
+   "label": "TBL boost applies: 95% upper-floor units served by elevator?",
+   "segment": null,
+   "value": "Yes"
+  },
+  {
+   "row": 189,
+   "key": "tbl_boost_applies_type_i_building",
+   "section": "LIHTC",
+   "label": "TBL boost applies: Type I building?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 190,
+   "key": "tbl_boost_applies_type_iii_building",
+   "section": "LIHTC",
+   "label": "TBL boost applies: Type III building?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 191,
+   "key": "tbl_boost_energy_efficiency_resource_conservation",
+   "section": "LIHTC",
+   "label": "TBL boost: energy efficiency / resource conservation (%)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 192,
+   "key": "tbl_boost_seismic_environmental_mitigation",
+   "section": "LIHTC",
+   "label": "TBL boost: seismic / environmental mitigation ($)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 193,
+   "key": "tbl_boost_development_impact_fees",
+   "section": "LIHTC",
+   "label": "TBL boost: development impact fees ($)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 194,
+   "key": "credit_reduction_pct",
+   "section": "LIHTC",
+   "label": "Credit reduction %",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 195,
+   "key": "voluntary_exclusion_of_eligible_basis_federal",
+   "section": "LIHTC",
+   "label": "Voluntary exclusion of eligible basis - federal ($)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 196,
+   "key": "voluntary_exclusion_state_credits",
+   "section": "LIHTC",
+   "label": "Voluntary exclusion - state credits ($)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 197,
+   "key": "federal_equity_pay_in_pct_at_closing",
+   "section": "LIHTC",
+   "label": "Federal equity pay-in % at closing",
+   "segment": null,
+   "value": 0.15
+  },
+  {
+   "row": 198,
+   "key": "federal_equity_pay_in_pct_at_c_of_o_cost_cert",
+   "section": "LIHTC",
+   "label": "Federal equity pay-in % at C of O / cost cert",
+   "segment": null,
+   "value": 0.35
+  },
+  {
+   "row": 199,
+   "key": "federal_equity_at_8609",
+   "section": "LIHTC",
+   "label": "Federal equity at 8609 ($)",
+   "segment": null,
+   "value": 250000
+  },
+  {
+   "row": 200,
+   "key": "state_equity_pay_in_pct_at_c_of_o",
+   "section": "LIHTC",
+   "label": "State equity pay-in % at C of O",
+   "segment": null,
+   "value": 0.9
+  },
+  {
+   "row": 203,
+   "key": "developer_fee_pct_of_eligible_basis",
+   "section": "Developer Fee",
+   "label": "Developer fee % of eligible basis (and of non-residential basis)",
+   "segment": null,
+   "value": 0.15
+  },
+  {
+   "row": 204,
+   "key": "paid_dev_fee_cap_as_pct_of_perm_loan",
+   "section": "Developer Fee",
+   "label": "Paid dev fee cap as % of perm loan (investor requirement)",
+   "segment": null,
+   "value": 0.03985
+  },
+  {
+   "row": 205,
+   "key": "paid_fee_test_2_5m",
+   "section": "Developer Fee",
+   "label": "Paid fee test (a) - $2.5M",
+   "segment": null,
+   "value": 2500000
+  },
+  {
+   "row": 206,
+   "key": "paid_fee_test_basis_threshold_6_666_667",
+   "section": "Developer Fee",
+   "label": "Paid fee test (b) - basis threshold $6,666,667",
+   "segment": null,
+   "value": 6666667
+  },
+  {
+   "row": 207,
+   "key": "paid_fee_test_pct_of_basis_above_threshold",
+   "section": "Developer Fee",
+   "label": "Paid fee test (b) - % of basis above threshold",
+   "segment": null,
+   "value": 0.05
+  },
+  {
+   "row": 208,
+   "key": "paid_fee_test_plus_1_000_000",
+   "section": "Developer Fee",
+   "label": "Paid fee test (b) - plus $1,000,000",
+   "segment": null,
+   "value": 1000000
+  },
+  {
+   "row": 209,
+   "key": "paid_fee_cap_lesser_of_6m",
+   "section": "Developer Fee",
+   "label": "Paid fee cap - lesser of $6M",
+   "segment": null,
+   "value": 6000000
+  },
+  {
+   "row": 210,
+   "key": "paid_developer_fee_pct_at_closing_award",
+   "section": "Developer Fee",
+   "label": "Paid developer fee % at closing / award",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 211,
+   "key": "paid_developer_fee_pct_at_tco",
+   "section": "Developer Fee",
+   "label": "Paid developer fee % at TCO",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 214,
+   "key": "d1_sizing",
+   "section": "Debt 1 - Primary",
+   "label": "Perm loan sizing mode (\"Auto Calculated\" / \"Hard Code\")",
+   "segment": null,
+   "value": "Auto Calculated"
+  },
+  {
+   "row": 215,
+   "key": "d1_amount",
+   "section": "Debt 1 - Primary",
+   "label": "Perm loan hardcoded amount",
+   "segment": null,
+   "value": 10000000
+  },
+  {
+   "row": 216,
+   "key": "d1_c_rate",
+   "section": "Debt 1 - Primary",
+   "label": "Construction loan rate - tax-exempt",
+   "segment": null,
+   "value": 0.0612
+  },
+  {
+   "row": 217,
+   "key": "d1_c_rate_taxable",
+   "section": "Debt 1 - Primary",
+   "label": "Construction loan rate - taxable",
+   "segment": null,
+   "value": 0.0612
+  },
+  {
+   "row": 218,
+   "key": "d1_p_rate",
+   "section": "Debt 1 - Primary",
+   "label": "Perm loan rate - tax-exempt tranche",
+   "segment": null,
+   "value": 0.0616
+  },
+  {
+   "row": 219,
+   "key": "d1_dscr",
+   "section": "Debt 1 - Primary",
+   "label": "Minimum DSCR",
+   "segment": null,
+   "value": 1.15
+  },
+  {
+   "row": 220,
+   "key": "d1_amort",
+   "section": "Debt 1 - Primary",
+   "label": "Amortization (years)",
+   "segment": null,
+   "value": 40
+  },
+  {
+   "row": 221,
+   "key": "d1_test_year",
+   "section": "Debt 1 - Primary",
+   "label": "Loan term / hold (\"Sale term\", years)",
+   "segment": null,
+   "value": 16
+  },
+  {
+   "row": 222,
+   "key": "d1_name",
+   "section": "Debt 1 - Primary",
+   "label": "Instrument name",
+   "segment": null,
+   "value": "Perm loan (TE + taxable)"
+  },
+  {
+   "row": 223,
+   "key": "d1_include",
+   "section": "Debt 1 - Primary",
+   "label": "Include instrument?",
+   "segment": null,
+   "value": "Yes"
+  },
+  {
+   "row": 224,
+   "key": "d1_structure",
+   "section": "Debt 1 - Primary",
+   "label": "Instrument structure",
+   "segment": null,
+   "value": "Construction-to-Perm"
+  },
+  {
+   "row": 225,
+   "key": "d1_lien",
+   "section": "Debt 1 - Primary",
+   "label": "Lien position",
+   "segment": null,
+   "value": "1st"
+  },
+  {
+   "row": 226,
+   "key": "d1_c_rate_type",
+   "section": "Debt 1 - Primary",
+   "label": "Construction rate type",
+   "segment": "Construction phase",
+   "value": "Fixed"
+  },
+  {
+   "row": 227,
+   "key": "d1_c_spread",
+   "section": "Debt 1 - Primary",
+   "label": "Construction spread (if floating)",
+   "segment": "Construction phase",
+   "value": 0
+  },
+  {
+   "row": 228,
+   "key": "d1_c_int_treat",
+   "section": "Debt 1 - Primary",
+   "label": "Construction interest treatment",
+   "segment": "Construction phase",
+   "value": "Capitalized"
+  },
+  {
+   "row": 229,
+   "key": "d1_p_rate_type",
+   "section": "Debt 1 - Primary",
+   "label": "Permanent rate type",
+   "segment": "Permanent phase",
+   "value": "Blended TE/Taxable"
+  },
+  {
+   "row": 230,
+   "key": "d1_p_spread",
+   "section": "Debt 1 - Primary",
+   "label": "Permanent spread / taxable-tranche add-on",
+   "segment": "Permanent phase",
+   "value": 0.0111
+  },
+  {
+   "row": 231,
+   "key": "d1_io",
+   "section": "Debt 1 - Primary",
+   "label": "Interest-only period (months)",
+   "segment": "Permanent phase",
+   "value": 0
+  },
+  {
+   "row": 232,
+   "key": "d1_amort_type",
+   "section": "Debt 1 - Primary",
+   "label": "Amortization type",
+   "segment": "Permanent phase",
+   "value": "Full"
+  },
+  {
+   "row": 233,
+   "key": "d1_term",
+   "section": "Debt 1 - Primary",
+   "label": "Loan term / maturity (years)",
+   "segment": "Permanent phase",
+   "value": 40
+  },
+  {
+   "row": 234,
+   "key": "d1_ppy",
+   "section": "Debt 1 - Primary",
+   "label": "Payments per year",
+   "segment": "Permanent phase",
+   "value": 12
+  },
+  {
+   "row": 235,
+   "key": "d1_recycled_in_blend",
+   "section": "Debt 1 - Primary",
+   "label": "Recycled bonds included in perm rate blend?",
+   "segment": null,
+   "value": "Yes"
+  },
+  {
+   "row": 238,
+   "key": "d2_name",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Instrument name",
+   "segment": null,
+   "value": "Apple AHF loan"
+  },
+  {
+   "row": 239,
+   "key": "d2_include",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Include instrument?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 240,
+   "key": "d2_structure",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Instrument structure",
+   "segment": null,
+   "value": "Construction-to-Perm"
+  },
+  {
+   "row": 241,
+   "key": "d2_sizing",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Sizing mode",
+   "segment": null,
+   "value": "Hardcode"
+  },
+  {
+   "row": 242,
+   "key": "d2_amount",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Commitment / hardcoded amount",
+   "segment": null,
+   "value": 5000000
+  },
+  {
+   "row": 243,
+   "key": "d2_lien",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Lien position",
+   "segment": null,
+   "value": "2nd"
+  },
+  {
+   "row": 244,
+   "key": "d2_c_rate_type",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Construction rate type",
+   "segment": "Construction phase",
+   "value": "Fixed"
+  },
+  {
+   "row": 245,
+   "key": "d2_c_rate",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Construction fixed rate OR index",
+   "segment": "Construction phase",
+   "value": 0.03
+  },
+  {
+   "row": 246,
+   "key": "d2_c_spread",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Construction spread (if floating)",
+   "segment": "Construction phase",
+   "value": 0
+  },
+  {
+   "row": 247,
+   "key": "d2_c_int_treat",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Construction interest treatment",
+   "segment": "Construction phase",
+   "value": "Capitalized"
+  },
+  {
+   "row": 248,
+   "key": "d2_p_rate_type",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Permanent rate type",
+   "segment": "Permanent phase",
+   "value": "Fixed"
+  },
+  {
+   "row": 249,
+   "key": "d2_p_rate",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Permanent fixed rate OR index",
+   "segment": "Permanent phase",
+   "value": 0.02
+  },
+  {
+   "row": 250,
+   "key": "d2_p_spread",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Permanent spread (if floating)",
+   "segment": "Permanent phase",
+   "value": 0
+  },
+  {
+   "row": 251,
+   "key": "d2_dscr",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Minimum DSCR (Auto sizing)",
+   "segment": "Permanent phase",
+   "value": 1.15
+  },
+  {
+   "row": 252,
+   "key": "d2_io",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Interest-only period (months)",
+   "segment": "Permanent phase",
+   "value": 0
+  },
+  {
+   "row": 253,
+   "key": "d2_amort_type",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Amortization type",
+   "segment": "Permanent phase",
+   "value": "Full"
+  },
+  {
+   "row": 254,
+   "key": "d2_amort",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Amortization period (years)",
+   "segment": "Permanent phase",
+   "value": 20
+  },
+  {
+   "row": 255,
+   "key": "d2_term",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Total loan term incl. construction (years)",
+   "segment": "Permanent phase",
+   "value": 20
+  },
+  {
+   "row": 256,
+   "key": "d2_ppy",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Payments per year",
+   "segment": "Permanent phase",
+   "value": 12
+  },
+  {
+   "row": 257,
+   "key": "d2_orig_rate",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Origination fee (% of commitment)",
+   "segment": "Fees",
+   "value": 0.01
+  },
+  {
+   "row": 258,
+   "key": "d2_orig_min",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Origination fee minimum ($)",
+   "segment": "Fees",
+   "value": 30000
+  },
+  {
+   "row": 259,
+   "key": "d2_app_fee",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Application fee ($, credited against origination)",
+   "segment": "Fees",
+   "value": 15000
+  },
+  {
+   "row": 260,
+   "key": "d2_conv_fee",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Conversion fee ($)",
+   "segment": "Fees",
+   "value": 10000
+  },
+  {
+   "row": 261,
+   "key": "d2_monitor_rate",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Annual monitoring fee (% of commitment)",
+   "segment": "Fees",
+   "value": 0.0015
+  },
+  {
+   "row": 262,
+   "key": "d2_monitor_waive",
+   "section": "Debt 2 - Secondary C-to-P",
+   "label": "Waive monitoring fee?",
+   "segment": "Fees",
+   "value": "No"
+  },
+  {
+   "row": 265,
+   "key": "hcd_0_42pct_debt_service_flag_for_perm_source_row_49",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "\"HCD 0.42%\" debt-service flag for perm source row 49",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 266,
+   "key": "hcd_0_42pct_debt_service_flag_for_perm_source_row_50",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "\"HCD 0.42%\" debt-service flag for perm source row 50",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 267,
+   "key": "hcd_0_42pct_debt_service_flag_for_perm_source_row_51",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "\"HCD 0.42%\" debt-service flag for perm source row 51",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 268,
+   "key": "hcd_0_42pct_debt_service_flag_for_perm_source_row_52",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "\"HCD 0.42%\" debt-service flag for perm source row 52",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 269,
+   "key": "leasehold_seller_carryback_note",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "Leasehold / seller carryback note (construction & perm source)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 270,
+   "key": "seller_carryback_interest_rate",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "Seller carryback interest rate",
+   "segment": null,
+   "value": 0.08
+  },
+  {
+   "row": 271,
+   "key": "gp_loan_note_construction_source",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "GP loan note - construction source ($)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 272,
+   "key": "gp_loan_note_permanent_source",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "GP loan note - permanent source ($)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 273,
+   "key": "d3_name",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "Program / lender",
+   "segment": null,
+   "value": "HCD"
+  },
+  {
+   "row": 274,
+   "key": "d3_include",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "Include instrument?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 275,
+   "key": "d3_amount",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "Committed amount",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 276,
+   "key": "d3_rate",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "Annual payment rate (% of principal)",
+   "segment": null,
+   "value": 0.0042
+  },
+  {
+   "row": 277,
+   "key": "d3_repay",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "Repayment method",
+   "segment": null,
+   "value": "Fixed"
+  },
+  {
+   "row": 278,
+   "key": "d3_term",
+   "section": "Debt 3 - Soft / HCD",
+   "label": "Term / maturity (years)",
+   "segment": null,
+   "value": 55
+  },
+  {
+   "row": 281,
+   "key": "fee_constr_orig",
+   "section": "Debt Fees",
+   "label": "Construction loan origination fee %",
+   "segment": null,
+   "value": 0.0105
+  },
+  {
+   "row": 282,
+   "key": "fee_perm_orig",
+   "section": "Debt Fees",
+   "label": "Perm loan origination fee %",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 285,
+   "key": "constr_close",
+   "section": "Construction Financing / FOF",
+   "label": "Construction closing / start date",
+   "segment": null,
+   "value": {
+    "__date__": "2027-03-01T08:00:00"
+   }
+  },
+  {
+   "row": 286,
+   "key": "construction_start",
+   "section": "Construction Financing / FOF",
+   "label": "Construction start (months after closing)",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 287,
+   "key": "c_of_o_cost_cert",
+   "section": "Construction Financing / FOF",
+   "label": "C of O & cost cert (months after completion)",
+   "segment": null,
+   "value": 2
+  },
+  {
+   "row": 288,
+   "key": "stabilization_period",
+   "section": "Construction Financing / FOF",
+   "label": "Stabilization period (months after lease-up)",
+   "segment": null,
+   "value": 3
+  },
+  {
+   "row": 289,
+   "key": "conversion",
+   "section": "Construction Financing / FOF",
+   "label": "Conversion (months after stabilization)",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 290,
+   "key": "8609",
+   "section": "Construction Financing / FOF",
+   "label": "8609 (months after conversion)",
+   "segment": null,
+   "value": 6
+  },
+  {
+   "row": 291,
+   "key": "te_bond_amount",
+   "section": "Construction Financing / FOF",
+   "label": "Tax-exempt construction loan (bond) amount",
+   "segment": null,
+   "value": 90744000,
+   "excel_formula": "=IF($E$382=\"% of aggregate basis\",ROUND($E$303*'Financing & Debt Sizing'!D181,-3),$E$383)"
+  },
+  {
+   "row": 292,
+   "key": "recycled_yn",
+   "section": "Construction Financing / FOF",
+   "label": "Recycled bonds?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 293,
+   "key": "recycled_pct",
+   "section": "Construction Financing / FOF",
+   "label": "Recycled bonds % of TDC",
+   "segment": null,
+   "value": 0.08
+  },
+  {
+   "row": 294,
+   "key": "equity_funding_lag_after_closing",
+   "section": "Construction Financing / FOF",
+   "label": "Equity funding lag after closing (months)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 295,
+   "key": "equity_funding_lag_after_c_of_o_cost_cert",
+   "section": "Construction Financing / FOF",
+   "label": "Equity funding lag after C of O / cost cert (months)",
+   "segment": null,
+   "value": 7
+  },
+  {
+   "row": 296,
+   "key": "equity_funding_lag_after_conversion",
+   "section": "Construction Financing / FOF",
+   "label": "Equity funding lag after conversion (months)",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 297,
+   "key": "equity_funding_lag_after_8609",
+   "section": "Construction Financing / FOF",
+   "label": "Equity funding lag after 8609 (months)",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 298,
+   "key": "s_curve_steepness",
+   "section": "Construction Financing / FOF",
+   "label": "S-curve steepness (draw schedule)",
+   "segment": null,
+   "value": 3
+  },
+  {
+   "row": 299,
+   "key": "rent_from_previous_commercial_ops_available_during_construct",
+   "section": "Construction Financing / FOF",
+   "label": "Rent from previous commercial ops available during construction?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 300,
+   "key": "cell_tower_noi_available_during_construction",
+   "section": "Construction Financing / FOF",
+   "label": "Cell tower NOI available during construction?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 301,
+   "key": "application_adjustment_factor_available_during_construction",
+   "section": "Construction Financing / FOF",
+   "label": "Application adjustment factor available during construction?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 302,
+   "key": "noi_residual_from_commercial_space_already_received",
+   "section": "Construction Financing / FOF",
+   "label": "NOI residual from commercial space already received ($)",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 303,
+   "key": "bond_ratio",
+   "section": "Construction Financing / FOF",
+   "label": "Bond ratio (% of aggregate basis) - reference only, does not size bonds",
+   "segment": null,
+   "value": 0.275
+  },
+  {
+   "row": 306,
+   "key": "replacement_reserve_escalation",
+   "section": "Operating Cash Flow / Waterfall",
+   "label": "Replacement reserve escalation",
+   "segment": null,
+   "value": 0.03
+  },
+  {
+   "row": 307,
+   "key": "service_amenities_escalation",
+   "section": "Operating Cash Flow / Waterfall",
+   "label": "Service amenities escalation",
+   "segment": null,
+   "value": 0.03
+  },
+  {
+   "row": 308,
+   "key": "investor_asset_management_fee",
+   "section": "Operating Cash Flow / Waterfall",
+   "label": "Investor asset management fee (yr 1 $)",
+   "segment": null,
+   "value": 7500
+  },
+  {
+   "row": 309,
+   "key": "investor_asset_management_fee_escalation",
+   "section": "Operating Cash Flow / Waterfall",
+   "label": "Investor asset management fee escalation",
+   "segment": null,
+   "value": 0.03
+  },
+  {
+   "row": 310,
+   "key": "partnership_management_fee",
+   "section": "Operating Cash Flow / Waterfall",
+   "label": "Partnership management fee (yr 1 $)",
+   "segment": null,
+   "value": 25000
+  },
+  {
+   "row": 311,
+   "key": "partnership_management_fee_escalation",
+   "section": "Operating Cash Flow / Waterfall",
+   "label": "Partnership management fee escalation",
+   "segment": null,
+   "value": 0.03
+  },
+  {
+   "row": 312,
+   "key": "residual_cash_flow_share_to_investor",
+   "section": "Operating Cash Flow / Waterfall",
+   "label": "Residual cash flow share to investor (years ~6-18)",
+   "segment": null,
+   "value": 0.9
+  },
+  {
+   "row": 313,
+   "key": "profit_share_pct",
+   "section": "Operating Cash Flow / Waterfall",
+   "label": "Profit share %",
+   "segment": null,
+   "value": 0.075
+  },
+  {
+   "row": 316,
+   "key": "exit_cap_rate",
+   "section": "Sale / Returns",
+   "label": "Exit cap rate",
+   "segment": null,
+   "value": 0.065
+  },
+  {
+   "row": 317,
+   "key": "net_sale_proceeds_factor",
+   "section": "Sale / Returns",
+   "label": "Net sale proceeds factor (1 - cost of sale)",
+   "segment": null,
+   "value": 0.97
+  },
+  {
+   "row": 318,
+   "key": "discount_rate_owow_wacc",
+   "section": "Sale / Returns",
+   "label": "Discount rate / oWOW WACC (NPV)",
+   "segment": null,
+   "value": 0.12
+  },
+  {
+   "row": 319,
+   "key": "equity_investment",
+   "section": "Sale / Returns",
+   "label": "Equity investment (year 1)",
+   "segment": null,
+   "value": -2200000
+  },
+  {
+   "row": 320,
+   "key": "equity_investment_in_15_yr_irr_row",
+   "section": "Sale / Returns",
+   "label": "Equity investment in 15-yr IRR row",
+   "segment": null,
+   "value": -2200000
+  },
+  {
+   "row": 321,
+   "key": "owow_equity",
+   "section": "Sale / Returns",
+   "label": "oWOW equity (oWOW returns block)",
+   "segment": null,
+   "value": -2200000
+  },
+  {
+   "row": 322,
+   "key": "discount_rate_for_5_yr_npv_block",
+   "section": "Sale / Returns",
+   "label": "Discount rate for 5-yr NPV block",
+   "segment": null,
+   "value": 0.2
+  },
+  {
+   "row": 323,
+   "key": "discount_rate_for_owow_5_yr_npv_block",
+   "section": "Sale / Returns",
+   "label": "Discount rate for oWOW 5-yr NPV block",
+   "segment": null,
+   "value": 0.2
+  },
+  {
+   "row": 324,
+   "key": "equity_preconstruction",
+   "section": "Sale / Returns",
+   "label": "Equity preconstruction ($)",
+   "segment": null,
+   "value": 2200000
+  },
+  {
+   "row": 325,
+   "key": "preferred_return_rate",
+   "section": "Sale / Returns",
+   "label": "Preferred return rate",
+   "segment": null,
+   "value": 0.08
+  },
+  {
+   "row": 328,
+   "key": "prevailing_wage",
+   "section": "Scoring / Application",
+   "label": "Prevailing wage?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 329,
+   "key": "type_3a_construction",
+   "section": "Scoring / Application",
+   "label": "Type 3A construction?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 330,
+   "key": "type_1a_construction",
+   "section": "Scoring / Application",
+   "label": "Type 1A construction?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 331,
+   "key": "within_1_2_mile_of_grocery",
+   "section": "Scoring / Application",
+   "label": "Within 1/2 mile of grocery (25k SF)",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 332,
+   "key": "within_1_2_mile_of_library",
+   "section": "Scoring / Application",
+   "label": "Within 1/2 mile of library",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 333,
+   "key": "within_1_2_mile_of_school",
+   "section": "Scoring / Application",
+   "label": "Within 1/2 mile of school",
+   "segment": null,
+   "value": 0
+  },
+  {
+   "row": 334,
+   "key": "within_1_2_mile_of_hospital_clinic",
+   "section": "Scoring / Application",
+   "label": "Within 1/2 mile of hospital / clinic",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 335,
+   "key": "within_1_2_mile_of_pharmacy",
+   "section": "Scoring / Application",
+   "label": "Within 1/2 mile of pharmacy",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 336,
+   "key": "within_1_2_mile_of_public_park",
+   "section": "Scoring / Application",
+   "label": "Within 1/2 mile of public park",
+   "segment": null,
+   "value": 1
+  },
+  {
+   "row": 337,
+   "key": "neighborhood_change_area",
+   "section": "Scoring / Application",
+   "label": "Neighborhood change area?",
+   "segment": null,
+   "value": "Yes"
+  },
+  {
+   "row": 338,
+   "key": "opportunity_resource_area_type",
+   "section": "Scoring / Application",
+   "label": "Opportunity / resource area type",
+   "segment": null,
+   "value": "Low Resource"
+  },
+  {
+   "row": 339,
+   "key": "cdlac_housing_type_high_density_flag",
+   "section": "Scoring / Application",
+   "label": "CDLAC housing type / high-density flag",
+   "segment": null,
+   "value": "Meets High Density Housing Requirement"
+  },
+  {
+   "row": 340,
+   "key": "rural_set_aside",
+   "section": "Scoring / Application",
+   "label": "Rural set-aside?",
+   "segment": null,
+   "value": "No"
+  },
+  {
+   "row": 341,
+   "key": "manager_unit",
+   "section": "Scoring / Application",
+   "label": "Manager unit?",
+   "segment": null,
+   "value": "Yes"
+  },
+  {
+   "row": 342,
+   "key": "minimum_set_aside_election",
+   "section": "Scoring / Application",
+   "label": "Minimum set-aside election",
+   "segment": null,
+   "value": "40%/60% Average Income"
+  },
+  {
+   "row": 343,
+   "key": "cdlac_points",
+   "section": "Scoring / Application",
+   "label": "CDLAC points (reported - typed in source, not calculated)",
+   "segment": null,
+   "value": 111
+  },
+  {
+   "row": 346,
+   "key": "title_escrow_closing_sf_of_lot",
+   "section": "Development Cost / SF",
+   "label": "Title/Escrow/Closing",
+   "segment": "$/SF of lot",
+   "value": 4.29497045752954
+  },
+  {
+   "row": 347,
+   "key": "off_site_improvements_sf_of_lot",
+   "section": "Development Cost / SF",
+   "label": "Off-Site Improvements",
+   "segment": "$/SF of lot",
+   "value": 15.1499848500152
+  },
+  {
+   "row": 348,
+   "key": "demolition_sf_of_lot",
+   "section": "Development Cost / SF",
+   "label": "Demolition",
+   "segment": "$/SF of lot",
+   "value": 7.57499242500758
+  },
+  {
+   "row": 349,
+   "key": "site_work_landscape_surface_parking_sf_of_lot",
+   "section": "Development Cost / SF",
+   "label": "Site Work/ Landscape / Surface Parking",
+   "segment": "$/SF of lot",
+   "value": 42.9249570750429
+  },
+  {
+   "row": 350,
+   "key": "structures_residential_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Structures - Residential",
+   "segment": "$/SF of gross building area",
+   "value": 201.594637882618
+  },
+  {
+   "row": 351,
+   "key": "gc_general_conditions_profit_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "GC - General Conditions & Profit",
+   "segment": "$/SF of gross building area",
+   "value": 3.77798697387759
+  },
+  {
+   "row": 352,
+   "key": "gc_overhead_profit_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "GC - Overhead & Profit",
+   "segment": "$/SF of gross building area",
+   "value": 21.6139887732047
+  },
+  {
+   "row": 353,
+   "key": "gc_contingency_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "GC Contingency",
+   "segment": "$/SF of gross building area",
+   "value": 12.513361921329
+  },
+  {
+   "row": 354,
+   "key": "architect_fees_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Architect Fees",
+   "segment": "$/SF of gross building area",
+   "value": 6.29105857305728
+  },
+  {
+   "row": 355,
+   "key": "survey_and_engineering_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Survey and Engineering",
+   "segment": "$/SF of gross building area",
+   "value": 5.31576556877032
+  },
+  {
+   "row": 356,
+   "key": "construction_lender_legal_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Construction Lender Legal",
+   "segment": "$/SF of gross building area",
+   "value": 0.510028241473475
+  },
+  {
+   "row": 357,
+   "key": "perm_related_legal_and_misc_fees_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Perm Related Legal and misc fees",
+   "segment": "$/SF of gross building area",
+   "value": 0.0944496743469398
+  },
+  {
+   "row": 358,
+   "key": "construction_third_party_and_due_dilligence_fees_sf_of_gross",
+   "section": "Development Cost / SF",
+   "label": "Construction third party and due dilligence fees",
+   "segment": "$/SF of gross building area",
+   "value": 0.283349023040819
+  },
+  {
+   "row": 359,
+   "key": "syndicator_legal_fees_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Syndicator legal fees",
+   "segment": "$/SF of gross building area",
+   "value": 0.377798697387759
+  },
+  {
+   "row": 360,
+   "key": "construction_applicant_legal_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Construction applicant legal",
+   "segment": "$/SF of gross building area",
+   "value": 0.566698046081639
+  },
+  {
+   "row": 361,
+   "key": "perm_applicant_legal_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Perm applicant legal",
+   "segment": "$/SF of gross building area",
+   "value": 0.0944496743469398
+  },
+  {
+   "row": 362,
+   "key": "taxes_during_construction_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Taxes During Construction",
+   "segment": "$/SF of gross building area",
+   "value": 0.0796919127302304
+  },
+  {
+   "row": 363,
+   "key": "performance_bond_premium_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Performance Bond Premium",
+   "segment": "$/SF of gross building area",
+   "value": 2.04365048859495
+  },
+  {
+   "row": 364,
+   "key": "title_and_recording_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Title and Recording",
+   "segment": "$/SF of gross building area",
+   "value": 0.283349023040819
+  },
+  {
+   "row": 365,
+   "key": "builders_risk_insurance_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Builders Risk Insurance",
+   "segment": "$/SF of gross building area",
+   "value": 1.13339609216328
+  },
+  {
+   "row": 366,
+   "key": "contractor_insurance_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Contractor Insurance",
+   "segment": "$/SF of gross building area",
+   "value": 1.8889934869388
+  },
+  {
+   "row": 367,
+   "key": "title_and_recording_sf_of_gross_building_area_r367",
+   "section": "Development Cost / SF",
+   "label": "Title and Recording",
+   "segment": "$/SF of gross building area",
+   "value": 0.0566698046081639
+  },
+  {
+   "row": 368,
+   "key": "school_impact_fees_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "School Impact Fees",
+   "segment": "$/SF of gross building area",
+   "value": 4.20011448496802
+  },
+  {
+   "row": 369,
+   "key": "other_impact_fees_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Other Impact Fees",
+   "segment": "$/SF of gross building area",
+   "value": 1.0895714432663
+  },
+  {
+   "row": 370,
+   "key": "building_permit_plan_check_other_fees_sf_of_gross_building_a",
+   "section": "Development Cost / SF",
+   "label": "Building Permit, Plan Check, Other Fees",
+   "segment": "$/SF of gross building area",
+   "value": 5.11299534090184
+  },
+  {
+   "row": 371,
+   "key": "capital_fees_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Capital Fees (utility fee & hook-up charges)",
+   "segment": "$/SF of gross building area",
+   "value": 7.41069863684997
+  },
+  {
+   "row": 372,
+   "key": "environmental_reports_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Environmental Reports",
+   "segment": "$/SF of gross building area",
+   "value": 0.0755597394775518
+  },
+  {
+   "row": 373,
+   "key": "market_study_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Market Study",
+   "segment": "$/SF of gross building area",
+   "value": 0.0566698046081639
+  },
+  {
+   "row": 374,
+   "key": "tcac_app_alloc_monitor_fees_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "TCAC App/Alloc/Monitor Fees",
+   "segment": "$/SF of gross building area",
+   "value": 0.80924480980458
+  },
+  {
+   "row": 375,
+   "key": "cdlac_fees_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "CDLAC Fees",
+   "segment": "$/SF of gross building area",
+   "value": 0.487623417131875
+  },
+  {
+   "row": 376,
+   "key": "financial_consultant_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Financial Consultant",
+   "segment": "$/SF of gross building area",
+   "value": 0.245569153302043
+  },
+  {
+   "row": 377,
+   "key": "cost_cert_accounting_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Cost Cert / Accounting",
+   "segment": "$/SF of gross building area",
+   "value": 0.113339609216328
+  },
+  {
+   "row": 378,
+   "key": "construction_management_services_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Construction management services",
+   "segment": "$/SF of gross building area",
+   "value": 0.40802259317878
+  },
+  {
+   "row": 379,
+   "key": "partnership_start_up_fee_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Partnership Start-up Fee",
+   "segment": "$/SF of gross building area",
+   "value": 0.0944496743469398
+  },
+  {
+   "row": 380,
+   "key": "soft_cost_contingency_sf_of_gross_building_area",
+   "section": "Development Cost / SF",
+   "label": "Soft Cost Contingency",
+   "segment": "$/SF of gross building area",
+   "value": 0.821712166818376
+  },
+  {
+   "row": 381,
+   "key": "residential_sf_adjustment",
+   "section": "Development Cost / SF",
+   "label": "Residential SF adjustment (339 plan plug; 0 for new sites)",
+   "segment": "SF",
+   "value": 0
+  },
+  {
+   "row": 382,
+   "key": "tax_exempt_bond_sizing_method",
+   "section": "Construction Financing / FOF",
+   "label": "Tax-exempt bond sizing method",
+   "segment": null,
+   "value": "% of aggregate basis"
+  },
+  {
+   "row": 383,
+   "key": "tax_exempt_bond_amount_typed",
+   "section": "Construction Financing / FOF",
+   "label": "Tax-exempt bond amount, typed",
+   "segment": null,
+   "value": 30880581.6
+  },
+  {
+   "row": 386,
+   "key": "market_discount_studio_pct_below_market_rent_per_unit",
+   "section": "Rents / Rent Builder",
+   "label": "Market discount, Studio",
+   "segment": "% below market rent per unit",
+   "value": 0.1
+  },
+  {
+   "row": 387,
+   "key": "market_discount_1_br_pct_below_market_rent_per_unit",
+   "section": "Rents / Rent Builder",
+   "label": "Market discount, 1 BR",
+   "segment": "% below market rent per unit",
+   "value": 0.1
+  },
+  {
+   "row": 388,
+   "key": "market_discount_2_br_pct_below_market_rent_per_unit",
+   "section": "Rents / Rent Builder",
+   "label": "Market discount, 2 BR",
+   "segment": "% below market rent per unit",
+   "value": 0.1
+  },
+  {
+   "row": 389,
+   "key": "market_discount_3_br_pct_below_market_rent_per_unit",
+   "section": "Rents / Rent Builder",
+   "label": "Market discount, 3 BR",
+   "segment": "% below market rent per unit",
+   "value": 0.1
+  }
+ ]
+}

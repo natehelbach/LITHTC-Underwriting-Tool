@@ -1,0 +1,21 @@
+B2: =MI_ProjectName&"  |  BASECASE ANALYSIS" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  BASECASE ANALYSIS'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+B29= 'Old Stale Version'
+C31= 'Base Case - Current' | D31= 'Total gross' | E31= '$/SF' | F31= 'Min projected to be used' | G31= 'Shortfall / Surplus' | H31= 'Notes'
+C32= 'Proposed Rents' | D32: ='Rent Builder'!D47 -> 21262329.192 | E32: ='Rent Builder'!P44 -> 0 | G32: ='Sources & Uses'!$E$58 -> -4892263.54330367 | H32= 'rents based on internal adjustments'
+C33= 'Max Rents LIHTC' | D33: ='Rent Builder'!L44 -> 1898591.25 | E33: ='Rent Builder'!M44 -> 0
+C34= 'Market Rents' | D34: ='Rent Builder'!R44 -> 0 | E34: ='Rent Builder'!S44 -> 0 | H34= 'market comps average taken 9/15/2026'
+C35= '% under max allowed' | D35: =IFERROR(1-D32/D$33,"n/a") -> -10.1990030460743 | E35: =IFERROR(1-E32/E$33,"n/a") -> 'n/a'
+C36= '% under market' | D36: =IFERROR(1-D32/D$34,"n/a") -> 'n/a' | E36: =IFERROR(1-E32/E$34,"n/a") -> 'n/a'
+C38= 'Leasing Revenue Projected' | D38: =Leasing!C89 -> 8765191.54476085 | F38: =-D38*0.25 -> -2191297.88619021 | G38: =F38+D38 -> 6573893.65857064 | H38= 'debt service is capitalized so this would go to partnership; assumes 75% of projection'
+C39= 'Owner Contingency' | D39: ='Dev Budget'!H39 -> 11216476.8395493 | F39: =-D39*1 -> -11216476.8395493 | G39: =F39+D39 -> 0 | H39= 'assumes no contingency left'
+C40= '1x rent bump out of 3 potential' | D40= 2393732.00294346 | F40= 0 | G40: =D40+F40 -> 2393732.00294346 | H40= '3 potential timelines for rent bumps. This assumes we achieve one 3% rent bump over 3 years'
+C42= 'Amount left over' | G42: =SUM(G32:G40) -> 4075362.11821043 | H42= 'Surplus funds from above pots of funding'
+C44= 'Current developer fee' | G44: ='LIHTC & Dev Fee'!H173 -> 7424980.20737524 | H44= 'current developer fee modelled - 50% goes to new capital partner'
+C45= 'Developer Fee remaining out of program max allowed' | G45: =IF(G42<0,G42,0) -> 0 | H45= 'Can increase based on projected surplus above - 50% goes to new capital partner'
+C47= 'Amount left over after max development fee' | G47: =G42-G45 -> 4075362.11821043 | H47= 'Surplus funds after max development fee'
+C49= 'Leasehold Loan'
+C50= 'Curent Leasehold remaining in deal' | G50: =-'Sources & Uses'!E40 -> 0 | H50= 'Common equity, oWOW loans / contributions / Gardner Interest; remains in deal as leasehold at close'
+C51= 'left over surplus funds post dev fee' | G51: =G47 -> 4075362.11821043
+C52= 'Savings from construction interest from apple funding' | G52= 370700 | H52= '<< savings from apple funding loan'
+C53= 'Amount of leasehold left in the deal at close' | G53: =SUM(G50:G52) -> 4446062.11821043

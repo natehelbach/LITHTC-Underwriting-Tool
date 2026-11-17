@@ -1,0 +1,51 @@
+B2: =MI_ProjectName&"  |  PROGRAM" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  PROGRAM'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+B5= 'BUILD PROGRAM'
+B6= 'Physical program only. Inputs (SF overrides, lot size, floors, parking override) live on Master Inputs.'
+B7= 'SITE'
+B8= 'Site Area (Acres)' | C8: ='Initial Screen'!G18/43560 -> 1.51322314049587
+B9= 'Site Area (Sq Ft)' | C9: =IFERROR(C8*43560,0) -> 65916
+B11= 'GROSS FLOOR AREA BY USE'
+B12= 'Use' | C12= 'SF' | D12= '% of floor'
+B13= 'Rooftops' | C13: =IF('Master Inputs'!$E$34>0,'Master Inputs'!$E$34,3000) -> 3000
+B14= 'Amenities' | C14: =IF('Master Inputs'!$E$35>0,'Master Inputs'!$E$35,3000) -> 3000
+B15= 'Residential' | C15: =IF('Master Inputs'!$E$36>0,'Master Inputs'!$E$36,'Initial Screen'!P40-C14+'Master Inputs'!$E$381) -> 654010.285714375
+B16= 'Fourth Floor Parking' | C16: =IF('Master Inputs'!$E$37>0,'Master Inputs'!$E$37,IF('Initial Screen'!P36>3,IF('Initial Screen'!P36>3,'Initial Screen'!P17*(1-(ROUNDUP('Initial Screen'!P36,0)-'Initial Screen'!P36)/(IF(AND('Initial Screen'!P36>2,'Initial Screen'!P36<3),2,IF(AND('Initial Screen'!P36>3,'Initial Screen'!P36<4),3,IF(AND('Initial Screen'!P36>4,'Initial Screen'!P36<5),4,1))))),0)-C17,0)) -> 65916
+B17= 'Fourth floor non-parking' | C17: =IF('Master Inputs'!$E$38>0,'Master Inputs'!$E$38,IF('Initial Screen'!P36>3,'Initial Screen'!P17*D17*(1-(ROUNDUP('Initial Screen'!P36,0)-'Initial Screen'!P36)),0)) -> 0 | D17: =IFERROR('Master Inputs'!$E$38/SUM('Master Inputs'!$E$37:$E$38),0) -> 0
+B18= 'Third Floor Parking' | C18: =IF('Master Inputs'!$E$39>0,'Master Inputs'!$E$39,IF('Initial Screen'!P36>2,IF('Initial Screen'!P36>2,'Initial Screen'!P17*(1-(ROUNDUP('Initial Screen'!P36,0)-'Initial Screen'!P36)/(IF(AND('Initial Screen'!P36>2,'Initial Screen'!P36<3),2,IF(AND('Initial Screen'!P36>3,'Initial Screen'!P36<4),3,IF(AND('Initial Screen'!P36>4,'Initial Screen'!P36<5),4,1))))),0)-C19,0)) -> 65916
+B19= 'Third floor non-parking' | C19: =IF('Master Inputs'!$E$40>0,'Master Inputs'!$E$40,IF('Initial Screen'!P36>2,'Initial Screen'!P17*D19*(1-(ROUNDUP('Initial Screen'!P36,0)-'Initial Screen'!P36)),0)) -> 0 | D19: =IFERROR('Master Inputs'!$E$40/SUM('Master Inputs'!$E$39:$E$40),0) -> 0
+B20= 'Second Floor Parking' | C20: =IF('Master Inputs'!$E$41>0,'Master Inputs'!$E$41,IF('Initial Screen'!P36>1,IF('Initial Screen'!P36>1,'Initial Screen'!P17*(1-(ROUNDUP('Initial Screen'!P36,0)-'Initial Screen'!P36)/(IF(AND('Initial Screen'!P36>2,'Initial Screen'!P36<3),2,IF(AND('Initial Screen'!P36>3,'Initial Screen'!P36<4),3,IF(AND('Initial Screen'!P36>4,'Initial Screen'!P36<5),4,1))))),0)-C21,0)) -> 65916
+B21= 'Second floor non-parking' | C21: =IF('Master Inputs'!$E$42>0,'Master Inputs'!$E$42,IF('Initial Screen'!P36>1,'Initial Screen'!P17*D21*(1-(ROUNDUP('Initial Screen'!P36,0)-'Initial Screen'!P36)),0)) -> 0 | D21: =IFERROR('Master Inputs'!$E$42/SUM('Master Inputs'!$E$41:$E$42),0) -> 0
+B22= 'Ground Floor Parking' | C22: =IF('Master Inputs'!$E$43>0,'Master Inputs'!$E$43,'Initial Screen'!P17-C23) -> 51084.9
+B23= 'Ground Floor (less commercial and parking)' | C23: =IF('Master Inputs'!$E$44>0,'Master Inputs'!$E$44,'Initial Screen'!P17*D23) -> 14831.1 | D23: =IFERROR('Master Inputs'!$E$44/SUM('Master Inputs'!$E$43:$E$44),0.225) -> 0.225
+B24= 'Total floor area (excl. rooftop)' | C24: =SUM(C14:C23) -> 920674.285714375
+B27= 'BUILDING AREA'
+B28= 'Common Area (% of total gross area)' | C28: =C30/C31 -> 0.14831976190785 | D28= '*'
+B29= 'Gross Residential Area (Sq Ft)' | C29: =Program!C15+Program!C14+Program!C23 -> 671841.385714375
+B30= 'Gross Common and Commerciall Area (Sq Ft)' | C30: =Program!C22+Program!C21+Program!C20 -> 117000.9
+B31= 'Total Gross Area (Sq Ft)' | C31: =C30+C29 -> 788842.285714375
+B34= 'PARKING'
+B35= 'Sq Ft per stall' | C35: =C38/'Unit Mix Summary'!$F$36 -> 164.558227848101
+B36= 'Residential Parking Stalls' | C36: ='Unit Mix Summary'!F36 -> 711
+B38= 'Parking Area Sq Ft' | C38: =Program!C20+Program!C22 -> 117000.9
+B39= 'Parking Stall Ratio (Stalls / Unit)' | C39: ='Unit Mix Summary'!$F$36/Program!$E$64 -> 0.699115044247788
+B41= 'Parking SF / gross residential SF' | C41: =C38/C29 -> 0.174149587220787
+B44= 'UNITS BY TYPE'
+B45= 'Restricted Units' | D45= 'Avg SF of units' | E45= '# of units' | H45= 'Mgr units (Rent Builder)'
+B46= 'Studio' | D46: ='Rent Builder'!D53 -> 400 | E46: ='Rent Builder'!E53 -> 102
+B47= '1 BR' | D47: ='Rent Builder'!D54 -> 560 | E47: ='Rent Builder'!E54 -> 796 | H47: =SUMIF('Rent Builder'!$H$12:$H$39,Program!B47,'Rent Builder'!$F$12:$F$39) -> 2
+B48= '2 BR' | D48: ='Rent Builder'!D55 -> 720 | E48: ='Rent Builder'!E55 -> 115 | H48: =SUMIF('Rent Builder'!$H$12:$H$39,Program!B48,'Rent Builder'!$F$12:$F$39) -> 2
+B49= '3 BR' | D49: ='Rent Builder'!D56 -> 0 | E49: ='Rent Builder'!E56 -> 0
+B50= 'Total Restricted' | D50: =SUMPRODUCT(D46:D49,E46:E49) -> 569360 | E50: =SUM(E46:E49) -> 1013
+B52= 'Manager' | D52= 'AVG SF' | E52= '# of units'
+B53= 'Studio' | D53: ='Rent Builder'!D60 -> 0 | E53: ='Rent Builder'!E60 -> 0
+B54= '1 BR' | D54: ='Rent Builder'!D61 -> 560 | E54: ='Rent Builder'!E61 -> 2
+B55= '2 BR' | D55: ='Rent Builder'!D62 -> 720 | E55: ='Rent Builder'!E62 -> 2
+B56= '3 BR' | D56: ='Rent Builder'!D63 -> 0 | E56: ='Rent Builder'!E63 -> 0
+B57= 'Total Manager' | D57: =SUMPRODUCT(D53:D56,E53:E56) -> 2560 | E57: =SUM(E53:E56) -> 4
+B59= 'Total Units' | D59= 'Avg SF of units' | E59= '# of Units'
+B60= 'Studio' | D60: ='Rent Builder'!D68 -> 400 | E60: ='Rent Builder'!E68 -> 102
+B61= '1 BR' | D61: ='Rent Builder'!D69 -> 560 | E61: ='Rent Builder'!E69 -> 798
+B62= '2 BR' | D62: ='Rent Builder'!D70 -> 720 | E62: ='Rent Builder'!E70 -> 117
+B63= '3 BR' | D63: ='Rent Builder'!D71 -> 0 | E63: ='Rent Builder'!E71 -> 0
+B64= 'Total ' | D64: =SUMPRODUCT(D60:D63,E60:E63) -> 571920 | E64: =SUM(E60:E63) -> 1017

@@ -1,0 +1,52 @@
+B2: =MI_ProjectName&"  |  SENSITIVITIES" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  SENSITIVITIES'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+B5= 'surplus (overage)' | C5: ='Sources & Uses'!E58 -> -4892263.54330367 | E5= 'Equity in' | F5= 2600000 | I5= '.'
+B6= 'Tiebreaker delta' | C6: ='CDLAC Score and Tiebreaker'!$E$145 -> 2.74567534067444 | E6= 'internal loans' | F6= 2000000 | I6= '.' | K6= 'Surplus/overage sensitivities'
+B7= 'IRR' | C7: =Program!F38 -> 0 | E7= 'Gardner' | F7= 2550000 | G7= 'need to account for interest to be current (only goes till may)' | I7= '.' | M7= 'Residential Hard Costs (psf)'
+B8= 'Profit' | C8: =Program!F36 -> 0 | E8= 'Five star' | F8= 2000000 | G8= 'paydown loan' | M8: =(M9-$N$9)/$N$9 -> -0.0149700598802395 | N8: =(N9-$N$9)/$N$9 -> 0 | O8: =(O9-$N$9)/$N$9 -> 0.0149700598802395 | P8: =(P9-$N$9)/$N$9 -> 0.029940119760479 | Q8: =(Q9-$N$9)/$N$9 -> 0.0449101796407186 | R8: =(R9-$N$9)/$N$9 -> 0.0598802395209581 | S8: =(S9-$N$9)/$N$9 -> 0.0748502994011976 | T8: =(T9-$N$9)/$N$9 -> 0.0898203592814371
+G9: =0.8*9 -> 7.2 | K9= 1 | L9: =$C$5 -> -4892263.54330367 | M9: =N9-5 -> 329 | N9= 334 | O9: =N9+5 -> 339 | P9: =O9+5 -> 344 | Q9: =P9+5 -> 349 | R9: =Q9+5 -> 354 | S9: =R9+5 -> 359 | T9: =S9+5 -> 364
+D10: =IF(E10="no","yes","no") -> 'yes' | E10= 'no' | G10: ='Dev Budget'!H37 -> 224828849.991673 | K10= 'Perm rate' | L10= 0.0585
+B11= 'Sensitivity Items' | C11= 'Selection' | D11= 'pov' | E11= 'application' | F11= 'previous' | G11= 'Notes' | I11= '.' | L11: =L10+0.05% -> 0.059
+B12= 'Residential hard costs' | C12: =IF($D$10="yes",D12,E12) -> 306 | D12= 306 | E12: =D12 -> 306 | F12= 318 | I12= '.' | L12: =L11+0.05% -> 0.0595
+B13= 'Parking hard costs' | C13: =IF($D$10="yes",D13,E13) -> 150 | D13= 150 | E13= 150 | F13= 150 | I13= '.' | L13: =L12+0.05% -> 0.06
+B14= 'Post-Award Trending' | C14: =IF($D$10="yes",D14,E14) -> 0 | D14= 0 | E14= 0 | F14= 0 | I14= '.' | L14: =L13+0.05% -> 0.0605
+B15= 'Opex' | C15: =IF($D$10="yes",D15,E15) -> 4994.3325711811 | D15: ='OpEx Builder'!$J$174 -> 4994.3325711811 | E15: =D15 -> 4994.3325711811 | F15= 7140 | G15= 'Federal min: 7140, 15% under: 6069' | I15= '.' | L15: =L14+0.05% -> 0.061
+B16= 'Rates - TE' | C16: =IF($D$10="yes",D16,E16) -> 0.0612 | D16: ='Master Inputs'!$E$216 -> 0.0612 | E16= 0.0555 | F16= 0.059 | I16= '.' | L16: =L15+0.05% -> 0.0615
+B17= 'Rates - Taxable' | C17: =IF($D$10="yes",D17,E17) -> 0.0612 | D17: ='Master Inputs'!$E$217 -> 0.0612 | E17= 0.0644 | F17= 0.063 | I17= '.'
+B18= 'Perm loan rates' | C18: =IF($D$10="yes",D18,E18) -> 0.0668025742165792 | D18: ='Financing & Debt Sizing'!E173 -> 0.0668025742165792 | E18: ='Financing & Debt Sizing'!D173 -> 0.0668025742165792 | F18= 0.0593 | I18= '.' | M18= 'Construction duration'
+B19= 'Federal credit pricing' | C19: =IF($D$10="yes",D19,E19) -> 0.78 | D19: ='Master Inputs'!$E$177 -> 0.78 | E19= 0.82 | F19= 0.8 | G19= 'we can go as high as 82 cents for app.' | I19= '.' | L19: =$C$5 -> -4892263.54330367 | M19: =N19-1 -> 14 | N19= 15 | O19: =N19+1 -> 16 | P19: =O19+1 -> 17 | Q19: =P19+1 -> 18
+B20= 'State credit pricing' | C20: =IF($D$10="yes",D20,E20) -> 0.82 | D20: ='Master Inputs'!$E$178 -> 0.82 | E20= 0.88 | F20= 0.88 | I20= '.' | K20= 'Leasing duration' | L20: =L21-1 -> 11
+B21= 'Efficiency Ratio' | C21: =IF($D$10="yes",D21,E21) -> 0.1225 | D21= 0.1225 | E21= 0.1225 | F21= 0.14 | I21= '.' | L21= 12
+B22= 'Lot Coverage' | C22: =IF($D$10="yes",D22,E22) -> 0.809349157499182 | D22= 0.809349157499182 | E22= 0.809349157499182 | F22= 0.945405091656648 | I22= '.' | L22: =L21+1 -> 13
+B23= 'CUAC reduction %' | C23: =IF($D$10="yes",D23,E23) -> 0.45 | D23: ='Master Inputs'!$E$68 -> 0.45 | E23: =D23 -> 0.45 | F23= 0.5 | I23= '.' | L23: =L22+1 -> 14
+B24= 'Other income - storage' | C24: =IF($D$10="yes",D24,E24) -> 40 | D24: ='Master Inputs'!$E$102 -> 40 | E24= 40 | F24= 50 | I24= '.' | L24: =L23+1 -> 15
+B25= 'Other income - comcast' | C25: =IF($D$10="yes",D25,E25) -> 60 | D25: ='Master Inputs'!$E$106 -> 60 | E25= 60 | F25= 55 | I25= '.'
+B26= 'Construction timeilne' | C26: =IF($D$10="yes",D26,E26) -> 18 | D26: ='Master Inputs'!$E$164 -> 18 | E26: =D26 -> 18 | F26= 19 | I26= '.' | M26= 'federal credits'
+B27= 'Leasing timeline' | C27: =IF($D$10="yes",D27,E27) -> 12 | D27: ='Master Inputs'!$E$119 -> 12 | E27: =D27 -> 12 | F27= 14 | I27= '.' | L27: =$C$5 -> -4892263.54330367 | M27: =N27-0.02 -> 0.74 | N27: =O27-0.02 -> 0.76 | O27: =P27-0.02 -> 0.78 | P27= 0.8 | Q27: =P27+0.02 -> 0.82
+B28= 'Percent under gross rule' | C28: =IF($D$10="yes",D28,E28) -> 0.15 | D28= 0.15 | E28= 0.15 | F28= 0.1 | I28= '.' | K28= 'state credits' | L28= 0
+B29= 'Implied parking income' | C29: =IF($D$10="yes",D29,E29) -> 100 | D29= 100 | E29= 100 | F29= 200 | I29= '.'
+B30= 'Internet vacancy' | C30: =IF($D$10="yes",D30,E30) -> 0.25 | D30: ='Master Inputs'!$E$107 -> 0.25 | E30= 0.25 | F30= 0.2 | I30= '.'
+B31= 'Storage vacancy' | C31: =IF($D$10="yes",D31,E31) -> 0.25 | D31: ='Master Inputs'!$E$103 -> 0.25 | E31= 0.1 | F31= 0.25
+B32= 'Prevailing wage flag' | C32: =IF($D$10="yes",D32,E32) -> 'No' | D32: ='Master Inputs'!$E$328 -> 'No' | E32= 'no' | F32= 'No' | I32= '.'
+B33= 'Parking vacancy' | C33: =IF($D$10="yes",D33,E33) -> 1 | D33: ='Master Inputs'!$E$94 -> 1 | E33= 0.05 | F33= 0.05 | I33= '.' | M33= 'Change in 60% AMI unit rents'
+B34= 'Parking out of eligible' | C34: =IF($D$10="yes",D34,E34) -> 'No' | D34: ='Master Inputs'!$E$181 -> 'No' | E34= 'no' | F34= 'Yes' | I34= '.' | L34: =$C$5 -> -4892263.54330367 | M34= 0.0597872205255023 | N34: =M34+0.05 -> 0.109787220525502 | O34: =N34+0.05 -> 0.159787220525502 | P34: =O34+0.05 -> 0.209787220525502 | Q34: =P34+0.05 -> 0.259787220525502
+B35= 'Bond ratio' | C35: ='Master Inputs'!$E$303 -> 0.275 | I35= '.' | K35= 'Change in ' | L35= -0.15
+B36= 'Comps growth' | C36: =IF($D$10="yes",D36,E36) -> 0 | D36= 0 | E36= 0 | F36= 0 | I36= '.' | K36= '50% AMI unit rents' | L36: =L35+0.05 -> -0.1
+B37= 'Replacement cost' | C37: =IF($D$10="yes",D37,E37) -> 250 | D37= 250 | E37= 250 | L37: =L36+0.05 -> -0.05
+B38= 'Pre-award trending' | C38: =IF($D$10="yes",D38,E38) -> 0.0578019925797902 | D38: ='OpEx & Other Income'!E104 -> 0.0578019925797902 | E38: =D38 -> 0.0578019925797902 | F38= 0 | L38: =L37+0.05 -> 0
+B39= 'rents' | C39: =IF($D$10="yes",D39,E39) -> 0.9395 | D39= 0.9395 | E39= 0.895 | I39= '.' | L39: =L38+0.05 -> 0.05
+I40= '.'
+I41= '.'
+B42= 'Assumes Gardner keeps 500k in' | I42= '.'
+I43= '.'
+B44= 'Leaseup NOI x 50% offset' | C44: =Leasing!C95 -> 7753823.28959613 | I44= '.'
+B45= 'Net surplus (overage)' | C45: =C5+C44 -> 2861559.74629247 | I45= '.'
+I46= '.'
+B47= 'Dev fee' | C47: ='Dev Budget'!K113 -> 3000000 | I47= '.'
+B48= 'Blended hard cost' | C48: ='Dev Budget'!F164 -> 252.115958412473 | G48: ='Initial Screen'!O81 -> '21-story residential mixed-use buildling (17-stories of residential over 4-stories of parking)'
+B49= 'Parking ratio' | C49: ='OpEx & Other Income'!H38 -> 0.350246305418719 | F49= 0.03
+B51= 'Total project cost' | C51: ='Sources & Uses'!E26 -> 349568088.780651
+B52= 'NOI' | C52: ='Operating Cash Flow'!$J$47 -> 14576030.7324 | E52= 'busines plan'
+B53= 'Perm loan' | C53: ='Sources & Uses'!E47 -> 170796282.47831 | D53: =C53-E53 -> 134349719.639771 | E53= 36446562.8385392
+B54= 'Federal' | C54: ='LIHTC & Dev Fee'!$G$58 -> 133838968.795869 | D54: =C54-E54 -> 111396349.575407 | E54= 22442619.2204624
+B55= 'State' | C55: ='LIHTC & Dev Fee'!$G$64 -> 0 | D55: =C55-E55 -> -11294248.1226977 | E55= 11294248.1226977

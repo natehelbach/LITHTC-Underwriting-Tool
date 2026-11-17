@@ -1,0 +1,9 @@
+A1= 'Land sensitivity: Site 8 (podium + three towers, 1,017 units)'
+A2= 'Full model runs. Headline = market-capped rents; max rents shown for reference.'
+A4= 'Land price' | B4= '$/SF land' | C4= 'Market-capped' | D4= 'Max rents' | E4= 'Tiebreaker'
+A5= 0 | B5= 0 | C5= -4892263.54319924 | D5= 11043373.5090992 | E5= 2.74567534067444
+A6= 9000000 | B6= 136.537411250683 | C6= -14622348.5413416 | D6= 1313963.02736688 | E6= 2.66194599549346
+A7= 15000000 | B7= 227.562352084471 | C7= -21109279.2415518 | D7= -5172507.56566513 | E7= 2.60890693296025
+A9= 'Land price at $0 surplus' | B9= 'Market-capped' | C9= 'Max rents'
+A10= 'Land price' | B10= 'None: gap at $0 land' | C10= 10215331.6167494 | D10= 'max rents: interpolated $0 to $15.0M'
+A11= 'Each $1.00 of land lowers surplus by about $1.08.'

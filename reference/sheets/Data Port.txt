@@ -1,0 +1,1488 @@
+B2: =MI_ProjectName&"  |  DATA PORT" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  DATA PORT'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+C5= 'Application Dates:' | K5: ='Data Port'!$H$76&", "&'Data Port'!$H$77&", "&'Data Port'!$H$78 -> 'Other, 3400 Broadway LLC, A Limited Liability Company'
+C6= 'Submission' | E6= datetime.datetime(2026, 5, 19, 0, 0) | H6: =IF(G6="",IF(E6="",F6,E6),G6) -> datetime.datetime(2026, 5, 19, 0, 0)
+C7= 'Award' | E7= datetime.datetime(2026, 8, 18, 0, 0) | H7: =IF(G7="",IF(E7="",F7,E7),G7) -> datetime.datetime(2026, 8, 18, 0, 0)
+C8= 'Construction start' | E8= datetime.datetime(2027, 2, 18, 0, 0) | H8: =IF(G8="",IF(E8="",F8,E8),G8) -> datetime.datetime(2027, 2, 18, 0, 0)
+C9= 'Construction completion' | E9: =EDATE(E8,Sensitivities!$C$26) -> datetime.datetime(2028, 8, 18, 0, 0) | H9: =IF(G9="",IF(E9="",F9,E9),G9) -> datetime.datetime(2028, 8, 18, 0, 0)
+C10= 'Placed in Service 1' | E10: =EDATE(Leasing!D114,6) -> datetime.datetime(2030, 3, 1, 0, 0) | H10: =IF(G10="",IF(E10="",F10,E10),G10) -> datetime.datetime(2030, 3, 1, 0, 0)
+E11= 'This proforma' | F11= 'Default' | G11= 'Override' | H11= 'Final' | I11= "<<< this is what gets linked to the app40 document. App40 preferably has the on-sheet calc logic already applied so we don't have to do this individually"
+H12: =IF(G12="",IF(E12="",F12,E12),G12) -> 0
+C13= 'Site Amenities' | H13: =IF(G13="",IF(E13="",F13,E13),G13) -> 0
+H14: =IF(G14="",IF(E14="",F14,E14),G14) -> 0
+C15= 'Is it 1/2 mile from grocery 25000 SF size' | E15: =IF('Master Inputs'!$E$331=1,"(i)","N/A") -> '(i)' | H15: =IF(G15="",IF(E15="",F15,E15),G15) -> '(i)'
+C16= 'Is it 1/2 mile from library' | E16: =IF('Master Inputs'!$E$332=1,"(i)","N/A") -> '(i)' | H16: =IF(G16="",IF(E16="",F16,E16),G16) -> '(i)'
+C17= 'Is it 1/2 mile from elementary school, middle school, or adult school?' | E17: =IF('Master Inputs'!$E$333=1,"(i)",IF('Master Inputs'!$E$333=2,"(ii)","N/A")) -> 'N/A' | H17: =IF(G17="",IF(E17="",F17,E17),G17) -> 'N/A'
+C18= 'Is it 1/2 mile from Hospital / medical clinic' | E18: =IF('Master Inputs'!$E$334=1,"(i)","N/A") -> '(i)' | H18: =IF(G18="",IF(E18="",F18,E18),G18) -> '(i)'
+C19= 'Is it 1/2 mile from pharmacy?' | E19: =IF('Master Inputs'!$E$335=1,"(i)","N/A") -> '(i)' | H19: =IF(G19="",IF(E19="",F19,E19),G19) -> '(i)'
+C20= 'Is it 1/2 mile from public park' | E20: =IF('Master Inputs'!$E$336=1,"(i)","N/A") -> '(i)' | H20: =IF(G20="",IF(E20="",F20,E20),G20) -> '(i)'
+H21: =IF(G21="",IF(E21="",F21,E21),G21) -> 0
+C22= 'Project is located in a nieghborhood experiencing change' | E22: ='Initial Screen'!J16 -> 'Yes' | H22: =IF(G22="",IF(E22="",F22,E22),G22) -> 'Yes'
+H23: =IF(G23="",IF(E23="",F23,E23),G23) -> 0
+C24= 'CTCAC APPLICANT:' | E24= '3400 Broadway LLC' | H24: =IF(G24="",IF(E24="",F24,E24),G24) -> '3400 Broadway LLC'
+C25= 'PROJECT NAME:' | E25: ='Master Inputs'!$E$11 -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303' | H25: =IF(G25="",IF(E25="",F25,E25),G25) -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303'
+C26= 'Election to take State credits' | E26: =IF('Master Inputs'!$E$179="yes","Yes","No") -> 'No' | H26: =IF(G26="",IF(E26="",F26,E26),G26) -> 'No'
+B27= 'I.' | H27: =IF(G27="",IF(E27="",F27,E27),G27) -> 0
+C28= 'Application type:' | E28= 'Preliminary Reservation' | H28: =IF(G28="",IF(E28="",F28,E28),G28) -> 'Preliminary Reservation'
+C29= 'Joint Application?' | E29= 'CDLAC-CTCAC Joint Application (submitting concurrently)' | H29: =IF(G29="",IF(E29="",F29,E29),G29) -> 'CDLAC-CTCAC Joint Application (submitting concurrently)'
+C30= 'Prior application was submitted but not selected?' | E30= 'No' | H30: =IF(G30="",IF(E30="",F30,E30),G30) -> 'No'
+C31= 'Has credit previously been awarded?' | E31= 'No' | H31: =IF(G31="",IF(E31="",F31,E31),G31) -> 'No'
+C32= 'Is this project a Re-syndication of a current CTCAC project?' | E32= 'No' | H32: =IF(G32="",IF(E32="",F32,E32),G32) -> 'No'
+H33: =IF(G33="",IF(E33="",F33,E33),G33) -> 0
+C34= 'Site Address:' | E34: =E25 -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303' | H34: =IF(G34="",IF(E34="",F34,E34),G34) -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303'
+C35= 'City:' | E35: ='Master Inputs'!$E$12 -> 'Los Angeles' | H35: =IF(G35="",IF(E35="",F35,E35),G35) -> 'Los Angeles'
+C36= 'County:' | E36: ='Master Inputs'!$E$13 -> 'Los Angeles' | H36: =IF(G36="",IF(E36="",F36,E36),G36) -> 'Los Angeles'
+C37= 'Zip Code:' | E37= 94611 | H37: =IF(G37="",IF(E37="",F37,E37),G37) -> 94611
+C38= 'Census Tract:' | E38: ='Initial Screen'!G23 -> 0 | H38: =IF(G38="",IF(E38="",F38,E38),G38) -> 0
+C39= "Assessor's Parcel Number(s):" | E39: =_xlfn.TEXTJOIN(", ",TRUE(),'Initial Screen'!G24:G29) -> '2148-031-015' | H39: =IF(G39="",IF(E39="",F39,E39),G39) -> '2148-031-015'
+C40= 'CTCAC/HCD Opportunity Area Designation:' | E40: ='Initial Screen'!J17 -> 'Low Resource' | H40: =IF(G40="",IF(E40="",F40,E40),G40) -> 'Low Resource'
+C41= 'Project is located in a census tract/block group designated High Segregation & Poverty:' | E41= 'No' | H41: =IF(G41="",IF(E41="",F41,E41),G41) -> 'No'
+C42= 'Project is located in a DDA:' | E42: =IF('Master Inputs'!$E$176="DDA","Yes","No") -> 'Yes' | H42: =IF(G42="",IF(E42="",F42,E42),G42) -> 'Yes'
+C43= '*Federal Congressional District:' | E43: ='Initial Screen'!G30 -> '50' | H43: =IF(G43="",IF(E43="",F43,E43),G43) -> '50'
+C44= 'Project is located in a Qualified Census Tract:' | E44: =IF('Master Inputs'!$E$176="QCT","Yes","No") -> 'No' | H44: =IF(G44="",IF(E44="",F44,E44),G44) -> 'No'
+C45= '*State Assembly District:' | E45: ='Initial Screen'!G31 -> '77' | H45: =IF(G45="",IF(E45="",F45,E45),G45) -> '77'
+C46= 'Project is a Scattered Site Project:' | E46= 'No' | H46: =IF(G46="",IF(E46="",F46,E46),G46) -> 'No'
+C47= '*State Senate District:' | E47: ='Initial Screen'!G32 -> '39' | H47: =IF(G47="",IF(E47="",F47,E47),G47) -> '39'
+C48= 'Number of Scattered Sites:' | E48= 'No' | H48: =IF(G48="",IF(E48="",F48,E48),G48) -> 'No'
+C49= 'Project is Rural¹' | E49= 'No' | H49: =IF(G49="",IF(E49="",F49,E49),G49) -> 'No'
+C50= 'Project is the 4% component of a Hybrid project¹ \n     ' | E50= 'No' | H50: =IF(G50="",IF(E50="",F50,E50),G50) -> 'No'
+H51: =IF(G51="",IF(E51="",F51,E51),G51) -> 0
+C52= 'Type:' | H52: =IF(G52="",IF(E52="",F52,E52),G52) -> 0
+H53: =IF(G53="",IF(E53="",F53,E53),G53) -> 0
+C54= 'Federal Minimum Set-Aside Election (IRC Section 42(g)(1))' | E54: ='Master Inputs'!$E$342 -> '40%/60% Average Income' | H54: =IF(G54="",IF(E54="",F54,E54),G54) -> '40%/60% Average Income'
+E55: =IF(E56="Large Family","Large Family","A project scoring maximum New Construction Density and Local Incentives points under Section 5230(c) ") -> 'A project scoring maximum New Construction Density and Local Incentives points under Section 5230(c) ' | H55: =IF(G55="",IF(E55="",F55,E55),G55) -> 'A project scoring maximum New Construction Density and Local Incentives points under Section 5230(c) '
+C56= 'Housing Type Selection' | E56= 'Non-Targeted' | H56: =IF(G56="",IF(E56="",F56,E56),G56) -> 'Non-Targeted'
+C57= 'Housing Needs' | H57: =IF(G57="",IF(E57="",F57,E57),G57) -> 0
+C58= 'CTCAC Geographic Area (Reg. Section 10315(i))' | E58: ='Master Inputs'!$E$14 -> 'City of Los Angeles' | H58: =IF(G58="",IF(E58="",F58,E58),G58) -> 'City of Los Angeles'
+C59= 'CDLAC Region (§ 5022)' | E59: ='Master Inputs'!$E$15 -> 'City of Los Angeles' | H59: =IF(G59="",IF(E59="",F59,E59),G59) -> 'City of Los Angeles'
+C60= 'MIP' | E60= 'No' | H60: =IF(G60="",IF(E60="",F60,E60),G60) -> 'No'
+H61: =IF(G61="",IF(E61="",F61,E61),G61) -> 0
+B62= 'II' | H62: =IF(G62="",IF(E62="",F62,E62),G62) -> 0
+C63= 'Applicant is the current owner and will retain ownership:' | E63= 'N/A' | H63: =IF(G63="",IF(E63="",F63,E63),G63) -> 'N/A'
+C64= 'Applicant will be or is a general partner in the to be formed or formed final ownership entity:' | E64= 'Yes' | H64: =IF(G64="",IF(E64="",F64,E64),G64) -> 'Yes'
+C65= 'Applicant is the project developer and will be part of the final ownership entity for the project:' | E65= 'Yes' | H65: =IF(G65="",IF(E65="",F65,E65),G65) -> 'Yes'
+C66= 'Applicant is the project developer and will not be part of the final ownership entity for the project:' | E66= 'N/A' | H66: =IF(G66="",IF(E66="",F66,E66),G66) -> 'N/A'
+H67: =IF(G67="",IF(E67="",F67,E67),G67) -> 0
+C68= 'Street Address:' | E68= '411 2nd Street' | H68: =IF(G68="",IF(E68="",F68,E68),G68) -> '411 2nd Street'
+C69= 'City:' | E69= 'Oakland' | H69: =IF(G69="",IF(E69="",F69,E69),G69) -> 'Oakland'
+C70= 'State:' | E70= 'CA' | H70: =IF(G70="",IF(E70="",F70,E70),G70) -> 'CA'
+C71= 'Zip Code:' | E71= 94607 | H71: =IF(G71="",IF(E71="",F71,E71),G71) -> 94607
+C72= 'Contact Person:' | E72= 'Jeremy Harris' | H72: =IF(G72="",IF(E72="",F72,E72),G72) -> 'Jeremy Harris'
+C73= 'Phone:' | E73= 8584495270 | H73: =IF(G73="",IF(E73="",F73,E73),G73) -> 8584495270
+C74= 'Email: ' | E74= 'jeremy@owow.com' | H74: =IF(G74="",IF(E74="",F74,E74),G74) -> 'jeremy@owow.com'
+H75: =IF(G75="",IF(E75="",F75,E75),G75) -> 0
+C76= 'Legal Status of Applicant:' | E76= 'Other' | H76: =IF(G76="",IF(E76="",F76,E76),G76) -> 'Other'
+C77= 'Parent Company:' | E77: =$E$24 -> '3400 Broadway LLC' | H77: =IF(G77="",IF(E77="",F77,E77),G77) -> '3400 Broadway LLC'
+C78= 'If Other, Specify:' | E78= 'A Limited Liability Company' | H78: =IF(G78="",IF(E78="",F78,E78),G78) -> 'A Limited Liability Company'
+H79: =IF(G79="",IF(E79="",F79,E79),G79) -> 0
+C80= 'General Partner Name:' | E80: =$E$24 -> '3400 Broadway LLC' | H80: =IF(G80="",IF(E80="",F80,E80),G80) -> '3400 Broadway LLC'
+C81= 'AGP or MGP' | E81= 'Administrative GP' | H81: =IF(G81="",IF(E81="",F81,E81),G81) -> 'Administrative GP'
+C82= 'Street Address:' | E82= '411 2nd Street' | H82: =IF(G82="",IF(E82="",F82,E82),G82) -> '411 2nd Street'
+C83= 'City:' | E83= 'Oakland' | H83: =IF(G83="",IF(E83="",F83,E83),G83) -> 'Oakland'
+C84= 'State:' | E84= 'CA' | H84: =IF(G84="",IF(E84="",F84,E84),G84) -> 'CA'
+C85= 'Zip Code:' | E85= 94607 | H85: =IF(G85="",IF(E85="",F85,E85),G85) -> 94607
+C86= 'Contact Person:' | E86= 'Jeremy Harris' | H86: =IF(G86="",IF(E86="",F86,E86),G86) -> 'Jeremy Harris'
+C87= 'Phone:' | E87= 8584495270 | H87: =IF(G87="",IF(E87="",F87,E87),G87) -> 8584495270
+C88= 'Email: ' | E88= 'jeremy@owow.com' | H88: =IF(G88="",IF(E88="",F88,E88),G88) -> 'jeremy@owow.com'
+C89= 'Nonprofit/For Profit:' | E89= 'For Profit' | H89: =IF(G89="",IF(E89="",F89,E89),G89) -> 'For Profit'
+C90= 'Parent Company:' | E90: =$E$24 -> '3400 Broadway LLC' | H90: =IF(G90="",IF(E90="",F90,E90),G90) -> '3400 Broadway LLC'
+C91= 'INTEREST (%):' | E91= 0.009 | H91: =IF(G91="",IF(E91="",F91,E91),G91) -> 0.009
+H92: =IF(G92="",IF(E92="",F92,E92),G92) -> 0
+C93= 'General Partner Name:' | E93= 'Central Valley Coalition for Affordable Housing' | H93: =IF(G93="",IF(E93="",F93,E93),G93) -> 'Central Valley Coalition for Affordable Housing'
+C94= 'AGP or MGP' | E94= 'Managing GP' | H94: =IF(G94="",IF(E94="",F94,E94),G94) -> 'Managing GP'
+C95= 'Street Address:' | E95= '3351 M Street, Ste. 100' | H95: =IF(G95="",IF(E95="",F95,E95),G95) -> '3351 M Street, Ste. 100'
+C96= 'City:' | E96= 'Merced' | H96: =IF(G96="",IF(E96="",F96,E96),G96) -> 'Merced'
+C97= 'State:' | E97= 'CA' | H97: =IF(G97="",IF(E97="",F97,E97),G97) -> 'CA'
+C98= 'Zip Code:' | E98= 95348 | H98: =IF(G98="",IF(E98="",F98,E98),G98) -> 95348
+C99= 'Contact Person:' | E99= 'Christina Alley' | H99: =IF(G99="",IF(E99="",F99,E99),G99) -> 'Christina Alley'
+C100= 'Phone:' | E100= '209.388.0782' | H100: =IF(G100="",IF(E100="",F100,E100),G100) -> '209.388.0782'
+C101= 'Email: ' | E101= 'chris@centralvalleycoalition.com' | H101: =IF(G101="",IF(E101="",F101,E101),G101) -> 'chris@centralvalleycoalition.com'
+C102= 'Nonprofit/For Profit:' | E102= 'Nonprofit' | H102: =IF(G102="",IF(E102="",F102,E102),G102) -> 'Nonprofit'
+C103= 'Parent Company:' | E103= 'Central Valley Coalition for Affordable Housing' | H103: =IF(G103="",IF(E103="",F103,E103),G103) -> 'Central Valley Coalition for Affordable Housing'
+C104= 'INTEREST (%):' | E104= 0.001 | H104: =IF(G104="",IF(E104="",F104,E104),G104) -> 0.001
+C105= 'Title' | E105= 'CEO' | H105: =IF(G105="",IF(E105="",F105,E105),G105) -> 'CEO'
+C106= 'General Partner Name:' | H106: =IF(G106="",IF(E106="",F106,E106),G106) -> 0
+C107= 'AGP or MGP' | E107= '(select one)' | H107: =IF(G107="",IF(E107="",F107,E107),G107) -> '(select one)'
+C108= 'Street Address:' | H108: =IF(G108="",IF(E108="",F108,E108),G108) -> 0
+C109= 'City:' | H109: =IF(G109="",IF(E109="",F109,E109),G109) -> 0
+C110= 'State:' | H110: =IF(G110="",IF(E110="",F110,E110),G110) -> 0
+C111= 'Zip Code:' | H111: =IF(G111="",IF(E111="",F111,E111),G111) -> 0
+C112= 'Contact Person:' | H112: =IF(G112="",IF(E112="",F112,E112),G112) -> 0
+C113= 'Phone:' | H113: =IF(G113="",IF(E113="",F113,E113),G113) -> 0
+C114= 'Email: ' | H114: =IF(G114="",IF(E114="",F114,E114),G114) -> 0
+C115= 'Nonprofit/For Profit:' | H115: =IF(G115="",IF(E115="",F115,E115),G115) -> 0
+C116= 'Parent Company:' | H116: =IF(G116="",IF(E116="",F116,E116),G116) -> 0
+C117= 'INTEREST (%):' | H117: =IF(G117="",IF(E117="",F117,E117),G117) -> 0
+H118: =IF(G118="",IF(E118="",F118,E118),G118) -> 0
+C119= 'Status of Ownership Entity' | E119= 'to be formed' | H119: =IF(G119="",IF(E119="",F119,E119),G119) -> 'to be formed'
+C120= 'If to be formed, enter date:' | E120= datetime.datetime(2026, 8, 19, 0, 0) | H120: =IF(G120="",IF(E120="",F120,E120),G120) -> datetime.datetime(2026, 8, 19, 0, 0)
+H121: =IF(G121="",IF(E121="",F121,E121),G121) -> datetime.time(0, 0)
+C122= 'Company Name:' | E122: =$E$24 -> '3400 Broadway LLC' | H122: =IF(G122="",IF(E122="",F122,E122),G122) -> '3400 Broadway LLC'
+C123= 'Street Address:' | E123= '411 2nd Street' | H123: =IF(G123="",IF(E123="",F123,E123),G123) -> '411 2nd Street'
+C124= 'City:' | E124= 'Oakland' | H124: =IF(G124="",IF(E124="",F124,E124),G124) -> 'Oakland'
+C125= 'State:' | E125= 'CA' | H125: =IF(G125="",IF(E125="",F125,E125),G125) -> 'CA'
+C126= 'Zip Code:' | E126= 94607 | H126: =IF(G126="",IF(E126="",F126,E126),G126) -> 94607
+C127= 'Contact Person:' | E127= 'Jeremy Harris' | H127: =IF(G127="",IF(E127="",F127,E127),G127) -> 'Jeremy Harris'
+C128= 'Phone:' | E128= 8584495270 | H128: =IF(G128="",IF(E128="",F128,E128),G128) -> 8584495270
+C129= 'Email: ' | E129= 'jeremy@owow.com' | H129: =IF(G129="",IF(E129="",F129,E129),G129) -> 'jeremy@owow.com'
+C130= 'Participatory Role:' | E130= 'Developer and Managing Member of the AGP in the future to be formed LP' | H130: =IF(G130="",IF(E130="",F130,E130),G130) -> 'Developer and Managing Member of the AGP in the future to be formed LP'
+H131: =IF(G131="",IF(E131="",F131,E131),G131) -> 0
+C132= 'Developer:' | E132: =$E$24 -> '3400 Broadway LLC' | H132: =IF(G132="",IF(E132="",F132,E132),G132) -> '3400 Broadway LLC'
+C133= 'Address:' | E133= '411 2nd Street' | H133: =IF(G133="",IF(E133="",F133,E133),G133) -> '411 2nd Street'
+C134= 'City, State, Zip' | E134= 'Oakland, CA 94607' | H134: =IF(G134="",IF(E134="",F134,E134),G134) -> 'Oakland, CA 94607'
+C135= 'Contact Person:' | E135= 'Jeremy Harris' | H135: =IF(G135="",IF(E135="",F135,E135),G135) -> 'Jeremy Harris'
+C136= 'Phone:' | E136= 8584495270 | H136: =IF(G136="",IF(E136="",F136,E136),G136) -> 8584495270
+C137= 'Fax:' | H137: =IF(G137="",IF(E137="",F137,E137),G137) -> 0
+C138= 'Email:' | E138= 'jeremy@owow.com' | H138: =IF(G138="",IF(E138="",F138,E138),G138) -> 'jeremy@owow.com'
+H139: =IF(G139="",IF(E139="",F139,E139),G139) -> 0
+C140= 'Architect:' | E140= 'Inflection Platform, Inc.' | H140: =IF(G140="",IF(E140="",F140,E140),G140) -> 'Inflection Platform, Inc.'
+C141= 'Address:' | E141= '411 2nd Street' | H141: =IF(G141="",IF(E141="",F141,E141),G141) -> '411 2nd Street'
+C142= 'City, State, Zip:' | E142= 'Oakland, CA 94607' | H142: =IF(G142="",IF(E142="",F142,E142),G142) -> 'Oakland, CA 94607'
+C143= 'Contact Person:' | E143= 'Alice Kao' | H143: =IF(G143="",IF(E143="",F143,E143),G143) -> 'Alice Kao'
+C144= 'Phone:' | E144= 5102038051 | H144: =IF(G144="",IF(E144="",F144,E144),G144) -> 5102038051
+C145= 'Fax:' | H145: =IF(G145="",IF(E145="",F145,E145),G145) -> 0
+C146= 'Email:' | E146= 'alice.kao@owow.com' | H146: =IF(G146="",IF(E146="",F146,E146),G146) -> 'alice.kao@owow.com'
+H147: =IF(G147="",IF(E147="",F147,E147),G147) -> 0
+C148= 'Attorney:' | E148= 'Sabelhaus & Strain PC' | H148: =IF(G148="",IF(E148="",F148,E148),G148) -> 'Sabelhaus & Strain PC'
+C149= 'Address:' | E149= '1724 10th Street, Suite 110' | H149: =IF(G149="",IF(E149="",F149,E149),G149) -> '1724 10th Street, Suite 110'
+C150= 'City, State, Zip' | E150= 'Sacramento, CA 95811' | H150: =IF(G150="",IF(E150="",F150,E150),G150) -> 'Sacramento, CA 95811'
+C151= 'Contact Person:' | E151= 'Stephen A. Strain' | H151: =IF(G151="",IF(E151="",F151,E151),G151) -> 'Stephen A. Strain'
+C152= 'Phone:' | E152= '916.444.0286' | H152: =IF(G152="",IF(E152="",F152,E152),G152) -> '916.444.0286'
+C153= 'Fax:' | H153: =IF(G153="",IF(E153="",F153,E153),G153) -> 0
+C154= 'Email:' | E154= 'sstrain@sabelhauslaw.com' | H154: =IF(G154="",IF(E154="",F154,E154),G154) -> 'sstrain@sabelhauslaw.com'
+H155: =IF(G155="",IF(E155="",F155,E155),G155) -> 0
+C156= 'General Contractor:' | E156= 'oWOW Construction' | H156: =IF(G156="",IF(E156="",F156,E156),G156) -> 'oWOW Construction'
+C157= 'Address:' | E157= '411 2nd Street' | H157: =IF(G157="",IF(E157="",F157,E157),G157) -> '411 2nd Street'
+C158= 'City, State, Zip:' | E158= 'Oakland, CA 94607' | H158: =IF(G158="",IF(E158="",F158,E158),G158) -> 'Oakland, CA 94607'
+C159= 'Contact Person:' | E159= 'Andy Ball' | H159: =IF(G159="",IF(E159="",F159,E159),G159) -> 'Andy Ball'
+C160= 'Phone:' | E160= 6504520268 | H160: =IF(G160="",IF(E160="",F160,E160),G160) -> 6504520268
+C161= 'Fax:' | H161: =IF(G161="",IF(E161="",F161,E161),G161) -> 0
+C162= 'Email:' | E162= 'andy@owow.com' | H162: =IF(G162="",IF(E162="",F162,E162),G162) -> 'andy@owow.com'
+H163: =IF(G163="",IF(E163="",F163,E163),G163) -> 0
+C164= 'Tax Professional:' | E164= 'DAUBY O’CONNOR & ZALESKI, LLC' | H164: =IF(G164="",IF(E164="",F164,E164),G164) -> 'DAUBY O’CONNOR & ZALESKI, LLC'
+C165= 'Address:' | E165= '501 Congressional Blvd' | H165: =IF(G165="",IF(E165="",F165,E165),G165) -> '501 Congressional Blvd'
+C166= 'City, State, Zip' | E166= 'Carmel, IN 46032' | H166: =IF(G166="",IF(E166="",F166,E166),G166) -> 'Carmel, IN 46032'
+C167= 'Contact Person:' | E167= 'Chris Thompson' | H167: =IF(G167="",IF(E167="",F167,E167),G167) -> 'Chris Thompson'
+C168= 'Phone:' | H168: =IF(G168="",IF(E168="",F168,E168),G168) -> 0
+C169= 'Fax:' | H169: =IF(G169="",IF(E169="",F169,E169),G169) -> 0
+C170= 'Email:' | E170= 'cthompson@dozllc.com' | H170: =IF(G170="",IF(E170="",F170,E170),G170) -> 'cthompson@dozllc.com'
+H171: =IF(G171="",IF(E171="",F171,E171),G171) -> 0
+C172= 'Energy Consultant:' | E172= 'FARD Engineers' | H172: =IF(G172="",IF(E172="",F172,E172),G172) -> 'FARD Engineers'
+C173= 'Address:' | E173= '200 Gregory Lane, Building A' | H173: =IF(G173="",IF(E173="",F173,E173),G173) -> '200 Gregory Lane, Building A'
+C174= 'City, State, Zip:' | E174= 'Pleasant Hill, CA 94523' | H174: =IF(G174="",IF(E174="",F174,E174),G174) -> 'Pleasant Hill, CA 94523'
+C175= 'Contact Person:' | E175= 'Avery Colter' | H175: =IF(G175="",IF(E175="",F175,E175),G175) -> 'Avery Colter'
+C176= 'Phone:' | E176= '925.446.6185' | H176: =IF(G176="",IF(E176="",F176,E176),G176) -> '925.446.6185'
+C177= 'Fax:' | H177: =IF(G177="",IF(E177="",F177,E177),G177) -> 0
+C178= 'Email:' | E178= 'avery@fard.com' | H178: =IF(G178="",IF(E178="",F178,E178),G178) -> 'avery@fard.com'
+H179: =IF(G179="",IF(E179="",F179,E179),G179) -> 0
+C180= 'CPA:' | E180= 'DAUBY O’CONNOR & ZALESKI, LLC' | H180: =IF(G180="",IF(E180="",F180,E180),G180) -> 'DAUBY O’CONNOR & ZALESKI, LLC'
+C181= 'Address:' | E181= '501 Congressional Blvd' | H181: =IF(G181="",IF(E181="",F181,E181),G181) -> '501 Congressional Blvd'
+C182= 'City, State, Zip' | E182= 'Carmel, IN 46032' | H182: =IF(G182="",IF(E182="",F182,E182),G182) -> 'Carmel, IN 46032'
+C183= 'Contact Person:' | E183= 'Chris Thompson' | H183: =IF(G183="",IF(E183="",F183,E183),G183) -> 'Chris Thompson'
+C184= 'Phone:' | H184: =IF(G184="",IF(E184="",F184,E184),G184) -> 0
+C185= 'Fax:' | H185: =IF(G185="",IF(E185="",F185,E185),G185) -> 0
+C186= 'Email:' | E186= 'cthompson@dozllc.com' | H186: =IF(G186="",IF(E186="",F186,E186),G186) -> 'cthompson@dozllc.com'
+H187: =IF(G187="",IF(E187="",F187,E187),G187) -> 0
+C188= 'Investor:' | E188= 'Hudson Housing Capital LLC' | H188: =IF(G188="",IF(E188="",F188,E188),G188) -> 'Hudson Housing Capital LLC'
+C189= 'Address:' | E189= '630 Fifth Ave, 28th Floor' | H189: =IF(G189="",IF(E189="",F189,E189),G189) -> '630 Fifth Ave, 28th Floor'
+C190= 'City, State, Zip:' | E190= 'New York, NY, 10111' | H190: =IF(G190="",IF(E190="",F190,E190),G190) -> 'New York, NY, 10111'
+C191= 'Contact Person:' | E191= 'Blake Davis' | H191: =IF(G191="",IF(E191="",F191,E191),G191) -> 'Blake Davis'
+C192= 'Phone:' | E192= '212.218.4488' | H192: =IF(G192="",IF(E192="",F192,E192),G192) -> '212.218.4488'
+C193= 'Fax:' | E193= '-' | H193: =IF(G193="",IF(E193="",F193,E193),G193) -> '-'
+C194= 'Email:' | E194= 'Blake.Davis@hudsonhousing.com' | H194: =IF(G194="",IF(E194="",F194,E194),G194) -> 'Blake.Davis@hudsonhousing.com'
+H195: =IF(G195="",IF(E195="",F195,E195),G195) -> 0
+C196= 'Consultant:' | E196= 'Zen Development Consultants LLC' | H196: =IF(G196="",IF(E196="",F196,E196),G196) -> 'Zen Development Consultants LLC'
+C197= 'Address:' | E197= '222 Redwood Drive' | H197: =IF(G197="",IF(E197="",F197,E197),G197) -> '222 Redwood Drive'
+C198= 'City, State, Zip' | E198= 'Woodacre, CA, 94973' | H198: =IF(G198="",IF(E198="",F198,E198),G198) -> 'Woodacre, CA, 94973'
+C199= 'Contact Person:' | E199= 'Jeremy Hoffman' | H199: =IF(G199="",IF(E199="",F199,E199),G199) -> 'Jeremy Hoffman'
+C200= 'Phone:' | E200= '818.653.3899' | H200: =IF(G200="",IF(E200="",F200,E200),G200) -> '818.653.3899'
+C201= 'Fax:' | H201: =IF(G201="",IF(E201="",F201,E201),G201) -> 0
+C202= 'Email:' | E202= 'jeremy@zendevelopment.org' | H202: =IF(G202="",IF(E202="",F202,E202),G202) -> 'jeremy@zendevelopment.org'
+H203: =IF(G203="",IF(E203="",F203,E203),G203) -> 0
+C204= 'Market Analyst:' | E204= 'The Concord Group' | H204: =IF(G204="",IF(E204="",F204,E204),G204) -> 'The Concord Group'
+C205= 'Address:' | E205= '140 Newport Center Drive, Suite 210' | H205: =IF(G205="",IF(E205="",F205,E205),G205) -> '140 Newport Center Drive, Suite 210'
+C206= 'City, State, Zip:' | E206= 'Newport Beach, CA, 92660' | H206: =IF(G206="",IF(E206="",F206,E206),G206) -> 'Newport Beach, CA, 92660'
+C207= 'Contact Person:' | E207= 'Brodie Dizgun' | H207: =IF(G207="",IF(E207="",F207,E207),G207) -> 'Brodie Dizgun'
+C208= 'Phone:' | E208= '949.717.6450' | H208: =IF(G208="",IF(E208="",F208,E208),G208) -> '949.717.6450'
+C209= 'Fax:' | H209: =IF(G209="",IF(E209="",F209,E209),G209) -> 0
+C210= 'Email:' | E210= 'btd@theconcordgroup.com' | H210: =IF(G210="",IF(E210="",F210,E210),G210) -> 'btd@theconcordgroup.com'
+H211: =IF(G211="",IF(E211="",F211,E211),G211) -> 0
+C212= 'Appraiser:' | E212= 'N/A' | H212: =IF(G212="",IF(E212="",F212,E212),G212) -> 'N/A'
+C213= 'Address:' | H213: =IF(G213="",IF(E213="",F213,E213),G213) -> 0
+C214= 'City, State, Zip' | H214: =IF(G214="",IF(E214="",F214,E214),G214) -> 0
+C215= 'Contact Person:' | H215: =IF(G215="",IF(E215="",F215,E215),G215) -> 0
+C216= 'Phone:' | H216: =IF(G216="",IF(E216="",F216,E216),G216) -> 0
+C217= 'Fax:' | H217: =IF(G217="",IF(E217="",F217,E217),G217) -> 0
+C218= 'Email:' | H218: =IF(G218="",IF(E218="",F218,E218),G218) -> 0
+H219: =IF(G219="",IF(E219="",F219,E219),G219) -> 0
+C220= 'CNA Consultant:' | E220= 'N/A' | H220: =IF(G220="",IF(E220="",F220,E220),G220) -> 'N/A'
+C221= 'Address:' | H221: =IF(G221="",IF(E221="",F221,E221),G221) -> 0
+C222= 'City, State, Zip:' | H222: =IF(G222="",IF(E222="",F222,E222),G222) -> 0
+C223= 'Contact Person:' | H223: =IF(G223="",IF(E223="",F223,E223),G223) -> 0
+C224= 'Phone:' | H224: =IF(G224="",IF(E224="",F224,E224),G224) -> 0
+C225= 'Fax:' | H225: =IF(G225="",IF(E225="",F225,E225),G225) -> 0
+C226= 'Email:' | H226: =IF(G226="",IF(E226="",F226,E226),G226) -> 0
+H227: =IF(G227="",IF(E227="",F227,E227),G227) -> 0
+C228= 'Bond Issuer:' | E228= 'California Municial Finance Authority' | H228: =IF(G228="",IF(E228="",F228,E228),G228) -> 'California Municial Finance Authority'
+C229= 'Address:' | E229= '2111 Palomar Airport Rd # 320' | H229: =IF(G229="",IF(E229="",F229,E229),G229) -> '2111 Palomar Airport Rd # 320'
+C230= 'City, State, Zip:' | E230= 'Carlsbad, CA 92011' | H230: =IF(G230="",IF(E230="",F230,E230),G230) -> 'Carlsbad, CA 92011'
+C231= 'Contact Person:' | E231= 'Ben Barker' | H231: =IF(G231="",IF(E231="",F231,E231),G231) -> 'Ben Barker'
+C232= 'Phone:' | E232= '(760) 795-9187' | H232: =IF(G232="",IF(E232="",F232,E232),G232) -> '(760) 795-9187'
+C233= 'Fax:' | H233: =IF(G233="",IF(E233="",F233,E233),G233) -> 0
+C234= 'Email:' | E234= 'bbarker@cmfa-ca.com' | H234: =IF(G234="",IF(E234="",F234,E234),G234) -> 'bbarker@cmfa-ca.com'
+H235: =IF(G235="",IF(E235="",F235,E235),G235) -> 0
+C236= 'Prop. Mgmt. Co.:' | E236= 'Aperto Property Management' | H236: =IF(G236="",IF(E236="",F236,E236),G236) -> 'Aperto Property Management'
+C237= 'Address:' | E237= '2 Venture, Suite 525' | H237: =IF(G237="",IF(E237="",F237,E237),G237) -> '2 Venture, Suite 525'
+C238= 'City, State, Zip:' | E238= 'Irvine, CA 92618' | H238: =IF(G238="",IF(E238="",F238,E238),G238) -> 'Irvine, CA 92618'
+C239= 'Contact Person:' | E239= 'Ed Quigley' | H239: =IF(G239="",IF(E239="",F239,E239),G239) -> 'Ed Quigley'
+C240= 'Phone:' | E240= 9498734200 | H240: =IF(G240="",IF(E240="",F240,E240),G240) -> 9498734200
+C241= 'Fax:' | H241: =IF(G241="",IF(E241="",F241,E241),G241) -> 0
+C242= 'Email:' | E242= 'equigley@apertopm.com' | H242: =IF(G242="",IF(E242="",F242,E242),G242) -> 'equigley@apertopm.com'
+H243: =IF(G243="",IF(E243="",F243,E243),G243) -> 0
+C244= '2nd Prop. Mgmt. Co.:' | E244= 'N/A' | H244: =IF(G244="",IF(E244="",F244,E244),G244) -> 'N/A'
+C245= 'Address:' | H245: =IF(G245="",IF(E245="",F245,E245),G245) -> 0
+C246= 'City, State, Zip:' | H246: =IF(G246="",IF(E246="",F246,E246),G246) -> 0
+C247= 'Contact Person:' | H247: =IF(G247="",IF(E247="",F247,E247),G247) -> 0
+C248= 'Phone:' | H248: =IF(G248="",IF(E248="",F248,E248),G248) -> 0
+C249= 'Fax:' | H249: =IF(G249="",IF(E249="",F249,E249),G249) -> 0
+C250= 'Email:' | H250: =IF(G250="",IF(E250="",F250,E250),G250) -> 0
+H251: =IF(G251="",IF(E251="",F251,E251),G251) -> 0
+C252= 'New Construction' | E252= 'Yes' | H252: =IF(G252="",IF(E252="",F252,E252),G252) -> 'Yes'
+C253= 'Adaptive Reuse' | E253= 'N/A' | H253: =IF(G253="",IF(E253="",F253,E253),G253) -> 'N/A'
+C254= 'Rehabilitation-Only' | E254= 'N/A' | H254: =IF(G254="",IF(E254="",F254,E254),G254) -> 'N/A'
+C255= 'Acquisition & Rehabilitation' | E255= 'N/A' | H255: =IF(G255="",IF(E255="",F255,E255),G255) -> 'N/A'
+C256= 'Will demolition of an existing structure be involved?' | E256= 'N/A' | H256: =IF(G256="",IF(E256="",F256,E256),G256) -> 'N/A'
+C257= 'If demolition of housing units, how many units demolished?' | E257= 0 | H257: =IF(G257="",IF(E257="",F257,E257),G257) -> 0
+C258= 'Will relocation of existing tenants be involved?' | E258= 'N/A' | H258: =IF(G258="",IF(E258="",F258,E258),G258) -> 'N/A'
+H259: =IF(G259="",IF(E259="",F259,E259),G259) -> 0
+C260= 'If requesting Acquisition Credit, will the acquisition meet the 10-year placed in service rule as required ' | E260= 'N/A' | H260: =IF(G260="",IF(E260="",F260,E260),G260) -> 'N/A'
+C261= 'If no, will it meet the waiver conditions of IRC Sec. 42(d)(6)?' | E261= 'N/A' | H261: =IF(G261="",IF(E261="",F261,E261),G261) -> 'N/A'
+C262= 'Acquisition basis is established using:' | E262= 'Appraisal' | H262: =IF(G262="",IF(E262="",F262,E262),G262) -> 'Appraisal'
+C263= 'existing tenants?' | E263= 'N/A' | H263: =IF(G263="",IF(E263="",F263,E263),G263) -> 'N/A'
+H264: =IF(G264="",IF(E264="",F264,E264),G264) -> 0
+C265= 'Resyndication Projects' | H265: =IF(G265="",IF(E265="",F265,E265),G265) -> 0
+C266= 'Are Transfer Event provisions applicable?  See questionnaire on CTCAC website.' | E266= 'N/A' | H266: =IF(G266="",IF(E266="",F266,E266),G266) -> 'N/A'
+C267= 'Is the project currently under a Capital Needs Agreement with CTCAC?' | E267= 'N/A' | H267: =IF(G267="",IF(E267="",F267,E267),G267) -> 'N/A'
+C268= 'If so, has the Short Term Work been completed?' | E268= 'N/A' | H268: =IF(G268="",IF(E268="",F268,E268),G268) -> 'N/A'
+C269= 'Is the project subject to hold harmless rent limits?' | E269= 'N/A' | H269: =IF(G269="",IF(E269="",F269,E269),G269) -> 'N/A'
+H270: =IF(G270="",IF(E270="",F270,E270),G270) -> 0
+C271= 'Purchase Information' | H271: =IF(G271="",IF(E271="",F271,E271),G271) -> 0
+C272= 'Name of Seller: ' | E272= '3400 Broadway LLC' | H272: =IF(G272="",IF(E272="",F272,E272),G272) -> '3400 Broadway LLC'
+C273= 'Seller Principal:' | E273= 'Danny Haber' | H273: =IF(G273="",IF(E273="",F273,E273),G273) -> 'Danny Haber'
+C274= 'Title:' | E274= 'Managing Partner' | H274: =IF(G274="",IF(E274="",F274,E274),G274) -> 'Managing Partner'
+C275= 'Seller Address:' | E275= '411 2nd Street, Oakland, CA 94607' | H275: =IF(G275="",IF(E275="",F275,E275),G275) -> '411 2nd Street, Oakland, CA 94607'
+C277= 'Signatory of Seller:' | E277: =E273 -> 'Danny Haber' | H277: =IF(G277="",IF(E277="",F277,E277),G277) -> 'Danny Haber'
+C278= 'Seller Principal:' | E278: =E277 -> 'Danny Haber' | H278: =IF(G278="",IF(E278="",F278,E278),G278) -> 'Danny Haber'
+C279= 'Title:' | E279: =E274 -> 'Managing Partner' | H279: =IF(G279="",IF(E279="",F279,E279),G279) -> 'Managing Partner'
+H280: =IF(G280="",IF(E280="",F280,E280),G280) -> 0
+C281= 'Date of Purchase Contract or Option:  ' | E281= datetime.datetime(2026, 5, 18, 0, 0) | H281: =IF(G281="",IF(E281="",F281,E281),G281) -> datetime.datetime(2026, 5, 18, 0, 0)
+C282= 'Expiration Date of Option:  ' | E282= 'Does not expire' | H282: =IF(G282="",IF(E282="",F282,E282),G282) -> 'Does not expire'
+C283= 'Purchase Price:  ' | E283: ='Dev Budget'!F171 -> 2180000 | H283: =IF(G283="",IF(E283="",F283,E283),G283) -> 2180000
+C284= 'Phone:' | E284= '-' | H284: =IF(G284="",IF(E284="",F284,E284),G284) -> '-'
+C285= 'Holding Costs per Month:' | E285: =E292/70 -> 0 | H285: =IF(G285="",IF(E285="",F285,E285),G285) -> 0
+C286= 'Real Estate Tax Rate:  ' | E286: ='Dev Budget'!E58 -> 0.0125 | H286: =IF(G286="",IF(E286="",F286,E286),G286) -> 0.0125
+H287: =IF(G287="",IF(E287="",F287,E287),G287) -> 0
+C288= 'Purchased from Affiliate:' | E288= 'No' | H288: =IF(G288="",IF(E288="",F288,E288),G288) -> 'No'
+C289= 'If yes, broker fee amount to affiliate?' | H289: =IF(G289="",IF(E289="",F289,E289),G289) -> 0
+C290= 'Expected escrow closing date:' | E290= 'Closed' | H290: =IF(G290="",IF(E290="",F290,E290),G290) -> 'Closed'
+C291= 'Historical Property/Site:' | H291: =IF(G291="",IF(E291="",F291,E291),G291) -> 0
+C292= 'Total Projected Holding Costs:' | E292= 0 | H292: =IF(G292="",IF(E292="",F292,E292),G292) -> 0
+C293= 'Purchase price over appraisal' | H293: =IF(G293="",IF(E293="",F293,E293),G293) -> 0
+C294= 'Amount of SOFT perm financing covering the excess purchase price over appraised value' | H294: =IF(G294="",IF(E294="",F294,E294),G294) -> 0
+H295: =IF(G295="",IF(E295="",F295,E295),G295) -> 0
+C296= 'Project site will be subject to a ground lease?' | E296= 'No' | H296: =IF(G296="",IF(E296="",F296,E296),G296) -> 'No'
+C297= 'Project owner is/will be the lessee?' | E297= 'N/A' | H297: =IF(G297="",IF(E297="",F297,E297),G297) -> 'N/A'
+C298= 'If no, please explain:' | H298: =IF(G298="",IF(E298="",F298,E298),G298) -> 0
+C299= 'Lessor:' | E299= '3400 Broadway LLC' | H299: =IF(G299="",IF(E299="",F299,E299),G299) -> '3400 Broadway LLC'
+C300= 'Will any loans be secured by the property?  ' | E300= '(select)' | H300: =IF(G300="",IF(E300="",F300,E300),G300) -> '(select)'
+C301= 'Term (in years):' | E301: =99 -> 99 | H301: =IF(G301="",IF(E301="",F301,E301),G301) -> 99
+C302= 'Annual Payment Amount:' | H302: =IF(G302="",IF(E302="",F302,E302),G302) -> 0
+H305: =IF(G305="",IF(E305="",F305,E305),G305) -> 0
+C306= 'Project Type:' | E306= 'Other (Specify below)' | H306: =IF(G306="",IF(E306="",F306,E306),G306) -> 'Other (Specify below)'
+C307= 'Two or More Story With an Elevator:' | E307= 'Yes' | H307: =IF(G307="",IF(E307="",F307,E307),G307) -> 'Yes'
+C308= ' if yes, enter number of stories:' | E308: ='Initial Screen'!S36+'Initial Screen'!S38 -> 21 | H308: =IF(G308="",IF(E308="",F308,E308),G308) -> 21
+C309= 'Two or More Story Without an Elevator:' | E309= 'N/A' | H309: =IF(G309="",IF(E309="",F309,E309),G309) -> 'N/A'
+C310= 'One or More Levels of Subterranean Parking:' | E310= 'N/A' | H310: =IF(G310="",IF(E310="",F310,E310),G310) -> 'N/A'
+C311= 'Other:' | E311: ='Initial Screen'!O81 -> '21-story residential mixed-use buildling (17-stories of residential over 4-stories of parking)' | H311: =IF(G311="",IF(E311="",F311,E311),G311) -> '21-story residential mixed-use buildling (17-stories of residential over 4-stories of parking)'
+H312: =IF(G312="",IF(E312="",F312,E312),G312) -> 0
+C313= 'Acres' | E313: =Program!C8 -> 1.51322314049587 | H313: =IF(G313="",IF(E313="",F313,E313),G313) -> 1.51322314049587
+C314= 'Net Acres' | E314: =E313*'Initial Screen'!S32 -> 0.887228279741769 | H314: =IF(G314="",IF(E314="",F314,E314),G314) -> 0.887228279741769
+H315: =IF(G315="",IF(E315="",F315,E315),G315) -> 0
+C316= 'Total Number of Buildings:' | E316= 1 | H316: =IF(G316="",IF(E316="",F316,E316),G316) -> 1
+C317= 'Residential Buildings:' | E317= 1 | H317: =IF(G317="",IF(E317="",F317,E317),G317) -> 1
+C318= 'Community Buildings:' | E318= 0 | H318: =IF(G318="",IF(E318="",F318,E318),G318) -> 0
+C319= 'Commercial/ Retail Space:' | E319= 'N/A' | H319: =IF(G319="",IF(E319="",F319,E319),G319) -> 'N/A'
+C320= 'Are Buildings on a Contiguous Site?' | E320= 'Yes' | H320: =IF(G320="",IF(E320="",F320,E320),G320) -> 'Yes'
+C321= 'If not Contiguous, do buildings meet the requirements of IRC Sec. 42(g)(7)?' | E321= 'N/A' | H321: =IF(G321="",IF(E321="",F321,E321),G321) -> 'N/A'
+H322: =IF(G322="",IF(E322="",F322,E322),G322) -> 0
+C323= 'Do any buildings have 4 or fewer units? ' | E323= 'No' | H323: =IF(G323="",IF(E323="",F323,E323),G323) -> 'No'
+C324= 'a person related to the owner (IRC Sec. 42(i)(3)(c))?' | E324= 'N/A' | H324: =IF(G324="",IF(E324="",F324,E324),G324) -> 'N/A'
+H325: =IF(G325="",IF(E325="",F325,E325),G325) -> 0
+C326= 'Total number of units:' | E326: =SUM(Program!E46:E56) -> 2030 | H326: =IF(G326="",IF(E326="",F326,E326),G326) -> 2030
+C327= "Total number of non-Tax Credit Units (i.e. market rate units) (excluding managers' units):" | E327: ='LIHTC & Dev Fee'!C219 -> 0 | H327: =IF(G327="",IF(E327="",F327,E327),G327) -> 0
+C328= 'Total number of units (excluding managers’ units):' | E328: =E326-'Rent Builder'!$F$44 -> 2026 | H328: =IF(G328="",IF(E328="",F328,E328),G328) -> 2026
+C329= 'Total number of Low Income Units:' | E329: ='Rent Builder'!$G$44 -> 1013 | H329: =IF(G329="",IF(E329="",F329,E329),G329) -> 1013
+C330= 'Total square footage of all residential units (excluding managers’ units):' | E330: =ROUNDUP(Program!C15+Program!C23*0.85,0)-E334+30000 -> 681785.9 | H330: =IF(G330="",IF(E330="",F330,E330),G330) -> 681785.9
+C331= 'Total square footage of Low Income Units:' | E331: =ROUNDUP(Program!C15+Program!C23*0.85,0)-E334+30000 -> 681785.9 | H331: =IF(G331="",IF(E331="",F331,E331),G331) -> 681785.9
+C332= 'Total interior amenity space square footage (CTCAC Regulation Section 10325(g)(1)): ' | E332: =Program!C13+Program!C21+Program!C14+Program!C23/3 -> 10943.7 | H332: =IF(G332="",IF(E332="",F332,E332),G332) -> 10943.7
+C333= 'Total commercial/ retail space square footage:' | E333= 0 | H333: =IF(G333="",IF(E333="",F333,E333),G333) -> 0
+C334= 'Total common area square footage (including managers’ units):' | E334: =Program!C23+Program!C19+Program!C17 -> 14831.1 | H334: =IF(G334="",IF(E334="",F334,E334),G334) -> 14831.1
+C335= 'Total parking structure square footage (excludes car-ports and "tuck under" parking):' | E335: =Program!C18+Program!C20+Program!C22+Program!C16 -> 248832.9 | H335: =IF(G335="",IF(E335="",F335,E335),G335) -> 248832.9
+H336: =IF(G336="",IF(E336="",F336,E336),G336) -> 0
+C337= 'Homeless' | H337: =IF(G337="",IF(E337="",F337,E337),G337) -> 0
+C338= 'Transitional housing' | H338: =IF(G338="",IF(E338="",F338,E338),G338) -> 0
+C339= 'Persons with physical, mental, development disabilities' | H339: =IF(G339="",IF(E339="",F339,E339),G339) -> 0
+C340= 'Persons with HIV/AIDS' | H340: =IF(G340="",IF(E340="",F340,E340),G340) -> 0
+C341= 'Transition age youth' | H341: =IF(G341="",IF(E341="",F341,E341),G341) -> 0
+C342= 'Farmworker' | H342: =IF(G342="",IF(E342="",F342,E342),G342) -> 0
+C343= 'Family Reunification' | H343: =IF(G343="",IF(E343="",F343,E343),G343) -> 0
+C344= 'Veteran' | H344: =IF(G344="",IF(E344="",F344,E344),G344) -> 0
+C345= 'ADA and Accessible Units pursuant to CBC Chapter 11B' | E345: =ROUNDUP(Program!$E$64*0.15,0) -> 153 | H345: =IF(G345="",IF(E345="",F345,E345),G345) -> 153
+C346= 'Other:' | H346: =IF(G346="",IF(E346="",F346,E346),G346) -> 0
+H347: =IF(G347="",IF(E347="",F347,E347),G347) -> 0
+C348= 'Current Land Use Designation' | E348= 'Mixed Use Residential' | H348: =IF(G348="",IF(E348="",F348,E348),G348) -> 'Mixed Use Residential'
+C349= 'Current Zoning and Maximum Density' | E349: =CONCATENATE('Initial Screen'!J26,"; ",'Initial Screen'!P19," DUA") -> '(WC) Uptown-SN-RIO; 1000 DUA' | H349: =IF(G349="",IF(E349="",F349,E349),G349) -> '(WC) Uptown-SN-RIO; 1000 DUA'
+C350= 'Proposed Zoning and Maximum Density' | E350: =E349 -> '(WC) Uptown-SN-RIO; 1000 DUA' | H350: =IF(G350="",IF(E350="",F350,E350),G350) -> '(WC) Uptown-SN-RIO; 1000 DUA'
+C351= 'Occupancy restrictions that run with the land due to CUP’s or density bonuses?' | E351= 'No' | H351: =IF(G351="",IF(E351="",F351,E351),G351) -> 'No'
+C352= 'Subject to Inclusionary Zoning?' | E352= 'No' | H352: =IF(G352="",IF(E352="",F352,E352),G352) -> 'No'
+C353= 'Building Height Requirements' | E353: =CONCATENATE('Initial Screen'!J28+33, " Max") -> '198 Max' | H353: =IF(G353="",IF(E353="",F353,E353),G353) -> '198 Max'
+C354= 'Required Parking Ratio' | E354= 0 | H354: =IF(G354="",IF(E354="",F354,E354),G354) -> 0
+C355= 'Total Number of Parking Spaces' | E355: ='OpEx & Other Income'!E38 -> 711 | H355: =IF(G355="",IF(E355="",F355,E355),G355) -> 711
+H356: =IF(G356="",IF(E356="",F356,E356),G356) -> 0
+C357= 'Development Timetable' | H357: =IF(G357="",IF(E357="",F357,E357),G357) -> 0
+C358= 'Construction Completion' | E358= datetime.datetime(2026, 4, 5, 0, 0) | H358: =IF(G358="",IF(E358="",F358,E358),G358) -> datetime.datetime(2026, 4, 5, 0, 0)
+C359= 'Placed in Service' | E359= datetime.datetime(2029, 2, 5, 0, 0) | H359: =IF(G359="",IF(E359="",F359,E359),G359) -> datetime.datetime(2029, 2, 5, 0, 0)
+C360= 'Occupancy of All Low-Income Units' | H360: =IF(G360="",IF(E360="",F360,E360),G360) -> 0
+H361: =IF(G361="",IF(E361="",F361,E361),G361) -> 0
+C362= 'Construction Financing 1' | E362= 'JLL Real Estate Capital, LLC' | H362: =IF(G362="",IF(E362="",F362,E362),G362) -> 'JLL Real Estate Capital, LLC'
+C363= 'Name of Lender' | E363: =E362 -> 'JLL Real Estate Capital, LLC' | H363: =IF(G363="",IF(E363="",F363,E363),G363) -> 'JLL Real Estate Capital, LLC'
+C364= 'Type of Source' | E364= 'Loan, Tax-Exempt' | H364: =IF(G364="",IF(E364="",F364,E364),G364) -> 'Loan, Tax-Exempt'
+C365= 'Term' | H365: =IF(G365="",IF(E365="",F365,E365),G365) -> 0
+C366= 'Amort' | H366: =IF(G366="",IF(E366="",F366,E366),G366) -> 0
+C367= 'Interest Rate' | E367: ='Financing & Debt Sizing'!D178 -> 0.0612 | H367: =IF(G367="",IF(E367="",F367,E367),G367) -> 0.0612
+C368= 'Fixed/Variable' | E368= 'Fixed' | H368: =IF(G368="",IF(E368="",F368,E368),G368) -> 'Fixed'
+C369= 'Lien Position' | E369= 1 | H369: =IF(G369="",IF(E369="",F369,E369),G369) -> 1
+C370= 'Required Payment' | H370: =IF(G370="",IF(E370="",F370,E370),G370) -> 0
+C371= 'Amount of Funds' | E371: =ROUND('Sources & Uses'!E30,0) -> 90744000 | H371: =IF(G371="",IF(E371="",F371,E371),G371) -> 90744000
+H372: =IF(G372="",IF(E372="",F372,E372),G372) -> 0
+C373= 'Construction Financing 2' | H373: =IF(G373="",IF(E373="",F373,E373),G373) -> 0
+C374= 'Name of Lender' | E374: =E362 -> 'JLL Real Estate Capital, LLC' | H374: =IF(G374="",IF(E374="",F374,E374),G374) -> 'JLL Real Estate Capital, LLC'
+C375= 'Type of Source' | E375= 'Loan, Tax-Exempt, Recycled' | H375: =IF(G375="",IF(E375="",F375,E375),G375) -> 'Loan, Tax-Exempt, Recycled'
+C376= 'Term' | H376: =IF(G376="",IF(E376="",F376,E376),G376) -> 0
+C377= 'Amort' | H377: =IF(G377="",IF(E377="",F377,E377),G377) -> 0
+C378= 'Interest Rate' | E378: ='Financing & Debt Sizing'!D178 -> 0.0612 | H378: =IF(G378="",IF(E378="",F378,E378),G378) -> 0.0612
+C379= 'Fixed/Variable' | E379= 'Fixed' | H379: =IF(G379="",IF(E379="",F379,E379),G379) -> 'Fixed'
+C380= 'Lien Position' | E380= 2 | H380: =IF(G380="",IF(E380="",F380,E380),G380) -> 2
+C381= 'Required Payment' | H381: =IF(G381="",IF(E381="",F381,E381),G381) -> 0
+C382= 'Amount of Funds' | E382: ='Sources & Uses'!E32 -> 8836818.61410386 | H382: =IF(G382="",IF(E382="",F382,E382),G382) -> 8836818.61410386
+H383: =IF(G383="",IF(E383="",F383,E383),G383) -> 0
+C384= 'Construction Financing 3' | H384: =IF(G384="",IF(E384="",F384,E384),G384) -> 0
+C385= 'Name of Lender' | E385: =E362 -> 'JLL Real Estate Capital, LLC' | H385: =IF(G385="",IF(E385="",F385,E385),G385) -> 'JLL Real Estate Capital, LLC'
+C386= 'Type of Source' | E386= 'Loan, Taxable' | H386: =IF(G386="",IF(E386="",F386,E386),G386) -> 'Loan, Taxable'
+C387= 'Term' | H387: =IF(G387="",IF(E387="",F387,E387),G387) -> 0
+C388= 'Amort' | H388: =IF(G388="",IF(E388="",F388,E388),G388) -> 0
+C389= 'Interest Rate' | E389: ='Financing & Debt Sizing'!D179 -> 0.0612 | H389: =IF(G389="",IF(E389="",F389,E389),G389) -> 0.0612
+C390= 'Fixed/Variable' | E390= 'Fixed' | H390: =IF(G390="",IF(E390="",F390,E390),G390) -> 'Fixed'
+C391= 'Lien Position' | E391= 3 | H391: =IF(G391="",IF(E391="",F391,E391),G391) -> 3
+C392= 'Required Payment' | H392: =IF(G392="",IF(E392="",F392,E392),G392) -> 0
+C393= 'Amount of Funds' | E393: ='Sources & Uses'!E31 -> 158099319.936153 | H393: =IF(G393="",IF(E393="",F393,E393),G393) -> 158099319.936153
+H394: =IF(G394="",IF(E394="",F394,E394),G394) -> 0
+C395= 'Construction Financing 4' | E395= 'Hudson' | H395: =IF(G395="",IF(E395="",F395,E395),G395) -> 'Hudson'
+C396= 'Name of Lender' | E396= 'Hudson Housing Capital LLC' | H396: =IF(G396="",IF(E396="",F396,E396),G396) -> 'Hudson Housing Capital LLC'
+C397= 'Type of Source' | E397= 'Equity, LIHTC Investor' | H397: =IF(G397="",IF(E397="",F397,E397),G397) -> 'Equity, LIHTC Investor'
+C398= 'Term' | H398: =IF(G398="",IF(E398="",F398,E398),G398) -> 0
+C399= 'Amort' | H399: =IF(G399="",IF(E399="",F399,E399),G399) -> 0
+C400= 'Interest Rate' | H400: =IF(G400="",IF(E400="",F400,E400),G400) -> 0
+C401= 'Fixed/Variable' | E401= 'Fixed' | H401: =IF(G401="",IF(E401="",F401,E401),G401) -> 'Fixed'
+C402= 'Lien Position' | H402: =IF(G402="",IF(E402="",F402,E402),G402) -> 0
+C403= 'Required Payment' | H403: =IF(G403="",IF(E403="",F403,E403),G403) -> 0
+C404= 'Amount of Funds' | E404: ='Sources & Uses'!E29 -> 42860776.7181978 | H404: =IF(G404="",IF(E404="",F404,E404),G404) -> 42860776.7181978
+C405= 'Federal Credit Factor' | E405: =Sensitivities!$C$19 -> 0.78 | H405: =IF(G405="",IF(E405="",F405,E405),G405) -> 0.78
+C406= 'State Credit Factor' | E406: =Sensitivities!$C$20 -> 0.82 | H406: =IF(G406="",IF(E406="",F406,E406),G406) -> 0.82
+H407: =IF(G407="",IF(E407="",F407,E407),G407) -> 0
+C408= 'Construction Financing 5' | H408: =IF(G408="",IF(E408="",F408,E408),G408) -> 0
+C409= 'Name of Lender' | E409: ='Sources & Uses'!D33 -> 'Deferred Fees until Conversion (Developer fee reserves, etc)' | H409: =IF(G409="",IF(E409="",F409,E409),G409) -> 'Deferred Fees until Conversion (Developer fee reserves, etc)'
+C410= 'Type of Source' | E410= 'Cost Deferral' | H410: =IF(G410="",IF(E410="",F410,E410),G410) -> 'Cost Deferral'
+C411= 'Term' | H411: =IF(G411="",IF(E411="",F411,E411),G411) -> 0
+C412= 'Amort' | H412: =IF(G412="",IF(E412="",F412,E412),G412) -> 0
+C413= 'Interest Rate' | H413: =IF(G413="",IF(E413="",F413,E413),G413) -> 0
+C414= 'Fixed/Variable' | E414= 'Fixed' | H414: =IF(G414="",IF(E414="",F414,E414),G414) -> 'Fixed'
+C415= 'Lien Position' | H415: =IF(G415="",IF(E415="",F415,E415),G415) -> 0
+C416= 'Required Payment' | H416: =IF(G416="",IF(E416="",F416,E416),G416) -> 0
+C417= 'Amount of Funds' | E417: ='Sources & Uses'!E33 -> 8986599.54902796 | H417: =IF(G417="",IF(E417="",F417,E417),G417) -> 8986599.54902796
+H418: =IF(G418="",IF(E418="",F418,E418),G418) -> 0
+C419= 'Construction Financing 6' | H419: =IF(G419="",IF(E419="",F419,E419),G419) -> 0
+C420= 'Name of Lender' | E420= '3400 Broadway LLC' | H420: =IF(G420="",IF(E420="",F420,E420),G420) -> '3400 Broadway LLC'
+C421= 'Type of Source' | E421= 'Developer Fee, Deferral' | H421: =IF(G421="",IF(E421="",F421,E421),G421) -> 'Developer Fee, Deferral'
+C422= 'Term' | E422= 180 | H422: =IF(G422="",IF(E422="",F422,E422),G422) -> 180
+C423= 'Amort' | H423: =IF(G423="",IF(E423="",F423,E423),G423) -> 0
+C424= 'Interest Rate' | H424: =IF(G424="",IF(E424="",F424,E424),G424) -> 0
+C425= 'Fixed/Variable' | E425= 'Fixed' | H425: =IF(G425="",IF(E425="",F425,E425),G425) -> 'Fixed'
+C426= 'Lien Position' | H426: =IF(G426="",IF(E426="",F426,E426),G426) -> 0
+C427= 'Required Payment' | H427: =IF(G427="",IF(E427="",F427,E427),G427) -> 0
+C428= 'Amount of Funds' | E428: ='Sources & Uses'!E36 -> 40040573.9631686 | H428: =IF(G428="",IF(E428="",F428,E428),G428) -> 40040573.9631686
+H429: =IF(G429="",IF(E429="",F429,E429),G429) -> 0
+C430= 'Construction Financing 7' | H430: =IF(G430="",IF(E430="",F430,E430),G430) -> 0
+C431= 'Name of Lender' | E431= '3400 Broadway LLC' | H431: =IF(G431="",IF(E431="",F431,E431),G431) -> '3400 Broadway LLC'
+C432= 'Type of Source' | E432= 'Value of lease' | H432: =IF(G432="",IF(E432="",F432,E432),G432) -> 'Value of lease'
+C433= 'Term' | E433: =99*12 -> 1188 | H433: =IF(G433="",IF(E433="",F433,E433),G433) -> 1188
+C434= 'Amort' | E434= 0 | H434: =IF(G434="",IF(E434="",F434,E434),G434) -> 0
+C435= 'Interest Rate' | E435= 0.06 | H435: =IF(G435="",IF(E435="",F435,E435),G435) -> 0.06
+C436= 'Fixed/Variable' | E436= 'Fixed' | H436: =IF(G436="",IF(E436="",F436,E436),G436) -> 'Fixed'
+C437= 'Lien Position' | H437: =IF(G437="",IF(E437="",F437,E437),G437) -> 0
+C438= 'Required Payment' | H438: =IF(G438="",IF(E438="",F438,E438),G438) -> 0
+C439= 'Amount of Funds' | E439: ='Sources & Uses'!E40 -> 0 | H439: =IF(G439="",IF(E439="",F439,E439),G439) -> 0
+H440: =IF(G440="",IF(E440="",F440,E440),G440) -> 0
+C441= 'Construction Financing 8' | H441: =IF(G441="",IF(E441="",F441,E441),G441) -> 0
+C442= 'Name of Lender' | H442: =IF(G442="",IF(E442="",F442,E442),G442) -> 0
+C443= 'Type of Source' | H443: =IF(G443="",IF(E443="",F443,E443),G443) -> 0
+C444= 'Term' | H444: =IF(G444="",IF(E444="",F444,E444),G444) -> 0
+C445= 'Amort' | H445: =IF(G445="",IF(E445="",F445,E445),G445) -> 0
+C446= 'Interest Rate' | H446: =IF(G446="",IF(E446="",F446,E446),G446) -> 0
+C447= 'Fixed/Variable' | H447: =IF(G447="",IF(E447="",F447,E447),G447) -> 0
+C448= 'Lien Position' | H448: =IF(G448="",IF(E448="",F448,E448),G448) -> 0
+C449= 'Required Payment' | H449: =IF(G449="",IF(E449="",F449,E449),G449) -> 0
+C450= 'Amount of Funds' | H450: =IF(G450="",IF(E450="",F450,E450),G450) -> 0
+H451: =IF(G451="",IF(E451="",F451,E451),G451) -> 0
+C452= 'Construction Financing 9' | H452: =IF(G452="",IF(E452="",F452,E452),G452) -> 0
+C453= 'Name of Lender' | H453: =IF(G453="",IF(E453="",F453,E453),G453) -> 0
+C454= 'Type of Source' | H454: =IF(G454="",IF(E454="",F454,E454),G454) -> 0
+C455= 'Term' | H455: =IF(G455="",IF(E455="",F455,E455),G455) -> 0
+C456= 'Amort' | H456: =IF(G456="",IF(E456="",F456,E456),G456) -> 0
+C457= 'Interest Rate' | H457: =IF(G457="",IF(E457="",F457,E457),G457) -> 0
+C458= 'Fixed/Variable' | E458= 'Fixed' | H458: =IF(G458="",IF(E458="",F458,E458),G458) -> 'Fixed'
+C459= 'Lien Position' | H459: =IF(G459="",IF(E459="",F459,E459),G459) -> 0
+C460= 'Required Payment' | H460: =IF(G460="",IF(E460="",F460,E460),G460) -> 0
+C461= 'Amount of Funds' | H461: =IF(G461="",IF(E461="",F461,E461),G461) -> 0
+H462: =IF(G462="",IF(E462="",F462,E462),G462) -> 0
+C463= 'Construction Financing 10' | H463: =IF(G463="",IF(E463="",F463,E463),G463) -> 0
+C464= 'Name of Lender' | H464: =IF(G464="",IF(E464="",F464,E464),G464) -> 0
+C465= 'Type of Source' | H465: =IF(G465="",IF(E465="",F465,E465),G465) -> 0
+C466= 'Term' | H466: =IF(G466="",IF(E466="",F466,E466),G466) -> 0
+C467= 'Amort' | H467: =IF(G467="",IF(E467="",F467,E467),G467) -> 0
+C468= 'Interest Rate' | H468: =IF(G468="",IF(E468="",F468,E468),G468) -> 0
+C469= 'Fixed/Variable' | E469= 'Fixed' | H469: =IF(G469="",IF(E469="",F469,E469),G469) -> 'Fixed'
+C470= 'Lien Position' | H470: =IF(G470="",IF(E470="",F470,E470),G470) -> 0
+C471= 'Required Payment' | H471: =IF(G471="",IF(E471="",F471,E471),G471) -> 0
+C472= 'Amount of Funds' | H472: =IF(G472="",IF(E472="",F472,E472),G472) -> 0
+H473: =IF(G473="",IF(E473="",F473,E473),G473) -> 0
+C474= 'Construction Financing 11' | H474: =IF(G474="",IF(E474="",F474,E474),G474) -> 0
+C475= 'Name of Lender' | H475: =IF(G475="",IF(E475="",F475,E475),G475) -> 0
+C476= 'Type of Source' | H476: =IF(G476="",IF(E476="",F476,E476),G476) -> 0
+C477= 'Term' | H477: =IF(G477="",IF(E477="",F477,E477),G477) -> 0
+C478= 'Amort' | H478: =IF(G478="",IF(E478="",F478,E478),G478) -> 0
+C479= 'Interest Rate' | H479: =IF(G479="",IF(E479="",F479,E479),G479) -> 0
+C480= 'Fixed/Variable' | E480= 'Fixed' | H480: =IF(G480="",IF(E480="",F480,E480),G480) -> 'Fixed'
+C481= 'Lien Position' | H481: =IF(G481="",IF(E481="",F481,E481),G481) -> 0
+C482= 'Required Payment' | H482: =IF(G482="",IF(E482="",F482,E482),G482) -> 0
+C483= 'Amount of Funds' | H483: =IF(G483="",IF(E483="",F483,E483),G483) -> 0
+H484: =IF(G484="",IF(E484="",F484,E484),G484) -> 0
+C485= 'Construction Financing 12' | H485: =IF(G485="",IF(E485="",F485,E485),G485) -> 0
+C486= 'Name of Lender' | H486: =IF(G486="",IF(E486="",F486,E486),G486) -> 0
+C487= 'Type of Source' | H487: =IF(G487="",IF(E487="",F487,E487),G487) -> 0
+C488= 'Term' | H488: =IF(G488="",IF(E488="",F488,E488),G488) -> 0
+C489= 'Amort' | H489: =IF(G489="",IF(E489="",F489,E489),G489) -> 0
+C490= 'Interest Rate' | H490: =IF(G490="",IF(E490="",F490,E490),G490) -> 0
+C491= 'Fixed/Variable' | E491= 'Fixed' | H491: =IF(G491="",IF(E491="",F491,E491),G491) -> 'Fixed'
+C492= 'Lien Position' | H492: =IF(G492="",IF(E492="",F492,E492),G492) -> 0
+C493= 'Required Payment' | H493: =IF(G493="",IF(E493="",F493,E493),G493) -> 0
+C494= 'Amount of Funds' | H494: =IF(G494="",IF(E494="",F494,E494),G494) -> 0
+H495: =IF(G495="",IF(E495="",F495,E495),G495) -> 0
+C496= 'Lender/Source 1' | H496: =IF(G496="",IF(E496="",F496,E496),G496) -> 0
+C497= 'Street Address:' | E497= '333 West Wacker Drive, Suite 2300' | H497: =IF(G497="",IF(E497="",F497,E497),G497) -> '333 West Wacker Drive, Suite 2300'
+C498= 'City:' | E498= 'Chicago, IL 60606' | H498: =IF(G498="",IF(E498="",F498,E498),G498) -> 'Chicago, IL 60606'
+C499= 'Contact Name:' | E499= 'CW Early' | H499: =IF(G499="",IF(E499="",F499,E499),G499) -> 'CW Early'
+C500= 'Phone Number:' | E500= '(312) 897-4000' | H500: =IF(G500="",IF(E500="",F500,E500),G500) -> '(312) 897-4000'
+C501= 'Type of Financing:' | E501= 'Tax exempt bonds' | H501: =IF(G501="",IF(E501="",F501,E501),G501) -> 'Tax exempt bonds'
+C502= 'Variable Rate Index (if applicable):' | E502= 'N/A' | H502: =IF(G502="",IF(E502="",F502,E502),G502) -> 'N/A'
+C503= 'Is the Lender/Source Committed?' | E503= 'Yes' | H503: =IF(G503="",IF(E503="",F503,E503),G503) -> 'Yes'
+H504: =IF(G504="",IF(E504="",F504,E504),G504) -> 0
+C505= 'Lender/Source 2' | H505: =IF(G505="",IF(E505="",F505,E505),G505) -> 0
+C506= 'Street Address:' | E506= '333 West Wacker Drive, Suite 2300' | H506: =IF(G506="",IF(E506="",F506,E506),G506) -> '333 West Wacker Drive, Suite 2300'
+C507= 'City:' | E507= 'Chicago, IL 60606' | H507: =IF(G507="",IF(E507="",F507,E507),G507) -> 'Chicago, IL 60606'
+C508= 'Contact Name:' | E508= 'CW Early' | H508: =IF(G508="",IF(E508="",F508,E508),G508) -> 'CW Early'
+C509= 'Phone Number:' | E509= '(312) 897-4000' | H509: =IF(G509="",IF(E509="",F509,E509),G509) -> '(312) 897-4000'
+C510= 'Type of Financing:' | E510= 'Taxable Loan' | H510: =IF(G510="",IF(E510="",F510,E510),G510) -> 'Taxable Loan'
+C511= 'Variable Rate Index (if applicable):' | E511= 'N/A' | H511: =IF(G511="",IF(E511="",F511,E511),G511) -> 'N/A'
+C512= 'Is the Lender/Source Committed?' | E512= 'Yes' | H512: =IF(G512="",IF(E512="",F512,E512),G512) -> 'Yes'
+H513: =IF(G513="",IF(E513="",F513,E513),G513) -> 0
+C514= 'Lender/Source 3' | H514: =IF(G514="",IF(E514="",F514,E514),G514) -> 0
+C515= 'Street Address:' | E515= '630 Fifth Ave, 28th Floor' | H515: =IF(G515="",IF(E515="",F515,E515),G515) -> '630 Fifth Ave, 28th Floor'
+C516= 'City:' | E516= 'New York, NY, 10111' | H516: =IF(G516="",IF(E516="",F516,E516),G516) -> 'New York, NY, 10111'
+C517= 'Contact Name:' | E517= 'Blake Davis' | H517: =IF(G517="",IF(E517="",F517,E517),G517) -> 'Blake Davis'
+C518= 'Phone Number:' | E518= '212.218.4488' | H518: =IF(G518="",IF(E518="",F518,E518),G518) -> '212.218.4488'
+C519= 'Type of Financing:' | E519= 'LIHTC equity' | H519: =IF(G519="",IF(E519="",F519,E519),G519) -> 'LIHTC equity'
+C520= 'Is the Lender/Source Committed?' | E520= 'Yes' | H520: =IF(G520="",IF(E520="",F520,E520),G520) -> 'Yes'
+H521: =IF(G521="",IF(E521="",F521,E521),G521) -> 0
+C522= 'Lender/Source 4' | H522: =IF(G522="",IF(E522="",F522,E522),G522) -> 0
+C523= 'Street Address:' | E523= '411 2nd Street' | H523: =IF(G523="",IF(E523="",F523,E523),G523) -> '411 2nd Street'
+C524= 'City:' | E524= 'Oakland' | H524: =IF(G524="",IF(E524="",F524,E524),G524) -> 'Oakland'
+C525= 'Contact Name:' | E525= 'Jeremy Harris' | H525: =IF(G525="",IF(E525="",F525,E525),G525) -> 'Jeremy Harris'
+C526= 'Phone Number:' | E526= 8584495270 | H526: =IF(G526="",IF(E526="",F526,E526),G526) -> 8584495270
+C527= 'Type of Financing:' | E527= 'Cost Deferral' | H527: =IF(G527="",IF(E527="",F527,E527),G527) -> 'Cost Deferral'
+C528= 'Is the Lender/Source Committed?' | E528= 'Yes' | H528: =IF(G528="",IF(E528="",F528,E528),G528) -> 'Yes'
+H529: =IF(G529="",IF(E529="",F529,E529),G529) -> 0
+C530= 'Lender/Source 5' | H530: =IF(G530="",IF(E530="",F530,E530),G530) -> 0
+C531= 'Street Address:' | E531= '411 2nd Street' | H531: =IF(G531="",IF(E531="",F531,E531),G531) -> '411 2nd Street'
+C532= 'City:' | E532= 'Oakland' | H532: =IF(G532="",IF(E532="",F532,E532),G532) -> 'Oakland'
+C533= 'Contact Name:' | E533= 'Jeremy Harris' | H533: =IF(G533="",IF(E533="",F533,E533),G533) -> 'Jeremy Harris'
+C534= 'Phone Number:' | E534= 8584495270 | H534: =IF(G534="",IF(E534="",F534,E534),G534) -> 8584495270
+C535= 'Type of Financing:' | E535= 'Deferred Development Fee' | H535: =IF(G535="",IF(E535="",F535,E535),G535) -> 'Deferred Development Fee'
+C536= 'Is the Lender/Source Committed?' | E536= 'Yes' | H536: =IF(G536="",IF(E536="",F536,E536),G536) -> 'Yes'
+H537: =IF(G537="",IF(E537="",F537,E537),G537) -> 0
+C538= 'Lender/Source 6' | H538: =IF(G538="",IF(E538="",F538,E538),G538) -> 0
+C539= 'Street Address:' | E539= '411 2nd Street' | H539: =IF(G539="",IF(E539="",F539,E539),G539) -> '411 2nd Street'
+C540= 'City:' | E540= 'Oakland' | H540: =IF(G540="",IF(E540="",F540,E540),G540) -> 'Oakland'
+C541= 'Contact Name:' | E541= 'Jeremy Harris' | H541: =IF(G541="",IF(E541="",F541,E541),G541) -> 'Jeremy Harris'
+C542= 'Phone Number:' | E542= 8584495270 | H542: =IF(G542="",IF(E542="",F542,E542),G542) -> 8584495270
+C543= 'Type of Financing:' | E543= 'Leasehold' | H543: =IF(G543="",IF(E543="",F543,E543),G543) -> 'Leasehold'
+C544= 'Is the Lender/Source Committed?' | E544= 'Yes' | H544: =IF(G544="",IF(E544="",F544,E544),G544) -> 'Yes'
+F545= ' ' | H545: =IF(G545="",IF(E545="",F545,E545),G545) -> ' '
+C546= 'Lender/Source 7' | H546: =IF(G546="",IF(E546="",F546,E546),G546) -> 0
+C547= 'Street Address:' | H547: =IF(G547="",IF(E547="",F547,E547),G547) -> 0
+C548= 'City:' | H548: =IF(G548="",IF(E548="",F548,E548),G548) -> 0
+C549= 'Contact Name:' | H549: =IF(G549="",IF(E549="",F549,E549),G549) -> 0
+C550= 'Phone Number:' | H550: =IF(G550="",IF(E550="",F550,E550),G550) -> 0
+C551= 'Type of Financing:' | H551= 'Net Operating Income'
+C552= 'Is the Lender/Source Committed?' | H552: =IF(G552="",IF(E552="",F552,E552),G552) -> 0
+H553: =IF(G553="",IF(E553="",F553,E553),G553) -> 0
+C554= 'Lender/Source 8' | H554: =IF(G554="",IF(E554="",F554,E554),G554) -> 0
+C555= 'Street Address:' | H555: =IF(G555="",IF(E555="",F555,E555),G555) -> 0
+C556= 'City:' | H556: =IF(G556="",IF(E556="",F556,E556),G556) -> 0
+C557= 'Contact Name:' | H557: =IF(G557="",IF(E557="",F557,E557),G557) -> 0
+C558= 'Phone Number:' | H558: =IF(G558="",IF(E558="",F558,E558),G558) -> 0
+C559= 'Type of Financing:' | H559: =IF(G559="",IF(E559="",F559,E559),G559) -> 0
+C560= 'Is the Lender/Source Committed?' | H560: =IF(G560="",IF(E560="",F560,E560),G560) -> 0
+H561: =IF(G561="",IF(E561="",F561,E561),G561) -> 0
+C562= 'Lender/Source 9' | H562: =IF(G562="",IF(E562="",F562,E562),G562) -> 0
+C563= 'Street Address:' | H563: =IF(G563="",IF(E563="",F563,E563),G563) -> 0
+C564= 'City:' | H564: =IF(G564="",IF(E564="",F564,E564),G564) -> 0
+C565= 'Contact Name:' | H565: =IF(G565="",IF(E565="",F565,E565),G565) -> 0
+C566= 'Phone Number:' | H566: =IF(G566="",IF(E566="",F566,E566),G566) -> 0
+C567= 'Type of Financing:' | H567: =IF(G567="",IF(E567="",F567,E567),G567) -> 0
+C568= 'Is the Lender/Source Committed?' | H568: =IF(G568="",IF(E568="",F568,E568),G568) -> 0
+H569: =IF(G569="",IF(E569="",F569,E569),G569) -> 0
+C570= 'Lender/Source 10' | H570: =IF(G570="",IF(E570="",F570,E570),G570) -> 0
+C571= 'Street Address:' | H571: =IF(G571="",IF(E571="",F571,E571),G571) -> 0
+C572= 'City:' | H572: =IF(G572="",IF(E572="",F572,E572),G572) -> 0
+C573= 'Contact Name:' | H573: =IF(G573="",IF(E573="",F573,E573),G573) -> 0
+C574= 'Phone Number:' | H574: =IF(G574="",IF(E574="",F574,E574),G574) -> 0
+C575= 'Type of Financing:' | H575: =IF(G575="",IF(E575="",F575,E575),G575) -> 0
+C576= 'Is the Lender/Source Committed?' | H576: =IF(G576="",IF(E576="",F576,E576),G576) -> 0
+H577: =IF(G577="",IF(E577="",F577,E577),G577) -> 0
+C578= 'Lender/Source 11' | H578: =IF(G578="",IF(E578="",F578,E578),G578) -> 0
+C579= 'Street Address:' | H579: =IF(G579="",IF(E579="",F579,E579),G579) -> 0
+C580= 'City:' | H580: =IF(G580="",IF(E580="",F580,E580),G580) -> 0
+C581= 'Contact Name:' | H581: =IF(G581="",IF(E581="",F581,E581),G581) -> 0
+C582= 'Phone Number:' | H582: =IF(G582="",IF(E582="",F582,E582),G582) -> 0
+C583= 'Type of Financing:' | H583: =IF(G583="",IF(E583="",F583,E583),G583) -> 0
+C584= 'Is the Lender/Source Committed?' | H584: =IF(G584="",IF(E584="",F584,E584),G584) -> 0
+H585: =IF(G585="",IF(E585="",F585,E585),G585) -> 0
+C586= 'Lender/Source 12' | H586: =IF(G586="",IF(E586="",F586,E586),G586) -> 0
+C587= 'Street Address:' | H587: =IF(G587="",IF(E587="",F587,E587),G587) -> 0
+C588= 'City:' | H588: =IF(G588="",IF(E588="",F588,E588),G588) -> 0
+C589= 'Contact Name:' | H589: =IF(G589="",IF(E589="",F589,E589),G589) -> 0
+C590= 'Phone Number:' | H590: =IF(G590="",IF(E590="",F590,E590),G590) -> 0
+C591= 'Type of Financing:' | H591: =IF(G591="",IF(E591="",F591,E591),G591) -> 0
+C592= 'Is the Lender/Source Committed?' | H592: =IF(G592="",IF(E592="",F592,E592),G592) -> 0
+H593: =IF(G593="",IF(E593="",F593,E593),G593) -> 0
+B594= 'DSCR' | C594= 'Permanent Financing 1' | E594= 1.15 | H594: =IF(G594="",IF(E594="",F594,E594),G594) -> 1.15
+C595= 'Name of Lender' | E595= 'JLL Real Estate Capital, LLC' | H595: =IF(G595="",IF(E595="",F595,E595),G595) -> 'JLL Real Estate Capital, LLC'
+C596= 'Type of Source' | E596= 'Loan, Tax-Exempt' | H596: =IF(G596="",IF(E596="",F596,E596),G596) -> 'Loan, Tax-Exempt'
+C597= 'Term' | E597: ='Financing & Debt Sizing'!D163*12 -> 192 | H597: =IF(G597="",IF(E597="",F597,E597),G597) -> 192
+C598= 'Amort' | E598: =16*12 -> 192 | H598: =IF(G598="",IF(E598="",F598,E598),G598) -> 192
+C599= 'Interest Rate' | E599: =Sensitivities!$C$18 -> 0.0668025742165792 | H599: =IF(G599="",IF(E599="",F599,E599),G599) -> 0.0668025742165792
+C600= 'Payment Type' | E600= 'Required' | H600: =IF(G600="",IF(E600="",F600,E600),G600) -> 'Required'
+C601= 'Lien Position' | E601= 1 | H601= 1
+C602= 'Annual Debt Service - Residential' | E602: =ROUNDUP('Financing & Debt Sizing'!D165,0) -> 12263420 | H602: =IF(G602="",IF(E602="",F602,E602),G602) -> 12263420
+C603= 'Annual Debt Service - Commercial' | H603: =IF(G603="",IF(E603="",F603,E603),G603) -> 0
+C604= 'Amount of Funds' | E604: =ROUND('Sources & Uses'!E47,0) -> 170796282 | H604: =IF(G604="",IF(E604="",F604,E604),G604) -> 170796282
+C605= 'Amortization' | E605= 40 | H605: =IF(G605="",IF(E605="",F605,E605),G605) -> 40
+C606= 'Permanent Financing 2' | H606: =IF(G606="",IF(E606="",F606,E606),G606) -> 0
+C607= 'Name of Lender' | E607= '3400 Broadway LLC' | H607: =IF(G607="",IF(E607="",F607,E607),G607) -> '3400 Broadway LLC'
+C608= 'Type of Source' | E608= 'Developer Fee, Deferral' | H608: =IF(G608="",IF(E608="",F608,E608),G608) -> 'Developer Fee, Deferral'
+C609= 'Term' | H609: =15*12 -> 180
+C610= 'Amort' | H610: =IF(G610="",IF(E610="",F610,E610),G610) -> 0
+C611= 'Interest Rate' | H611= 0
+C612= 'Payment Type' | E612= 'Residual' | H612: =IF(G612="",IF(E612="",F612,E612),G612) -> 'Residual'
+C613= 'Lien Position' | H613: =IF(G613="",IF(E613="",F613,E613),G613) -> 0
+C614= 'Annual Debt Service - Residential' | H614: =IF(G614="",IF(E614="",F614,E614),G614) -> 0
+C615= 'Annual Debt Service - Commercial' | H615: =IF(G615="",IF(E615="",F615,E615),G615) -> 0
+C616= 'Amount of Funds' | E616: =ROUND('Sources & Uses'!E52,) -> 40040574 | H616: =IF(G616="",IF(E616="",F616,E616),G616) -> 40040574
+H617: =IF(G617="",IF(E617="",F617,E617),G617) -> 0
+C618= 'Permanent Financing 3' | H618: =IF(G618="",IF(E618="",F618,E618),G618) -> 0
+C619= 'Name of Lender' | E619= '3400 Broadway LLC' | H619: =IF(G619="",IF(E619="",F619,E619),G619) -> '3400 Broadway LLC'
+C620= 'Type of Source' | E620= 'Value of Lease' | H620: =IF(G620="",IF(E620="",F620,E620),G620) -> 'Value of Lease'
+C621= 'Term' | E621: =99*12 -> 1188 | H621: =IF(G621="",IF(E621="",F621,E621),G621) -> 1188
+C622= 'Amort' | H622: =IF(G622="",IF(E622="",F622,E622),G622) -> 0
+C623= 'Interest Rate' | E623= 0 | H623: =IF(G623="",IF(E623="",F623,E623),G623) -> 0
+C624= 'Payment Type' | E624= 'Residual' | H624: =IF(G624="",IF(E624="",F624,E624),G624) -> 'Residual'
+C625= 'Lien Position' | H625: =IF(G625="",IF(E625="",F625,E625),G625) -> 0
+C626= 'Annual Debt Service - Residential' | H626: =IF(G626="",IF(E626="",F626,E626),G626) -> 0
+C627= 'Annual Debt Service - Commercial' | H627: =IF(G627="",IF(E627="",F627,E627),G627) -> 0
+C628= 'Amount of Funds' | E628: ='Sources & Uses'!$E$48 -> 0 | H628: =IF(G628="",IF(E628="",F628,E628),G628) -> 0
+H629: =IF(G629="",IF(E629="",F629,E629),G629) -> 0
+C630= 'Permanent Financing 4' | H630: =IF(G630="",IF(E630="",F630,E630),G630) -> 0
+C631= 'Name of Lender' | E631= '3400 Broadway LLC' | H631: =IF(G631="",IF(E631="",F631,E631),G631) -> '3400 Broadway LLC'
+C632= 'Type of Source' | E632= 'Net Operating Income' | H632: =IF(G632="",IF(E632="",F632,E632),G632) -> 'Net Operating Income'
+C633= 'Term' | H633: =IF(G633="",IF(E633="",F633,E633),G633) -> 0
+C634= 'Amort' | H634: =IF(G634="",IF(E634="",F634,E634),G634) -> 0
+C635= 'Interest Rate' | E635: ='Operating Cash Flow'!G54 -> 0 | H635: =IF(G635="",IF(E635="",F635,E635),G635) -> 0
+C636= 'Payment Type' | E636= 'Residual' | H636: =IF(G636="",IF(E636="",F636,E636),G636) -> 'Residual'
+C637= 'Lien Position' | H637= 0
+C638= 'Annual Debt Service - Residential' | H638: =IF(G638="",IF(E638="",F638,E638),G638) -> 0
+C639= 'Annual Debt Service - Commercial' | H639: =IF(G639="",IF(E639="",F639,E639),G639) -> 0
+C640= 'Amount of Funds' | E640: =ROUND('Sources & Uses'!$E$55,) -> 0 | H640: =IF(G640="",IF(E640="",F640,E640),G640) -> 0
+H641: =IF(G641="",IF(E641="",F641,E641),G641) -> 0
+C642= 'Permanent Financing 5' | H642: =IF(G642="",IF(E642="",F642,E642),G642) -> 0
+C643= 'Name of Lender' | H643: =IF(G643="",IF(E643="",F643,E643),G643) -> 0
+C644= 'Type of Source' | H644: =IF(G644="",IF(E644="",F644,E644),G644) -> 0
+C645= 'Term' | H645= 0
+C646= 'Amort' | H646: =IF(G646="",IF(E646="",F646,E646),G646) -> 0
+C647= 'Interest Rate' | H647: =IF(G647="",IF(E647="",F647,E647),G647) -> 0
+C648= 'Payment Type' | H648: =IF(G648="",IF(E648="",F648,E648),G648) -> 0
+C649= 'Lien Position' | H649: =IF(G649="",IF(E649="",F649,E649),G649) -> 0
+C650= 'Annual Debt Service - Residential' | H650: =IF(G650="",IF(E650="",F650,E650),G650) -> 0
+C651= 'Annual Debt Service - Commercial' | H651: =IF(G651="",IF(E651="",F651,E651),G651) -> 0
+C652= 'Amount of Funds' | H652: =IF(G652="",IF(E652="",F652,E652),G652) -> 0
+H653: =IF(G653="",IF(E653="",F653,E653),G653) -> 0
+C654= 'Permanent Financing 6' | H654: =IF(G654="",IF(E654="",F654,E654),G654) -> 0
+C655= 'Name of Lender' | H655: =IF(G655="",IF(E655="",F655,E655),G655) -> 0
+C656= 'Type of Source' | H656: =IF(G656="",IF(E656="",F656,E656),G656) -> 0
+C657= 'Term' | H657: =IF(G657="",IF(E657="",F657,E657),G657) -> 0
+C658= 'Amort' | H658: =IF(G658="",IF(E658="",F658,E658),G658) -> 0
+C659= 'Interest Rate' | H659: =IF(G659="",IF(E659="",F659,E659),G659) -> 0
+C660= 'Payment Type' | H660: =IF(G660="",IF(E660="",F660,E660),G660) -> 0
+C661= 'Lien Position' | H661: =IF(G661="",IF(E661="",F661,E661),G661) -> 0
+C662= 'Annual Debt Service - Residential' | H662: =IF(G662="",IF(E662="",F662,E662),G662) -> 0
+C663= 'Annual Debt Service - Commercial' | H663: =IF(G663="",IF(E663="",F663,E663),G663) -> 0
+C664= 'Amount of Funds' | H664: =IF(G664="",IF(E664="",F664,E664),G664) -> 0
+H665: =IF(G665="",IF(E665="",F665,E665),G665) -> 0
+C666= 'Permanent Financing 7' | H666: =IF(G666="",IF(E666="",F666,E666),G666) -> 0
+C667= 'Name of Lender' | H667: =IF(G667="",IF(E667="",F667,E667),G667) -> 0
+C668= 'Type of Source' | H668: =IF(G668="",IF(E668="",F668,E668),G668) -> 0
+C669= 'Term' | H669: =IF(G669="",IF(E669="",F669,E669),G669) -> 0
+C670= 'Amort' | H670: =IF(G670="",IF(E670="",F670,E670),G670) -> 0
+C671= 'Interest Rate' | H671: =IF(G671="",IF(E671="",F671,E671),G671) -> 0
+C672= 'Payment Type' | H672: =IF(G672="",IF(E672="",F672,E672),G672) -> 0
+C673= 'Lien Position' | H673: =IF(G673="",IF(E673="",F673,E673),G673) -> 0
+C674= 'Annual Debt Service - Residential' | H674: =IF(G674="",IF(E674="",F674,E674),G674) -> 0
+C675= 'Annual Debt Service - Commercial' | H675: =IF(G675="",IF(E675="",F675,E675),G675) -> 0
+C676= 'Amount of Funds' | H676: =IF(G676="",IF(E676="",F676,E676),G676) -> 0
+H677: =IF(G677="",IF(E677="",F677,E677),G677) -> 0
+C678= 'Permanent Financing 8' | H678: =IF(G678="",IF(E678="",F678,E678),G678) -> 0
+C679= 'Name of Lender' | H679: =IF(G679="",IF(E679="",F679,E679),G679) -> 0
+C680= 'Type of Source' | H680: =IF(G680="",IF(E680="",F680,E680),G680) -> 0
+C681= 'Term' | H681: =IF(G681="",IF(E681="",F681,E681),G681) -> 0
+C682= 'Amort' | H682: =IF(G682="",IF(E682="",F682,E682),G682) -> 0
+C683= 'Interest Rate' | H683: =IF(G683="",IF(E683="",F683,E683),G683) -> 0
+C684= 'Payment Type' | H684: =IF(G684="",IF(E684="",F684,E684),G684) -> 0
+C685= 'Lien Position' | H685: =IF(G685="",IF(E685="",F685,E685),G685) -> 0
+C686= 'Annual Debt Service - Residential' | H686: =IF(G686="",IF(E686="",F686,E686),G686) -> 0
+C687= 'Annual Debt Service - Commercial' | H687: =IF(G687="",IF(E687="",F687,E687),G687) -> 0
+C688= 'Amount of Funds' | H688: =IF(G688="",IF(E688="",F688,E688),G688) -> 0
+H689: =IF(G689="",IF(E689="",F689,E689),G689) -> 0
+C690= 'Permanent Financing 9' | H690: =IF(G690="",IF(E690="",F690,E690),G690) -> 0
+C691= 'Name of Lender' | H691: =IF(G691="",IF(E691="",F691,E691),G691) -> 0
+C692= 'Type of Source' | H692: =IF(G692="",IF(E692="",F692,E692),G692) -> 0
+C693= 'Term' | H693: =IF(G693="",IF(E693="",F693,E693),G693) -> 0
+C694= 'Amort' | H694: =IF(G694="",IF(E694="",F694,E694),G694) -> 0
+C695= 'Interest Rate' | H695: =IF(G695="",IF(E695="",F695,E695),G695) -> 0
+C696= 'Payment Type' | H696: =IF(G696="",IF(E696="",F696,E696),G696) -> 0
+C697= 'Lien Position' | H697: =IF(G697="",IF(E697="",F697,E697),G697) -> 0
+C698= 'Annual Debt Service - Residential' | H698: =IF(G698="",IF(E698="",F698,E698),G698) -> 0
+C699= 'Annual Debt Service - Commercial' | H699: =IF(G699="",IF(E699="",F699,E699),G699) -> 0
+C700= 'Amount of Funds' | H700: =IF(G700="",IF(E700="",F700,E700),G700) -> 0
+H701: =IF(G701="",IF(E701="",F701,E701),G701) -> 0
+C702= 'Permanent Financing 10' | H702: =IF(G702="",IF(E702="",F702,E702),G702) -> 0
+C703= 'Name of Lender' | H703: =IF(G703="",IF(E703="",F703,E703),G703) -> 0
+C704= 'Type of Source' | H704: =IF(G704="",IF(E704="",F704,E704),G704) -> 0
+C705= 'Term' | H705: =IF(G705="",IF(E705="",F705,E705),G705) -> 0
+C706= 'Amort' | H706: =IF(G706="",IF(E706="",F706,E706),G706) -> 0
+C707= 'Interest Rate' | H707: =IF(G707="",IF(E707="",F707,E707),G707) -> 0
+C708= 'Payment Type' | H708: =IF(G708="",IF(E708="",F708,E708),G708) -> 0
+C709= 'Lien Position' | H709: =IF(G709="",IF(E709="",F709,E709),G709) -> 0
+C710= 'Annual Debt Service - Residential' | H710: =IF(G710="",IF(E710="",F710,E710),G710) -> 0
+C711= 'Annual Debt Service - Commercial' | H711: =IF(G711="",IF(E711="",F711,E711),G711) -> 0
+C712= 'Amount of Funds' | H712: =IF(G712="",IF(E712="",F712,E712),G712) -> 0
+H713: =IF(G713="",IF(E713="",F713,E713),G713) -> 0
+C714= 'Permanent Financing 11' | H714: =IF(G714="",IF(E714="",F714,E714),G714) -> 0
+C715= 'Name of Lender' | H715: =IF(G715="",IF(E715="",F715,E715),G715) -> 0
+C716= 'Type of Source' | H716: =IF(G716="",IF(E716="",F716,E716),G716) -> 0
+C717= 'Term' | H717: =IF(G717="",IF(E717="",F717,E717),G717) -> 0
+C718= 'Amort' | H718: =IF(G718="",IF(E718="",F718,E718),G718) -> 0
+C719= 'Interest Rate' | H719: =IF(G719="",IF(E719="",F719,E719),G719) -> 0
+C720= 'Payment Type' | H720: =IF(G720="",IF(E720="",F720,E720),G720) -> 0
+C721= 'Lien Position' | H721: =IF(G721="",IF(E721="",F721,E721),G721) -> 0
+C722= 'Annual Debt Service - Residential' | H722: =IF(G722="",IF(E722="",F722,E722),G722) -> 0
+C723= 'Annual Debt Service - Commercial' | H723: =IF(G723="",IF(E723="",F723,E723),G723) -> 0
+C724= 'Amount of Funds' | H724: =IF(G724="",IF(E724="",F724,E724),G724) -> 0
+H725: =IF(G725="",IF(E725="",F725,E725),G725) -> 0
+C726= 'Permanent Financing 12' | E726= 'Hudson' | H726: =IF(G726="",IF(E726="",F726,E726),G726) -> 'Hudson'
+C727= 'Name of Lender' | E727= 'Hudson Housing Capital LLC' | H727: =IF(G727="",IF(E727="",F727,E727),G727) -> 'Hudson Housing Capital LLC'
+C728= 'Type of Source' | E728= 'Equity, LIHTC Investor' | H728: =IF(G728="",IF(E728="",F728,E728),G728) -> 'Equity, LIHTC Investor'
+C729= 'Term' | E729: =25*12 -> 300 | H729: =IF(G729="",IF(E729="",F729,E729),G729) -> 300
+C730= 'Amort' | H730: =IF(G730="",IF(E730="",F730,E730),G730) -> 0
+C731= 'Interest Rate' | H731: =IF(G731="",IF(E731="",F731,E731),G731) -> 0
+C732= 'Payment Type' | H732: =IF(G732="",IF(E732="",F732,E732),G732) -> 0
+C733= 'Lien Position' | H733: =IF(G733="",IF(E733="",F733,E733),G733) -> 0
+C734= 'Annual Debt Service - Residential' | H734: =IF(G734="",IF(E734="",F734,E734),G734) -> 0
+C735= 'Annual Debt Service - Commercial' | H735: =IF(G735="",IF(E735="",F735,E735),G735) -> 0
+C736= 'Amount of Funds' | H736: =IF(G736="",IF(E736="",F736,E736),G736) -> 0
+H737: =IF(G737="",IF(E737="",F737,E737),G737) -> 0
+C738= 'Total Tax Credit Equity' | E738: =ROUND('Sources & Uses'!E46,) -> 133838969 | H738: =IF(G738="",IF(E738="",F738,E738),G738) -> 133838969
+H739: =IF(G739="",IF(E739="",F739,E739),G739) -> 0
+C740= 'Lender/Source 1' | H740: =IF(G740="",IF(E740="",F740,E740),G740) -> 0
+C741= 'Street Address:' | E741= '333 West Wacker Drive, Suite 2300' | H741: =IF(G741="",IF(E741="",F741,E741),G741) -> '333 West Wacker Drive, Suite 2300'
+C742= 'City:' | E742= 'Chicago, IL 60606' | H742: =IF(G742="",IF(E742="",F742,E742),G742) -> 'Chicago, IL 60606'
+C743= 'Contact Name:' | E743= 'CW Early' | H743: =IF(G743="",IF(E743="",F743,E743),G743) -> 'CW Early'
+C744= 'Phone Number:' | E744= '(312) 897-4000' | H744: =IF(G744="",IF(E744="",F744,E744),G744) -> '(312) 897-4000'
+C745= 'Type of Financing:' | E745= 'Perm Financing' | H745: =IF(G745="",IF(E745="",F745,E745),G745) -> 'Perm Financing'
+C746= 'Variable Rate Index (if applicable):' | E746= 'N/A' | H746: =IF(G746="",IF(E746="",F746,E746),G746) -> 'N/A'
+C747= 'Is the Lender/Source Committed?' | E747= 'Yes' | H747: =IF(G747="",IF(E747="",F747,E747),G747) -> 'Yes'
+H748: =IF(G748="",IF(E748="",F748,E748),G748) -> 0
+C749= 'Lender/Source 2' | H749: =IF(G749="",IF(E749="",F749,E749),G749) -> 0
+C750= 'Street Address:' | E750= '411 2nd Street' | H750: =IF(G750="",IF(E750="",F750,E750),G750) -> '411 2nd Street'
+C751= 'City:' | E751= 'Oakland' | H751: =IF(G751="",IF(E751="",F751,E751),G751) -> 'Oakland'
+C752= 'Contact Name:' | E752= 'Jeremy Harris' | H752: =IF(G752="",IF(E752="",F752,E752),G752) -> 'Jeremy Harris'
+C753= 'Phone Number:' | E753= 8584495270 | H753: =IF(G753="",IF(E753="",F753,E753),G753) -> 8584495270
+C754= 'Type of Financing:' | E754= 'Deferred Development Fee' | H754: =IF(G754="",IF(E754="",F754,E754),G754) -> 'Deferred Development Fee'
+C755= 'Variable Rate Index (if applicable):' | E755= 'N/A' | H755: =IF(G755="",IF(E755="",F755,E755),G755) -> 'N/A'
+C756= 'Is the Lender/Source Committed?' | E756= 'Yes' | H756: =IF(G756="",IF(E756="",F756,E756),G756) -> 'Yes'
+H757: =IF(G757="",IF(E757="",F757,E757),G757) -> 0
+C758= 'Lender/Source 3' | H758: =IF(G758="",IF(E758="",F758,E758),G758) -> 0
+C759= 'Street Address:' | E759= '411 2nd Street' | H759: =IF(G759="",IF(E759="",F759,E759),G759) -> '411 2nd Street'
+C760= 'City:' | E760= 'Oakland' | H760: =IF(G760="",IF(E760="",F760,E760),G760) -> 'Oakland'
+C761= 'Contact Name:' | E761= 'Jeremy Harris' | H761: =IF(G761="",IF(E761="",F761,E761),G761) -> 'Jeremy Harris'
+C762= 'Phone Number:' | E762= 8584495270 | H762: =IF(G762="",IF(E762="",F762,E762),G762) -> 8584495270
+C763= 'Type of Financing:' | E763= 'Leasehold' | H763: =IF(G763="",IF(E763="",F763,E763),G763) -> 'Leasehold'
+C764= 'Is the Lender/Source Committed?' | E764= 'Yes' | H764: =IF(G764="",IF(E764="",F764,E764),G764) -> 'Yes'
+H765: =IF(G765="",IF(E765="",F765,E765),G765) -> 0
+C766= 'Lender/Source 4' | H766: =IF(G766="",IF(E766="",F766,E766),G766) -> 0
+C767= 'Street Address:' | E767= '411 2nd Street' | H767: =IF(G767="",IF(E767="",F767,E767),G767) -> '411 2nd Street'
+C768= 'City:' | E768= 'Oakland' | H768: =IF(G768="",IF(E768="",F768,E768),G768) -> 'Oakland'
+C769= 'Contact Name:' | E769= 'Jeremy Harris' | H769: =IF(G769="",IF(E769="",F769,E769),G769) -> 'Jeremy Harris'
+C770= 'Phone Number:' | E770= 8584495270 | H770: =IF(G770="",IF(E770="",F770,E770),G770) -> 8584495270
+C771= 'Type of Financing:' | E771= 'Net Operating Income' | H771: =IF(G771="",IF(E771="",F771,E771),G771) -> 'Net Operating Income'
+C772= 'Is the Lender/Source Committed?' | E772= 'Yes' | H772: =IF(G772="",IF(E772="",F772,E772),G772) -> 'Yes'
+H773: =IF(G773="",IF(E773="",F773,E773),G773) -> 0
+C774= 'Lender/Source 5' | H774: =IF(G774="",IF(E774="",F774,E774),G774) -> 0
+C775= 'Street Address:' | H775: =IF(G775="",IF(E775="",F775,E775),G775) -> 0
+C776= 'City:' | H776: =IF(G776="",IF(E776="",F776,E776),G776) -> 0
+C777= 'Contact Name:' | H777: =IF(G777="",IF(E777="",F777,E777),G777) -> 0
+C778= 'Phone Number:' | H778: =IF(G778="",IF(E778="",F778,E778),G778) -> 0
+C779= 'Type of Financing:' | H779: =IF(G779="",IF(E779="",F779,E779),G779) -> 0
+C780= 'Is the Lender/Source Committed?' | H780: =IF(G780="",IF(E780="",F780,E780),G780) -> 0
+H781: =IF(G781="",IF(E781="",F781,E781),G781) -> 0
+C782= 'Lender/Source 6' | H782: =IF(G782="",IF(E782="",F782,E782),G782) -> 0
+C783= 'Street Address:' | H783: =IF(G783="",IF(E783="",F783,E783),G783) -> 0
+C784= 'City:' | H784: =IF(G784="",IF(E784="",F784,E784),G784) -> 0
+C785= 'Contact Name:' | H785: =IF(G785="",IF(E785="",F785,E785),G785) -> 0
+C786= 'Phone Number:' | H786: =IF(G786="",IF(E786="",F786,E786),G786) -> 0
+C787= 'Type of Financing:' | H787: =IF(G787="",IF(E787="",F787,E787),G787) -> 0
+C788= 'Is the Lender/Source Committed?' | H788: =IF(G788="",IF(E788="",F788,E788),G788) -> 0
+H789: =IF(G789="",IF(E789="",F789,E789),G789) -> 0
+C790= 'Lender/Source 7' | H790: =IF(G790="",IF(E790="",F790,E790),G790) -> 0
+C791= 'Street Address:' | H791: =IF(G791="",IF(E791="",F791,E791),G791) -> 0
+C792= 'City:' | H792: =IF(G792="",IF(E792="",F792,E792),G792) -> 0
+C793= 'Contact Name:' | H793: =IF(G793="",IF(E793="",F793,E793),G793) -> 0
+C794= 'Phone Number:' | H794: =IF(G794="",IF(E794="",F794,E794),G794) -> 0
+C795= 'Type of Financing:' | H795: =IF(G795="",IF(E795="",F795,E795),G795) -> 0
+C796= 'Is the Lender/Source Committed?' | H796: =IF(G796="",IF(E796="",F796,E796),G796) -> 0
+H797: =IF(G797="",IF(E797="",F797,E797),G797) -> 0
+C798= 'Lender/Source 8' | H798: =IF(G798="",IF(E798="",F798,E798),G798) -> 0
+C799= 'Street Address:' | H799: =IF(G799="",IF(E799="",F799,E799),G799) -> 0
+C800= 'City:' | H800: =IF(G800="",IF(E800="",F800,E800),G800) -> 0
+C801= 'Contact Name:' | H801: =IF(G801="",IF(E801="",F801,E801),G801) -> 0
+C802= 'Phone Number:' | H802: =IF(G802="",IF(E802="",F802,E802),G802) -> 0
+C803= 'Type of Financing:' | H803: =IF(G803="",IF(E803="",F803,E803),G803) -> 0
+C804= 'Is the Lender/Source Committed?' | H804: =IF(G804="",IF(E804="",F804,E804),G804) -> 0
+H805: =IF(G805="",IF(E805="",F805,E805),G805) -> 0
+C806= 'Lender/Source 9' | H806: =IF(G806="",IF(E806="",F806,E806),G806) -> 0
+C807= 'Street Address:' | H807: =IF(G807="",IF(E807="",F807,E807),G807) -> 0
+C808= 'City:' | H808: =IF(G808="",IF(E808="",F808,E808),G808) -> 0
+C809= 'Contact Name:' | H809: =IF(G809="",IF(E809="",F809,E809),G809) -> 0
+C810= 'Phone Number:' | H810: =IF(G810="",IF(E810="",F810,E810),G810) -> 0
+C811= 'Type of Financing:' | H811: =IF(G811="",IF(E811="",F811,E811),G811) -> 0
+C812= 'Is the Lender/Source Committed?' | H812: =IF(G812="",IF(E812="",F812,E812),G812) -> 0
+H813: =IF(G813="",IF(E813="",F813,E813),G813) -> 0
+C814= 'Lender/Source 10' | H814: =IF(G814="",IF(E814="",F814,E814),G814) -> 0
+C815= 'Street Address:' | H815: =IF(G815="",IF(E815="",F815,E815),G815) -> 0
+C816= 'City:' | H816: =IF(G816="",IF(E816="",F816,E816),G816) -> 0
+C817= 'Contact Name:' | H817: =IF(G817="",IF(E817="",F817,E817),G817) -> 0
+C818= 'Phone Number:' | H818: =IF(G818="",IF(E818="",F818,E818),G818) -> 0
+C819= 'Type of Financing:' | H819: =IF(G819="",IF(E819="",F819,E819),G819) -> 0
+C820= 'Is the Lender/Source Committed?' | H820: =IF(G820="",IF(E820="",F820,E820),G820) -> 0
+H821: =IF(G821="",IF(E821="",F821,E821),G821) -> 0
+C822= 'Lender/Source 11' | H822: =IF(G822="",IF(E822="",F822,E822),G822) -> 0
+C823= 'Street Address:' | H823: =IF(G823="",IF(E823="",F823,E823),G823) -> 0
+C824= 'City:' | H824: =IF(G824="",IF(E824="",F824,E824),G824) -> 0
+C825= 'Contact Name:' | H825: =IF(G825="",IF(E825="",F825,E825),G825) -> 0
+C826= 'Phone Number:' | H826: =IF(G826="",IF(E826="",F826,E826),G826) -> 0
+C827= 'Type of Financing:' | H827: =IF(G827="",IF(E827="",F827,E827),G827) -> 0
+C828= 'Is the Lender/Source Committed?' | H828: =IF(G828="",IF(E828="",F828,E828),G828) -> 0
+H829: =IF(G829="",IF(E829="",F829,E829),G829) -> 0
+C830= 'Lender/Source 12' | H830: =IF(G830="",IF(E830="",F830,E830),G830) -> 0
+C831= 'Street Address:' | H831: =IF(G831="",IF(E831="",F831,E831),G831) -> 0
+C832= 'City:' | H832: =IF(G832="",IF(E832="",F832,E832),G832) -> 0
+C833= 'Contact Name:' | H833: =IF(G833="",IF(E833="",F833,E833),G833) -> 0
+C834= 'Phone Number:' | H834: =IF(G834="",IF(E834="",F834,E834),G834) -> 0
+C835= 'Type of Financing:' | H835: =IF(G835="",IF(E835="",F835,E835),G835) -> 0
+C836= 'Is the Lender/Source Committed?' | H836: =IF(G836="",IF(E836="",F836,E836),G836) -> 0
+H837: =IF(G837="",IF(E837="",F837,E837),G837) -> 0
+C838= 'Will project receive tax-exempt bond financing for more than 50% of the aggregate ' | E838= 'No' | H838: =IF(G838="",IF(E838="",F838,E838),G838) -> 'No'
+C839= 'CDLAC Allocation? ' | E839= 'No' | H839: =IF(G839="",IF(E839="",F839,E839),G839) -> 'No'
+C840= 'Date application was submitted to CDLAC (Reg. Section 10326(h)):' | E840= datetime.datetime(2026, 5, 19, 0, 0) | H840: =IF(G840="",IF(E840="",F840,E840),G840) -> datetime.datetime(2026, 5, 19, 0, 0)
+C841= 'Date of CDLAC application approval, actual or anticipated (Reg. Section 10326(j)(1)):' | E841: =E7 -> datetime.datetime(2026, 8, 18, 0, 0) | H841: =IF(G841="",IF(E841="",F841,E841),G841) -> datetime.datetime(2026, 8, 18, 0, 0)
+C842= 'Estimated date of Bond Issuance (Reg. Section 10326(e)(2)): ' | E842: =E8 -> datetime.datetime(2027, 2, 18, 0, 0) | H842: =IF(G842="",IF(E842="",F842,E842),G842) -> datetime.datetime(2027, 2, 18, 0, 0)
+C843= 'Percentage of aggregate basis financed by the bonds? (Reg. Section 10326(e)(2)):' | E843: ='Financing & Debt Sizing'!D182 -> 0.275000373442328 | H843: =IF(G843="",IF(E843="",F843,E843),G843) -> 0.275000373442328
+H844: =IF(G844="",IF(E844="",F844,E844),G844) -> 0
+H845: =IF(G845="",IF(E845="",F845,E845),G845) -> 0
+C846= 'Will project have Credit Enhancement?' | E846= 'No' | H846: =IF(G846="",IF(E846="",F846,E846),G846) -> 'No'
+H847: =IF(G847="",IF(E847="",F847,E847),G847) -> 0
+C848= 'Low Income Units ' | H848: =IF(G848="",IF(E848="",F848,E848),G848) -> 0
+H849: =IF(G849="",IF(E849="",F849,E849),G849) -> 0
+C850= 'Row 1' | H850: =IF(G850="",IF(E850="",F850,E850),G850) -> 0
+C851= 'Bedroom Type' | E851= 'SRO/Studio' | H851: =IF(G851="",IF(E851="",F851,E851),G851) -> 'SRO/Studio'
+C852= 'Number of Units' | E852: ='Rent Builder'!G12 -> 89 | H852: =IF(G852="",IF(E852="",F852,E852),G852) -> 89
+C853= 'Average Square Feet' | E853: ='Rent Builder'!D12 -> 400 | H853: =IF(G853="",IF(E853="",F853,E853),G853) -> 400
+C854= 'Propsoed Monthly Rent (less utilities)' | E854: =ROUNDUP('Rent Builder'!O12,0) -> 851 | H854: =IF(G854="",IF(E854="",F854,E854),G854) -> 851
+C855= 'Monthly utility' | E855: ='Rent Builder'!L12 -> 850.35 | H855: =IF(G855="",IF(E855="",F855,E855),G855) -> 850.35
+C856= '% of AMI' | E856: ='Rent Builder'!J12 -> 0.3 | H856: =IF(G856="",IF(E856="",F856,E856),G856) -> 0.3
+C857= 'Special Needs Population' | E857= 0 | H857: =IF(G857="",IF(E857="",F857,E857),G857) -> 0
+H858: =IF(G858="",IF(E858="",F858,E858),G858) -> 0
+C859= 'Row 2' | H859: =IF(G859="",IF(E859="",F859,E859),G859) -> 0
+C860= 'Bedroom Type' | E860= 'SRO/Studio' | H860: =IF(G860="",IF(E860="",F860,E860),G860) -> 'SRO/Studio'
+C861= 'Number of Units' | E861: ='Rent Builder'!G13 -> 13 | H861: =IF(G861="",IF(E861="",F861,E861),G861) -> 13
+C862= 'Average Square Feet' | E862: ='Rent Builder'!D13 -> 400 | H862: =IF(G862="",IF(E862="",F862,E862),G862) -> 400
+C863= 'Propsoed Monthly Rent (less utilities)' | E863: =ROUNDUP('Rent Builder'!O13,0) -> 1434 | H863: =IF(G863="",IF(E863="",F863,E863),G863) -> 1434
+C864= 'Monthly utility' | E864: ='Rent Builder'!L13 -> 1433.35 | H864: =IF(G864="",IF(E864="",F864,E864),G864) -> 1433.35
+C865= '% of AMI' | E865: ='Rent Builder'!J13 -> 0.5 | H865: =IF(G865="",IF(E865="",F865,E865),G865) -> 0.5
+C866= 'Special Needs Population' | E866= 0 | H866: =IF(G866="",IF(E866="",F866,E866),G866) -> 0
+H867: =IF(G867="",IF(E867="",F867,E867),G867) -> 0
+C868= 'Row 3' | H868: =IF(G868="",IF(E868="",F868,E868),G868) -> 0
+C869= 'Bedroom Type' | E869= 'SRO/Studio' | H869: =IF(G869="",IF(E869="",F869,E869),G869) -> 'SRO/Studio'
+C870= 'Number of Units' | E870: ='Rent Builder'!G14 -> 1 | H870: =IF(G870="",IF(E870="",F870,E870),G870) -> 1
+C871= 'Average Square Feet' | E871: ='Rent Builder'!D14 -> 560 | H871: =IF(G871="",IF(E871="",F871,E871),G871) -> 560
+C872= 'Propsoed Monthly Rent (less utilities)' | E872: =ROUNDUP('Rent Builder'!O14,0) -> 904 | H872: =IF(G872="",IF(E872="",F872,E872),G872) -> 904
+C873= 'Monthly utility' | E873: ='Rent Builder'!L14 -> 903.55 | H873: =IF(G873="",IF(E873="",F873,E873),G873) -> 903.55
+C874= '% of AMI' | E874: ='Rent Builder'!J14 -> 0.3 | H874: =IF(G874="",IF(E874="",F874,E874),G874) -> 0.3
+C875= 'Special Needs Population' | E875= 0 | H875: =IF(G875="",IF(E875="",F875,E875),G875) -> 0
+H876: =IF(G876="",IF(E876="",F876,E876),G876) -> 0
+C877= 'Row 4' | H877: =IF(G877="",IF(E877="",F877,E877),G877) -> 0
+C878= 'Bedroom Type' | E878= 'SRO/Studio' | H878: =IF(G878="",IF(E878="",F878,E878),G878) -> 'SRO/Studio'
+C879= 'Number of Units' | E879: ='Rent Builder'!G15 -> 89 | H879: =IF(G879="",IF(E879="",F879,E879),G879) -> 89
+C880= 'Average Square Feet' | E880: ='Rent Builder'!D15 -> 560 | H880: =IF(G880="",IF(E880="",F880,E880),G880) -> 560
+C881= 'Propsoed Monthly Rent (less utilities)' | E881: =ROUNDUP('Rent Builder'!O15,0) -> 1529 | H881: =IF(G881="",IF(E881="",F881,E881),G881) -> 1529
+C882= 'Monthly utility' | E882: ='Rent Builder'!L15 -> 1528.55 | H882: =IF(G882="",IF(E882="",F882,E882),G882) -> 1528.55
+C883= '% of AMI' | E883: ='Rent Builder'!J15 -> 0.5 | H883: =IF(G883="",IF(E883="",F883,E883),G883) -> 0.5
+C884= 'Special Needs Population' | E884= 0 | H884: =IF(G884="",IF(E884="",F884,E884),G884) -> 0
+H885: =IF(G885="",IF(E885="",F885,E885),G885) -> 0
+C886= 'Row 5' | H886: =IF(G886="",IF(E886="",F886,E886),G886) -> 0
+C887= 'Bedroom Type' | E887= 'SRO/Studio' | H887: =IF(G887="",IF(E887="",F887,E887),G887) -> 'SRO/Studio'
+C888= 'Number of Units' | E888: ='Rent Builder'!G16 -> 420 | H888: =IF(G888="",IF(E888="",F888,E888),G888) -> 420
+C889= 'Average Square Feet' | E889: ='Rent Builder'!D16 -> 560 | H889: =IF(G889="",IF(E889="",F889,E889),G889) -> 560
+C890= 'Propsoed Monthly Rent (less utilities)' | E890: =ROUNDUP('Rent Builder'!O16,0) -> 1788 | H890: =IF(G890="",IF(E890="",F890,E890),G890) -> 1788
+C891= 'Monthly utility' | E891: ='Rent Builder'!L16 -> 1840.55 | H891: =IF(G891="",IF(E891="",F891,E891),G891) -> 1840.55
+C892= '% of AMI' | E892: ='Rent Builder'!J16 -> 0.6 | H892: =IF(G892="",IF(E892="",F892,E892),G892) -> 0.6
+C893= 'Special Needs Population' | E893= 0 | H893: =IF(G893="",IF(E893="",F893,E893),G893) -> 0
+H894: =IF(G894="",IF(E894="",F894,E894),G894) -> 0
+C895= 'Row 6' | H895: =IF(G895="",IF(E895="",F895,E895),G895) -> 0
+C896= 'Bedroom Type' | E896= 'SRO/Studio' | H896: =IF(G896="",IF(E896="",F896,E896),G896) -> 'SRO/Studio'
+C897= 'Number of Units' | E897: ='Rent Builder'!G17 -> 286 | H897: =IF(G897="",IF(E897="",F897,E897),G897) -> 286
+C898= 'Average Square Feet' | E898: ='Rent Builder'!D17 -> 560 | H898: =IF(G898="",IF(E898="",F898,E898),G898) -> 560
+C899= 'Propsoed Monthly Rent (less utilities)' | E899: =ROUNDUP('Rent Builder'!O17,0) -> 1788 | H899: =IF(G899="",IF(E899="",F899,E899),G899) -> 1788
+C900= 'Monthly utility' | E900: ='Rent Builder'!L17 -> 2152.55 | H900: =IF(G900="",IF(E900="",F900,E900),G900) -> 2152.55
+C901= '% of AMI' | E901: ='Rent Builder'!J17 -> 0.7 | H901: =IF(G901="",IF(E901="",F901,E901),G901) -> 0.7
+C902= 'Special Needs Population' | E902= 0 | H902: =IF(G902="",IF(E902="",F902,E902),G902) -> 0
+H903: =IF(G903="",IF(E903="",F903,E903),G903) -> 0
+C904= 'Row 7' | H904: =IF(G904="",IF(E904="",F904,E904),G904) -> 0
+C905= 'Bedroom Type' | E905= '1 Bedroom' | H905: =IF(G905="",IF(E905="",F905,E905),G905) -> '1 Bedroom'
+C906= 'Number of Units' | E906: ='Rent Builder'!G18 -> 0 | H906: =IF(G906="",IF(E906="",F906,E906),G906) -> 0
+C907= 'Average Square Feet' | E907: ='Rent Builder'!D18 -> 560 | H907: =IF(G907="",IF(E907="",F907,E907),G907) -> 560
+C908= 'Propsoed Monthly Rent (less utilities)' | E908: ='Rent Builder'!O18 -> 0 | H908: =IF(G908="",IF(E908="",F908,E908),G908) -> 0
+C909= 'Monthly utility' | E909: ='Rent Builder'!L18 -> 0 | H909: =IF(G909="",IF(E909="",F909,E909),G909) -> 0
+C910= '% of AMI' | E910: ='Rent Builder'!J18 -> 'Manager' | H910: =IF(G910="",IF(E910="",F910,E910),G910) -> 'Manager'
+C911= 'Special Needs Population' | E911= 0 | H911: =IF(G911="",IF(E911="",F911,E911),G911) -> 0
+H912: =IF(G912="",IF(E912="",F912,E912),G912) -> 0
+C913= 'Row 7' | H913: =IF(G913="",IF(E913="",F913,E913),G913) -> 0
+C914= 'Bedroom Type' | E914= '1 Bedroom' | H914: =IF(G914="",IF(E914="",F914,E914),G914) -> '1 Bedroom'
+C915= 'Number of Units' | E915: ='Rent Builder'!G19 -> 12 | H915: =IF(G915="",IF(E915="",F915,E915),G915) -> 12
+C916= 'Average Square Feet' | E916: ='Rent Builder'!D19 -> 720 | H916: =IF(G916="",IF(E916="",F916,E916),G916) -> 720
+C917= 'Propsoed Monthly Rent (less utilities)' | E917: ='Rent Builder'!O19 -> 1080.65 | H917: =IF(G917="",IF(E917="",F917,E917),G917) -> 1080.65
+C918= 'Monthly utility' | E918: ='Rent Builder'!L19 -> 1080.65 | H918: =IF(G918="",IF(E918="",F918,E918),G918) -> 1080.65
+C919= '% of AMI' | E919: ='Rent Builder'!J19 -> 0.3 | H919: =IF(G919="",IF(E919="",F919,E919),G919) -> 0.3
+C920= 'Special Needs Population' | E920= 0 | H920: =IF(G920="",IF(E920="",F920,E920),G920) -> 0
+C922= 'Row 8' | H922: =IF(G922="",IF(E922="",F922,E922),G922) -> 0
+C923= 'Bedroom Type' | E923= '1 Bedroom' | H923: =IF(G923="",IF(E923="",F923,E923),G923) -> '1 Bedroom'
+C924= 'Number of Units' | E924: ='Rent Builder'!G20 -> 103 | H924: =IF(G924="",IF(E924="",F924,E924),G924) -> 103
+C925= 'Average Square Feet' | E925: ='Rent Builder'!D20 -> 720 | H925: =IF(G925="",IF(E925="",F925,E925),G925) -> 720
+C926= 'Propsoed Monthly Rent (less utilities)' | E926: =ROUNDUP('Rent Builder'!O20,0) -> 2580 | H926: =IF(G926="",IF(E926="",F926,E926),G926) -> 2580
+C927= 'Monthly utility' | E927: ='Rent Builder'!L20 -> 2579.65 | H927: =IF(G927="",IF(E927="",F927,E927),G927) -> 2579.65
+C928= '% of AMI' | E928: ='Rent Builder'!J20 -> 0.7 | H928: =IF(G928="",IF(E928="",F928,E928),G928) -> 0.7
+C929= 'Special Needs Population' | E929= 0 | H929: =IF(G929="",IF(E929="",F929,E929),G929) -> 0
+H930: =IF(G930="",IF(E930="",F930,E930),G930) -> 0
+C931= 'Row 8' | H931: =IF(G931="",IF(E931="",F931,E931),G931) -> 0
+C932= 'Bedroom Type' | E932= '1 Bedroom' | H932: =IF(G932="",IF(E932="",F932,E932),G932) -> '1 Bedroom'
+C933= 'Number of Units' | E933: ='Rent Builder'!G21 -> 0 | H933: =IF(G933="",IF(E933="",F933,E933),G933) -> 0
+C934= 'Average Square Feet' | E934: ='Rent Builder'!D21 -> 720 | H934: =IF(G934="",IF(E934="",F934,E934),G934) -> 720
+C935= 'Propsoed Monthly Rent (less utilities)' | E935: ='Rent Builder'!O21 -> 0 | H935: =IF(G935="",IF(E935="",F935,E935),G935) -> 0
+C936= 'Monthly utility' | E936: ='Rent Builder'!L21 -> 0 | H936: =IF(G936="",IF(E936="",F936,E936),G936) -> 0
+C937= '% of AMI' | E937: ='Rent Builder'!J21 -> 'Manager' | H937: =IF(G937="",IF(E937="",F937,E937),G937) -> 'Manager'
+C938= 'Special Needs Population' | E938= 0 | H938: =IF(G938="",IF(E938="",F938,E938),G938) -> 0
+C940= 'Row 9' | H940: =IF(G940="",IF(E940="",F940,E940),G940) -> 0
+C941= 'Bedroom Type' | E941= '1 Bedroom' | H941: =IF(G941="",IF(E941="",F941,E941),G941) -> '1 Bedroom'
+C942= 'Number of Units' | E942: ='Rent Builder'!G22 -> None | H942: =IF(G942="",IF(E942="",F942,E942),G942) -> 0
+C943= 'Average Square Feet' | E943: ='Rent Builder'!D22 -> None | H943: =IF(G943="",IF(E943="",F943,E943),G943) -> 0
+C944= 'Propsoed Monthly Rent (less utilities)' | E944: =ROUNDUP('Rent Builder'!O22,0) -> 0 | H944: =IF(G944="",IF(E944="",F944,E944),G944) -> 0
+C945= 'Monthly utility' | E945: ='Rent Builder'!L22 -> 0 | H945: =IF(G945="",IF(E945="",F945,E945),G945) -> 0
+C946= '% of AMI' | E946: ='Rent Builder'!J22 -> 0 | H946: =IF(G946="",IF(E946="",F946,E946),G946) -> 0
+C947= 'Special Needs Population' | E947= 0 | H947: =IF(G947="",IF(E947="",F947,E947),G947) -> 0
+H948: =IF(G948="",IF(E948="",F948,E948),G948) -> 0
+C949= 'Row 10' | H949: =IF(G949="",IF(E949="",F949,E949),G949) -> 0
+C950= 'Bedroom Type' | E950= '1 Bedroom' | H950: =IF(G950="",IF(E950="",F950,E950),G950) -> '1 Bedroom'
+C951= 'Number of Units' | E951: ='rent builder' #REF! -> '#VALUE!' | H951: =IF(G951="",IF(E951="",F951,E951),G951) -> '#VALUE!'
+C952= 'Average Square Feet' | E952: ='rent builder' #REF! -> '#VALUE!' | H952: =IF(G952="",IF(E952="",F952,E952),G952) -> '#VALUE!'
+C953= 'Propsoed Monthly Rent (less utilities)' | E953: =ROUNDUP('rent builder' #REF!,0) -> '#VALUE!' | H953: =IF(G953="",IF(E953="",F953,E953),G953) -> '#VALUE!'
+C954= 'Monthly utility' | E954: ='rent builder' #REF! -> '#VALUE!' | H954: =IF(G954="",IF(E954="",F954,E954),G954) -> '#VALUE!'
+C955= '% of AMI' | E955: ='rent builder' #REF! -> '#VALUE!' | H955: =IF(G955="",IF(E955="",F955,E955),G955) -> '#VALUE!'
+C956= 'Special Needs Population' | E956= 0 | H956: =IF(G956="",IF(E956="",F956,E956),G956) -> 0
+H957: =IF(G957="",IF(E957="",F957,E957),G957) -> 0
+C958= 'Row 11' | H958: =IF(G958="",IF(E958="",F958,E958),G958) -> 0
+C959= 'Bedroom Type' | E959= '1 Bedroom' | H959: =IF(G959="",IF(E959="",F959,E959),G959) -> '1 Bedroom'
+C960= 'Number of Units' | E960: ='Rent Builder'!G23 -> None | H960: =IF(G960="",IF(E960="",F960,E960),G960) -> 0
+C961= 'Average Square Feet' | E961: ='Rent Builder'!D23 -> None | H961: =IF(G961="",IF(E961="",F961,E961),G961) -> 0
+C962= 'Propsoed Monthly Rent (less utilities)' | E962: =ROUNDUP('Rent Builder'!O23,0) -> 0 | H962: =IF(G962="",IF(E962="",F962,E962),G962) -> 0
+C963= 'Monthly utility' | E963: ='Rent Builder'!L23 -> 0 | H963: =IF(G963="",IF(E963="",F963,E963),G963) -> 0
+C964= '% of AMI' | E964: ='Rent Builder'!J23 -> 0 | H964: =IF(G964="",IF(E964="",F964,E964),G964) -> 0
+C965= 'Special Needs Population' | E965= 0 | H965: =IF(G965="",IF(E965="",F965,E965),G965) -> 0
+H966: =IF(G966="",IF(E966="",F966,E966),G966) -> 0
+C967= 'Row 12' | H967: =IF(G967="",IF(E967="",F967,E967),G967) -> 0
+C968= 'Bedroom Type' | E968= '1 Bedroom' | H968: =IF(G968="",IF(E968="",F968,E968),G968) -> '1 Bedroom'
+C969= 'Number of Units' | E969: ='Rent Builder'!G24 -> None | H969: =IF(G969="",IF(E969="",F969,E969),G969) -> 0
+C970= 'Average Square Feet' | E970: ='Rent Builder'!D24 -> None | H970: =IF(G970="",IF(E970="",F970,E970),G970) -> 0
+C971= 'Propsoed Monthly Rent (less utilities)' | E971: ='Rent Builder'!O24 -> 0 | H971: =IF(G971="",IF(E971="",F971,E971),G971) -> 0
+C972= 'Monthly utility' | E972: ='Rent Builder'!L24 -> 0 | H972: =IF(G972="",IF(E972="",F972,E972),G972) -> 0
+C973= '% of AMI' | E973: ='Rent Builder'!J24 -> 0 | H973: =IF(G973="",IF(E973="",F973,E973),G973) -> 0
+C974= 'Special Needs Population' | E974= 0 | H974: =IF(G974="",IF(E974="",F974,E974),G974) -> 0
+H975: =IF(G975="",IF(E975="",F975,E975),G975) -> 0
+C976= 'Row 13' | H976: =IF(G976="",IF(E976="",F976,E976),G976) -> 0
+C977= 'Bedroom Type' | E977= '2 Bedrooms' | H977: =IF(G977="",IF(E977="",F977,E977),G977) -> '2 Bedrooms'
+C978= 'Number of Units' | E978: ='Rent Builder'!G25 -> None | H978: =IF(G978="",IF(E978="",F978,E978),G978) -> 0
+C979= 'Average Square Feet' | E979: ='Rent Builder'!D25 -> None | H979: =IF(G979="",IF(E979="",F979,E979),G979) -> 0
+C980= 'Propsoed Monthly Rent (less utilities)' | E980: =ROUNDUP('Rent Builder'!O25,0) -> 0 | H980: =IF(G980="",IF(E980="",F980,E980),G980) -> 0
+C981= 'Monthly utility' | E981: ='Rent Builder'!L25 -> 0 | H981: =IF(G981="",IF(E981="",F981,E981),G981) -> 0
+C982= '% of AMI' | E982: ='Rent Builder'!J25 -> 0 | H982: =IF(G982="",IF(E982="",F982,E982),G982) -> 0
+C983= 'Special Needs Population' | E983= 0 | H983: =IF(G983="",IF(E983="",F983,E983),G983) -> 0
+H984: =IF(G984="",IF(E984="",F984,E984),G984) -> 0
+C985= 'Row 14' | H985: =IF(G985="",IF(E985="",F985,E985),G985) -> 0
+C986= 'Bedroom Type' | E986= '2 Bedrooms' | H986: =IF(G986="",IF(E986="",F986,E986),G986) -> '2 Bedrooms'
+C987= 'Number of Units' | E987: ='Rent Builder'!G26 -> None | H987: =IF(G987="",IF(E987="",F987,E987),G987) -> 0
+C988= 'Average Square Feet' | E988: ='Rent Builder'!D26 -> None | H988: =IF(G988="",IF(E988="",F988,E988),G988) -> 0
+C989= 'Propsoed Monthly Rent (less utilities)' | E989: =ROUNDUP('Rent Builder'!O26,0) -> 0 | H989: =IF(G989="",IF(E989="",F989,E989),G989) -> 0
+C990= 'Monthly utility' | E990: ='Rent Builder'!L26 -> 0 | H990: =IF(G990="",IF(E990="",F990,E990),G990) -> 0
+C991= '% of AMI' | E991: ='Rent Builder'!J26 -> 0 | H991: =IF(G991="",IF(E991="",F991,E991),G991) -> 0
+C992= 'Special Needs Population' | E992= 0 | H992: =IF(G992="",IF(E992="",F992,E992),G992) -> 0
+H993: =IF(G993="",IF(E993="",F993,E993),G993) -> 0
+C994= 'Row 15' | H994: =IF(G994="",IF(E994="",F994,E994),G994) -> 0
+C995= 'Bedroom Type' | E995= '2 Bedrooms' | H995: =IF(G995="",IF(E995="",F995,E995),G995) -> '2 Bedrooms'
+C996= 'Number of Units' | E996: ='Rent Builder'!G27 -> None | H996: =IF(G996="",IF(E996="",F996,E996),G996) -> 0
+C997= 'Average Square Feet' | E997: ='Rent Builder'!D27 -> None | H997: =IF(G997="",IF(E997="",F997,E997),G997) -> 0
+C998= 'Propsoed Monthly Rent (less utilities)' | E998: =ROUNDUP('Rent Builder'!O27,0) -> 0 | H998: =IF(G998="",IF(E998="",F998,E998),G998) -> 0
+C999= 'Monthly utility' | E999: ='Rent Builder'!L27 -> 0 | H999: =IF(G999="",IF(E999="",F999,E999),G999) -> 0
+C1000= '% of AMI' | E1000: ='Rent Builder'!J27 -> 0 | H1000: =IF(G1000="",IF(E1000="",F1000,E1000),G1000) -> 0
+C1001= 'Special Needs Population' | E1001= 0 | H1001: =IF(G1001="",IF(E1001="",F1001,E1001),G1001) -> 0
+H1002: =IF(G1002="",IF(E1002="",F1002,E1002),G1002) -> 0
+C1003= 'Row 16' | H1003: =IF(G1003="",IF(E1003="",F1003,E1003),G1003) -> 0
+C1004= 'Bedroom Type' | E1004= '2 Bedrooms' | H1004: =IF(G1004="",IF(E1004="",F1004,E1004),G1004) -> '2 Bedrooms'
+C1005= 'Number of Units' | E1005: ='Rent Builder'!G28 -> None | H1005: =IF(G1005="",IF(E1005="",F1005,E1005),G1005) -> 0
+C1006= 'Average Square Feet' | E1006: ='Rent Builder'!D28 -> None | H1006: =IF(G1006="",IF(E1006="",F1006,E1006),G1006) -> 0
+C1007= 'Propsoed Monthly Rent (less utilities)' | E1007: =ROUNDUP('Rent Builder'!O28,0) -> 0 | H1007: =IF(G1007="",IF(E1007="",F1007,E1007),G1007) -> 0
+C1008= 'Monthly utility' | E1008: ='Rent Builder'!L28 -> 0 | H1008: =IF(G1008="",IF(E1008="",F1008,E1008),G1008) -> 0
+C1009= '% of AMI' | E1009: ='Rent Builder'!J28 -> 0 | H1009: =IF(G1009="",IF(E1009="",F1009,E1009),G1009) -> 0
+C1010= 'Special Needs Population' | E1010= 0 | H1010: =IF(G1010="",IF(E1010="",F1010,E1010),G1010) -> 0
+H1011: =IF(G1011="",IF(E1011="",F1011,E1011),G1011) -> 0
+C1012= 'Row 17' | H1012: =IF(G1012="",IF(E1012="",F1012,E1012),G1012) -> 0
+C1013= 'Bedroom Type' | E1013= '2 Bedrooms' | H1013: =IF(G1013="",IF(E1013="",F1013,E1013),G1013) -> '2 Bedrooms'
+C1014= 'Number of Units' | E1014: ='Rent Builder'!G29 -> None | H1014: =IF(G1014="",IF(E1014="",F1014,E1014),G1014) -> 0
+C1015= 'Average Square Feet' | E1015: ='Rent Builder'!D29 -> None | H1015: =IF(G1015="",IF(E1015="",F1015,E1015),G1015) -> 0
+C1016= 'Propsoed Monthly Rent (less utilities)' | E1016: =ROUNDUP('Rent Builder'!O29,0) -> 0 | H1016: =IF(G1016="",IF(E1016="",F1016,E1016),G1016) -> 0
+C1017= 'Monthly utility' | E1017: ='Rent Builder'!L29 -> 0 | H1017: =IF(G1017="",IF(E1017="",F1017,E1017),G1017) -> 0
+C1018= '% of AMI' | E1018: ='Rent Builder'!J29 -> 0 | H1018: =IF(G1018="",IF(E1018="",F1018,E1018),G1018) -> 0
+C1019= 'Special Needs Population' | E1019= 0 | H1019: =IF(G1019="",IF(E1019="",F1019,E1019),G1019) -> 0
+H1020: =IF(G1020="",IF(E1020="",F1020,E1020),G1020) -> 0
+C1021= 'Row 18' | H1021: =IF(G1021="",IF(E1021="",F1021,E1021),G1021) -> 0
+C1022= 'Bedroom Type' | E1022= '2 Bedrooms' | H1022: =IF(G1022="",IF(E1022="",F1022,E1022),G1022) -> '2 Bedrooms'
+C1023= 'Number of Units' | E1023: ='rent builder' #REF! -> '#VALUE!' | H1023: =IF(G1023="",IF(E1023="",F1023,E1023),G1023) -> '#VALUE!'
+C1024= 'Average Square Feet' | E1024: ='rent builder' #REF! -> '#VALUE!' | H1024: =IF(G1024="",IF(E1024="",F1024,E1024),G1024) -> '#VALUE!'
+C1025= 'Propsoed Monthly Rent (less utilities)' | E1025: =ROUNDUP('rent builder' #REF!,0) -> '#VALUE!' | H1025: =IF(G1025="",IF(E1025="",F1025,E1025),G1025) -> '#VALUE!'
+C1026= 'Monthly utility' | E1026: ='rent builder' #REF! -> '#VALUE!' | H1026: =IF(G1026="",IF(E1026="",F1026,E1026),G1026) -> '#VALUE!'
+C1027= '% of AMI' | E1027: ='rent builder' #REF! -> '#VALUE!' | H1027: =IF(G1027="",IF(E1027="",F1027,E1027),G1027) -> '#VALUE!'
+C1028= 'Special Needs Population' | E1028= 0 | H1028: =IF(G1028="",IF(E1028="",F1028,E1028),G1028) -> 0
+H1029: =IF(G1029="",IF(E1029="",F1029,E1029),G1029) -> 0
+C1030= 'Total # Special Needs Bedrooms' | E1030= 0 | H1030: =IF(G1030="",IF(E1030="",F1030,E1030),G1030) -> 0
+H1031: =IF(G1031="",IF(E1031="",F1031,E1031),G1031) -> 0
+C1032= 'Resyndication project using hold harmless rent limits in the above table?' | E1032= 'N/A' | H1032: =IF(G1032="",IF(E1032="",F1032,E1032),G1032) -> 'N/A'
+H1033: =IF(G1033="",IF(E1033="",F1033,E1033),G1033) -> 0
+C1034= 'Manager Units' | H1034: =IF(G1034="",IF(E1034="",F1034,E1034),G1034) -> 0
+C1035= 'Bedroom Type 1' | E1035: =IF(Program!B53="2 BR","2 Bedroom",IF(Program!B53="1 BR","1 Bedroom",IF(Program!B53="Studio","SRO/Studio",0))) -> 'SRO/Studio' | F1035= '2 Bedrooms' | H1035: =IF(G1035="",IF(E1035="",F1035,E1035),G1035) -> 'SRO/Studio'
+C1036= 'Number of Units' | E1036: ='Rent Builder'!F17 -> 0 | H1036: =IF(G1036="",IF(E1036="",F1036,E1036),G1036) -> 0
+C1037= 'Average Square Feet' | E1037: =IF(E1036>0,'Rent Builder'!D17,0) -> 0 | H1037: =IF(G1037="",IF(E1037="",F1037,E1037),G1037) -> 0
+C1038= 'Proposed Monthly Rent' | E1038: =IF(E1036>0,'Rent Builder'!L17,0) -> 0 | H1038: =IF(G1038="",IF(E1038="",F1038,E1038),G1038) -> 0
+H1039: =IF(G1039="",IF(E1039="",F1039,E1039),G1039) -> 0
+C1040= 'Bedroom Type 2' | E1040: =IF(Program!B54="2 BR","2 Bedroom",IF(Program!B54="1 BR","1 Bedroom",IF(Program!B54="Studio","SRO/Studio",0))) -> '1 Bedroom' | F1040= '2 Bedrooms' | H1040: =IF(G1040="",IF(E1040="",F1040,E1040),G1040) -> '1 Bedroom'
+C1041= 'Number of Units' | E1041: =0 -> 0 | H1041: =IF(G1041="",IF(E1041="",F1041,E1041),G1041) -> 0
+C1042= 'Average Square Feet' | E1042: =IF(E1041>0,'Rent Builder'!D22,0) -> 0 | H1042: =IF(G1042="",IF(E1042="",F1042,E1042),G1042) -> 0
+C1043= 'Proposed Monthly Rent' | E1043: =IF(E1041>0,'Rent Builder'!L22,0) -> 0 | H1043: =IF(G1043="",IF(E1043="",F1043,E1043),G1043) -> 0
+H1044: =IF(G1044="",IF(E1044="",F1044,E1044),G1044) -> 0
+C1045= 'Bedroom Type 3' | E1045: =IF(Program!B55="2 BR","2 Bedroom",IF(Program!B55="1 BR","1 Bedroom",IF(Program!B55="Studio","SRO/Studio",0))) -> '2 Bedroom' | F1045= '2 Bedrooms' | H1045: =IF(G1045="",IF(E1045="",F1045,E1045),G1045) -> '2 Bedroom'
+C1046= 'Number of Units' | E1046: ='Rent Builder'!F32 -> None | H1046: =IF(G1046="",IF(E1046="",F1046,E1046),G1046) -> 0
+C1047= 'Average Square Feet' | E1047: =IF(E1046>0,'Rent Builder'!D32,0) -> None | H1047: =IF(G1047="",IF(E1047="",F1047,E1047),G1047) -> 0
+C1048= 'Proposed Monthly Rent' | E1048: =IF(E1046>0,'Rent Builder'!L32,0) -> 0 | H1048: =IF(G1048="",IF(E1048="",F1048,E1048),G1048) -> 0
+H1049: =IF(G1049="",IF(E1049="",F1049,E1049),G1049) -> 0
+C1050= 'Bedroom Type 4' | E1050: =IF(Program!B56="2 BR","2 Bedroom",IF(Program!B56="1 BR","1 Bedroom",IF(Program!B56="Studio","SRO/Studio",0))) -> 0 | H1050: =IF(G1050="",IF(E1050="",F1050,E1050),G1050) -> 0
+C1051= 'Number of Units' | E1051: =0 -> 0 | H1051: =IF(G1051="",IF(E1051="",F1051,E1051),G1051) -> 0
+C1052= 'Average Square Feet' | E1052: =IF(E1051>0,'Rent Builder'!D31,0) -> 0 | H1052: =IF(G1052="",IF(E1052="",F1052,E1052),G1052) -> 0
+C1053= 'Proposed Monthly Rent' | E1053: =IF(E1051>0,'Rent Builder'!L31,0) -> 0 | H1053: =IF(G1053="",IF(E1053="",F1053,E1053),G1053) -> 0
+H1054: =IF(G1054="",IF(E1054="",F1054,E1054),G1054) -> 0
+C1055= 'Market Rate Units' | H1055: =IF(G1055="",IF(E1055="",F1055,E1055),G1055) -> 0
+C1056= 'Bedroom Type 1' | H1056: =IF(G1056="",IF(E1056="",F1056,E1056),G1056) -> 0
+C1057= 'Number of Units' | H1057: =IF(G1057="",IF(E1057="",F1057,E1057),G1057) -> 0
+C1058= 'Average Square Feet' | H1058: =IF(G1058="",IF(E1058="",F1058,E1058),G1058) -> 0
+C1059= 'Proposed Monthly Rent' | H1059: =IF(G1059="",IF(E1059="",F1059,E1059),G1059) -> 0
+H1060: =IF(G1060="",IF(E1060="",F1060,E1060),G1060) -> 0
+C1061= 'Bedroom Type 2' | H1061: =IF(G1061="",IF(E1061="",F1061,E1061),G1061) -> 0
+C1062= 'Number of Units' | H1062: =IF(G1062="",IF(E1062="",F1062,E1062),G1062) -> 0
+C1063= 'Average Square Feet' | H1063: =IF(G1063="",IF(E1063="",F1063,E1063),G1063) -> 0
+C1064= 'Proposed Monthly Rent' | H1064: =IF(G1064="",IF(E1064="",F1064,E1064),G1064) -> 0
+H1065: =IF(G1065="",IF(E1065="",F1065,E1065),G1065) -> 0
+C1066= 'Bedroom Type 3' | H1066: =IF(G1066="",IF(E1066="",F1066,E1066),G1066) -> 0
+C1067= 'Number of Units' | H1067: =IF(G1067="",IF(E1067="",F1067,E1067),G1067) -> 0
+C1068= 'Average Square Feet' | H1068: =IF(G1068="",IF(E1068="",F1068,E1068),G1068) -> 0
+C1069= 'Proposed Monthly Rent' | H1069: =IF(G1069="",IF(E1069="",F1069,E1069),G1069) -> 0
+H1070: =IF(G1070="",IF(E1070="",F1070,E1070),G1070) -> 0
+C1071= 'Bedroom Type 4' | H1071: =IF(G1071="",IF(E1071="",F1071,E1071),G1071) -> 0
+C1072= 'Number of Units' | H1072: =IF(G1072="",IF(E1072="",F1072,E1072),G1072) -> 0
+C1073= 'Average Square Feet' | H1073: =IF(G1073="",IF(E1073="",F1073,E1073),G1073) -> 0
+C1074= 'Proposed Monthly Rent' | H1074: =IF(G1074="",IF(E1074="",F1074,E1074),G1074) -> 0
+H1075: =IF(G1075="",IF(E1075="",F1075,E1075),G1075) -> 0
+C1076= 'Annual Income from Laundry Facilities:' | E1076: =ROUND('Unit Mix Summary'!H39,) -> 122040 | H1076: =IF(G1076="",IF(E1076="",F1076,E1076),G1076) -> 122040
+C1077= 'Annual Income from Vending Machines:' | E1077: =ROUND('Unit Mix Summary'!G44,) -> 0 | H1077: =IF(G1077="",IF(E1077="",F1077,E1077),G1077) -> 0
+C1078= 'Annual Interest Income:' | E1078: =ROUND('Unit Mix Summary'!G47,) -> 0 | H1078: =IF(G1078="",IF(E1078="",F1078,E1078),G1078) -> 0
+C1079= 'Other Annual Income:' | E1079: =SUM('Operating Cash Flow'!J15:J20)-'Operating Cash Flow'!J15-'Operating Cash Flow'!J16-'Operating Cash Flow'!J17-(E1076+E1077+E1078) -> 732240 | H1079: =IF(G1079="",IF(E1079="",F1079,E1079),G1079) -> 732240
+E1080: =CONCATENATE('Unit Mix Summary'!D36,"-",'Unit Mix Summary'!D37,"-",'Unit Mix Summary'!D38,"-",'Unit Mix Summary'!D46) -> 'Parking-AT&T antenna-Storage-Master Service - Internet' | H1080: =IF(G1080="",IF(E1080="",F1080,E1080),G1080) -> 'Parking-AT&T antenna-Storage-Master Service - Internet'
+H1081: =IF(G1081="",IF(E1081="",F1081,E1081),G1081) -> 0
+C1082= 'Monthly Resident Utility Allowance by Unit Size ' | H1082: =IF(G1082="",IF(E1082="",F1082,E1082),G1082) -> 0
+H1083: =IF(G1083="",IF(E1083="",F1083,E1083),G1083) -> 0
+C1084= 'SRO/STUDIO' | H1084: =IF(G1084="",IF(E1084="",F1084,E1084),G1084) -> 0
+C1085= 'Space Heating:' | E1085: ='Utility Allowances'!AA8 -> 3.3 | H1085: =IF(G1085="",IF(E1085="",F1085,E1085),G1085) -> 3.3
+C1086= 'Water Heating:' | E1086: ='Utility Allowances'!AA12 -> 6.6 | H1086: =IF(G1086="",IF(E1086="",F1086,E1086),G1086) -> 6.6
+C1087= 'Cooking:' | E1087: ='Utility Allowances'!AA9 -> 1.1 | H1087: =IF(G1087="",IF(E1087="",F1087,E1087),G1087) -> 1.1
+C1088= 'Lighting:' | E1088: ='Utility Allowances'!AA10 -> 8.8 | H1088: =IF(G1088="",IF(E1088="",F1088,E1088),G1088) -> 8.8
+C1089= 'Electricity:' | H1089: =IF(G1089="",IF(E1089="",F1089,E1089),G1089) -> 0
+C1090= 'Water:*' | H1090: =IF(G1090="",IF(E1090="",F1090,E1090),G1090) -> 0
+C1091= 'Other:' | H1091: =IF(G1091="",IF(E1091="",F1091,E1091),G1091) -> 0
+H1092: =IF(G1092="",IF(E1092="",F1092,E1092),G1092) -> 0
+C1093= '1 BR' | H1093: =IF(G1093="",IF(E1093="",F1093,E1093),G1093) -> 0
+C1094= 'Space Heating:' | E1094: ='Utility Allowances'!AB8 -> 4.4 | H1094: =IF(G1094="",IF(E1094="",F1094,E1094),G1094) -> 4.4
+C1095= 'Water Heating:' | E1095: ='Utility Allowances'!AB12 -> 8.8 | H1095: =IF(G1095="",IF(E1095="",F1095,E1095),G1095) -> 8.8
+C1096= 'Cooking:' | E1096: ='Utility Allowances'!AB9 -> 1.65 | H1096: =IF(G1096="",IF(E1096="",F1096,E1096),G1096) -> 1.65
+C1097= 'Lighting:' | E1097: ='Utility Allowances'!AB10 -> 12.1 | H1097: =IF(G1097="",IF(E1097="",F1097,E1097),G1097) -> 12.1
+C1098= 'Electricity:' | H1098: =IF(G1098="",IF(E1098="",F1098,E1098),G1098) -> 0
+C1099= 'Water:*' | H1099: =IF(G1099="",IF(E1099="",F1099,E1099),G1099) -> 0
+C1100= 'Other:' | H1100: =IF(G1100="",IF(E1100="",F1100,E1100),G1100) -> 0
+H1101: =IF(G1101="",IF(E1101="",F1101,E1101),G1101) -> 0
+C1102= '2 BR' | H1102: =IF(G1102="",IF(E1102="",F1102,E1102),G1102) -> 0
+C1103= 'Space Heating:' | E1103: ='Utility Allowances'!AC8 -> 6.05 | H1103: =IF(G1103="",IF(E1103="",F1103,E1103),G1103) -> 6.05
+C1104= 'Water Heating:' | E1104: ='Utility Allowances'!AC12 -> 11.55 | H1104: =IF(G1104="",IF(E1104="",F1104,E1104),G1104) -> 11.55
+C1105= 'Cooking:' | E1105: ='Utility Allowances'!AC9 -> 2.2 | H1105: =IF(G1105="",IF(E1105="",F1105,E1105),G1105) -> 2.2
+C1106= 'Lighting:' | E1106: ='Utility Allowances'!AC10 -> 15.4 | H1106: =IF(G1106="",IF(E1106="",F1106,E1106),G1106) -> 15.4
+C1107= 'Electricity:' | H1107: =IF(G1107="",IF(E1107="",F1107,E1107),G1107) -> 0
+C1108= 'Water:*' | H1108: =IF(G1108="",IF(E1108="",F1108,E1108),G1108) -> 0
+C1109= 'Other:' | H1109: =IF(G1109="",IF(E1109="",F1109,E1109),G1109) -> 0
+H1110: =IF(G1110="",IF(E1110="",F1110,E1110),G1110) -> 0
+C1111= '3 BR' | H1111: =IF(G1111="",IF(E1111="",F1111,E1111),G1111) -> 0
+C1112= 'Space Heating:' | E1112: ='Utility Allowances'!AD8 -> 7.15 | H1112: =IF(G1112="",IF(E1112="",F1112,E1112),G1112) -> 7.15
+C1113= 'Water Heating:' | E1113: ='Utility Allowances'!AD12 -> 14.3 | H1113: =IF(G1113="",IF(E1113="",F1113,E1113),G1113) -> 14.3
+C1114= 'Cooking:' | E1114: ='Utility Allowances'!AD9 -> 2.75 | H1114: =IF(G1114="",IF(E1114="",F1114,E1114),G1114) -> 2.75
+C1115= 'Lighting:' | E1115: ='Utility Allowances'!AD10 -> 19.25 | H1115: =IF(G1115="",IF(E1115="",F1115,E1115),G1115) -> 19.25
+C1116= 'Electricity:' | H1116: =IF(G1116="",IF(E1116="",F1116,E1116),G1116) -> 0
+C1117= 'Water:*' | H1117: =IF(G1117="",IF(E1117="",F1117,E1117),G1117) -> 0
+C1118= 'Other:' | H1118: =IF(G1118="",IF(E1118="",F1118,E1118),G1118) -> 0
+H1119: =IF(G1119="",IF(E1119="",F1119,E1119),G1119) -> 0
+C1120= '4 BR' | H1120: =IF(G1120="",IF(E1120="",F1120,E1120),G1120) -> 0
+C1121= 'Space Heating:' | E1121: ='Utility Allowances'!AE8 -> 9.35 | H1121: =IF(G1121="",IF(E1121="",F1121,E1121),G1121) -> 9.35
+C1122= 'Water Heating:' | E1122: ='Utility Allowances'!AE12 -> 18.15 | H1122: =IF(G1122="",IF(E1122="",F1122,E1122),G1122) -> 18.15
+C1123= 'Cooking:' | E1123: ='Utility Allowances'!AE9 -> 3.85 | H1123: =IF(G1123="",IF(E1123="",F1123,E1123),G1123) -> 3.85
+C1124= 'Lighting:' | E1124: ='Utility Allowances'!AE10 -> 24.2 | H1124: =IF(G1124="",IF(E1124="",F1124,E1124),G1124) -> 24.2
+C1125= 'Electricity:' | H1125: =IF(G1125="",IF(E1125="",F1125,E1125),G1125) -> 0
+C1126= 'Water:*' | H1126: =IF(G1126="",IF(E1126="",F1126,E1126),G1126) -> 0
+C1127= 'Other:' | H1127: =IF(G1127="",IF(E1127="",F1127,E1127),G1127) -> 0
+H1128: =IF(G1128="",IF(E1128="",F1128,E1128),G1128) -> 0
+C1129= 'Name of PHA or California Energy Commission Providing Utility Allowances:' | E1129= 'Oakland Housing Authority' | H1129: =IF(G1129="",IF(E1129="",F1129,E1129),G1129) -> 'Oakland Housing Authority'
+H1130: =IF(G1130="",IF(E1130="",F1130,E1130),G1130) -> 0
+C1131= 'Advertising:' | E1131: =ROUND(SUM('OpEx Builder'!I164),) -> 18252 | H1131: =IF(G1131="",IF(E1131="",F1131,E1131),G1131) -> 18252
+C1132= 'Legal:' | E1132: =ROUND(SUM('OpEx Builder'!I154),) -> 97697 | H1132: =IF(G1132="",IF(E1132="",F1132,E1132),G1132) -> 97697
+C1133= 'Accounting/Audit:' | E1133: =ROUND(SUM('OpEx Builder'!I145,'OpEx Builder'!I147),) -> 69691 | H1133: =IF(G1133="",IF(E1133="",F1133,E1133),G1133) -> 69691
+C1134= 'Security:' | E1134: =ROUND(SUM('OpEx Builder'!I123,'OpEx Builder'!I125,'OpEx Builder'!I126),) -> 180512 | H1134: =IF(G1134="",IF(E1134="",F1134,E1134),G1134) -> 180512
+C1135= 'Other: Misc. Admin (compliance, phone, office, software, bank)' | E1135: =ROUND(SUM('OpEx Builder'!I144,'OpEx Builder'!I146,'OpEx Builder'!I148,'OpEx Builder'!I149,'OpEx Builder'!I150,'OpEx Builder'!I151,'OpEx Builder'!I152,'OpEx Builder'!I153,'OpEx Builder'!I155,'OpEx Builder'!I156,'OpEx Builder'!I157,'OpEx Builder'!I159,'OpEx Builder'!I160),) -> 217516 | H1135: =IF(G1135="",IF(E1135="",F1135,E1135),G1135) -> 217516
+H1136: =IF(G1136="",IF(E1136="",F1136,E1136),G1136) -> 0
+C1137= 'Total Management:' | E1137: =ROUND(SUM('OpEx Builder'!I168),) -> 629494 | H1137: =IF(G1137="",IF(E1137="",F1137,E1137),G1137) -> 629494
+H1138: =IF(G1138="",IF(E1138="",F1138,E1138),G1138) -> 0
+C1139= 'Fuel:' | E1139: =ROUND(SUM('OpEx Builder'!I141),) -> 3708 | H1139: =IF(G1139="",IF(E1139="",F1139,E1139),G1139) -> 3708
+C1140= 'Gas:' | E1140: =ROUND(SUM('OpEx Builder'!I142),) -> 0 | H1140: =IF(G1140="",IF(E1140="",F1140,E1140),G1140) -> 0
+C1141= 'Electricity:' | E1141: =ROUND(SUM('OpEx Builder'!I135),) -> 310570 | H1141: =IF(G1141="",IF(E1141="",F1141,E1141),G1141) -> 310570
+C1142= 'Water/Sewer:' | E1142: =ROUND(SUM('OpEx Builder'!I136,'OpEx Builder'!I137),) -> 332811 | H1142: =IF(G1142="",IF(E1142="",F1142,E1142),G1142) -> 332811
+C1143= 'Other: Utility billing' | E1143: =ROUND(SUM('OpEx Builder'!I139),) -> 0 | H1143: =IF(G1143="",IF(E1143="",F1143,E1143),G1143) -> 0
+H1144: =IF(G1144="",IF(E1144="",F1144,E1144),G1144) -> 0
+C1145= 'On-site Manager:' | E1145: =ROUND(SUM('OpEx Builder'!I74,'OpEx Builder'!I75,'OpEx Builder'!I76,'OpEx Builder'!I77),) -> 796213 | H1145: =IF(G1145="",IF(E1145="",F1145,E1145),G1145) -> 796213
+C1146= 'Number of Staff:' | E1146: =ROUND(SUM(Program!E46:E50)/100,) -> 20 | H1146: =IF(G1146="",IF(E1146="",F1146,E1146),G1146) -> 20
+C1147= 'Maintenance Personnel:' | E1147: =ROUND(SUM('OpEx Builder'!I78,'OpEx Builder'!I79,'OpEx Builder'!I80,'OpEx Builder'!I81),) -> 74973 | H1147: =IF(G1147="",IF(E1147="",F1147,E1147),G1147) -> 74973
+C1148= 'Number of Rent-Free Units:' | E1148= 3 | H1148: =IF(G1148="",IF(E1148="",F1148,E1148),G1148) -> 3
+C1149= 'Payroll Taxes / Benefits / Training' | H1149: =IF(G1149="",IF(E1149="",F1149,E1149),G1149) -> 0
+C1150= 'Other Amount' | E1150: =ROUND(SUM('OpEx Builder'!I82,'OpEx Builder'!I83,'OpEx Builder'!I84,'OpEx Builder'!I85,'OpEx Builder'!I86,'OpEx Builder'!I87),) -> 443850 | H1150: =IF(G1150="",IF(E1150="",F1150,E1150),G1150) -> 443850
+C1151= 'Total Insurance:' | E1151: =ROUND(SUM('OpEx Builder'!I163),) -> 762632 | H1151: =IF(G1151="",IF(E1151="",F1151,E1151),G1151) -> 762632
+H1152: =IF(G1152="",IF(E1152="",F1152,E1152),G1152) -> 0
+C1153= 'Painting:' | E1153: =ROUND(SUM('OpEx Builder'!I91,'OpEx Builder'!I107),) -> 55665 | H1153: =IF(G1153="",IF(E1153="",F1153,E1153),G1153) -> 55665
+C1154= 'Repairs:' | E1154: =ROUND(SUM('OpEx Builder'!I92,'OpEx Builder'!I93,'OpEx Builder'!I94,'OpEx Builder'!I95,'OpEx Builder'!I96,'OpEx Builder'!I97,'OpEx Builder'!I99,'OpEx Builder'!I100,'OpEx Builder'!I101,'OpEx Builder'!I102,'OpEx Builder'!I103,'OpEx Builder'!I104,'OpEx Builder'!I110,'OpEx Builder'!I111,'OpEx Builder'!I112,'OpEx Builder'!I113,'OpEx Builder'!I114,'OpEx Builder'!I116,'OpEx Builder'!I117,'OpEx Builder'!I119,'OpEx Builder'!I120,'OpEx Builder'!I121,'OpEx Builder'!I122,'OpEx Builder'!I127),) -> 139013 | H1154: =IF(G1154="",IF(E1154="",F1154,E1154),G1154) -> 139013
+C1155= 'Trash Removal:' | E1155: =ROUND(SUM('OpEx Builder'!I138),) -> 330777 | H1155: =IF(G1155="",IF(E1155="",F1155,E1155),G1155) -> 330777
+C1156= 'Exterminating:' | E1156: =ROUND(SUM('OpEx Builder'!I108),) -> 19592 | H1156: =IF(G1156="",IF(E1156="",F1156,E1156),G1156) -> 19592
+C1157= 'Grounds:' | E1157: =ROUND(SUM('OpEx Builder'!I90,'OpEx Builder'!I106),) -> 24771 | H1157: =IF(G1157="",IF(E1157="",F1157,E1157),G1157) -> 24771
+C1158= 'Elevator:' | E1158: =ROUND(SUM('OpEx Builder'!I118),) -> 36000 | H1158: =IF(G1158="",IF(E1158="",F1158,E1158),G1158) -> 36000
+C1159= 'Contracts - Cleaning - Supplies - Laundry costs' | E1159: =ROUND(SUM('OpEx Builder'!I89,'OpEx Builder'!I98,'OpEx Builder'!I105,'OpEx Builder'!I109,'OpEx Builder'!I115,'OpEx Builder'!I124,'OpEx Builder'!I128,'OpEx Builder'!I129,'OpEx Builder'!I130,'OpEx Builder'!I131,'OpEx Builder'!I133),) -> 264021 | H1159: =IF(G1159="",IF(E1159="",F1159,E1159),G1159) -> 264021
+H1160: =IF(G1160="",IF(E1160="",F1160,E1160),G1160) -> 0
+C1161= 'Other Name' | E1161= 'Laundry' | H1161: =IF(G1161="",IF(E1161="",F1161,E1161),G1161) -> 'Laundry'
+C1162= 'Other Amount' | E1162: =ROUND(SUM('OpEx Builder'!I132),) -> 14832 | H1162: =IF(G1162="",IF(E1162="",F1162,E1162),G1162) -> 14832
+C1163= 'Other Name' | E1163= 'Misc. Tax/License' | H1163: =IF(G1163="",IF(E1163="",F1163,E1163),G1163) -> 'Misc. Tax/License'
+C1164= 'Other Amount' | E1164: =ROUND(SUM('OpEx Builder'!I158,'OpEx Builder'!I162),) -> 12566 | H1164: =IF(G1164="",IF(E1164="",F1164,E1164),G1164) -> 12566
+C1165= 'Other Name' | E1165= 'Internet (bulk)' | H1165: =IF(G1165="",IF(E1165="",F1165,E1165),G1165) -> 'Internet (bulk)'
+C1166= 'Other Amount' | E1166: =ROUND(SUM('OpEx Builder'!I140),) -> 244080 | H1166: =IF(G1166="",IF(E1166="",F1166,E1166),G1166) -> 244080
+C1167= 'Other Name' | E1167= 'Other' | H1167: =IF(G1167="",IF(E1167="",F1167,E1167),G1167) -> 'Other'
+C1168= 'Other Amount' | E1168: =0 -> 0 | H1168: =IF(G1168="",IF(E1168="",F1168,E1168),G1168) -> 0
+C1169= 'Other Name' | E1169= 'Other' | H1169: =IF(G1169="",IF(E1169="",F1169,E1169),G1169) -> 'Other'
+C1170= 'Other Amount' | E1170: =0 -> 0 | H1170: =IF(G1170="",IF(E1170="",F1170,E1170),G1170) -> 0
+H1171: =IF(G1171="",IF(E1171="",F1171,E1171),G1171) -> 0
+C1172= ' Total 3-Month Operating Reserve:' | E1172: =ROUND('Dev Budget'!H104,) -> 4667630 | H1172: =IF(G1172="",IF(E1172="",F1172,E1172),G1172) -> 4667630
+C1173= 'Total Annual Transit Pass / Internet Expense (site amenity election):' | H1173: =IF(G1173="",IF(E1173="",F1173,E1173),G1173) -> 0
+C1174= 'Total Annual Services Amenities Budget (from project expenses):' | E1174: ='Master Inputs'!$E$89 -> 32100 | H1174: =IF(G1174="",IF(E1174="",F1174,E1174),G1174) -> 32100
+C1175= 'Total Annual Reserve for Replacement:' | E1175: ='OpEx & Other Income'!$H$24 -> 305100 | H1175: =IF(G1175="",IF(E1175="",F1175,E1175),G1175) -> 305100
+C1176= 'Total Annual Monitoring Fees:' | E1176: ='Financing & Debt Sizing'!O144 -> 85398.1412391549 | H1176: =IF(G1176="",IF(E1176="",F1176,E1176),G1176) -> 85398.1412391549
+C1177= 'Total Annual Real Estate Taxes:' | E1177: ='Master Inputs'!$E$87 -> 48000 | H1177: =IF(G1177="",IF(E1177="",F1177,E1177),G1177) -> 48000
+C1178= 'Specialty Locality Taxes (community facilities district, mello roos, etc.:' | H1178: =IF(G1178="",IF(E1178="",F1178,E1178),G1178) -> 0
+C1179= 'Other (Specify)' | H1179: =IF(G1179="",IF(E1179="",F1179,E1179),G1179) -> 0
+C1180= 'Other (Specify)' | H1180: =IF(G1180="",IF(E1180="",F1180,E1180),G1180) -> 0
+H1181: =IF(G1181="",IF(E1181="",F1181,E1181),G1181) -> 0
+C1182= 'Total Annual Commercial/Non-Residential Revenue:' | E1182: ='Operating Cash Flow'!J15+'Operating Cash Flow'!J16+'Operating Cash Flow'!J17 -> 1011600 | H1182: =IF(G1182="",IF(E1182="",F1182,E1182),G1182) -> 1011600
+C1183= 'Expnse' | H1183: =IF(G1183="",IF(E1183="",F1183,E1183),G1183) -> 0
+C1184= 'Tax-Exempt Financing - Included in Eligible?' | E1184: =ROUND('Sources & Uses'!E30,) -> 90744000 | H1184: =IF(G1184="",IF(E1184="",F1184,E1184),G1184) -> 90744000
+C1185= 'Taxable Bond Financing - Included in Eligible?' | E1185: =ROUND('Sources & Uses'!E31,) -> 158099320 | H1185: =IF(G1185="",IF(E1185="",F1185,E1185),G1185) -> 158099320
+C1186= 'HOME Investment Partnership Act (HOME) - Included in Eligible?' | H1186: =IF(G1186="",IF(E1186="",F1186,E1186),G1186) -> 0
+C1187= 'Community Development Block Grant (CDBG) - Included in Eligible?' | H1187: =IF(G1187="",IF(E1187="",F1187,E1187),G1187) -> 0
+C1188= 'RHS 514 - Included in Eligible?' | H1188: =IF(G1188="",IF(E1188="",F1188,E1188),G1188) -> 0
+C1189= 'RHS 515 - Included in Eligible?' | H1189: =IF(G1189="",IF(E1189="",F1189,E1189),G1189) -> 0
+C1190= 'RHS 516 - Included in Eligible?' | H1190: =IF(G1190="",IF(E1190="",F1190,E1190),G1190) -> 0
+C1191= 'RHS 538 - Included in Eligible?' | H1191: =IF(G1191="",IF(E1191="",F1191,E1191),G1191) -> 0
+C1192= 'USDA RD - Included in Eligible?' | H1192: =IF(G1192="",IF(E1192="",F1192,E1192),G1192) -> 0
+C1193= 'HOPE VI - Included in Eligible?' | H1193: =IF(G1193="",IF(E1193="",F1193,E1193),G1193) -> 0
+C1194= 'HOPWA - Included in Eligible?' | H1194: =IF(G1194="",IF(E1194="",F1194,E1194),G1194) -> 0
+C1195= 'HUD 202 Supportive Housing for the Elderly - Included in Eligible?' | H1195: =IF(G1195="",IF(E1195="",F1195,E1195),G1195) -> 0
+C1196= 'HUD 811 - Included in Eligible?' | H1196: =IF(G1196="",IF(E1196="",F1196,E1196),G1196) -> 0
+C1197= 'HCD AHSC - Included in Eligible?' | H1197: =IF(G1197="",IF(E1197="",F1197,E1197),G1197) -> 0
+C1198= 'HCD Homekey - Included in Eligible?' | H1198: =IF(G1198="",IF(E1198="",F1198,E1198),G1198) -> 0
+C1199= 'McKinney-Vento Homeless Assistance Program - Included in Eligible?' | H1199: =IF(G1199="",IF(E1199="",F1199,E1199),G1199) -> 0
+C1200= 'MIP - Included in Eligible?' | H1200: =IF(G1200="",IF(E1200="",F1200,E1200),G1200) -> 0
+C1201= 'MHSA - Included in Eligible?' | H1201: =IF(G1201="",IF(E1201="",F1201,E1201),G1201) -> 0
+C1202= 'NAHASDA - Included in Eligible?' | H1202: =IF(G1202="",IF(E1202="",F1202,E1202),G1202) -> 0
+C1203= 'NSP - Included in Eligible?' | H1203: =IF(G1203="",IF(E1203="",F1203,E1203),G1203) -> 0
+C1204= 'HCD MHP - Included in Eligible?' | H1204: =IF(G1204="",IF(E1204="",F1204,E1204),G1204) -> 0
+C1205= 'HCD NPLH - Included in Eligible?' | H1205: =IF(G1205="",IF(E1205="",F1205,E1205),G1205) -> 0
+C1206= 'HCD VHHP - Included in Eligible?' | H1206: =IF(G1206="",IF(E1206="",F1206,E1206),G1206) -> 0
+C1207= 'National Housing Trust Fund (HTF)  - Included in Eligible?' | H1207: =IF(G1207="",IF(E1207="",F1207,E1207),G1207) -> 0
+C1208= 'FHLB AHP - Included in Eligible?' | H1208: =IF(G1208="",IF(E1208="",F1208,E1208),G1208) -> 0
+C1209= 'Qualified Opportunity Zone Investment  - Included in Eligible?' | H1209: =IF(G1209="",IF(E1209="",F1209,E1209),G1209) -> 0
+C1210= 'FHA Insurance - Included in Eligible?' | H1210: =IF(G1210="",IF(E1210="",F1210,E1210),G1210) -> 0
+C1211= 'FHA Risk Sharing loan? - Included in Eligible?' | H1211: =IF(G1211="",IF(E1211="",F1211,E1211),G1211) -> 0
+C1212= 'Federal - Included in Eligible?' | H1212: =IF(G1212="",IF(E1212="",F1212,E1212),G1212) -> 0
+C1213= 'State - Included in Eligible?' | H1213: =IF(G1213="",IF(E1213="",F1213,E1213),G1213) -> 0
+C1214= 'Local - Included in Eligible?' | H1214: =IF(G1214="",IF(E1214="",F1214,E1214),G1214) -> 0
+C1215= 'Other - Included in Eligible?' | H1215: =IF(G1215="",IF(E1215="",F1215,E1215),G1215) -> 0
+C1216= 'Tax-Exempt Financing - Amount' | H1216: =IF(G1216="",IF(E1216="",F1216,E1216),G1216) -> 0
+C1217= 'Taxable Bond Financing - Amount' | H1217: =IF(G1217="",IF(E1217="",F1217,E1217),G1217) -> 0
+C1218= 'HOME Investment Partnership Act (HOME) - Amount' | H1218: =IF(G1218="",IF(E1218="",F1218,E1218),G1218) -> 0
+C1219= 'Community Development Block Grant (CDBG) - Amount' | H1219: =IF(G1219="",IF(E1219="",F1219,E1219),G1219) -> 0
+C1220= 'RHS 514 - Amount' | H1220: =IF(G1220="",IF(E1220="",F1220,E1220),G1220) -> 0
+C1221= 'RHS 515 - Amount' | H1221: =IF(G1221="",IF(E1221="",F1221,E1221),G1221) -> 0
+C1222= 'RHS 516 - Amount' | H1222: =IF(G1222="",IF(E1222="",F1222,E1222),G1222) -> 0
+C1223= 'RHS 538 - Amount' | H1223: =IF(G1223="",IF(E1223="",F1223,E1223),G1223) -> 0
+C1224= 'USDA RD - Amount' | H1224: =IF(G1224="",IF(E1224="",F1224,E1224),G1224) -> 0
+C1225= 'HOPE VI - Amount' | H1225: =IF(G1225="",IF(E1225="",F1225,E1225),G1225) -> 0
+C1226= 'HOPWA - Amount' | H1226: =IF(G1226="",IF(E1226="",F1226,E1226),G1226) -> 0
+C1227= 'HUD 202 Supportive Housing for the Elderly - Amount' | H1227: =IF(G1227="",IF(E1227="",F1227,E1227),G1227) -> 0
+C1228= 'HUD 811 - Amount' | H1228: =IF(G1228="",IF(E1228="",F1228,E1228),G1228) -> 0
+C1229= 'HCD AHSC - Amount' | H1229: =IF(G1229="",IF(E1229="",F1229,E1229),G1229) -> 0
+C1230= 'HCD Homekey - Amount' | H1230: =IF(G1230="",IF(E1230="",F1230,E1230),G1230) -> 0
+C1231= 'McKinney-Vento Homeless Assistance Program - Amount' | H1231: =IF(G1231="",IF(E1231="",F1231,E1231),G1231) -> 0
+C1232= 'MIP - Amount' | H1232: =IF(G1232="",IF(E1232="",F1232,E1232),G1232) -> 0
+C1233= 'MHSA - Amount' | H1233: =IF(G1233="",IF(E1233="",F1233,E1233),G1233) -> 0
+C1234= 'NAHASDA - Amount' | H1234: =IF(G1234="",IF(E1234="",F1234,E1234),G1234) -> 0
+C1235= 'NSP - Amount' | H1235: =IF(G1235="",IF(E1235="",F1235,E1235),G1235) -> 0
+C1236= 'HCD MHP - Amount' | H1236: =IF(G1236="",IF(E1236="",F1236,E1236),G1236) -> 0
+C1237= 'HCD NPLH - Amount' | H1237: =IF(G1237="",IF(E1237="",F1237,E1237),G1237) -> 0
+C1238= 'HCD VHHP - Amount' | H1238: =IF(G1238="",IF(E1238="",F1238,E1238),G1238) -> 0
+C1239= 'National Housing Trust Fund (HTF)  - Amount' | H1239: =IF(G1239="",IF(E1239="",F1239,E1239),G1239) -> 0
+C1240= 'FHLB AHP - Amount' | H1240: =IF(G1240="",IF(E1240="",F1240,E1240),G1240) -> 0
+C1241= 'Qualified Opportunity Zone Investment  - Amount' | H1241: =IF(G1241="",IF(E1241="",F1241,E1241),G1241) -> 0
+C1242= 'FHA Insurance - Amount' | H1242: =IF(G1242="",IF(E1242="",F1242,E1242),G1242) -> 0
+C1243= 'FHA Risk Sharing loan? - Amount' | H1243: =IF(G1243="",IF(E1243="",F1243,E1243),G1243) -> 0
+C1244= 'Federal - Amount' | H1244: =IF(G1244="",IF(E1244="",F1244,E1244),G1244) -> 0
+C1245= 'State - Amount' | H1245: =IF(G1245="",IF(E1245="",F1245,E1245),G1245) -> 0
+C1246= 'Local - Amount' | H1246: =IF(G1246="",IF(E1246="",F1246,E1246),G1246) -> 0
+C1247= 'LIHTC Credits' | E1247: =ROUND('Sources & Uses'!E46,) -> 133838969 | H1247: =IF(G1247="",IF(E1247="",F1247,E1247),G1247) -> 133838969
+C1248= 'Recycled Bonds' | E1248: =ROUND('Financing & Debt Sizing'!C187,) -> 8836819 | H1248: =IF(G1248="",IF(E1248="",F1248,E1248),G1248) -> 8836819
+H1249: =IF(G1249="",IF(E1249="",F1249,E1249),G1249) -> 0
+C1250= 'Plus (+) 20% basis adjustment - Prevailing Wages' | H1250: =IF(G1250="",IF(E1250="",F1250,E1250),G1250) -> 0
+C1251= 'Plus (+) 5% basis adjustment ' | H1251: =IF(G1251="",IF(E1251="",F1251,E1251),G1251) -> 0
+C1252= 'Plus (+) 10% basis adjustment - Parking (New Construction)' | H1252: =IF(G1252="",IF(E1252="",F1252,E1252),G1252) -> 0
+C1253= 'Plus (+) 2% basis adjustment - Daycare' | H1253: =IF(G1253="",IF(E1253="",F1253,E1253),G1253) -> 0
+C1254= 'Plus (+) 2% basis adjustment - 100% Special Needs' | H1254: =IF(G1254="",IF(E1254="",F1254,E1254),G1254) -> 0
+C1255= 'Plus (+) up to 20% basis adjustment -  ITEM (e) Features' | H1255: =IF(G1255="",IF(E1255="",F1255,E1255),G1255) -> 0
+C1256= 'Plus (+) the lesser of the associated costs or up to a 15% basis adjustment - Seismic upgrading / Environmental mitigation ' | H1256: =IF(G1256="",IF(E1256="",F1256,E1256),G1256) -> 0
+C1257= 'Plus (+) Local Development Impact Fees ' | H1257: =IF(G1257="",IF(E1257="",F1257,E1257),G1257) -> 0
+C1258= 'Plus (+) 10% basis adjustment - Elevator' | H1258: =IF(G1258="",IF(E1258="",F1258,E1258),G1258) -> 0
+C1259= 'Plus (+) 15% basis adjustment - Type I Construction' | H1259: =IF(G1259="",IF(E1259="",F1259,E1259),G1259) -> 0
+C1260= 'Plus (+) 10% basis adjustment - Type III Construction' | H1260: =IF(G1260="",IF(E1260="",F1260,E1260),G1260) -> 0
+C1261= 'Plus (+) 10% basis adjustment - High Opportunity Area ' | H1261: =IF(G1261="",IF(E1261="",F1261,E1261),G1261) -> 0
+H1262: =IF(G1262="",IF(E1262="",F1262,E1262),G1262) -> 0
+C1263= 'All electric. Threshold Basis Limit increase of 20%.' | E1263= 'Yes' | F1263= 'Yes' | H1263: =IF(G1263="",IF(E1263="",F1263,E1263),G1263) -> 'Yes'
+C1264= 'For rehabilitation projects, electric ready as defined in Section 160.9 of the 2022 Building Energy Efficiency Standards. Threshold Basis Limit increase of 15%.' | E1264= 'N/A' | F1264= 'N/A' | H1264: =IF(G1264="",IF(E1264="",F1264,E1264),G1264) -> 'N/A'
+C1265= 'Project shall have onsite renewable generation estimated to produce 50% or more of annual tenant electricity use. If combined available roof area is insufficient, project shall have onsite renewable generation based on at least 90% of the available solar accessible roof area. A project not availing itself of the 90% roof area exception may also receive an increase under paragraph (2) only if the renewable generation used to calculate each basis increase does not overlap. Threshold Basis Limit increase of 5%.' | E1265= 'N/A' | F1265= 'N/A' | H1265: =IF(G1265="",IF(E1265="",F1265,E1265),G1265) -> 'N/A'
+C1266= 'Project shall have onsite renewable generation estimated to produce 75% or more of annual common area electricity use. If combined available roof area is insufficient, project shall have onsite renewable generation based on at least 90% of the available solar accessible roof area. A project not availing itself of the 90% roof area exception may also receive an increase under paragraph (1) only if the renewable generation used to calculate each basis increase does not overlap. Threshold Basis Limit increase of 2%.' | E1266= 'N/A' | F1266= 'N/A' | H1266: =IF(G1266="",IF(E1266="",F1266,E1266),G1266) -> 'N/A'
+C1267= 'Newly constructed project buildings shall be 15% more energy efficient than existing (at the time of application) Energy Efficiency Standards (CA Energy Code of Regulations, Title 24, Part 6) for energy efficiency alone (not counting solar). Threshold Basis Limit increase of 4%.' | E1267= 'N/A' | F1267= 'N/A' | H1267: =IF(G1267="",IF(E1267="",F1267,E1267),G1267) -> 'N/A'
+C1268= 'Rehabilitated project buildings shall have an 80% decrease in estimated TDV energy use (or improvement in energy efficiency) post-rehabilitation as demonstrated using the appropriate performance module of CEC approved software. Threshold Basis Limit increase 4%.' | E1268= 'N/A' | F1268= 'N/A' | H1268: =IF(G1268="",IF(E1268="",F1268,E1268),G1268) -> 'N/A'
+C1269= 'Irrigate only with reclaimed water, greywater, or rainwater (excluding water used for community gardens), or irrigate with reclaimed water, greywater, or rainwater in an amount that annually equals or exceeds 20,000 gallons or 300 gallons per unit, whichever is less. Threshold Basis Limit increase 1%.' | E1269= 'N/A' | F1269= 'N/A' | H1269: =IF(G1269="",IF(E1269="",F1269,E1269),G1269) -> 'N/A'
+C1270= 'Community gardens of at least 60 square feet per unit.  Permanent site improvements that provide a viable growing space within the project. Threshold Basis Limit increase 1%.' | E1270= 'N/A' | F1270= 'N/A' | H1270: =IF(G1270="",IF(E1270="",F1270,E1270),G1270) -> 'N/A'
+C1271= 'Install bamboo, stained concrete, cork, salvaged or FSC-Certified wood, natural linoleum, natural rubber, or ceramic tile in all kitchens, living rooms, and bathrooms (where no VOC adhesives or backing is also used). Threshold Basis Limit increase 1%.' | E1271= 'N/A' | F1271= 'N/A' | H1271: =IF(G1271="",IF(E1271="",F1271,E1271),G1271) -> 'N/A'
+C1272= 'Install bamboo, stained concrete, cork, salvaged or FSC-Certified wood, natural linoleum, natural rubber, or ceramic tile in all interior floor space other than units (where no VOC adhesives or backing is also used). Threshold Basis Limit increase 2%.' | E1272= 'N/A' | F1272= 'N/A' | H1272: =IF(G1272="",IF(E1272="",F1272,E1272),G1272) -> 'N/A'
+C1273= 'For new construction projects, meet all requirements of the U.S. Environmental Protection Agency Indoor Air Plus Program. Threshold Basis Limit increase 2%.' | E1273= 'N/A' | F1273= 'N/A' | H1273: =IF(G1273="",IF(E1273="",F1273,E1273),G1273) -> 'N/A'
+H1274: =IF(G1274="",IF(E1274="",F1274,E1274),G1274) -> 0
+C1275= 'Residential' | H1275: =IF(G1275="",IF(E1275="",F1275,E1275),G1275) -> 0
+C1276= 'Land Cost or Value' | E1276: =ROUND('Dev Budget'!F169,) -> 2180000 | H1276: =IF(G1276="",IF(E1276="",F1276,E1276),G1276) -> 2180000
+C1277= 'Demolition' | E1277: ='Dev Budget'!H23 -> 499313.2006868 | H1277: =IF(G1277="",IF(E1277="",F1277,E1277),G1277) -> 499313.2006868
+C1278= 'Legal' | E1278: =ROUND('Dev Budget'!H17,) -> 283107 | H1278: =IF(G1278="",IF(E1278="",F1278,E1278),G1278) -> 283107
+C1279= 'Land Lease Rent Prepayment' | E1279= 0 | H1279: =IF(G1279="",IF(E1279="",F1279,E1279),G1279) -> 0
+C1280= 'Existing Improvements Value' | E1280: =ROUND('Master Inputs'!$E$28,) -> 0 | H1280: =IF(G1280="",IF(E1280="",F1280,E1280),G1280) -> 0
+C1281= 'Off-Site Improvements' | E1281= 0 | H1281: =IF(G1281="",IF(E1281="",F1281,E1281),G1281) -> 0
+C1282= 'Predevelopment Interest/Holding Cost' | E1282: =ROUND('Dev Budget'!H18+'Dev Budget'!H16,) -> 0 | H1282: =IF(G1282="",IF(E1282="",F1282,E1282),G1282) -> 0
+C1283= 'Assumed, Accrued Interest on Existing Debt (Rehabilitation/Acquisition)' | E1283= 0 | H1283: =IF(G1283="",IF(E1283="",F1283,E1283),G1283) -> 0
+C1284= 'Excess Purchase Price Over Appraisal' | E1284= 0 | H1284: =IF(G1284="",IF(E1284="",F1284,E1284),G1284) -> 0
+H1285: =IF(G1285="",IF(E1285="",F1285,E1285),G1285) -> 0
+C1286= 'Site Work' | E1286: ='Dev Budget'!H24 -> 2829441.47055853 | H1286: =IF(G1286="",IF(E1286="",F1286,E1286),G1286) -> 2829441.47055853 | K1286: =E1286*'Dev Budget'!$N$24 -> 2829441.47055853 | L1286: =ROUND(K1286,) -> 2829441
+C1287= 'Structures' | E1287: =ROUND('Dev Budget'!H37-'Data Port'!E1294-'Data Port'!E1292-'Data Port'!E1291-'Data Port'!E1290-'Data Port'!E1289-'Data Port'!E1288-'Data Port'!E1286-E1277,) -> 189715092 | H1287: =IF(G1287="",IF(E1287="",F1287,E1287),G1287) -> 189715092 | K1287: =E1287*'Dev Budget'!$N$24 -> 189715092 | L1287: =ROUND(K1287,) -> 189715092
+C1288= 'General Requirements' | E1288: =ROUND(('Dev Budget'!$H$37-$E$1294)*0.015,) -> 3199622 | H1288: =IF(G1288="",IF(E1288="",F1288,E1288),G1288) -> 3199622 | K1288: =E1288*'Dev Budget'!$N$24 -> 3199622 | L1288: =ROUND(K1288,) -> 3199622
+C1289= 'Contractor Overhead' | E1289: =ROUND(('Dev Budget'!$H$37-$E$1294)*0.04,) -> 8532325 | H1289: =IF(G1289="",IF(E1289="",F1289,E1289),G1289) -> 8532325 | K1289: =E1289*'Dev Budget'!$N$24 -> 8532325 | L1289: =ROUND(K1289,) -> 8532325
+C1290= 'Contractor Profit' | E1290: =ROUND(('Dev Budget'!$H$37-$E$1294)*0.04,) -> 8532325 | H1290: =IF(G1290="",IF(E1290="",F1290,E1290),G1290) -> 8532325 | K1290: =E1290*'Dev Budget'!$N$24 -> 8532325 | L1290: =ROUND(K1290,) -> 8532325
+C1291= 'Prevailing Wages' | E1291= 0 | H1291: =IF(G1291="",IF(E1291="",F1291,E1291),G1291) -> 0 | K1291: =E1291*'Dev Budget'!$N$24 -> 0 | L1291: =ROUND(K1291,) -> 0
+C1292= 'General Liability Insurance' | E1292= 0 | H1292: =IF(G1292="",IF(E1292="",F1292,E1292),G1292) -> 0 | K1292: =E1292*'Dev Budget'!$N$24 -> 0 | L1292: =ROUND(K1292,) -> 0
+C1293= 'Third-party Construction Management' | E1293: =ROUND('Dev Budget'!H87,) -> 375656 | H1293: =IF(G1293="",IF(E1293="",F1293,E1293),G1293) -> 375656
+C1294= 'Contractor Contigency' | E1294: =ROUND('Dev Budget'!H31,) -> 11520731 | H1294: =IF(G1294="",IF(E1294="",F1294,E1294),G1294) -> 11520731 | K1294: =E1294*'Dev Budget'!$N$24 -> 11520731 | L1294: =ROUND(K1294,) -> 11520731
+H1295: =IF(G1295="",IF(E1295="",F1295,E1295),G1295) -> 0
+C1296= 'Design' | E1296: =ROUND('Dev Budget'!H41,)-E1297 -> 5492016 | H1296: =IF(G1296="",IF(E1296="",F1296,E1296),G1296) -> 5492016
+C1297= 'Supervision' | E1297= 300000 | H1297: =IF(G1297="",IF(E1297="",F1297,E1297),G1297) -> 300000
+C1298= 'Total Survey & Engineering' | E1298: =ROUND('Dev Budget'!H42,) -> 4894089 | H1298: =IF(G1298="",IF(E1298="",F1298,E1298),G1298) -> 4894089
+H1299: =IF(G1299="",IF(E1299="",F1299,E1299),G1299) -> 0
+C1300= 'Construction Loan Interest' | E1300: =ROUND('Dev Budget'!H55,) -> 24049565 | H1300: =IF(G1300="",IF(E1300="",F1300,E1300),G1300) -> 24049565
+C1301= 'interest in basis' | E1301: ='Dev Budget'!Q55 -> 14374690.7419577 | H1301: =IF(G1301="",IF(E1301="",F1301,E1301),G1301) -> 14374690.7419577
+C1302= 'interest out of basis' | E1302: =E1300-E1301 -> 9674874.2580423 | H1302: =IF(G1302="",IF(E1302="",F1302,E1302),G1302) -> 9674874.2580423
+H1303: =IF(G1303="",IF(E1303="",F1303,E1303),G1303) -> 0
+C1304= 'Origination Fee' | E1304: =ROUND('Dev Budget'!H57,) -> 2705641 | H1304: =IF(G1304="",IF(E1304="",F1304,E1304),G1304) -> 2705641
+C1305= 'Credit Enhancement/Application Fee' | E1305: =ROUND('Dev Budget'!H81,) -> 448942 | H1305: =IF(G1305="",IF(E1305="",F1305,E1305),G1305) -> 448942
+C1306= 'Bond Premium' | E1306: =ROUND('Dev Budget'!H59,) -> 1881536 | H1306: =IF(G1306="",IF(E1306="",F1306,E1306),G1306) -> 1881536
+C1307= 'Cost of Issuance' | E1307: =ROUND('Dev Budget'!H56,) -> 145234 | H1307: =IF(G1307="",IF(E1307="",F1307,E1307),G1307) -> 145234
+C1308= 'Title & Recording' | E1308: =ROUND('Dev Budget'!H61,) -> 260872 | H1308: =IF(G1308="",IF(E1308="",F1308,E1308),G1308) -> 260872
+C1309= 'Taxes' | E1309: =ROUND('Dev Budget'!H58,) -> 73370 | H1309: =IF(G1309="",IF(E1309="",F1309,E1309),G1309) -> 73370
+C1310= 'Insurance' | E1310: =ROUND('Dev Budget'!H62+'Dev Budget'!H63,) -> 2782636 | H1310: =IF(G1310="",IF(E1310="",F1310,E1310),G1310) -> 2782636
+C1311= 'Lender Inspections' | E1311: =ROUND('Dev Budget'!H60,) -> 75000 | H1311: =IF(G1311="",IF(E1311="",F1311,E1311),G1311) -> 75000
+H1312: =IF(G1312="",IF(E1312="",F1312,E1312),G1312) -> 0
+C1313= 'Loan Origination Fee' | E1313: =ROUND('Dev Budget'!H67,) -> 0 | H1313: =IF(G1313="",IF(E1313="",F1313,E1313),G1313) -> 0
+C1314= 'Credit Enhancement/Application Fee' | E1314= 0 | H1314: =IF(G1314="",IF(E1314="",F1314,E1314),G1314) -> 0
+C1315= 'Title & Recording' | E1315: =ROUND('Dev Budget'!H68,) -> 52174 | H1315: =IF(G1315="",IF(E1315="",F1315,E1315),G1315) -> 52174
+C1316= 'Taxes' | E1316= 0 | H1316: =IF(G1316="",IF(E1316="",F1316,E1316),G1316) -> 0
+C1317= 'Insurance' | E1317= 0 | H1317: =IF(G1317="",IF(E1317="",F1317,E1317),G1317) -> 0
+C1318= 'Other: Misc due dilligence and applicant legal and Misc' | E1318: =ROUND('Dev Budget'!H51+'Dev Budget'!H49+'Dev Budget'!H69,) -> 434787 | H1318: =IF(G1318="",IF(E1318="",F1318,E1318),G1318) -> 434787
+H1319: =IF(G1319="",IF(E1319="",F1319,E1319),G1319) -> 0
+C1320= 'Lender Legal Paid by Applicant' | E1320: =ROUND('Dev Budget'!H46+'Dev Budget'!H47,) -> 556527 | H1320: =IF(G1320="",IF(E1320="",F1320,E1320),G1320) -> 556527
+C1321= 'Perm related due dilligence and fees in basis' | E1321: =E1320-ROUND('Dev Budget'!H47,) -> 469570 | H1321: =IF(G1321="",IF(E1321="",F1321,E1321),G1321) -> 469570
+C1322= 'Financial Consulting, \nApplication Preparation/Review' | E1322: =ROUND('Dev Budget'!H85,) -> 226089 | H1322: =IF(G1322="",IF(E1322="",F1322,E1322),G1322) -> 226089
+C1323= 'Entitlement Services, Building Permit Expediting' | E1323: =ROUND('Dev Budget'!H89,) -> 0 | H1323: =IF(G1323="",IF(E1323="",F1323,E1323),G1323) -> 0
+C1324= 'Tenant File Review Services' | H1324: =IF(G1324="",IF(E1324="",F1324,E1324),G1324) -> 0
+C1325= 'Applicant construction legal and due dilligence' | E1325: =ROUND('Dev Budget'!H50+'Dev Budget'!H48,) -> 782616 | H1325: =IF(G1325="",IF(E1325="",F1325,E1325),G1325) -> 782616 | K1325: =E1325*'Dev Budget'!N48 -> 391308 | L1325: =ROUND(K1325,) -> 391308
+H1326: =IF(G1326="",IF(E1326="",F1326,E1326),G1326) -> 0
+C1327= 'Rent Reserves' | H1327: =IF(G1327="",IF(E1327="",F1327,E1327),G1327) -> 0
+C1328= 'Capitalized Rent Reserves' | H1328: =IF(G1328="",IF(E1328="",F1328,E1328),G1328) -> 0
+C1329= 'Required Capitalized Replacement Reserve' | H1329: =IF(G1329="",IF(E1329="",F1329,E1329),G1329) -> 0
+C1330= '3-Month Operating Reserve' | E1330: =ROUND('Dev Budget'!H104,) -> 4667630 | H1330: =IF(G1330="",IF(E1330="",F1330,E1330),G1330) -> 4667630
+C1331= 'Other: (Specify)' | H1331: =IF(G1331="",IF(E1331="",F1331,E1331),G1331) -> 0
+H1332: =IF(G1332="",IF(E1332="",F1332,E1332),G1332) -> 0
+C1333= 'Construction Hard Cost Contingency ' | E1333: =ROUND('Dev Budget'!H39,) -> 11216477 | H1333: =IF(G1333="",IF(E1333="",F1333,E1333),G1333) -> 11216477
+C1334= 'Soft Cost Contingency' | E1334: =ROUND('Dev Budget'!H100,) -> 756529 | H1334: =IF(G1334="",IF(E1334="",F1334,E1334),G1334) -> 756529
+H1335: =IF(G1335="",IF(E1335="",F1335,E1335),G1335) -> 0
+C1336= 'CTCAC App/Allocation/Monitoring Fees' | E1336: =ROUND('Dev Budget'!H80,) -> 745051 | H1336: =IF(G1336="",IF(E1336="",F1336,E1336),G1336) -> 745051
+C1337= 'Environmental Audit' | E1337: =ROUND('Dev Budget'!H77,) -> 69566 | H1337: =IF(G1337="",IF(E1337="",F1337,E1337),G1337) -> 69566
+C1338= 'Local Development Impact Fees' | E1338: =ROUND('Dev Budget'!H73+'Dev Budget'!H74,) -> 4870078 | H1338: =IF(G1338="",IF(E1338="",F1338,E1338),G1338) -> 4870078
+C1339= 'Permit Processing Fees' | E1339: =ROUND('Dev Budget'!H75,) -> 4707403 | H1339: =IF(G1339="",IF(E1339="",F1339,E1339),G1339) -> 4707403
+C1340= 'Capital Fees' | E1340: =ROUND('Dev Budget'!H76,) -> 6822840 | H1340: =IF(G1340="",IF(E1340="",F1340,E1340),G1340) -> 6822840
+C1341= 'Marketing' | E1341: =ROUND('Dev Budget'!H82,) -> 1779750 | H1341: =IF(G1341="",IF(E1341="",F1341,E1341),G1341) -> 1779750
+C1342= 'Furnishings' | E1342: =ROUND('Dev Budget'!H84,) -> 0 | H1342: =IF(G1342="",IF(E1342="",F1342,E1342),G1342) -> 0
+C1343= 'Market Study' | E1343: =ROUND('Dev Budget'!H79,) -> 52174 | H1343: =IF(G1343="",IF(E1343="",F1343,E1343),G1343) -> 52174
+C1344= 'Accounting/Reimbursables' | E1344: =ROUND('Dev Budget'!H86,) -> 104349 | H1344: =IF(G1344="",IF(E1344="",F1344,E1344),G1344) -> 104349
+C1345= 'Appraisal Costs' | E1345: =ROUND('Dev Budget'!H78,) -> 0 | H1345: =IF(G1345="",IF(E1345="",F1345,E1345),G1345) -> 0
+C1346= 'Partnership Start-up Fees' | E1346: ='Dev Budget'!H88 -> 86957.3864653241 | H1346: =IF(G1346="",IF(E1346="",F1346,E1346),G1346) -> 86957.3864653241
+C1347= 'Other: (Specify)' | H1347: =IF(G1347="",IF(E1347="",F1347,E1347),G1347) -> 0
+C1348= 'Other: (Specify)' | H1348: =IF(G1348="",IF(E1348="",F1348,E1348),G1348) -> 0
+H1349: =IF(G1349="",IF(E1349="",F1349,E1349),G1349) -> 0
+C1350= 'Developer Overhead/Profit' | E1350: =ROUND('Dev Budget'!H115,) -> 43040574 | H1350: =IF(G1350="",IF(E1350="",F1350,E1350),G1350) -> 43040574
+C1351= 'Processing Agent Fees' | H1351: =IF(G1351="",IF(E1351="",F1351,E1351),G1351) -> 0
+C1352= 'Broker Fees Paid  to a Related Party' | H1352: =IF(G1352="",IF(E1352="",F1352,E1352),G1352) -> 0
+C1353= 'Construction Management by Developer' | H1353: =IF(G1353="",IF(E1353="",F1353,E1353),G1353) -> 0
+C1354= 'Other: (Specify)' | H1354: =IF(G1354="",IF(E1354="",F1354,E1354),G1354) -> 0
+C1355= 'Applicatoin adjustment factor construction' | E1355= 0 | H1355: =IF(G1355="",IF(E1355="",F1355,E1355),G1355) -> 0
+C1356= 'Application adjustment factor Perm' | E1356= 0 | H1356: =IF(G1356="",IF(E1356="",F1356,E1356),G1356) -> 0
+C1357= 'Commercial' | H1357: =IF(G1357="",IF(E1357="",F1357,E1357),G1357) -> 0
+C1358= 'Land Cost or Value' | H1358: =IF(G1358="",IF(E1358="",F1358,E1358),G1358) -> 0
+C1359= 'Demolition' | H1359: =IF(G1359="",IF(E1359="",F1359,E1359),G1359) -> 0
+C1360= 'Legal' | H1360: =IF(G1360="",IF(E1360="",F1360,E1360),G1360) -> 0
+C1361= 'Land Lease Rent Prepayment' | H1361: =IF(G1361="",IF(E1361="",F1361,E1361),G1361) -> 0
+C1362= 'Existing Improvements Value' | H1362: =IF(G1362="",IF(E1362="",F1362,E1362),G1362) -> 0
+C1363= 'Off-Site Improvements' | H1363: =IF(G1363="",IF(E1363="",F1363,E1363),G1363) -> 0
+C1364= 'Predevelopment Interest/Holding Cost' | H1364: =IF(G1364="",IF(E1364="",F1364,E1364),G1364) -> 0
+C1365= 'Assumed, Accrued Interest on Existing Debt (Rehabilitation/Acquisition)' | H1365: =IF(G1365="",IF(E1365="",F1365,E1365),G1365) -> 0
+C1366= 'Excess Purchase Price Over Appraisal' | H1366: =IF(G1366="",IF(E1366="",F1366,E1366),G1366) -> 0
+H1367: =IF(G1367="",IF(E1367="",F1367,E1367),G1367) -> 0
+C1368= 'Site Work' | H1368: =IF(G1368="",IF(E1368="",F1368,E1368),G1368) -> 0
+C1369= 'Structures' | E1369: =ROUND('Dev Budget'!V37,0) -> 0 | H1369: =IF(G1369="",IF(E1369="",F1369,E1369),G1369) -> 0
+C1370= 'General Requirements' | H1370: =IF(G1370="",IF(E1370="",F1370,E1370),G1370) -> 0
+C1371= 'Contractor Overhead' | H1371: =IF(G1371="",IF(E1371="",F1371,E1371),G1371) -> 0
+C1372= 'Contractor Profit' | H1372: =IF(G1372="",IF(E1372="",F1372,E1372),G1372) -> 0
+C1373= 'Prevailing Wages' | H1373: =IF(G1373="",IF(E1373="",F1373,E1373),G1373) -> 0
+C1374= 'General Liability Insurance' | H1374: =IF(G1374="",IF(E1374="",F1374,E1374),G1374) -> 0
+C1375= 'Third-party Construction Management' | H1375: =IF(G1375="",IF(E1375="",F1375,E1375),G1375) -> 0
+C1376= 'Other: (Specify)' | H1376: =IF(G1376="",IF(E1376="",F1376,E1376),G1376) -> 0
+H1377: =IF(G1377="",IF(E1377="",F1377,E1377),G1377) -> 0
+C1378= 'Design' | H1378: =IF(G1378="",IF(E1378="",F1378,E1378),G1378) -> 0
+C1379= 'Supervision' | H1379: =IF(G1379="",IF(E1379="",F1379,E1379),G1379) -> 0
+C1380= 'Total Survey & Engineering' | H1380: =IF(G1380="",IF(E1380="",F1380,E1380),G1380) -> 0
+H1381: =IF(G1381="",IF(E1381="",F1381,E1381),G1381) -> 0
+C1382= 'Construction Loan Interest' | H1382: =IF(G1382="",IF(E1382="",F1382,E1382),G1382) -> 0
+C1383= 'Origination Fee' | H1383: =IF(G1383="",IF(E1383="",F1383,E1383),G1383) -> 0
+C1384= 'Credit Enhancement/Application Fee' | H1384: =IF(G1384="",IF(E1384="",F1384,E1384),G1384) -> 0
+C1385= 'Bond Premium' | H1385: =IF(G1385="",IF(E1385="",F1385,E1385),G1385) -> 0
+C1386= 'Cost of Issuance' | H1386: =IF(G1386="",IF(E1386="",F1386,E1386),G1386) -> 0
+C1387= 'Title & Recording' | H1387: =IF(G1387="",IF(E1387="",F1387,E1387),G1387) -> 0
+C1388= 'Taxes' | H1388: =IF(G1388="",IF(E1388="",F1388,E1388),G1388) -> 0
+C1389= 'Insurance' | H1389: =IF(G1389="",IF(E1389="",F1389,E1389),G1389) -> 0
+C1390= 'Other: (Specify)' | H1390: =IF(G1390="",IF(E1390="",F1390,E1390),G1390) -> 0
+H1391: =IF(G1391="",IF(E1391="",F1391,E1391),G1391) -> 0
+C1392= 'Loan Origination Fee' | H1392: =IF(G1392="",IF(E1392="",F1392,E1392),G1392) -> 0
+C1393= 'Credit Enhancement/Application Fee' | H1393: =IF(G1393="",IF(E1393="",F1393,E1393),G1393) -> 0
+C1394= 'Title & Recording' | H1394: =IF(G1394="",IF(E1394="",F1394,E1394),G1394) -> 0
+C1395= 'Taxes' | H1395: =IF(G1395="",IF(E1395="",F1395,E1395),G1395) -> 0
+C1396= 'Insurance' | H1396: =IF(G1396="",IF(E1396="",F1396,E1396),G1396) -> 0
+C1397= 'Other: (Specify)' | H1397: =IF(G1397="",IF(E1397="",F1397,E1397),G1397) -> 0
+H1398: =IF(G1398="",IF(E1398="",F1398,E1398),G1398) -> 0
+C1399= 'Lender Legal Paid by Applicant' | H1399: =IF(G1399="",IF(E1399="",F1399,E1399),G1399) -> 0
+C1400= 'Financial Consulting, \nApplication Preparation/Review' | H1400: =IF(G1400="",IF(E1400="",F1400,E1400),G1400) -> 0
+C1401= 'Entitlement Services, Building Permit Expediting' | H1401: =IF(G1401="",IF(E1401="",F1401,E1401),G1401) -> 0
+C1402= 'Tenant File Review Services' | H1402: =IF(G1402="",IF(E1402="",F1402,E1402),G1402) -> 0
+C1403= 'Other: (Specify)' | H1403: =IF(G1403="",IF(E1403="",F1403,E1403),G1403) -> 0
+H1404: =IF(G1404="",IF(E1404="",F1404,E1404),G1404) -> 0
+C1405= 'Rent Reserves' | H1405: =IF(G1405="",IF(E1405="",F1405,E1405),G1405) -> 0
+C1406= 'Capitalized Rent Reserves' | H1406: =IF(G1406="",IF(E1406="",F1406,E1406),G1406) -> 0
+C1407= 'Required Capitalized Replacement Reserve' | H1407: =IF(G1407="",IF(E1407="",F1407,E1407),G1407) -> 0
+C1408= '3-Month Operating Reserve' | H1408: =IF(G1408="",IF(E1408="",F1408,E1408),G1408) -> 0
+C1409= 'Other: (Specify)' | H1409: =IF(G1409="",IF(E1409="",F1409,E1409),G1409) -> 0
+H1410: =IF(G1410="",IF(E1410="",F1410,E1410),G1410) -> 0
+C1411= 'Construction Hard Cost Contingency ' | H1411: =IF(G1411="",IF(E1411="",F1411,E1411),G1411) -> 0
+C1412= 'Soft Cost Contingency' | H1412: =IF(G1412="",IF(E1412="",F1412,E1412),G1412) -> 0
+H1413: =IF(G1413="",IF(E1413="",F1413,E1413),G1413) -> 0
+C1414= 'CTCAC App/Allocation/Monitoring Fees' | H1414: =IF(G1414="",IF(E1414="",F1414,E1414),G1414) -> 0
+C1415= 'Environmental Audit' | H1415: =IF(G1415="",IF(E1415="",F1415,E1415),G1415) -> 0
+C1416= 'Local Development Impact Fees' | H1416: =IF(G1416="",IF(E1416="",F1416,E1416),G1416) -> 0
+C1417= 'Permit Processing Fees' | H1417: =IF(G1417="",IF(E1417="",F1417,E1417),G1417) -> 0
+C1418= 'Capital Fees' | H1418: =IF(G1418="",IF(E1418="",F1418,E1418),G1418) -> 0
+C1419= 'Marketing' | H1419: =IF(G1419="",IF(E1419="",F1419,E1419),G1419) -> 0
+C1420= 'Furnishings' | H1420: =IF(G1420="",IF(E1420="",F1420,E1420),G1420) -> 0
+C1421= 'Market Study' | H1421: =IF(G1421="",IF(E1421="",F1421,E1421),G1421) -> 0
+C1422= 'Accounting/Reimbursables' | H1422: =IF(G1422="",IF(E1422="",F1422,E1422),G1422) -> 0
+C1423= 'Appraisal Costs' | H1423: =IF(G1423="",IF(E1423="",F1423,E1423),G1423) -> 0
+C1424= 'Other: (Specify)' | H1424: =IF(G1424="",IF(E1424="",F1424,E1424),G1424) -> 0
+C1425= 'Other: (Specify)' | H1425: =IF(G1425="",IF(E1425="",F1425,E1425),G1425) -> 0
+C1426= 'Other: (Specify)' | H1426: =IF(G1426="",IF(E1426="",F1426,E1426),G1426) -> 0
+H1427: =IF(G1427="",IF(E1427="",F1427,E1427),G1427) -> 0
+C1428= 'Developer Overhead/Profit' | H1428: =IF(G1428="",IF(E1428="",F1428,E1428),G1428) -> 0
+C1429= 'Processing Agent Fees' | H1429: =IF(G1429="",IF(E1429="",F1429,E1429),G1429) -> 0
+C1430= 'Broker Fees Paid  to a Related Party' | H1430: =IF(G1430="",IF(E1430="",F1430,E1430),G1430) -> 0
+C1431= 'Construction Management by Developer' | H1431: =IF(G1431="",IF(E1431="",F1431,E1431),G1431) -> 0
+C1432= 'Other: (Specify)' | H1432: =IF(G1432="",IF(E1432="",F1432,E1432),G1432) -> 0
+C1435= 'Local Jurisdiction' | E1435: ="" -> None | H1435: =IF(G1435="",IF(E1435="",F1435,E1435),G1435) -> 0
+C1436= 'City Manager' | E1436: ="" -> None | H1436: =IF(G1436="",IF(E1436="",F1436,E1436),G1436) -> 0
+C1437= 'Title' | E1437: ="" -> None | H1437: =IF(G1437="",IF(E1437="",F1437,E1437),G1437) -> 0
+C1438= 'Mailing Address' | E1438: ="" -> None | H1438: =IF(G1438="",IF(E1438="",F1438,E1438),G1438) -> 0
+C1439= 'City' | E1439: ="" -> None | H1439: =IF(G1439="",IF(E1439="",F1439,E1439),G1439) -> 0
+C1440= 'Zip Code' | E1440: ="" -> None | H1440: =IF(G1440="",IF(E1440="",F1440,E1440),G1440) -> 0
+C1441= 'Phone Number' | E1441: ="" -> None | H1441: =IF(G1441="",IF(E1441="",F1441,E1441),G1441) -> 0
+C1442= 'Fax Number' | E1442: ="" -> None | H1442: =IF(G1442="",IF(E1442="",F1442,E1442),G1442) -> 0
+C1443= 'Email' | E1443: ="" -> None | H1443: =IF(G1443="",IF(E1443="",F1443,E1443),G1443) -> 0
+C1444= 'Ext' | E1444: ="" -> None | H1444: =IF(G1444="",IF(E1444="",F1444,E1444),G1444) -> 0
+C1446= 'Row 19' | H1446: =IF(G1446="",IF(E1446="",F1446,E1446),G1446) -> 0
+C1447= 'Bedroom Type' | E1447= '3 Bedrooms' | H1447: =IF(G1447="",IF(E1447="",F1447,E1447),G1447) -> '3 Bedrooms'
+C1448= 'Number of Units' | E1448: ='Rent Builder'!G30 -> None | H1448: =IF(G1448="",IF(E1448="",F1448,E1448),G1448) -> 0
+C1449= 'Average Square Feet' | E1449: ='Rent Builder'!D30 -> None | H1449: =IF(G1449="",IF(E1449="",F1449,E1449),G1449) -> 0
+C1450= 'Propsoed Monthly Rent (less utilities)' | E1450: =ROUNDUP('Rent Builder'!O30,0) -> 0 | H1450: =IF(G1450="",IF(E1450="",F1450,E1450),G1450) -> 0
+C1451= 'Monthly utility' | E1451: ='Rent Builder'!L30 -> 0 | H1451: =IF(G1451="",IF(E1451="",F1451,E1451),G1451) -> 0
+C1452= '% of AMI' | E1452: ='Rent Builder'!J30 -> 0 | H1452: =IF(G1452="",IF(E1452="",F1452,E1452),G1452) -> 0
+C1453= 'Special Needs Population' | E1453= 0 | H1453: =IF(G1453="",IF(E1453="",F1453,E1453),G1453) -> 0
+H1454: =IF(G1454="",IF(E1454="",F1454,E1454),G1454) -> 0
+C1455= 'Row 20' | H1455: =IF(G1455="",IF(E1455="",F1455,E1455),G1455) -> 0
+C1456= 'Bedroom Type' | E1456= '3 Bedrooms' | H1456: =IF(G1456="",IF(E1456="",F1456,E1456),G1456) -> '3 Bedrooms'
+C1457= 'Number of Units' | E1457: ='Rent Builder'!G31 -> None | H1457: =IF(G1457="",IF(E1457="",F1457,E1457),G1457) -> 0
+C1458= 'Average Square Feet' | E1458: ='Rent Builder'!D31 -> None | H1458: =IF(G1458="",IF(E1458="",F1458,E1458),G1458) -> 0
+C1459= 'Propsoed Monthly Rent (less utilities)' | E1459: =ROUNDUP('Rent Builder'!O31,0) -> 0 | H1459: =IF(G1459="",IF(E1459="",F1459,E1459),G1459) -> 0
+C1460= 'Monthly utility' | E1460: ='Rent Builder'!L31 -> 0 | H1460: =IF(G1460="",IF(E1460="",F1460,E1460),G1460) -> 0
+C1461= '% of AMI' | E1461: ='Rent Builder'!J31 -> 0 | H1461: =IF(G1461="",IF(E1461="",F1461,E1461),G1461) -> 0
+C1462= 'Special Needs Population' | E1462= 0 | H1462: =IF(G1462="",IF(E1462="",F1462,E1462),G1462) -> 0
+H1463: =IF(G1463="",IF(E1463="",F1463,E1463),G1463) -> 0
+C1464= 'Row 21' | H1464: =IF(G1464="",IF(E1464="",F1464,E1464),G1464) -> 0
+C1465= 'Bedroom Type' | E1465= '3 Bedrooms' | H1465: =IF(G1465="",IF(E1465="",F1465,E1465),G1465) -> '3 Bedrooms'
+C1466= 'Number of Units' | E1466: ='Rent Builder'!G32 -> None | H1466: =IF(G1466="",IF(E1466="",F1466,E1466),G1466) -> 0
+C1467= 'Average Square Feet' | E1467: ='Rent Builder'!D32 -> None | H1467: =IF(G1467="",IF(E1467="",F1467,E1467),G1467) -> 0
+C1468= 'Propsoed Monthly Rent (less utilities)' | E1468: =ROUNDUP('Rent Builder'!O32,0) -> 0 | H1468: =IF(G1468="",IF(E1468="",F1468,E1468),G1468) -> 0
+C1469= 'Monthly utility' | E1469: ='Rent Builder'!L32 -> 0 | H1469: =IF(G1469="",IF(E1469="",F1469,E1469),G1469) -> 0
+C1470= '% of AMI' | E1470: ='Rent Builder'!J32 -> 0 | H1470: =IF(G1470="",IF(E1470="",F1470,E1470),G1470) -> 0
+C1471= 'Special Needs Population' | E1471= 0 | H1471: =IF(G1471="",IF(E1471="",F1471,E1471),G1471) -> 0
+H1472: =IF(G1472="",IF(E1472="",F1472,E1472),G1472) -> 0
+C1473= 'Row 22' | H1473: =IF(G1473="",IF(E1473="",F1473,E1473),G1473) -> 0
+C1474= 'Bedroom Type' | E1474= '3 Bedrooms' | H1474: =IF(G1474="",IF(E1474="",F1474,E1474),G1474) -> '3 Bedrooms'
+C1475= 'Number of Units' | E1475: ='Rent Builder'!G33 -> None | H1475: =IF(G1475="",IF(E1475="",F1475,E1475),G1475) -> 0
+C1476= 'Average Square Feet' | E1476: ='Rent Builder'!D33 -> None | H1476: =IF(G1476="",IF(E1476="",F1476,E1476),G1476) -> 0
+C1477= 'Propsoed Monthly Rent (less utilities)' | E1477: =ROUNDUP('Rent Builder'!O33,0) -> 0 | H1477: =IF(G1477="",IF(E1477="",F1477,E1477),G1477) -> 0
+C1478= 'Monthly utility' | E1478: ='Rent Builder'!L33 -> 0 | H1478: =IF(G1478="",IF(E1478="",F1478,E1478),G1478) -> 0
+C1479= '% of AMI' | E1479: ='Rent Builder'!J33 -> 0 | H1479: =IF(G1479="",IF(E1479="",F1479,E1479),G1479) -> 0
+C1480= 'Special Needs Population' | E1480= 0 | H1480: =IF(G1480="",IF(E1480="",F1480,E1480),G1480) -> 0
+H1481: =IF(G1481="",IF(E1481="",F1481,E1481),G1481) -> 0
+C1482= 'Row 23' | H1482: =IF(G1482="",IF(E1482="",F1482,E1482),G1482) -> 0
+C1483= 'Bedroom Type' | E1483= '3 Bedrooms' | H1483: =IF(G1483="",IF(E1483="",F1483,E1483),G1483) -> '3 Bedrooms'
+C1484= 'Number of Units' | E1484: ='Rent Builder'!G34 -> None | H1484: =IF(G1484="",IF(E1484="",F1484,E1484),G1484) -> 0
+C1485= 'Average Square Feet' | E1485: ='Rent Builder'!D34 -> None | H1485: =IF(G1485="",IF(E1485="",F1485,E1485),G1485) -> 0
+C1486= 'Propsoed Monthly Rent (less utilities)' | E1486: =ROUNDUP('Rent Builder'!O34,0) -> 0 | H1486: =IF(G1486="",IF(E1486="",F1486,E1486),G1486) -> 0
+C1487= 'Monthly utility' | E1487: ='Rent Builder'!L34 -> 0 | H1487: =IF(G1487="",IF(E1487="",F1487,E1487),G1487) -> 0
+C1488= '% of AMI' | E1488: ='Rent Builder'!J34 -> 0 | H1488: =IF(G1488="",IF(E1488="",F1488,E1488),G1488) -> 0
+C1489= 'Special Needs Population' | E1489= 0 | H1489: =IF(G1489="",IF(E1489="",F1489,E1489),G1489) -> 0
+H1490: =IF(G1490="",IF(E1490="",F1490,E1490),G1490) -> 0
+C1491= 'Row 24' | H1491: =IF(G1491="",IF(E1491="",F1491,E1491),G1491) -> 0
+C1492= 'Bedroom Type' | E1492= '3 Bedrooms' | H1492: =IF(G1492="",IF(E1492="",F1492,E1492),G1492) -> '3 Bedrooms'
+C1493= 'Number of Units' | E1493: ='Rent Builder'!G35 -> None | H1493: =IF(G1493="",IF(E1493="",F1493,E1493),G1493) -> 0
+C1494= 'Average Square Feet' | E1494: ='Rent Builder'!D35 -> None | H1494: =IF(G1494="",IF(E1494="",F1494,E1494),G1494) -> 0
+C1495= 'Propsoed Monthly Rent (less utilities)' | E1495: =ROUNDUP('Rent Builder'!O35,0) -> 0 | H1495: =IF(G1495="",IF(E1495="",F1495,E1495),G1495) -> 0
+C1496= 'Monthly utility' | E1496: ='Rent Builder'!L35 -> 0 | H1496: =IF(G1496="",IF(E1496="",F1496,E1496),G1496) -> 0
+C1497= '% of AMI' | E1497: ='Rent Builder'!J35 -> 0 | H1497: =IF(G1497="",IF(E1497="",F1497,E1497),G1497) -> 0
+C1498= 'Special Needs Population' | E1498= 0 | H1498: =IF(G1498="",IF(E1498="",F1498,E1498),G1498) -> 0

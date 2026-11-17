@@ -1,0 +1,31 @@
+A1= '21101 Victory Blvd  |  SCREENING PROGRAM (edit yellow cells, then rerun)'
+A2= 'Unit sizes per user instruction (Oct 2026): studio 400, 1 BR 560, 2 BR 720 SF at every AMI level. Mix, AMI allocation, efficiency and manager rules from the legacy 1206 Oakmead model. Edits here are read on the next run.'
+A4= 'Bedroom mix' | B4= 'Share'
+A5= 'Studio' | B5= 0.1
+A6= '1 BR' | B6= 0.785
+A7= '2 BR' | B7= 0.115
+A8= '3 BR' | B8= 0
+A10= 'Unit size (SF)' | B10= 'All AMI levels'
+A11= 'Studio' | B11= 400
+A12= '1 BR' | B12= 560
+A13= '2 BR' | B13= 720
+A14= '3 BR (legacy, not used)' | B14= '900 / 1,100'
+A16= 'Other rules' | B16= 'Value'
+A17= 'Efficiency (net / gross residential)' | B17= '87.5%'
+A18= 'Units at 30% / 50% AMI' | B18= '10% / 10% of total'
+A19= '1 BR at 70% AMI' | B19= '36% of 1 BRs'
+A20= '2 BR at 70% AMI' | B20= '90% of 2 BRs'
+A21= 'Manager units' | B21= '1 x 1 BR + 1 x 2 BR; +1 1 BR at 240 units; +1 2 BR at 320'
+A23= 'Generated program (headline)' | B23= 'Units' | C23= 'SF each' | D23= 'AMI'
+A24= 'Studio' | B24= 89 | C24= 400 | D24= 0.3
+A25= 'Studio' | B25= 13 | C25= 400 | D25= 0.5
+A26= '1 BR' | B26= 1 | C26= 560 | D26= 0.3
+A27= '1 BR' | B27= 89 | C27= 560 | D27= 0.5
+A28= '1 BR' | B28= 420 | C28= 560 | D28= 0.6
+A29= '1 BR' | B29= 286 | C29= 560 | D29= 0.7
+A30= '1 BR (manager)' | B30= 2 | C30= 560 | D30= 'Manager'
+A31= '2 BR' | B31= 12 | C31= 720 | D31= 0.3
+A32= '2 BR' | B32= 103 | C32= 720 | D32= 0.7
+A33= '2 BR (manager)' | B33= 2 | C33= 720 | D33= 'Manager'
+A34= 'Total units' | B34= 1017
+A35= 'Average AMI (restricted units)' | B35= 0.598124383020731

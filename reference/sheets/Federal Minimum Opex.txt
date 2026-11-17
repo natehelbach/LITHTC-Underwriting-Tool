@@ -1,0 +1,32 @@
+B2: =MI_ProjectName&"  |  FEDERAL MINIMUM OPEX" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  FEDERAL MINIMUM OPEX'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+B5= 'Operating Cost per Unit Minimums for 2022 Applications'
+B6= 'Region' | C6= 'Project Type' | D6= 'At Risk and Non-Targeted1' | E6= 'Large Family' | F6= 'Senior' | G6= 'Single Room/\nSpecial Needs'
+B7= 'Rural*' | C7= 'Elevator' | D7= 5400 | E7= 5100 | F7= 4500 | G7= 5985
+C8= 'Non-Elevator' | D8= 5200 | E8= 4900 | F8= 4300 | G8= 5775
+B9= 'Capital Region' | C9= 'Elevator' | D9= 5300 | E9= 5000 | F9= 4300 | G9= 5775
+C10= 'Non-Elevator' | D10= 5100 | E10= 4800 | F10= 4200 | G10= 5565
+B11= 'Northern Region' | C11= 'Elevator' | D11= 5300 | E11= 5000 | F11= 4400 | G11= 5775
+C12= 'Non-Elevator' | D12= 5100 | E12= 4800 | F12= 4200 | G12= 5565
+B13= 'Central Valley Region' | C13= 'Elevator' | D13= 5000 | E13= 4700 | F13= 4200 | G13= 5460
+C14= 'Non-Elevator' | D14= 4800 | E14= 4500 | F14= 4000 | G14= 5250
+B15= 'Central Coast Region' | C15= 'Elevator' | D15= 5670 | E15= 5250 | F15= 5250 | G15= 5985
+C16= 'Non-Elevator' | D16= 5460 | E16= 5040 | F16= 5040 | G16= 5775
+B17= 'East Bay Region' | C17= 'Elevator' | D17= 7140 | E17= 7035 | F17= 6090 | G17= 7245
+C18= 'Non-Elevator' | D18= 6930 | E18= 6825 | F18= 5880 | G18= 7035
+B19= 'South & West Bay Region' | C19= 'Elevator' | D19= 6930 | E19= 6800 | F19= 5985 | G19= 7035
+C20= 'Non-Elevator' | D20= 6720 | E20= 6720 | F20= 5775 | G20= 6825
+B21= 'Inland Empire Region' | C21= 'Elevator' | D21= 5200 | E21= 4900 | F21= 4300 | G21= 5565
+C22= 'Non-Elevator' | D22= 5000 | E22= 4700 | F22= 4100 | G22= 5355
+B23= 'Los Angeles County' | C23= 'Elevator' | D23= 6300 | E23= 6200 | F23= 5500 | G23= 6720
+C24= 'Non-Elevator' | D24= 6090 | E24= 6000 | F24= 5300 | G24= 6510
+B25= 'Orange County' | C25= 'Elevator' | D25= 5500 | E25= 5200 | F25= 4600 | G25= 6200
+C26= 'Non-Elevator' | D26= 5300 | E26= 5000 | F26= 4400 | G26= 6000
+B27= 'San Diego County' | C27= 'Elevator' | D27= 6100 | E27= 5700 | F27= 5000 | G27= 6405
+C28= 'Non-Elevator' | D28= 5900 | E28= 5500 | F28= 4800 | G28= 6195
+B29= 'San Francisco County' | C29= 'Elevator' | D29= 8925 | E29= 8925 | F29= 7770 | G29= 9345
+C30= 'Non-Elevator' | D30= 8715 | E30= 8715 | F30= 7560 | G30= 9135 | L30= 'FEDERAL MINIMUM'
+B31= '1 Tax-Exempt Bond Projects with 25% or more of their units three-bedroom or larger use the Large Family column.  Tax-Exempt Bond Projects designed primarily to'
+B32= 'serve seniors use the Senior column.   Tax-Exempt Bond Projects primarily serving special needs populations use the Special Needs column.'
+B33= '*Alpine, Amador, Calaveras, Colusa, Del Norte, Glenn, Humboldt, Inyo, Lake, Lassen, Mariposa, Mendocino, Modoc, Mono, Nevada, Plumas, San Benito, Sierra, Siskiyou, Tehama, Trinity, and Tuolumne counties'
+B34= 'CALIFORNIA TAX CREDIT ALLOCATION COMMITTEE'

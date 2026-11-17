@@ -1,0 +1,6 @@
+A1= 'Parking sensitivity: podium levels at 21 stories'
+A2= 'Height held at 21 stories and tower plates held constant; each podium level removed adds one tower floor. Full model runs.'
+A4= 'Podium + tower floors' | B4= 'Spaces / unit' | C4= 'Units' | D4= 'Market-capped, $0 land' | E4= 'Max rents, $0 land' | F4= 'Market-capped, $9.0M' | G4= 'Max rents, $9.0M'
+A5= '2 + 19' | B5= 0.294635004397537 | C5= 1137 | D5= 22269559.3223354 | E5= 40089963.919966 | F5= 12540627.7117852 | G5= 30361608.1044974
+A6= '3 + 18' | B6= 0.48560817084494 | C6= 1077 | D6= 8648094.75565499 | E6= 25529393.7517701 | F6= -1081384.90227187 | G6= 15800537.2142739
+A7= '4 + 17 (headline)' | B7= 0.699115044247788 | C7= 1017 | D7= -4892263.54319924 | E7= 11043373.5090992 | F7= -14622348.5413416 | G7= 1313963.02736688

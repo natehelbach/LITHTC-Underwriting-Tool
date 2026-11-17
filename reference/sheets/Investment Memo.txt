@@ -1,0 +1,95 @@
+B2: =MI_ProjectName&"  |  INVESTMENT MEMO" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  INVESTMENT MEMO'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+B5= 'Investment Memo - AHC' | G5: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+B6= 'v4' | F6= 'ACQ'
+F7= 'INV'
+B8= 1 | C8= 'SUMMARY'
+C9= 'Project' | D9: ='Master Inputs'!$E$11 -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303'
+C10= 'City' | D10: ='Master Inputs'!$E$12 -> 'Los Angeles'
+C11= 'Region' | D11: ='Master Inputs'!$E$15 -> 'City of Los Angeles'
+C12= 'Housing Type' | D12: ='Initial Screen'!G39 -> 'At Risk and Non-Targeted1'
+C13= 'Submission Round' | D13= '2026-R2 MIP' | F13= datetime.datetime(2026, 3, 2, 0, 0)
+C14= 'Source' | D14= 'owned'
+C15= 'Our max valuation' | D15: ='Dev Budget'!F171 -> 2180000 | F15: ='Dev Budget'!E169 -> 0
+B17= 2 | C17= 'SITE CONTEXT'
+B18= '2a' | C18= 'Highlights (why good region, developments nearby?)' | J18= '`'
+B22= '2b' | C22= 'Asking Price & Flexibility'
+B26= '2c' | C26= 'Site History'
+B30= '2d' | C30= 'Seller(s)'
+C31= 'Owned'
+B35= 3 | C35= 'PROJECT DETAILS' | E35= 'This Project' | F35= 'Standard' | G35= 'Delta'
+C36= 'Land sf' | E36: ='Initial Screen'!G18 -> 65916 | F36= 25000 | G36: =E36-F36 -> 40916
+C37= '# of units' | E37: =Program!$E$64 -> 1017 | F37= 250 | G37: =E37-F37 -> 767
+C38= 'Stories' | E38: ='Initial Screen'!S36+'Initial Screen'!S38 -> 21 | F38= 12 | G38: =E38-F38 -> 9
+C39= 'Floorplate' | E39: ='Initial Screen'!S32*'Initial Screen'!G18 -> 38647.6638655514 | F39: =F36*0.88 -> 22000 | G39: =E39-F39 -> 16647.6638655514
+C40= 'Average AMI' | E40: ='Rent Builder'!$F$57 -> 0.595617343406609 | F40= 0.6 | G40: =E40-F40 -> -0.00438265659339077
+C41= 'Parking Ratio' | E41: ='OpEx & Other Income'!H38 -> 0.350246305418719 | F41= 0.5 | G41: =E41-F41 -> -0.149753694581281
+C43= 'Unit Type' | E43: ='Unit Mix Summary'!E12 -> 'Sq ft. ' | F43: ='Unit Mix Summary'!F12 -> 'Units' | G43: ='Unit Mix Summary'!G12 -> '%'
+C44: ='Unit Mix Summary'!D13 -> 'Studio' | E44: ='Unit Mix Summary'!E13 -> 400 | F44: ='Unit Mix Summary'!F13 -> 102 | G44: ='Unit Mix Summary'!G13 -> 0.100294985250737
+C45: ='Unit Mix Summary'!D14 -> '1 BR' | E45: ='Unit Mix Summary'!E14 -> 560 | F45: ='Unit Mix Summary'!F14 -> 796 | G45: ='Unit Mix Summary'!G14 -> 0.782694198623402
+C46: ='Unit Mix Summary'!D15 -> '2 BR' | E46: ='Unit Mix Summary'!E15 -> 720 | F46: ='Unit Mix Summary'!F15 -> 115 | G46: ='Unit Mix Summary'!G15 -> 0.113077679449361
+C47: ='Unit Mix Summary'!D16 -> '3 BR' | E47: ='Unit Mix Summary'!E16 -> 0 | F47: ='Unit Mix Summary'!F16 -> 0 | G47: ='Unit Mix Summary'!G16 -> 0
+C48: ="4 BR" -> '4 BR' | E48: =0 -> 0 | F48: =0 -> 0 | G48: =0 -> 0
+C49: ='Unit Mix Summary'!D17 -> 'Mgmt' | E49: ='Unit Mix Summary'!E17 -> 640 | F49: ='Unit Mix Summary'!F17 -> 4 | G49: ='Unit Mix Summary'!G17 -> 0.00393313667649951
+C50: ='Unit Mix Summary'!D18 -> 'Total' | E50: =SUMPRODUCT(E44:E49,F44:F49)/SUM(F44:F49) -> 562.3598820059 | F50: ='Unit Mix Summary'!F18 -> 1017 | G50: ='Unit Mix Summary'!G18 -> 1
+B52= 4 | C52= 'LIHTC PARAMETERS' | E52: =E35 -> 'This Project' | F52= 'Last Round Best' | G52: =G35 -> 'Delta'
+C53= 'Points' | E53: ='Master Inputs'!$E$343 -> 111 | F53: =E53 -> 111 | G53: =E53-F53 -> 0
+C54= 'Tie-breaker' | E54: ='CDLAC Score and Tiebreaker'!$E$145 -> 2.74567534067444 | G54: =E54-F54 -> 2.74567534067444
+B56= 5 | C56= 'FINANCIALS' | E56: =E52 -> 'This Project' | F56= 'Standard' | G56: =G52 -> 'Delta'
+C57= 'IRR' | E57: =Program!F38 -> 0 | F57= 0.741 | G57: =E57-F57 -> -0.741
+C58= 'Gross Profits' | E58: =Program!F36 -> 0 | F58= 45500000 | G58: =E58-F58 -> -45500000
+D59= 'Return of other costs' | E59: ='Operating Cash Flow'!F94 -> 1e-06
+D60= 'Upfront Development Fee' | E60: ='Operating Cash Flow'!F95 -> 3000000
+D61= 'Lease-up income before stabilization' | E61: ='Operating Cash Flow'!F96 -> 6573893.65857064
+D62= 'Return of operating reserves' | E62: ='Operating Cash Flow'!F98 -> 4667629.91112192
+D63= 'Residual cashflow' | E63: ='Operating Cash Flow'!F97+'Operating Cash Flow'!F99 -> 68821650.3469909
+D64= 'Sale' | E64: ='Operating Cash Flow'!F100 -> 188754863.246935
+C65= 'NPV of Profits' | E65: =Program!F37 -> 0 | F65= 11300000 | G65: =E65-F65 -> -11300000
+C66= 'Equity Multiple' | E66: =Program!F39 -> 0 | F66= 14.7 | G66: =E66-F66 -> -14.7
+C68= 'Surplus (overage)' | E68: =Sensitivities!C5 -> -4892263.54330367 | F68= 0 | G68: =E68-F68 -> -4892263.54330367
+B70= 6 | C70= 'OTHER ASSUMPTIONS' | E70: =E56 -> 'This Project' | F70: =F56 -> 'Standard' | G70: =G56 -> 'Delta'
+C71= 'Residential Hard Cost (psf)' | E71: ='Master Inputs'!$E$152 -> 306 | F71= 300 | G71: =(E71-F71)/F71 -> 0.02
+C72= 'Parking Hard Cost (psf)' | E72: ='Master Inputs'!$E$159 -> 150 | F72= 175 | G72: =(E72-F72)/F72 -> -0.142857142857143
+C73= 'Blended Hard Cost (psf)' | E73: ='Dev Budget'!F164 -> 252.115958412473 | F73= 265 | G73: =(E73-F73)/F73 -> -0.0486190248585921
+C75= 'Opex' | E75: =Sensitivities!C15 -> 4994.3325711811 | F75: =Sensitivities!F15 -> 7140 | G75: =(E75-F75)/F75 -> -0.300513645492843
+C77= 'Post-Award Trending' | E77: =Sensitivities!D14 -> 0 | F77= 0.03 | G77: =E77-F77 -> -0.03
+C79= 'Perm Loan' | E79: =Sensitivities!D18 -> 0.0668025742165792 | F79= 0.06 | G79: =E79-F79 -> 0.00680257421657925
+C81= 'CUAC Reduction' | E81: =Sensitivities!D23 -> 0.45 | F81= 0 | G81: =E81-F81 -> 0.45
+B83= 7 | C83= 'RISK AND MITIGANTS'
+C84= 'A) smaller units with lots of studios in the project. Average bedroom size is 418 sf here. Cap rate has been assumed at 8% as discussed. '
+C85= 'B) Opex is using the federal minimum and needs to be verified.'
+C86= 'C) State credit pricing of $0.88 cents needs to be validated'
+C87= 'D) Assuming 50% CUAC reduction, same as Harrison'
+C88= 'F) Project cannot pay out deferred dev fee in 12 years. Deferred dev fee total is $5.6M, paid out in 12 years including lease-up noi is $3.7M'
+B92= 8 | C92= "This Project's Rents"
+C93= 'Bedroom Count' | D93: ='Rent Builder'!J11 -> 'AMI / Status' | E93: ='Rent Builder'!D11 -> 'Unit Size' | F93= 'Unit Count' | G93= 'Max Rent Allowed' | H93= 'Our Rent' | I93= 'Rent/ SF'
+C94: ='Rent Builder'!H12 -> 'Studio' | D94: ='Rent Builder'!J12 -> 0.3 | E94: ='Rent Builder'!D12 -> 400 | F94: ='Rent Builder'!G12 -> 89 | G94: ='Rent Builder'!L12 -> 850.35 | H94: ='Rent Builder'!O12 -> 850.35 | I94: ='Rent Builder'!P12 -> 2.125875 | J94: =H94/G94 -> 1
+C95: ='Rent Builder'!H13 -> 'Studio' | D95: ='Rent Builder'!J13 -> 0.5 | E95: ='Rent Builder'!D13 -> 400 | F95: ='Rent Builder'!G13 -> 13 | G95: ='Rent Builder'!L13 -> 1433.35 | H95: ='Rent Builder'!O13 -> 1433.35 | I95: ='Rent Builder'!P13 -> 3.583375 | J95: =H95/G95 -> 1
+C96: ='Rent Builder'!H14 -> '1 BR' | D96: ='Rent Builder'!J14 -> 0.3 | E96: ='Rent Builder'!D14 -> 560 | F96: ='Rent Builder'!G14 -> 1 | G96: ='Rent Builder'!L14 -> 903.55 | H96: ='Rent Builder'!O14 -> 903.55 | I96: ='Rent Builder'!P14 -> 1.61348214285714 | J96: =IFERROR(H96/G96,0) -> 1
+C97: ='Rent Builder'!H15 -> '1 BR' | D97: ='Rent Builder'!J15 -> 0.5 | E97: ='Rent Builder'!D15 -> 560 | F97: ='Rent Builder'!G15 -> 89 | G97: ='Rent Builder'!L15 -> 1528.55 | H97: ='Rent Builder'!O15 -> 1528.55 | I97: ='Rent Builder'!P15 -> 2.72955357142857 | J97: =IFERROR(H97/G97,0) -> 1
+C98: ='Rent Builder'!H16 -> '1 BR' | D98: ='Rent Builder'!J16 -> 0.6 | E98: ='Rent Builder'!D16 -> 560 | F98: ='Rent Builder'!G16 -> 420 | G98: ='Rent Builder'!L16 -> 1840.55 | H98: ='Rent Builder'!O16 -> 1787.436 | I98: ='Rent Builder'!P16 -> 3.19185 | J98: =IFERROR(H98/G98,0) -> 0.971142321588656
+C99: ='Rent Builder'!H17 -> '1 BR' | D99: ='Rent Builder'!J17 -> 0.7 | E99: ='Rent Builder'!D17 -> 560 | F99: ='Rent Builder'!G17 -> 286 | G99: ='Rent Builder'!L17 -> 2152.55 | H99: ='Rent Builder'!O17 -> 1787.436 | I99: ='Rent Builder'!P17 -> 3.19185 | J99: =IFERROR(H99/G99,0) -> 0.830380711249448
+C100: ='Rent Builder'!H18 -> '1 BR' | D100: ='Rent Builder'!J18 -> 'Manager' | E100: ='Rent Builder'!D18 -> 560 | F100: ='Rent Builder'!G18 -> 0 | G100: ='Rent Builder'!L18 -> 0 | H100: ='Rent Builder'!O18 -> 0 | I100: ='Rent Builder'!P18 -> 0 | J100: =IFERROR(H100/G100,0) -> 0
+C101: ='Rent Builder'!H19 -> '2 BR' | D101: ='Rent Builder'!J19 -> 0.3 | E101: ='Rent Builder'!D19 -> 720 | F101: ='Rent Builder'!G19 -> 12 | G101: ='Rent Builder'!L19 -> 1080.65 | H101: ='Rent Builder'!O19 -> 1080.65 | I101: ='Rent Builder'!P19 -> 1.50090277777778 | J101: =IFERROR(H101/G101,0) -> 1
+C102: ='Rent Builder'!H20 -> '2 BR' | D102: ='Rent Builder'!J20 -> 0.7 | E102: ='Rent Builder'!D20 -> 720 | F102: ='Rent Builder'!G20 -> 103 | G102: ='Rent Builder'!L20 -> 2579.65 | H102: ='Rent Builder'!O20 -> 2579.65 | I102: ='Rent Builder'!P20 -> 3.58284722222222 | J102: =IFERROR(H102/G102,0) -> 1
+C103: ='Rent Builder'!H21 -> '2 BR' | D103: ='Rent Builder'!J21 -> 'Manager' | E103: ='Rent Builder'!D21 -> 720 | F103: ='Rent Builder'!G21 -> 0 | G103: ='Rent Builder'!L21 -> 0 | H103: ='Rent Builder'!O21 -> 0 | I103: ='Rent Builder'!P21 -> 0 | K103: =IFERROR(H103/G103,) -> 0
+C104: ='Rent Builder'!H22 -> None | D104: ='Rent Builder'!J22 -> 0 | E104: ='Rent Builder'!D22 -> None | F104: ='Rent Builder'!G22 -> None | G104: ='Rent Builder'!L22 -> 0 | H104: ='Rent Builder'!O22 -> 0 | I104: ='Rent Builder'!P22 -> 0 | J104: =H104/G104 -> '#DIV/0!'
+C105: ='rent builder' #REF! -> '#VALUE!' | D105: ='rent builder' #REF! -> '#VALUE!' | E105: ='rent builder' #REF! -> '#VALUE!' | F105: ='rent builder' #REF! -> '#VALUE!' | G105: ='rent builder' #REF! -> '#VALUE!' | H105: ='rent builder' #REF! -> '#VALUE!' | I105: ='rent builder' #REF! -> '#VALUE!' | J105: =H105/G105 -> '#VALUE!'
+C106: ='Rent Builder'!H23 -> None | D106: ='Rent Builder'!J23 -> 0 | E106: ='Rent Builder'!D23 -> None | F106: ='Rent Builder'!G23 -> None | G106: ='Rent Builder'!L23 -> 0 | H106: ='Rent Builder'!O23 -> 0 | I106: ='Rent Builder'!P23 -> 0 | J106: =H106/G106 -> '#DIV/0!'
+C107: ='Rent Builder'!H24 -> None | D107: ='Rent Builder'!J24 -> 0 | E107: ='Rent Builder'!D24 -> None | F107: ='Rent Builder'!G24 -> None | G107: ='Rent Builder'!L24 -> 0 | H107: ='Rent Builder'!O24 -> 0 | I107: ='Rent Builder'!P24 -> 0 | J107: =H107/G107 -> '#DIV/0!'
+C108: ='Rent Builder'!H25 -> None | D108: ='Rent Builder'!J25 -> 0 | E108: ='Rent Builder'!D25 -> None | F108: ='Rent Builder'!G25 -> None | G108: ='Rent Builder'!L25 -> 0 | H108: ='Rent Builder'!O25 -> 0 | I108: ='Rent Builder'!P25 -> 0 | J108: =IFERROR(H108/G108,0) -> 0
+C109: ='Rent Builder'!H26 -> None | D109: ='Rent Builder'!J26 -> 0 | E109: ='Rent Builder'!D26 -> None | F109: ='Rent Builder'!G26 -> None | G109: ='Rent Builder'!L26 -> 0 | H109: ='Rent Builder'!O26 -> 0 | I109: ='Rent Builder'!P26 -> 0 | J109: =IFERROR(H109/G109,0) -> 0
+C110: ='Rent Builder'!H27 -> None | D110: ='Rent Builder'!J27 -> 0 | E110: ='Rent Builder'!D27 -> None | F110: ='Rent Builder'!G27 -> None | G110: ='Rent Builder'!L27 -> 0 | H110: ='Rent Builder'!O27 -> 0 | I110: ='Rent Builder'!P27 -> 0 | J110: =IFERROR(H110/G110,0) -> 0
+C111: ='Rent Builder'!H28 -> None | D111: ='Rent Builder'!J28 -> 0 | E111: ='Rent Builder'!D28 -> None | F111: ='Rent Builder'!G28 -> None | G111: ='Rent Builder'!L28 -> 0 | H111: ='Rent Builder'!O28 -> 0 | I111: ='Rent Builder'!P28 -> 0 | J111: =IFERROR(H111/G111,0) -> 0
+C112: ='Rent Builder'!H29 -> None | D112: ='Rent Builder'!J29 -> 0 | E112: ='Rent Builder'!D29 -> None | F112: ='Rent Builder'!G29 -> None | G112: ='Rent Builder'!L29 -> 0 | H112: ='Rent Builder'!O29 -> 0 | I112: ='Rent Builder'!P29 -> 0 | J112: =IFERROR(H112/G112,0) -> 0
+C113: ='rent builder' #REF! -> '#VALUE!' | D113: ='rent builder' #REF! -> '#VALUE!' | E113: ='rent builder' #REF! -> '#VALUE!' | F113: ='rent builder' #REF! -> '#VALUE!' | G113: ='rent builder' #REF! -> '#VALUE!' | H113: ='rent builder' #REF! -> '#VALUE!' | I113: ='rent builder' #REF! -> '#VALUE!' | K113: =IFERROR(H113/G113,) -> 0
+C114: ='Rent Builder'!H30 -> None | D114: ='Rent Builder'!J30 -> 0 | E114: ='Rent Builder'!D30 -> None | F114: ='Rent Builder'!G30 -> None | G114: ='Rent Builder'!L30 -> 0 | H114: ='Rent Builder'!O30 -> 0 | I114: ='Rent Builder'!P30 -> 0 | K114: =IFERROR(H114/G114,) -> 0
+C115: ='Rent Builder'!H31 -> None | D115: ='Rent Builder'!J31 -> 0 | E115: ='Rent Builder'!D31 -> None | F115: ='Rent Builder'!G31 -> None | G115: ='Rent Builder'!L31 -> 0 | H115: ='Rent Builder'!O31 -> 0 | I115: ='Rent Builder'!P31 -> 0 | J115: =IFERROR(H115/G115,0) -> 0
+C116: ='Rent Builder'!H32 -> None | D116: ='Rent Builder'!J32 -> 0 | E116: ='Rent Builder'!D32 -> None | F116: ='Rent Builder'!G32 -> None | G116: ='Rent Builder'!L32 -> 0 | H116: ='Rent Builder'!O32 -> 0 | I116: ='Rent Builder'!P32 -> 0 | J116: =IFERROR(H116/G116,0) -> 0
+C117: ='Rent Builder'!H33 -> None | D117: ='Rent Builder'!J33 -> 0 | E117: ='Rent Builder'!D33 -> None | F117: ='Rent Builder'!G33 -> None | G117: ='Rent Builder'!L33 -> 0 | H117: ='Rent Builder'!O33 -> 0 | I117: ='Rent Builder'!P33 -> 0 | J117: =IFERROR(H117/G117,0) -> 0
+C118: ='Rent Builder'!H34 -> None | D118: ='Rent Builder'!J34 -> 0 | E118: ='Rent Builder'!D34 -> None | F118: ='Rent Builder'!G34 -> None | G118: ='Rent Builder'!L34 -> 0 | H118: ='Rent Builder'!O34 -> 0 | I118: ='Rent Builder'!P34 -> 0 | J118: =IFERROR(H118/G118,0) -> 0
+C119: ='Rent Builder'!H35 -> None | D119: ='Rent Builder'!J35 -> 0 | E119: ='Rent Builder'!D35 -> None | F119: ='Rent Builder'!G35 -> None | G119: ='Rent Builder'!L35 -> 0 | H119: ='Rent Builder'!O35 -> 0 | I119: ='Rent Builder'!P35 -> 0 | J119: =IFERROR(H119/G119,0) -> 0
+C120: ='Rent Builder'!H36 -> None | D120: ='Rent Builder'!J36 -> 0 | E120: ='Rent Builder'!D36 -> None | F120: ='Rent Builder'!G36 -> None | G120: ='Rent Builder'!L36 -> 0 | H120: ='Rent Builder'!O36 -> 0 | I120: ='Rent Builder'!P36 -> 0 | J120: =IFERROR(H120/G120,0) -> 0
+C121: ='Rent Builder'!H37 -> None | D121: ='Rent Builder'!J37 -> 0 | E121: ='Rent Builder'!D37 -> None | F121: ='Rent Builder'!G37 -> None | G121: ='Rent Builder'!L37 -> 0 | H121: ='Rent Builder'!O37 -> 0 | I121: ='Rent Builder'!P37 -> 0 | J121: =IFERROR(H121/G121,0) -> 0
+C122: ='Rent Builder'!H38 -> None | D122: ='Rent Builder'!J38 -> 0 | E122: ='Rent Builder'!D38 -> None | F122: ='Rent Builder'!G38 -> None | G122: ='Rent Builder'!L38 -> 0 | H122: ='Rent Builder'!O38 -> 0 | I122: ='Rent Builder'!P38 -> 0 | J122: =IFERROR(H122/G122,0) -> 0
+F123: =SUM(F94:F122) -> '#VALUE!' | J123: =IFERROR(SUMPRODUCT(F94:F122,J94:J122)/F123,0) -> 0

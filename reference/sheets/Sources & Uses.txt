@@ -1,0 +1,53 @@
+B2: =MI_ProjectName&"  |  SOURCES & USES" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  SOURCES & USES'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+C6= 'SOURCES AND USES'
+D7: ='Master Inputs'!$E$11 -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303'
+D8: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+C11= 'Uses of Funds' | E11= 'Total' | F11= 'Pecent ' | G11= 'Per Unit'
+D12: ='Dev Budget'!C13 -> 'Acquisition Costs' | E12: ='Dev Budget'!H19 -> 283107.272679517 | F12: =E12/$E$26 -> 0.00080987733653561 | G12: =E12/Program!$E$64 -> 278.374899389889
+D13: ='Dev Budget'!C21 -> 'Hard Costs' | E13: ='Dev Budget'!H37 -> 224828849.991673 | F13: =E13/$E$26 -> 0.643161825142311 | G13: =E13/Program!$E$64 -> 221070.648959364
+D14: ='Dev Budget'!C39 -> 'Hard Cost Contingency' | E14: ='Dev Budget'!H39 -> 11216476.8395493 | F14: =E14/$E$26 -> 0.0320866726670451 | G14: =E14/Program!$E$64 -> 11028.9841096847
+D15: ='Dev Budget'!C41 -> 'Architect Fees' | E15: ='Dev Budget'!H41 -> 5792015.8581368 | F15: =E15/$E$26 -> 0.0165690634930101 | G15: =E15/Program!$E$64 -> 5695.19750062616
+D16: ='Dev Budget'!C42 -> 'Survey and Engineering' | E16: ='Dev Budget'!H42 -> 4894088.66805268 | F16: =E16/$E$26 -> 0.0140003874069971 | G16: =E16/Program!$E$64 -> 4812.27990958966
+D17: ='Dev Budget'!C43 -> 'Environmental Mitigation' | E17: ='Dev Budget'!H43 -> 0 | F17: =E17/$E$26 -> 0 | G17: =E17/Program!$E$64 -> 0
+D18: ='Dev Budget'!C54 -> 'Construction Interest and Fees' | E18: ='Dev Budget'!H64 -> 31973856.1430309 | F18: =E18/$E$26 -> 0.0914667475928962 | G18: =E18/Program!$E$64 -> 31439.3865713185
+D19: ='Dev Budget'!C66 -> 'Permanent Financing' | E19: ='Dev Budget'!H70 -> 52174.4318791945 | F19: =E19/$E$26 -> 0.000149253989576644 | G19: =E19/Program!$E$64 -> 51.3022928998962
+D20= 'Legal Costs' | E20: ='Dev Budget'!H52 -> 1773930.68389261 | F20: =E20/$E$26 -> 0.00507463564560588 | G20: =E20/Program!$E$64 -> 1744.27795859647
+D21: ='Dev Budget'!C72 -> 'Other Soft Costs' | E21: ='Dev Budget'!H97 -> 20288855.7552182 | F21: =E21/$E$26 -> 0.0580397822524044 | G21: =E21/Program!$E$64 -> 19949.7106737642
+D22: ='Dev Budget'!C100 -> 'Soft Cost Contingency' | E22: ='Dev Budget'!H100 -> 756529.262248319 | F22: =E22/$E$26 -> 0.00216418284886133 | G22: =E22/Program!$E$64 -> 743.883247048495
+D23: ='Dev Budget'!C103 -> 'Reserves' | E23: ='Dev Budget'!H109 -> 4667629.91112192 | F23: =E23/$E$26 -> 0.0133525629510501 | G23: =E23/Program!$E$64 -> 4589.60659893994
+D24: ='Dev Budget'!C112 -> 'Developer Fee' | E24: ='Dev Budget'!H115 -> 43040573.9631686 | F24: =E24/$E$26 -> 0.123125008673706 | G24: =E24/Program!$E$64 -> 42321.115008032
+D26= 'Total Uses' | E26: =SUM(E12:E25) -> 349568088.780651 | F26: =E26/$E$26 -> 1 | G26: =SUM(G12:G25) -> 343724.767729254
+C28= 'Construction Sources of Funds' | E28= 'Total' | F28= 'Pecent ' | G28= 'Per Unit'
+D29= 'Tax Credit Equity' | E29: =E26-E30-E31-E32-E33-E35-E36-E37-E39-E40 -> 42860776.7181978 | F29: =E29/$E$43 -> 0.122610667546065 | G29: =E29/Program!$E$64 -> 42144.3232234
+D30: =IF('Master Inputs'!$E$175=4%,"Tax Exempt Construction Loan", "Construction Loan") -> 'Tax Exempt Construction Loan' | E30: =IF('Master Inputs'!$E$175=4%,'Financing & Debt Sizing'!D180,'Financing & Debt Sizing'!C195) -> 90744000 | F30: =E30/$E$43 -> 0.259588912467753 | G30: =E30/Program!$E$64 -> 89227.1386430678
+D31= 'Taxable Construction Loan' | E31: ='Flow of Funds'!D191 -> 158099319.936153 | F31: =E31/$E$43 -> 0.452270458918685 | G31: =E31/Program!$E$64 -> 155456.558442628
+D32= 'Recycled Bonds' | E32: ='Financing & Debt Sizing'!C187 -> 8836818.61410386 | F32: =E32/$E$43 -> 0.0252792485862428 | G32: =E32/Program!$E$64 -> 8689.10384867636
+D33= 'Deferred Fees until Conversion (Developer fee reserves, etc)' | E33: ='Dev Budget'!T119 -> 8986599.54902796 | F33: =E33/$E$43 -> 0.0257077228655929 | G33: =E33/Program!$E$64 -> 8836.38107082395
+D34= 'GP Contributions' | F34: =E34/$E$43 -> 0 | G34: =E34/Program!$E$64 -> 0
+D35: ="Debt 2 construction - "&'Financing & Debt Sizing'!E12 -> 'Debt 2 construction - Apple AHF loan' | E35: ='Financing & Debt Sizing'!E66 -> 0 | F35: =E35/$E$43 -> 0 | G35: =E35/Program!$E$64 -> 0
+D36= 'Deferred Developer Fee' | E36: ='Dev Budget'!H114 -> 40040573.9631686 | F36: =E36/$E$43 -> 0.114542989615661 | G36: =E36/Program!$E$64 -> 39371.2625006574
+D37= 'Rent from commercial operations' | E37: =IF(G53="Yes",E53,0) -> 0 | F37: =E37/$E$43 -> 0 | G37: =E37/Program!$E$64 -> 0
+E38: =IF(G54="Yes",E54,0) -> 0 | F38: =E38/$E$43 -> 0 | G38: =E38/Program!$E$64 -> 0
+D39= 'GP Loan Note' | E39: ='Master Inputs'!$E$271 -> 0 | F39: =E39/$E$43 -> 0 | G39: =E39/Program!$E$64 -> 0
+D40= 'Leasehold' | E40: ='Master Inputs'!$E$269 -> 0 | F40: =E40/$E$43 -> 0 | G40: =E40/Program!$E$64 -> 0
+D41= 'application adjustment factor' | E41: =IF(G56="Yes",E56,0) -> 0 | F41: =E41/$E$43 -> 0 | G41: =E41/Program!$E$64 -> 0
+F42: =E42/$E$43 -> 0
+D43= 'Total Construction Sources' | E43: =SUM(E29:E42) -> 349568088.780651 | F43: =SUM(F29:F42) -> 1 | G43: =SUM(G29:G42) -> 343724.767729254
+C45= 'Permanent Sources of Funds' | E45= 'Total' | F45= '%' | G45= 'Available During Construction' | H45= 'HCD 0.42%'
+D46= 'Tax Credit Equity' | E46: ='LIHTC & Dev Fee'!G66 -> 133838968.795869 | F46: =E46/$E$57 -> 0.388303904701486
+D47= 'Perm Loan' | E47: ='Financing & Debt Sizing'!D166 -> 170796282.47831 | F47: =E47/$E$57 -> 0.495527304129025
+D48= 'Leasehold' | E48: =E40 -> 0 | F48: =E48/$E$57 -> 0
+D49= 'GP Loan Note' | E49: ='Master Inputs'!$E$272 -> 0 | F49: =E49/$E$57 -> 0
+D50: ="Debt 3 - "&'Financing & Debt Sizing'!F12 -> 'Debt 3 - HCD' | E50: ='Financing & Debt Sizing'!F51 -> 0 | F50: =E50/$E$57 -> 0
+D51: ="Debt 2 perm - "&'Financing & Debt Sizing'!E12 -> 'Debt 2 perm - Apple AHF loan' | E51: ='Financing & Debt Sizing'!E51 -> 0 | F51: =E51/$E$57 -> 0
+D52= 'Deferred Developer Fee' | E52: ='Dev Budget'!H114 -> 40040573.9631686 | F52: =E52/$E$57 -> 0.116168791169489
+D53= 'Rent from previous commercial operations' | F53: =E53/$E$57 -> 0 | G53: ='Master Inputs'!$E$299 -> 'No' | H53: ='Master Inputs'!$E$265 -> 'No'
+D54= 'NOI during construction and lease-up cell tower' | E54: ='OpEx & Other Income'!$E$90*(Sensitivities!$C$26+Sensitivities!$C$27) -> 0 | F54: =E54/$E$57 -> 0 | G54: ='Master Inputs'!$E$300 -> 'No' | H54: ='Master Inputs'!$E$266 -> 'No'
+D55= 'NOI residual from commercial space already received' | E55: =K56 -> 0 | F55: =E55/$E$57 -> 0 | G55= 'No' | H55: ='Master Inputs'!$E$267 -> 'No' | K55= 'Max NOI as a source per JH - commercial building' | L55= '<< added lease-up'
+D56= 'application adjustment factor' | F56: =E56/$E$57 -> 0 | G56: ='Master Inputs'!$E$301 -> 'No' | H56: ='Master Inputs'!$E$268 -> 'No' | K56: ='Master Inputs'!$E$302 -> 0 | L56: =Leasing!C89 -> 8765191.54476085
+D57= 'Total  Permanent Sources' | E57: =SUM(E46:E56) -> 344675825.237347 | F57: =SUM(F46:F56) -> 1
+D58= 'Surplus (Gap)' | E58: =E57-E43 -> -4892263.54330367
+C61= 'Voluntary Exclusion of Eligible Basis'
+D62= 'Federal LIHTC' | E62: ='Master Inputs'!$E$195 -> 0
+D63= 'State Tax Credits' | E63: ='Master Inputs'!$E$196 -> 0

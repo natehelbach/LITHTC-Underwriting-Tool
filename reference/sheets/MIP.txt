@@ -1,0 +1,31 @@
+B2: =MI_ProjectName&"  |  MIP" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  MIP'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+B5= 'CalHFA Mixed Income Program'
+B6= 2026
+B8= 'Cost adjusted tax exempt bond amount' | C8: ='CDLAC Score and Tiebreaker'!F117 -> 90821731.2723337
+B9= 'State credit request amount' | C9: ='CDLAC Score and Tiebreaker'!F118 -> 0
+B10= 'County-based Delta adjustment' | C10: ='CDLAC Score and Tiebreaker'!F124 -> 0.0217857142857143
+B11= 'Total numerator' | C11: =SUM(C8:C9)*(1-C10) -> 88843114.9839007
+B13= 'Public benefit' | C13: ='CDLAC Score and Tiebreaker'!F114 -> 243934350
+B15= 'Tie-breaker' | C15: =C13/C11 -> 2.74567534067444
+B17= 'Assumptions'
+B18= 'MIP max loan' | C18= 6000000
+B19= 'Originations Fee - permanent loan' | C19= 0.015
+B21= 'Scoring methodology'
+B22= '1. Project Public Benefit and Efficiency'
+B23= 'MIP Loan taken' | C23: ='Sources & Uses'!E50 -> 0
+B26= '2. MIP Efficiency Bonus'
+B27= 'MIP as % of eligible max per unit' | C27= 'loan threshold' | D27= 'Adjustments'
+B28= 0.2 | C28: =B28*$C$18 -> 1200000 | D28= -0.5
+B29= 0.4 | C29: =B29*$C$18 -> 2400000 | D29= -0.375
+B30= 0.6 | C30: =B30*$C$18 -> 3600000 | D30= -0.25
+B31= 0.8 | C31: =B31*$C$18 -> 4800000 | D31= -0.125
+B32= 1 | C32: =B32*$C$18 -> 6000000 | D32= 0
+B34= "This project's adjusmtent" | D34: =IF(C23<=0,0,IF(C23<$C$28,$D$28,VLOOKUP(C23,$C$28:$D$32,2,TRUE()))) -> 0
+B36= '3. Geographic Distribution Bonus'
+B37= 'Located in city with over 1M in pop that has not received MIP funding in the prior 2 years ' | D37= -1 | G37= '>>> projects in the last two years'
+B38= 'Located in city damaged by Palisades Fire, Eaton Fire, Hurst Fire' | D38= -1
+B39= 'Located in a city with over 500k in pop up to 1M  that has not received MIP funding in the prior 2 years' | C39= 'yes' | D39= -0.5
+B40= 'Located in rural area (H&S Code 50199.21)' | D40= -0.5
+B42= "This project's geographic distribution bonus" | D42: =D39 -> -0.5
+B44= 'Total Adjustments' | D44: =D34+D42 -> -0.5

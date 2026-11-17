@@ -1,0 +1,394 @@
+B2: =MI_ProjectName&"  |  COST BENCHMARKS" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  COST BENCHMARKS'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+B5= 'United States' | C5= 'Material' | D5= 'Installation' | E5= 'Average'
+B6= '+30 City Average' | C6= '+4.20' | D6= 1.2 | E6= 3
+B8= 'Alabama' | C8= 'Material' | D8= 'Installation' | E8= 'Average'
+B9= 'Birmingham' | C9= 5.18 | D9= 0.42 | E9= 3.38
+B10= 'Huntsville' | C10= 4.97 | D10= 0.56 | E10= 3.38
+B11= 'Mobile' | C11= 5.41 | D11= 0.29 | E11= 3.55 | G11= 'mgp'
+B12= 'Montgomery' | C12= 5.44 | D12= 0.98 | E12= 3.87 | G12= 'opex'
+B13= 'Tuscaloosa' | C13= 4.97 | D13= 0.14 | E13= 3.26 | G13= 'povs'
+G14= 'send out to andy'
+B15= 'Alaska' | C15= 'Material' | D15= 'Installation' | E15= 'Average' | G15= 'quartz lake'
+B16= 'Anchorage' | C16= 4.26 | D16= 0.97 | E16= 2.94
+B17= 'Fairbanks' | C17= 4.31 | D17= 0.52 | E17= 2.74 | G17= 'DD checklist'
+B18= 'Juneau' | C18= 4.03 | D18= 0.97 | E18= 2.69
+B20= 'Arizona' | C20= 'Material' | D20= 'Installation' | E20= 'Average'
+B21= 'Flagstaff' | C21= 5.25 | D21= 1.12 | E21= 3.85
+B22= 'Mesa/Tempe' | C22= 4.16 | D22= 2.22 | E22= 3.44
+B23= 'Phoenix' | C23= 4.1 | D23= 1.37 | E23= 3.17
+B24= 'Prescott' | C24= 5.17 | D24= 2.23 | E24= 4.13
+B25= 'Tucson' | C25= 4.1 | D25= 0.98 | E25= 3.01
+B27= 'Arkansas' | C27= 'Material' | D27= 'Installation' | E27= 'Average'
+B28= 'Fort Smith' | C28= 4.52 | D28= 0 | E28= 3.06
+B29= 'Jonesboro' | C29= 4.54 | D29= 9.09 | E29= 6.05
+B30= 'Little Rock' | C30= 4.61 | D30= 0.15 | E30= 3.02
+B31= 'Pine Bluff' | C31= 4.24 | D31= 0 | E31= 2.9
+B32= 'Texarkana' | C32= 4.08 | D32= 6.46 | E32= 4.84
+B34= 'California' | C34= 'Material' | D34= 'Installation' | E34= 'Average'
+B35= 'Anaheim' | C35= 4.45 | D35= 2.13 | E35= 3.34
+B36= 'Bakersﬁeld' | C36= 5 | D36= 1.68 | E36= 3.37
+B37= 'Fresno' | C37= 4.81 | D37= 2.32 | E37= 3.6
+B38= 'Los Angeles' | C38= 4.66 | D38= 1.69 | E38= 3.21
+B39= 'Oakland' | C39= 5.36 | D39= 2.71 | E39= 3.97
+B40= 'Oxnard' | C40= 4.63 | D40= 1.81 | E40= 3.27
+B41= 'Redding' | C41= 3.67 | D41= 2.36 | E41= 3.03
+B42= 'Riverside' | C42= 4.45 | D42= 1.57 | E42= 3.07
+B43= 'Sacramento' | C43= 5.19 | D43= 2.49 | E43= 3.86
+B44= 'San Diego' | C44= 4.32 | D44= 2.81 | E44= 3.59
+B45= 'San Francisco' | C45= 5.27 | D45= 2.72 | E45= 3.89
+B46= 'San Jose' | C46= 4.41 | D46= 3.49 | E46= 3.89
+B47= 'Santa Barbara' | C47= 4.66 | D47= 1.58 | E47= 3.2
+B48= 'Stockton' | C48= 4.49 | D48= 2.6 | E48= 3.53
+B49= 'Vallejo' | C49= 5.13 | D49= 2.47 | E49= 3.74
+B51= 'Colorado' | C51= 'Material' | D51= 'Installation' | E51= 'Average'
+B52= 'Colorado Springs' | C52= 4.3 | D52= 0.14 | E52= 2.83
+B53= 'Denver' | C53= 4.22 | D53= 2.02 | E53= 3.56
+B54= 'Fort Collins' | C54= 4.15 | D54= 2.44 | E54= 3.47
+B55= 'Grand Junction' | C55= 5.07 | D55= 0.55 | E55= 3.42
+B56= 'Greeley' | C56= 4.27 | D56= 2.01 | E56= 3.4
+B57= 'Pueblo' | C57= 5.17 | D57= 0.14 | E57= 3.52
+B59= 'Connecticut' | C59= 'Material' | D59= 'Installation' | E59= 'Average'
+B60= 'Bridgeport' | C60= 4.41 | D60= 1.01 | E60= 2.82
+B61= 'Bristol' | C61= 4.34 | D61= 0.93 | E61= 2.74
+B62= 'Hartford' | C62= 4.53 | D62= 1.01 | E62= 2.82
+B63= 'New Britain' | C63= 4.36 | D63= 0.93 | E63= 2.74
+B64= 'New Haven' | C64= 4.49 | D64= 1.01 | E64= 2.71
+B65= 'Norwalk' | C65= 4.43 | D65= 0.93 | E65= 2.73
+B66= 'Stamford' | C66= 4.42 | D66= 0.88 | E66= 2.75
+B67= 'Waterbury' | C67= 4.43 | D67= 1.01 | E67= 2.82
+B69= 'D.C.' | C69= 'Material' | D69= 'Installation' | E69= 'Average'
+B70= 'Washington' | C70= 3.37 | D70= 1.94 | E70= 2.83
+B72= 'Delaware' | C72= 'Material' | D72= 'Installation' | E72= 'Average'
+B73= 'Wilmington' | C73= 3.97 | D73= 0.27 | E73= 2.3
+B75= 'Florida' | C75= 'Material' | D75= 'Installation' | E75= 'Average'
+B76= 'Daytona Beach' | C76= 4.88 | D76= 0.14 | E76= 3.05
+B77= 'Fort Lauderdale' | C77= 4.41 | D77= -2.01 | E77= 2.14
+B78= 'Jacksonville' | C78= 4.79 | D78= 0.15 | E78= 3.24
+B79= 'Melbourne' | C79= 4.84 | D79= 0 | E79= 3.21
+B80= 'Miami' | C80= 4.59 | D80= 0.3 | E80= 2.99
+B81= 'Orlando' | C81= 4.6 | D81= 0 | E81= 3.07
+B82= 'Panama City' | C82= 4.92 | D82= 1.25 | E82= 3.72
+B83= 'Pensacola' | C83= 4.69 | D83= 0.3 | E83= 3.26
+B84= 'St. Petersburg' | C84= 4.14 | D84= 0.61 | E84= 2.96
+B85= 'Tallahassee' | C85= 5.14 | D85= -0.46 | E85= 3.23
+B86= 'Tampa' | C86= 4.34 | D86= 0.15 | E86= 2.84
+B88= 'Georgia' | C88= 'Material' | D88= 'Installation' | E88= 'Average'
+B89= 'Albany' | C89= 5.88 | D89= 0.28 | E89= 3.86
+B90= 'Atlanta' | C90= 4.04 | D90= 0.93 | E90= 2.81
+B91= 'Augusta' | C91= 4.02 | D91= 0.14 | E91= 2.66
+B92= 'Columbus' | C92= 5.99 | D92= 0.28 | E92= 3.86
+B93= 'Macon' | C93= 5.86 | D93= 0.14 | E93= 3.63
+B94= 'Savannah' | C94= 5.96 | D94= 0.82 | E94= 4.07
+B95= 'Valdosta' | C95= 5.98 | D95= 2.11 | E95= 4.71
+B97= 'Hawaii' | C97= 'Material' | D97= 'Installation' | E97= 'Average'
+B98= 'Honolulu' | C98= 3.8 | D98= 0.08 | E98= 2.17
+B100= 'Hawaii States & Poss.' | C100= 'Material' | D100= 'Installation' | E100= 'Average'
+B101= 'Guam' | C101= 4.32 | D101= 0.19 | E101= 3.34
+B103= 'Idaho' | C103= 'Material' | D103= 'Installation' | E103= 'Average'
+B104= 'Boise' | C104= 5.32 | D104= 3.15 | E104= 4.51
+B105= 'Lewiston' | C105= 4.86 | D105= 0 | E105= 3.07
+B106= 'Pocatello' | C106= 5.36 | D106= 2.42 | E106= 4.28
+B107= 'Twin Falls' | C107= 5.4 | D107= 0.91 | E107= 3.72
+B109= 'Illinois' | C109= 'Material' | D109= 'Installation' | E109= 'Average'
+B110= 'Chicago' | C110= 3.05 | D110= 1.57 | E110= 2.32
+B111= 'Decatur' | C111= 4.84 | D111= 0.09 | E111= 2.66
+B112= 'East St. Louis' | C112= 4.77 | D112= 1.98 | E112= 3.44
+B113= 'Joliet' | C113= 3.11 | D113= 0.14 | E113= 1.61
+B114= 'Peoria' | C114= 4.6 | D114= 0.09 | E114= 2.51
+B115= 'Rockford' | C115= 4.65 | D115= 0.08 | E115= 2.35
+B116= 'Springﬁeld' | C116= 4.9 | D116= 2.69 | E116= 3.92
+B118= 'Indiana' | C118= 'Material' | D118= 'Installation' | E118= 'Average'
+B119= 'Anderson' | C119= 5.21 | D119= 0.12 | E119= 3.23
+B120= 'Bloomington' | C120= 5.02 | D120= 3.61 | E120= 4.43
+B121= 'Evansville' | C121= 4.93 | D121= 0.12 | E121= 2.97
+B122= 'Fort Wayne' | C122= 5.29 | D122= 0 | E122= 3.27
+B123= 'Gary' | C123= 5.35 | D123= 0.09 | E123= 2.94
+B124= 'Indianapolis' | C124= 4.76 | D124= 0 | E124= 2.83
+B125= 'Muncie' | C125= 4.99 | D125= 0 | E125= 3.14
+B126= 'South Bend' | C126= 6.06 | D126= 0.12 | E126= 3.72
+B127= 'Terre Haute' | C127= 4.89 | D127= 0.12 | E127= 2.97
+B129= 'Iowa' | C129= 'Material' | D129= 'Installation' | E129= 'Average'
+B130= 'Cedar Rapids' | C130= 5.13 | D130= 0.12 | E130= 3.14
+B131= 'Council Bluffs' | C131= 5.19 | D131= 0.12 | E131= 3.31
+B132= 'Davenport' | C132= 5.08 | D132= 0.1 | E132= 2.9
+B133= 'Des Moines' | C133= 6.15 | D133= 0.34 | E133= 3.77
+B134= 'Dubuque' | C134= 5.18 | D134= 0.12 | E134= 3.1
+B135= 'Sioux City' | C135= 5.05 | D135= 6.23 | E135= 5.49
+B136= 'Waterloo' | C136= 6.03 | D136= 0.13 | E136= 3.71
+B138= 'Kansas' | C138= 'Material' | D138= 'Installation' | E138= 'Average'
+B139= 'Dodge City' | C139= 4.88 | D139= -0.27 | E139= 2.94
+B140= 'Kansas City' | C140= 5.42 | D140= 2.03 | E140= 4.02
+B141= 'Salina' | C141= 4.95 | D141= 3.57 | E141= 4.39
+B142= 'Topeka' | C142= 5.57 | D142= 0.26 | E142= 3.61
+B143= 'Wichita' | C143= 5.07 | D143= 4.66 | E143= 4.91
+B145= 'Kentucky' | C145= 'Material' | D145= 'Installation' | E145= 'Average'
+B146= 'Bowling Green' | C146= 4.97 | D146= -0.51 | E146= 2.85
+B147= 'Lexington' | C147= 5.03 | D147= 0.13 | E147= 3.09
+B148= 'Louisville' | C148= 5.58 | D148= 0.13 | E148= 3.46
+B149= 'Owensboro' | C149= 4.86 | D149= 0 | E149= 2.9
+B151= 'Louisiana' | C151= 'Material' | D151= 'Installation' | E151= 'Average'
+B152= 'Alexandria' | C152= 4.14 | D152= 0.15 | E152= 2.74
+B153= 'Baton Rouge' | C153= 5.38 | D153= 0.14 | E153= 3.53
+B154= 'Lake Charles' | C154= 5.22 | D154= 0.14 | E154= 3.43
+B155= 'Monroe' | C155= 4.04 | D155= 0.15 | E155= 2.77
+B156= 'New Orleans' | C156= 5.33 | D156= 0.14 | E156= 3.46
+B157= 'Shreveport' | C157= 4.29 | D157= 0 | E157= 2.85
+B159= 'Maine' | C159= 'Material' | D159= 'Installation' | E159= 'Average'
+B160= 'Augusta' | C160= 6.62 | D160= 5.05 | E160= 5.94
+B161= 'Bangor' | C161= 6.15 | D161= 2.99 | E161= 4.91
+B162= 'Lewiston' | C162= 6.23 | D162= 2.97 | E162= 4.99
+B163= 'Portland' | C163= 6.09 | D163= 2.97 | E163= 4.92
+B165= 'Maryland' | C165= 'Material' | D165= 'Installation' | E165= 'Average'
+B166= 'Baltimore' | C166= 3.36 | D166= 0.12 | E166= 2.12
+B167= 'Hagerstown' | C167= 3.49 | D167= 0.34 | E167= 2.26
+B169= 'Massachusetts' | C169= 'Material' | D169= 'Installation' | E169= 'Average'
+B170= 'Boston' | C170= 4.73 | D170= 0.15 | E170= 2.46
+B171= 'Brockton' | C171= 5.2 | D171= 0.5 | E171= 2.92
+B172= 'Fall River' | C172= 5.21 | D172= 0.43 | E172= 2.95
+B173= 'Hyannis' | C173= 5.14 | D173= 0.43 | E173= 2.89
+B174= 'Lawrence' | C174= 5.17 | D174= 0.48 | E174= 2.84
+B175= 'Lowell' | C175= 5.11 | D175= 0.48 | E175= 2.86
+B176= 'New Bedford' | C176= 5.25 | D176= 0.51 | E176= 2.96
+B177= 'Pittsﬁeld' | C177= 5.1 | D177= 0.19 | E177= 2.9
+B178= 'Springﬁeld' | C178= 5.19 | D178= 0.36 | E178= 2.93
+B179= 'Worcester' | C179= 5.19 | D179= 0.42 | E179= 2.83
+B181= 'Michigan' | C181= 'Material' | D181= 'Installation' | E181= 'Average'
+B182= 'Ann Arbor' | C182= 4.73 | D182= 0.69 | E182= 3.03
+B183= 'Dearborn' | C183= 4.85 | D183= 0.68 | E183= 3.02
+B184= 'Detroit' | C184= 5.09 | D184= 0.1 | E184= 2.86
+B185= 'Flint' | C185= 4.85 | D185= 0.11 | E185= 2.86
+B186= 'Grand Rapids' | C186= 5.46 | D186= 0.12 | E186= 3.31
+B187= 'Kalamazoo' | C187= 5.33 | D187= 0 | E187= 3.25
+B188= 'Lansing' | C188= 4.6 | D188= 0.11 | E188= 2.88
+B189= 'Muskegon' | C189= 5.42 | D189= 2.24 | E189= 4.08
+B190= 'Saginaw' | C190= 4.87 | D190= 0.11 | E190= 2.92
+B192= 'Minnesota' | C192= 'Material' | D192= 'Installation' | E192= 'Average'
+B193= 'Duluth' | C193= 5.87 | D193= 0.97 | E193= 3.72
+B194= 'Minneapolis' | C194= 4.21 | D194= 0.09 | E194= 2.34
+B195= 'Rochester' | C195= 5.25 | D195= 0.9 | E195= 3.35
+B196= 'Saint Paul' | C196= 5.76 | D196= 0.52 | E196= 3.33
+B197= 'St. Cloud' | C197= 5.3 | D197= 2.19 | E197= 3.79
+B199= 'Mississippi' | C199= 'Material' | D199= 'Installation' | E199= 'Average'
+B200= 'Biloxi' | C200= 4.11 | D200= 0.15 | E200= 2.76
+B201= 'Greenville' | C201= 4.56 | D201= 1.21 | E201= 3.43
+B202= 'Jackson' | C202= 4.39 | D202= 0.15 | E202= 2.98
+B203= 'Meridian' | C203= 4.18 | D203= 0.15 | E203= 2.79
+B205= 'Missouri' | C205= 'Material' | D205= 'Installation' | E205= 'Average'
+B206= 'Cape Girardeau' | C206= 4.08 | D206= 1.96 | E206= 3.25
+B207= 'Columbia' | C207= 4.57 | D207= 1.97 | E207= 3.51
+B208= 'Joplin' | C208= 4.17 | D208= 0 | E208= 2.59
+B209= 'Kansas City' | C209= 4.38 | D209= 0.39 | E209= 2.59
+B210= 'Springﬁeld' | C210= 4.71 | D210= 0.12 | E210= 2.98
+B211= 'St. Joseph' | C211= 4.34 | D211= 0.11 | E211= 2.52
+B212= 'St. Louis' | C212= 4.02 | D212= 0 | E212= 2.25
+B214= 'Montana' | C214= 'Material' | D214= 'Installation' | E214= 'Average'
+B215= 'Billings' | C215= 5.46 | D215= 7.2 | E215= 6.13
+B216= 'Butte' | C216= 5.46 | D216= 3.02 | E216= 4.55
+B217= 'Great Falls' | C217= 5.48 | D217= 6.22 | E217= 5.66
+B218= 'Helena' | C218= 5.49 | D218= 3.02 | E218= 4.57
+B219= 'Missoula' | C219= 5.21 | D219= 4.36 | E219= 4.86
+B221= 'Nebraska' | C221= 'Material' | D221= 'Installation' | E221= 'Average'
+B222= 'Grand Island' | C222= 5.15 | D222= 0.13 | E222= 3.25
+B223= 'Lincoln' | C223= 5.46 | D223= 0 | E223= 3.44
+B224= 'North Platte' | C224= 4.55 | D224= 0.13 | E224= 2.94
+B225= 'Omaha' | C225= 5.57 | D225= 0.12 | E225= 3.44
+B227= 'Nevada' | C227= 'Material' | D227= 'Installation' | E227= 'Average'
+B228= 'Carson City' | C228= 5.78 | D228= 0 | E228= 3.53
+B229= 'Las Vegas' | C229= 6.04 | D229= 3.46 | E229= 4.94
+B230= 'Reno' | C230= 5.81 | D230= 0.36 | E230= 3.72
+B232= 'New Hampshire' | C232= 'Material' | D232= 'Installation' | E232= 'Average'
+B233= 'Manchester' | C233= 4.89 | D233= 0.97 | E233= 3.27
+B234= 'Nashua' | C234= 4.8 | D234= 1.08 | E234= 3.17
+B235= 'Portsmouth' | C235= 4.72 | D235= 1.19 | E235= 3.23
+B237= 'New Jersey' | C237= 'Material' | D237= 'Installation' | E237= 'Average'
+B238= 'Camden' | C238= 5.03 | D238= 0.31 | E238= 2.59
+B239= 'Elizabeth' | C239= 3.6 | D239= 0.36 | E239= 1.99
+B240= 'Jersey City' | C240= 3.74 | D240= 0.43 | E240= 2
+B241= 'Newark' | C241= 3.82 | D241= 0.43 | E241= 2.05
+B242= 'Paterson' | C242= 3.68 | D242= 0.43 | E242= 2.08
+B243= 'Trenton' | C243= 4.94 | D243= 0.15 | E243= 2.57
+B245= 'New Mexico' | C245= 'Material' | D245= 'Installation' | E245= 'Average'
+B246= 'Albuquerque' | C246= 5.97 | D246= 0.27 | E246= 3.88
+B247= 'Farmington' | C247= 5.73 | D247= 0.27 | E247= 3.75
+B248= 'Las Cruces' | C248= 5.33 | D248= 0.28 | E248= 3.51
+B249= 'Roswell' | C249= 5.23 | D249= 0.27 | E249= 3.48
+B250= 'Santa Fe' | C250= 5.84 | D250= 0.27 | E250= 3.87
+B252= 'New York' | C252= 'Material' | D252= 'Installation' | E252= 'Average'
+B253= 'Albany' | C253= 5.37 | D253= 0.18 | E253= 2.94
+B254= 'Binghamton' | C254= 4.21 | D254= 0.1 | E254= 2.41
+B255= 'Buffalo' | C255= 2.62 | D255= 1.55 | E255= 2.17
+B256= 'Hicksville' | C256= 4.21 | D256= 0.44 | E256= 2.23
+B257= 'New York' | C257= 3.94 | D257= 0.96 | E257= 2.27
+B258= 'Riverhead' | C258= 4.28 | D258= 0.45 | E258= 2.25
+B259= 'Rochester' | C259= 5.18 | D259= 0.1 | E259= 2.98
+B260= 'Schenectady' | C260= 5.13 | D260= 0.18 | E260= 2.94
+B261= 'Syracuse' | C261= 4.19 | D261= 0.1 | E261= 2.42
+B262= 'Utica' | C262= 4.38 | D262= 0.2 | E262= 2.47
+B263= 'Watertown' | C263= 4.2 | D263= 0.1 | E263= 2.54
+B264= 'White Plains' | C264= 3.86 | D264= 0.2 | E264= 1.85
+B265= 'Yonkers' | C265= 4.01 | D265= 0.2 | E265= 1.83
+B267= 'North Carolina' | C267= 'Material' | D267= 'Installation' | E267= 'Average'
+B268= 'Asheville' | C268= 4.78 | D268= 1.04 | E268= 3.34
+B269= 'Charlotte' | C269= 4.74 | D269= 1.78 | E269= 3.68
+B270= 'Durham' | C270= 6.14 | D270= 0.89 | E270= 4.43
+B271= 'Fayetteville' | C271= 5 | D271= 0.3 | E271= 3.37
+B272= 'Greensboro' | C272= 6.04 | D272= 0.89 | E272= 4.36
+B273= 'Raleigh' | C273= 6.02 | D273= 1.04 | E273= 4.3
+B274= 'Wilmington' | C274= 4.69 | D274= 0.3 | E274= 3.25
+B275= 'Winston-Salem' | C275= 6.06 | D275= 0.88 | E275= 4.25
+B277= 'North Dakota' | C277= 'Material' | D277= 'Installation' | E277= 'Average'
+B278= 'Bismarck' | C278= 5.3 | D278= 4.25 | E278= 4.87
+B279= 'Fargo' | C279= 4.58 | D279= 2.12 | E279= 3.65
+B280= 'Grand Forks' | C280= 4.98 | D280= 0.76 | E280= 3.33
+B281= 'Minot' | C281= 4.98 | D281= 1.26 | E281= 3.54
+B283= 'Ohio' | C283= 'Material' | D283= 'Installation' | E283= 'Average'
+B284= 'Akron' | C284= 4.72 | D284= 0 | E284= 2.85
+B285= 'Canton' | C285= 4.75 | D285= 0.74 | E285= 3.28
+B286= 'Cincinnati' | C286= 3.92 | D286= 1.24 | E286= 2.89
+B287= 'Cleveland' | C287= 4.76 | D287= 1.19 | E287= 3.34
+B288= 'Columbus' | C288= 4.52 | D288= 0 | E288= 2.85
+B289= 'Dayton' | C289= 3.96 | D289= 0 | E289= 2.46
+B290= 'Lorain' | C290= 4.78 | D290= 0.12 | E290= 3
+B291= 'Springﬁeld' | C291= 3.86 | D291= 0 | E291= 2.45
+B292= 'Toledo' | C292= 4.65 | D292= 0.86 | E292= 3.16
+B293= 'Youngstown' | C293= 4.86 | D293= 0 | E293= 3.03
+B295= 'Oklahoma' | C295= 'Material' | D295= 'Installation' | E295= 'Average'
+B296= 'Enid' | C296= 5.03 | D296= 0.15 | E296= 3.37
+B297= 'Lawton' | C297= 5.11 | D297= 0.3 | E297= 3.48
+B298= 'Muskogee' | C298= 4.73 | D298= 0.16 | E298= 3.17
+B299= 'Oklahoma City' | C299= 4.83 | D299= 0.29 | E299= 3.23
+B300= 'Tulsa' | C300= 4.69 | D300= 0.15 | E300= 3.11
+B302= 'Oregon' | C302= 'Material' | D302= 'Installation' | E302= 'Average'
+B303= 'Eugene' | C303= 4.81 | D303= 0.1 | E303= 2.72
+B304= 'Medford' | C304= 4.84 | D304= 0 | E304= 2.81
+B305= 'Portland' | C305= 4.69 | D305= 0.1 | E305= 2.69
+B306= 'Salem' | C306= 5.01 | D306= 0.1 | E306= 2.97
+B308= 'Pennsylvania' | C308= 'Material' | D308= 'Installation' | E308= 'Average'
+B309= 'Allentown' | C309= 4.24 | D309= 0.09 | E309= 2.36
+B310= 'Altoona' | C310= 4.29 | D310= 0.11 | E310= 2.45
+B311= 'Erie' | C311= 4.3 | D311= 0.1 | E311= 2.43
+B312= 'Harrisburg' | C312= 3.99 | D312= 0.11 | E312= 2.38
+B313= 'Philadelphia' | C313= 3.8 | D313= 0.52 | E313= 2.17
+B314= 'Pittsburgh' | C314= 6.11 | D314= 1.27 | E314= 4.06
+B315= 'Reading' | C315= 3.83 | D315= 0.1 | E315= 2.21
+B316= 'Scranton' | C316= 4.31 | D316= 0.1 | E316= 2.45
+B317= 'York' | C317= 3.9 | D317= 0.1 | E317= 2.21
+B319= 'Rhode Island' | C319= 'Material' | D319= 'Installation' | E319= 'Average'
+B320= 'Providence' | C320= 5.82 | D320= 0.18 | E320= 3.18
+B322= 'South Carolina' | C322= 'Material' | D322= 'Installation' | E322= 'Average'
+B323= 'Charleston' | C323= 5.41 | D323= 4.29 | E323= 5.06
+B324= 'Columbia' | C324= 5.39 | D324= 3.98 | E324= 4.99
+B325= 'Florence' | C325= 5.61 | D325= 3.98 | E325= 5
+B326= 'Greenville' | C326= 5.61 | D326= 3.24 | E326= 4.76
+B327= 'Spartanburg' | C327= 5.6 | D327= 3.39 | E327= 4.87
+B329= 'South Dakota' | C329= 'Material' | D329= 'Installation' | E329= 'Average'
+B330= 'Aberdeen' | C330= 5.09 | D330= 0.14 | E330= 3.34
+B331= 'Pierre' | C331= 5.17 | D331= 0.86 | E331= 3.6
+B332= 'Rapid City' | C332= 5.2 | D332= 0.82 | E332= 3.66
+B333= 'Sioux Falls' | C333= 5.5 | D333= 1.14 | E333= 3.82
+B335= 'Tennessee' | C335= 'Material' | D335= 'Installation' | E335= 'Average'
+B336= 'Chattanooga' | C336= 3.94 | D336= 0.29 | E336= 2.67
+B337= 'Jackson' | C337= 4.62 | D337= 0.17 | E337= 3.2
+B338= 'Johnson City' | C338= 3.83 | D338= 0.33 | E338= 2.67
+B339= 'Knoxville' | C339= 3.97 | D339= 0.15 | E339= 2.66
+B340= 'Memphis' | C340= 3.8 | D340= 0 | E340= 2.44
+B341= 'Nashville' | C341= 4.17 | D341= 2.53 | E341= 3.58
+B343= 'Texas' | C343= 'Material' | D343= 'Installation' | E343= 'Average'
+B344= 'Abilene' | C344= 5.42 | D344= 0.16 | E344= 3.67
+B345= 'Amarillo' | C345= 5.85 | D345= 0.16 | E345= 3.96
+B346= 'Austin' | C346= 4.93 | D346= 0 | E346= 3.27
+B347= 'Beaumont' | C347= 4.35 | D347= 0 | E347= 2.93
+B348= 'Corpus Christi' | C348= 4.31 | D348= 0.16 | E348= 2.86
+B349= 'Dallas' | C349= 4.24 | D349= 0.15 | E349= 2.8
+B350= 'El Paso' | C350= 4.86 | D350= 0 | E350= 3.18
+B351= 'Fort Worth' | C351= 5.24 | D351= 0 | E351= 3.49
+B352= 'Houston' | C352= 4.47 | D352= 0 | E352= 3
+B353= 'Laredo' | C353= 4.33 | D353= 0.16 | E353= 2.91
+B354= 'Lubbock' | C354= 5.23 | D354= 0.16 | E354= 3.6
+B355= 'Odessa' | C355= 5.31 | D355= 0.16 | E355= 3.54
+B356= 'San Antonio' | C356= 3.93 | D356= 0 | E356= 2.74
+B357= 'Waco' | C357= 5.41 | D357= 0.16 | E357= 3.57
+B358= 'Wichita Falls' | C358= 5.37 | D358= 0.8 | E358= 3.82
+B360= 'Utah' | C360= 'Material' | D360= 'Installation' | E360= 'Average'
+B361= 'Logan' | C361= 5.33 | D361= 1.37 | E361= 3.97
+B362= 'Ogden' | C362= 5.33 | D362= 1.37 | E362= 4.02
+B363= 'Provo' | C363= 5.31 | D363= 1.51 | E363= 3.96
+B364= 'Salt Lake City' | C364= 5.29 | D364= 1.92 | E364= 4.13
+B366= 'Vermont' | C366= 'Material' | D366= 'Installation' | E366= 'Average'
+B367= 'Burlington' | C367= 5.25 | D367= 0.62 | E367= 3.51
+B368= 'Rutland' | C368= 5.3 | D368= 0.75 | E368= 3.58
+B370= 'Virginia' | C370= 'Material' | D370= 'Installation' | E370= 'Average'
+B371= 'Alexandria' | C371= 4.83 | D371= 3.21 | E371= 4.2
+B372= 'Arlington' | C372= 4.8 | D372= 2.37 | E372= 3.86
+B373= 'Newport News' | C373= 5.31 | D373= 0.29 | E373= 3.61
+B374= 'Norfolk' | C374= 5.36 | D374= 0.29 | E374= 3.58
+B375= 'Portsmouth' | C375= 5.34 | D375= 9.83 | E375= 6.77
+B376= 'Richmond' | C376= 5.19 | D376= -2.88 | E376= 2.25
+B377= 'Roanoke' | C377= 4.81 | D377= 5.03 | E377= 4.79
+B379= 'Washington' | C379= 'Material' | D379= 'Installation' | E379= 'Average'
+B380= 'Everett' | C380= 4.64 | D380= 0.1 | E380= 2.62
+B381= 'Richland' | C381= 4.02 | D381= 0.11 | E381= 2.49
+B382= 'Seattle' | C382= 4.34 | D382= 4.47 | E382= 4.41
+B383= 'Spokane' | C383= 4 | D383= 0 | E383= 2.47
+B384= 'Tacoma' | C384= 4.62 | D384= 0 | E384= 2.62
+B385= 'Vancouver' | C385= 4.58 | D385= 0 | E385= 2.67
+B386= 'Yakima' | C386= 4.62 | D386= 0.1 | E386= 2.78
+B388= 'West Virginia' | C388= 'Material' | D388= 'Installation' | E388= 'Average'
+B389= 'Charleston' | C389= 5.93 | D389= -1.3 | E389= 2.85
+B390= 'Huntington' | C390= 5.95 | D390= 0.21 | E390= 3.54
+B391= 'Parkersburg' | C391= 4.89 | D391= 0.11 | E391= 2.95
+B392= 'Wheeling' | C392= 4.73 | D392= 0.33 | E392= 2.92
+B394= 'Wisconsin' | C394= 'Material' | D394= 'Installation' | E394= 'Average'
+B395= 'Eau Claire' | C395= 5.27 | D395= 0.1 | E395= 3
+B396= 'Green Bay' | C396= 5.17 | D396= 0.1 | E396= 2.97
+B397= 'Kenosha' | C397= 5.03 | D397= 0.1 | E397= 2.85
+B398= 'La Crosse' | C398= 5.25 | D398= 0.1 | E398= 3.04
+B399= 'Madison' | C399= 5.75 | D399= 0.1 | E399= 3.31
+B400= 'Milwaukee' | C400= 4.02 | D400= 4.15 | E400= 4.11
+B401= 'Racine' | C401= 4.96 | D401= 0 | E401= 2.76
+B403= 'Wyoming' | C403= 'Material' | D403= 'Installation' | E403= 'Average'
+B404= 'Casper' | C404= 6.04 | D404= 0 | E404= 4.05
+B405= 'Cheyenne' | C405= 6.02 | D405= 0.14 | E405= 3.87
+B406= 'Rock Springs' | C406= 5.79 | D406= 0.84 | E406= 4.16
+B408= 'Canada' | C408= 'Material' | D408= 'Installation' | E408= 'Average'
+B409= 'Calgary' | C409= 4.29 | D409= 0.31 | E409= 2.73
+B410= 'Edmonton' | C410= 4.26 | D410= 0.51 | E410= 2.81
+B411= 'Hamilton' | C411= 3.88 | D411= 1.73 | E411= 3.04
+B412= 'London' | C412= 4.28 | D412= 2.2 | E412= 3.44
+B413= 'Montreal' | C413= 4.32 | D413= 2.45 | E413= 3.68
+B414= 'Ottawa' | C414= 4.53 | D414= 1.35 | E414= 3.33
+B415= 'Quebec City' | C415= 4.55 | D415= 2.55 | E415= 3.8
+B416= 'Toronto' | C416= 4.15 | D416= 2.83 | E416= 3.63
+B417= 'Vancouver' | C417= 4.51 | D417= -0.44 | E417= 2.66
+B418= 'Winnipeg' | C418= 4.29 | D418= 0.84 | E418= 3.21
+B420= 'Product catalog'
+D422= 'can get longer than 32 if really needed'
+B423= 'Type' | C423= 'Subtype' | D423= 'Length' | E423= 'Width' | F423= 'Square Footage'
+B424= 'Studio' | C424= 'Studio' | D424= 28 | E424= 11.83 | F424: =D424*E424 -> 331.24
+B425= 'Studio' | C425= 'Studio' | D425= 30 | E425= 11.83 | F425: =D425*E425 -> 354.9
+B426= 'Studio' | C426= 'Studio' | D426= 32 | E426= 11.83 | F426: =D426*E426 -> 378.56
+B427= 'Studio' | C427= 'Studio' | D427= 34 | E427= 11.83 | F427: =D427*E427 -> 402.22 | G427= 'non family housing, we can use this as a 1 from lihtc'
+B428= '1BR' | C428= 'Urban 1' | D428= 24 | E428= 17.75 | F428: =D428*E428 -> 426
+B429= '1BR' | C429= 'Urban 1' | D429= 26 | E429= 17.75 | F429: =D429*E429 -> 461.5
+B430= '1BR' | C430= 'Urban 1' | D430= 28 | E430= 17.75 | F430: =D430*E430 -> 497
+B431= '1BR' | C431= 'Urban 1' | D431= 30 | E431= 17.75 | F431: =D431*E431 -> 532.5
+B432= '1BR' | C432= 'Urban 1' | D432= 32 | E432= 17.75 | F432: =D432*E432 -> 568 | G432= '60% and up'
+B433= '1BR' | C433= 'Urban 1' | D433= 34 | E433= 17.75 | F433: =D433*E433 -> 603.5 | G433= 'nonfamily housing maybe convertible u2'
+B434= '1BR' | C434= 'Standard 1' | D434= 24 | E434= 23.67 | F434: =D434*E434 -> 568.08
+B435= '1BR' | C435= 'Standard 1' | D435= 26 | E435= 23.67 | F435: =D435*E435 -> 615.42 | G435= 0.7
+B436= '1BR' | C436= 'Standard 1' | D436= 28 | E436= 23.67 | F436: =D436*E436 -> 662.76
+B437= '1BR' | C437= 'Standard 1' | D437= 30 | E437= 23.67 | F437: =D437*E437 -> 710.1
+B438= '1BR' | C438= 'Standard 1' | D438= 32 | E438= 23.67 | F438: =D438*E438 -> 757.44
+B439= '2BR' | C439= 'Urban 2' | D439= 30 | E439= 23.67 | F439: =D439*E439 -> 710.1 | G439= 'minimum'
+B440= '2BR' | C440= 'Urban 2' | D440= 32 | E440= 23.67 | F440: =D440*E440 -> 757.44
+B441= '2BR' | C441= 'Urban 2' | D441= 34 | E441= 23.67 | F441: =D441*E441 -> 804.78
+B442= '2BR' | C442= 'Standard 2' | D442= 24 | E442= 35.5 | F442: =D442*E442 -> 852
+B443= '2BR' | C443= 'Standard 2' | D443= 28 | E443= 35.5 | F443: =D443*E443 -> 994
+B444= '2BR' | C444= 'Standard 2' | D444= 30 | E444= 35.5 | F444: =D444*E444 -> 1065
+B445= '3BR' | C445= 'Standard 3' | D445= 28 | E445: =E427*2.5 -> 29.575 | F445: =D445*E445 -> 828.1 | G445= 'unlikely to be used'
+B446= '3BR' | C446= 'Standard 3' | D446= 30.5 | E446: =E445 -> 29.575 | F446: =D446*E446 -> 902.0375 | G446= 'miniums size'
+B447= '3BR' | C447= 'Standard 3' | D447= 32 | E447: =E446 -> 29.575 | F447: =D447*E447 -> 946.4
+B448= '3BR' | C448= 'Standard 3' | D448= 28 | E448: =E442 -> 35.5 | F448: =D448*E448 -> 994
+B449= '3BR' | C449= 'Standard 3' | D449= 30 | E449: =E448 -> 35.5 | F449: =D449*E449 -> 1065
+B450= '3BR' | C450= 'Standard 3' | D450= 32 | E450: =E449 -> 35.5 | F450: =D450*E450 -> 1136

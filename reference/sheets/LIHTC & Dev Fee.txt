@@ -1,0 +1,172 @@
+B2: =MI_ProjectName&"  |  LIHTC & DEV FEE" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  LIHTC & DEV FEE'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+B5= 'LIHTC & DEVELOPER FEE'
+B9= 'THRESHOLD BASIS LIMITS'
+D11= 'Threshold Basis Limits' | E11= 2024
+E12= 'Units' | F12= 'Joint Limits' | G12= 'Total'
+D13= 'Studio' | E13: ='Rent Builder'!E53 -> 102 | F13= 387110 | G13: =E13*F13 -> 39485220
+D14= '1 BR Units' | E14: ='Rent Builder'!E54 -> 796 | F14= 446334 | G14: =E14*F14 -> 355281864
+D15= '2 BR Units' | E15: ='Rent Builder'!E55 -> 115 | F15= 538400 | G15: =E15*F15 -> 61916000
+D16= '3 BR Units' | E16: ='Rent Builder'!E56 -> 0 | F16= 689152 | G16: =E16*F16 -> 0
+D17= '4 BR Units' | E17: =0 -> 0 | F17= 0 | G17: =E17*F17 -> 0
+D18= 'Manager' | E18: ='Rent Builder'!F44 -> 4 | F18: =IF(Program!H105="2 bedroom",'LIHTC & Dev Fee'!F15,IF(Program!H105="1 Bedroom",'LIHTC & Dev Fee'!F14,0)) -> 0 | G18: =E18*F18 -> 0
+D19= 'Total ' | E19: =SUM(E13:E18) -> 1017 | G19: =G13+G14+G15+G16+G17+G18 -> 456683084
+D21= 'Threshold Basis Limits Boosts'
+D22= 'State or Federal Prevailing Wage' | E22= 0.2 | F22: ='Master Inputs'!$E$183 -> 'No' | G22: =IF(F22="Yes",E22*$G$19,0) -> 0
+D23= 'Labor Agreement' | E23= 0.05 | F23: ='Master Inputs'!$E$184 -> 'No' | G23: =IF(F23="Yes",E23*$G$19,0) -> 0
+D24= 'New Construction with Structured Parking' | E24= 0.1 | F24: ='Master Inputs'!$E$185 -> 'No' | G24: =IF(F24="Yes",E24*$G$19,0) -> 0
+D25= 'Day Care Center' | E25= 0.02 | F25: ='Master Inputs'!$E$186 -> 'No' | G25: =IF(F25="Yes",E25*$G$19,0) -> 0
+D26= '100% Special Needs' | E26= 0.02 | F26: ='Master Inputs'!$E$187 -> 'No' | G26: =IF(F26="Yes",E26*$G$19,0) -> 0
+D27= "95% of project's upper floor units serviced by elevator" | E27= 0.1 | F27: ='Master Inputs'!$E$188 -> 'Yes' | G27: =IF(F27="Yes",E27*$G$19,0) -> 45668308.4
+D28= 'Type I Building' | E28= 0.15 | F28: ='Master Inputs'!$E$189 -> 'No' | G28: =IF(F28="Yes",E28*$G$19,0) -> 0
+D29= 'Type III Building' | E29= 0.1 | F29: ='Master Inputs'!$E$190 -> 'No' | G29: =IF(F29="Yes",E29*$G$19,0) -> 0
+D30= 'Energy Efficiancy/Resource Conservation/Indoor Air Quality (up to 10%)' | E30: ='Master Inputs'!$E$191 -> 0 | G30: =E30*G19 -> 0
+D31= 'Seismic Upgrading or Environmental Mitigation (up to 15% unadj. Eligible basis). ' | G31: ='Master Inputs'!$E$192 -> 0
+D32= 'Development Impact Fees' | G32: ='Master Inputs'!$E$193 -> 0
+D33= 'Highest or High Opportunity Area per TCAC/HCD Map and TBL for 2 bd <$500k' | E33= 0.1 | F33: =IFERROR(IF('Master Inputs'!$E$182="Yes","Yes","No"),0) -> 'No' | G33: =IF(F33="Yes",E33*G19,0) -> 0
+D34= 'Affordability Adjustments - 4% Deals Only'
+D35= "1% increase for every 1% of the project's units between 35% and 50% AMI" | G35: =IF('Master Inputs'!$E$175=4%,SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,">30%",'Rent Builder'!$J$12:$J$39,"<51%")/'Rent Builder'!$G$44*G19,0) -> 45983884.0750247
+D36= "2% increase for every 1% of the project's units at or below 35% AMI" | G36: =IF('Master Inputs'!$E$175=4%,SUMIF('Rent Builder'!$J$12:$J$39,"<31%",'Rent Builder'!$G$12:$G$39)/'Rent Builder'!$G$44*G19,0) -> 45983884.0750247
+D37= 'Adjusted Threshold Basis Limit' | G37: =SUM(G22:G36)+G19 -> 594319160.550049
+B39= 'ELIGIBLE & QUALIFIED BASIS'
+D40= 'Construction ' | G40: =IFERROR('Dev Budget'!Q119,) -> 329977733.717626
+D41= 'Acquisition' | G41: ='Dev Budget'!P119 -> 0
+D42= 'Total Eligible Basis' | G42: =IFERROR(SUM(G40:G41),0) -> 329977733.717626
+D44= 'Allowable Basis (lesser of Actual or Adjusted TBL)' | G44: =IF(G42<G37,G42,G37-G41) -> 329977733.717626
+D45= 'Less Voluntary Reduction' | G45: ='Sources & Uses'!E62 -> 0
+D46= 'Total Requested Unadjusted Eligible Basis' | G46: =G44-G45 -> 329977733.717626
+D47= 'High Cost Adjustment Area (DDA or QCT)' | G47: =IF(OR('Master Inputs'!$E$176="DDA",'Master Inputs'!$E$176="QCT"),130%,100%) -> 1.3
+D48= 'Total Adjusted Eligible Basis' | G48: =G47*G46 -> 428971053.832914
+D49= 'Applicable Fraction' | G49: =IF('LIHTC & Dev Fee'!C219=0,1,'LIHTC & Dev Fee'!C221) -> 1
+D50= 'Total Qualified Basis' | G50: =G49*G48 -> 428971053.832914
+D51= 'Less Credit Reduction' | F51: ='Master Inputs'!$E$194 -> 0 | G51: =-F51*G50 -> 0
+D52= 'Total Adjusted Qualified Basis' | G52: =G51+G50 -> 428971053.832914
+B54= 'TAX CREDITS & EQUITY'
+D55= 'Total Qualified Basis' | G55: =G52 -> 428971053.832914
+D56= 'Annual Federal Credits' | F56: ='Master Inputs'!$E$175 -> 0.04 | G56: =F56*G55 -> 17158842.1533165
+D57= 'Total Federal Credits (9% capped at $25M)' | G57: =IF('Master Inputs'!$E$175=9%,MIN(G56*10,25000000),G56*10) -> 171588421.533165
+D58= 'Federal Tax Credit Equity' | F58: =Sensitivities!$C$19 -> 0.78 | G58: =F58*G57 -> 133838968.795869
+C60= 'State Tax Credit Equity Calculation' | F60: ='Master Inputs'!$E$179 -> 'No'
+D61= 'Max State Credits' | F61: =MIN('Master Inputs'!$E$180,0.3) -> 0 | G61: =IF(F60="yes",F61*G46,0) -> 0
+D62= 'Voluntary Reduction' | G62: ='Sources & Uses'!E63 -> 0
+D63= 'Proforma State Credits' | G63: =G61-G62 -> 0
+D64= 'State Tax Credit Equity' | F64: =Sensitivities!$C$20 -> 0.82 | G64: =F64*G63 -> 0
+C66= 'TOTAL NET EQUITY ' | G66: =G64+G58 -> 133838968.795869
+E68= 'At Construction ' | F68: ='Flow of Funds'!R11+'Flow of Funds'!R12 -> 0.5 | G68: =G66*F68 -> 66919484.3979345 | J68= 50
+E69= 'At Perm ' | F69: ='LIHTC & Dev Fee'!G212 -> 0.5 | G69: =F69*G66 -> 66919484.3979345 | J69= 48
+E70= 'At 8609' | F70: =1-SUM(F68:F69) -> 0 | G70: =G66-G68-G69 -> 0 | J70= 2
+F71= 'Total' | G71: =SUM(G68:G70) -> 133838968.795869
+B74= 'DEVELOPER FEE - SELECTED (drives Dev Budget / Sources & Uses)'
+D76= 'Total Calculated Developer Fee on Basis' | E76: =IF(AND('Master Inputs'!$E$175=9%,Lists!Q7="Yes",Lists!Q8="Yes"),H91,IF(AND('Master Inputs'!$E$175=9%,Lists!Q7="Yes",Lists!Q8="No"),H90,IF(AND('Master Inputs'!$E$175=9%,Lists!Q7="No",Lists!Q8="Yes"),H102,IF(AND('Master Inputs'!$E$175=9%,Lists!Q7="No",Lists!Q8="No"),H101,IF(AND('Master Inputs'!$E$175=4%,Lists!Q7="No",Lists!Q8="Yes"),H197,IF(AND('Master Inputs'!$E$175=4%,Lists!Q7="No",Lists!Q8="No"),H176,IF(AND('Master Inputs'!$E$175=4%,Lists!Q7="Yes",Lists!Q8="Yes"),H155,IF(AND('Master Inputs'!$E$175=4%,Lists!Q7="Yes",Lists!Q8="No"),H129))))))))+H97 -> 43040573.9631686
+D77= 'Paid Developer Fee' | E77: =IF(AND('Master Inputs'!$E$175=9%,Lists!Q7="Yes",Lists!Q8="Yes"),H91,IF(AND('Master Inputs'!$E$175=9%,Lists!Q7="Yes",Lists!Q8="No"),H90,IF(AND('Master Inputs'!$E$175=9%,Lists!Q7="No",Lists!Q8="Yes"),H102,IF(AND('Master Inputs'!$E$175=9%,Lists!Q7="No",Lists!Q8="No"),H101,IF(AND('Master Inputs'!$E$175=4%,Lists!Q7="No",Lists!Q8="Yes"),H198,IF(AND('Master Inputs'!$E$175=4%,Lists!Q7="No",Lists!Q8="No"),H177,IF(AND('Master Inputs'!$E$175=4%,Lists!Q7="Yes",Lists!Q8="Yes"),H156,IF(AND('Master Inputs'!$E$175=4%,Lists!Q7="Yes",Lists!Q8="No"),H130)))))))) -> 3000000
+D78= 'GP Equity' | E78: =IF('Master Inputs'!$E$175=9%,0,IF(AND('Master Inputs'!$E$175=4%,Lists!Q7="No",Lists!Q8="Yes"),H199,IF(AND('Master Inputs'!$E$175=4%,Lists!Q7="No",Lists!Q8="No"),H178,IF(AND('Master Inputs'!$E$175=4%,Lists!Q7="Yes",Lists!Q8="Yes"),H157,IF(AND('Master Inputs'!$E$175=4%,Lists!Q7="Yes",Lists!Q8="No"),H131)))))+H97 -> 40040573.9631686
+B80= 'DEVELOPER FEE CALCULATION - 9% (NEW CONSTRUCTION / ACQ-REHAB)'
+C83= 'Project Type: New Construction, Rehabilitation  Only, Adaptive Reuse'
+C84= 'lesser of 15% of the project’s unadjusted eligible basis and 15% of the basis for non-residential costs included in the project allocated on a pro rata basis or two million five hundred thousand dollars ($2,500,000).'
+G85= 'Eligible Construction Related Basis' | H85= '15% of Eligible Construction Basis'
+C86= '15% of unadjusted eligible construction related basis' | F86= 0.15 | G86: ='Dev Budget'!Q119-'Dev Budget'!Q115 -> 286937159.754457 | H86: =G86*F86 -> 43040573.9631686
+C87= '15% of non-residential costs' | F87= 0.15 | G87: ='Dev Budget'!V119 -> 0 | H87: =G87*F87 -> 0
+C88= 'Total Calculated Developer Fee on Basis ' | H88: =SUM(H86:H87) -> 43040573.9631686
+C90= 'Lesser of Total Calculated Developer Fee on Basis or $2,500,000' | G90= 2500000 | H90: =MIN(G90,$H$88) -> 2500000
+C91= 'If Special Needs: Lesser of Total Calculated Developer Fee on Basis or $2,800,000' | G91= 2800000 | H91: =MIN(G91,$H$88) -> 2800000
+C93= 'Project Type: Acquisition/Rehabilitation'
+C94= 'lesser of 15% of the project’s unadjusted eligible construction related basis plus 5% of the project’s unadjusted eligible acquisition basis and 15% for the basis for non-residential costs included in the project allocated on a pro rata basis or two million five hundred thousand dollars ($2,500,000)'
+G95= 'Eligible Construction Related Basis' | H95= '15% of Eligible Construction Basis'
+C96= '15% of unadjusted eligible construction related basis' | F96= 0.15 | G96: ='Dev Budget'!Q119-'Dev Budget'!Q115 -> 286937159.754457 | H96: =G96*F96 -> 43040573.9631686
+C97= '5% of unadjusted acquisition basis' | F97= 0.05 | G97: ='Dev Budget'!P119-'Dev Budget'!P112 -> 0 | H97: =G97*F97 -> 0
+C98= '15% of non-residential costs' | F98= 0.15 | G98: ='Dev Budget'!V119 -> 0 | H98: =G98*F98 -> 0
+C99= 'Total Calculated Developer Fee on Basis ' | H99: =SUM(H96:H98) -> 43040573.9631686
+C101= 'Lesser of Total Calculated Developer Fee on Basis or $2,500,000' | G101= 2500000 | H101: =MIN(G101,$H$99) -> 2500000
+C102= 'If Special Needs: Lesser of Total Calculated Developer Fee on Basis or $2,800,000' | G102: =2800000 -> 2800000 | H102: =MIN(G102,$H$99) -> 2800000
+B105= 'DEVELOPER FEE CALCULATION - 4% ACQUISITION / REHAB'
+C107= 'Project Type: Acquisition/Rehabilitation'
+C108= '15% of the unadjusted eligible construction related basis and 5% of the unadjusted eligible acquisition basis and 15% of the basis for non-residential costs\nincluded in the project allocated on a pro rata basis.'
+G109= 'Eligible Construction Related Basis' | H109= '15% of Eligible Construction Basis'
+C110= '15% of unadjusted eligible construction related basis' | F110= 0.15 | G110: ='Dev Budget'!Q119-'Dev Budget'!Q115 -> 286937159.754457 | H110: =G110*F110 -> 43040573.9631686
+C111= '5% of unadjusted acquisition basis' | F111= 0.05 | G111: ='Dev Budget'!P119-'Dev Budget'!P112 -> 0 | H111: =G111*F111 -> 0
+C112= '15% of non-residential costs' | F112= 0.15 | G112: ='Dev Budget'!V119 -> 0 | H112: =G112*F112 -> 0
+C113= 'Total Calculated Developer Fee on Basis ' | H113: =SUM(H110:H112) -> 43040573.9631686
+C115= 'All developer fees in excess of the greater of the following shall be deferred or contributed as equity to the project:'
+D117= '15% of projects unadjusted eligible construction related basis' | H117: =H110 -> 43040573.9631686
+D118= '5% of unadjusted eligible acquisition basis' | H118: =H111 -> 0
+D119= 'Maximum of $2,500,000' | E119= 2500000 | H119: =MIN(H118+H117,E119) -> 2500000 | I119= '(a)'
+C121= 'one million dollars ($1,000,000) plus 5% of the project’s unadjusted eligible basis in excess of six million six hundred sixty six thousand six hundred sixty seven dollars ($6,666,667).'
+D122= 'Unadjusted Eligible Basis >$6,666,667' | E122= 6666667 | H122: ='Dev Budget'!Q119+'Dev Budget'!P119-'Dev Budget'!P115-'Dev Budget'!Q115-E122 -> 280270492.754457
+D123= '5% of Unadjusted Eligible Basis >$6,666,667' | E123= 6666667 | F123= 0.05 | H123: =H122*$F$123 -> 14013524.6377229
+D124= 'Plus $1,000,000' | E124= 1000000 | H124: =H123+E124 -> 15013524.6377229 | I124= '(b)'
+D126= 'Maximum / Greater of (a) and (b)' | H126: =MAX(H124,H119) -> 15013524.6377229 | I126= '(c )'
+D127= 'Lesser of $6M or (c )' | E127= 6000000 | H127: =MIN(H126,E127) -> 6000000
+D129= 'Total Calculated Developer Fee on Basis' | H129: =H113 -> 43040573.9631686
+D130= 'Paid Developer Fee' | H130: =IFERROR(H127,0) -> 6000000
+D131= 'Deferred or Contributed as equity' | H131: =H129-H130 -> 37040573.9631686
+B133= 'DEVELOPER FEE CALCULATION - 4% ACQ / REHAB, SPECIAL NEEDS'
+C134= '15% of the unadjusted eligible construction related basis and 5% of the unadjusted eligible acquisition basis and 15% of the basis for non-residential costs\nincluded in the project allocated on a pro rata basis.'
+G135= 'Eligible Construction Related Basis' | H135= '15% of Eligible Construction Basis'
+C136= '15% of unadjusted eligible construction related basis' | F136= 0.15 | G136: ='Dev Budget'!Q119-'Dev Budget'!Q115 -> 286937159.754457 | H136: =G136*F136 -> 43040573.9631686
+C137= '5% of unadjusted acquisition basis' | F137= 0.05 | G137: ='Dev Budget'!P119-'Dev Budget'!P112 -> 0 | H137: =G137*F137 -> 0
+C138= '15% of non-residential costs' | F138= 0.15 | G138: ='Dev Budget'!V119 -> 0 | H138: =G138*F138 -> 0
+C139= 'Total Calculated Developer Fee on Basis ' | H139: =SUM(H136:H138) -> 43040573.9631686
+C141= 'All developer fees in excess of the greater of the following shall be deferred or contributed as equity to the project:'
+D143= '15% of projects unadjusted eligible construction related basis' | H143: =H136 -> 43040573.9631686
+D144= '5% of unadjusted eligible acquisition basis' | H144: =H137 -> 0
+D145= 'Maximum of $2,800,000' | F145= 2800000 | H145: =MIN(H144+H143,F145) -> 2800000 | I145= '(a)'
+C147= 'one million dollars ($1,000,000) plus 5% of the project’s unadjusted eligible basis in excess of six million six hundred sixty six thousand six hundred sixty seven dollars ($6,666,667).'
+D148= 'Unadjusted Eligible Basis >$6,666,667' | E148= 6666667 | H148: ='Dev Budget'!Q119+'Dev Budget'!P119-'Dev Budget'!P115-'Dev Budget'!Q115-$E$148 -> 280270492.754457
+D149= '7% of Unadjusted Eligible Basis >$6,666,667' | E149= 6666667 | F149= 0.07 | H149: =H148*$F$149 -> 19618934.492812
+D150= 'Plus $1,000,000' | E150= 1000000 | H150: =H149+$E$150 -> 20618934.492812 | I150= '(b)'
+D152= 'Maximum / Greater of (a) and (b)' | H152: =MAX(H150,H145) -> 20618934.492812 | I152= '(c )'
+D153= 'Lesser of $6M or (c )' | E153= 6000000 | H153: =MIN(E153,H152) -> 6000000
+D155= 'Total Calculated Developer Fee on Basis' | H155: =H139 -> 43040573.9631686
+D156= 'Paid Developer Fee' | H156: =IFERROR(H153,0) -> 6000000
+D157= 'Deferred or Contributed as equity' | H157: =H155-H156 -> 37040573.9631686
+B159= 'DEVELOPER FEE CALCULATION - 4% NEW CONSTRUCTION  (current project type)'
+C160= 'the sum of 15% of the project’s unadjusted eligible basis and 15% of the basis for non-residential costs included in the project allocated on a pro rata basis.'
+G161= 'Eligible Construction Related Basis' | H161= '15% of Eligible Construction Basis'
+C162= '15% of unadjusted eligible construction related basis' | F162: ='Master Inputs'!$E$203 -> 0.15 | G162: =IFERROR('Dev Budget'!Q119-'Dev Budget'!Q115,) -> 286937159.754457 | H162: =G162*F162 -> 43040573.9631686
+C163= '15% of non-residential costs' | F163: ='Master Inputs'!$E$203 -> 0.15 | G163: ='Dev Budget'!V119 -> 0 | H163: =G163*F163 -> 0
+C164= 'Total Calculated Developer Fee on Basis ' | H164: =SUM(H162:H163) -> 43040573.9631686
+C166= 'All developer fees in excess of the greater of the following shall be deferred or contributed as equity to the project:'
+C167= '15% of the project’s unadjusted eligible basis, up to two million five hundred\nthousand dollars ($2,500,000);' | G167= 2500000 | H167: ='Master Inputs'!$E$205 -> 2500000 | I167= '(a)'
+C168= 'one million dollars ($1,000,000) plus 5% of the project’s unadjusted eligible basis in excess of six million six hundred sixty six thousand six hundred sixty seven dollars ($6,666,667).'
+D169= 'Unadjusted Eligible Basis >$6,666,667' | E169: ='Master Inputs'!$E$206 -> 6666667 | H169: ='Dev Budget'!Q119+'Dev Budget'!P119-'Dev Budget'!P115-'Dev Budget'!Q115-$E$169 -> 280270492.754457
+D170= '5% of Unadjusted Eligible Basis >$6,666,667' | E170= 6666667 | F170: ='Master Inputs'!$E$207 -> 0.05 | H170: =H169*$F$170 -> 14013524.6377229 | J170: ='Dev Budget'!H39+L176 -> 11216476.8395493
+D171= 'Plus $1,000,000' | E171: ='Master Inputs'!$E$208 -> 1000000 | H171: =(H170+$E$171) -> 15013524.6377229 | I171= '(b)' | J171: ='Sources & Uses'!E47*0.05 -> 8539814.12391548
+D173= 'Maximum / Greater of (a) and (b)' | H173: =MIN(MAX(H171,H167),'Sources & Uses'!E47*$J$173/$K$177) -> 7424980.20737524 | I173= '(c )' | J173: ='Master Inputs'!$E$204 -> 0.03985 | K173= '<<< select desired % of perm above 5% as required by TC investors'
+D174= 'Lesser of $6M or (c )' | E174: ='Master Inputs'!$E$209 -> 6000000 | H174= 3000000 | J174: =H174*$K$177/'Sources & Uses'!$E$47 -> 0.0161010530211583 | K174= '<<< % of perm actually achieved' | L174= "SD: paid fee fixed at $3.0M per source (Dev Fee Calculation G100 '*0+3000000')"
+J175= 'Dev Fee Schedule' | K175= '%' | L175= 'Amount'
+D176= 'Total Calculated Developer Fee on Basis' | H176: =H164 -> 43040573.9631686 | J176= 'At Award' | K176: ='Flow of Funds'!X11 -> 0 | L176: =K176*$H$177 -> 0
+D177= 'Paid Developer Fee' | H177: =IFERROR(H174,0) -> 3000000 | J177= 'At Construction' | K177: ='Flow of Funds'!X13 -> 0.916666666666667 | L177: =K177*$H$177 -> 2750000 | M177= '<<< required to be above 5% of perm as per LIHTC investors'
+D178= 'Deferred or Contributed as equity' | H178: =(H176-H177) -> 40040573.9631686 | J178= 'At Perm' | K178: ='Flow of Funds'!X15 -> 0.0833333333333333 | L178: =K178*$H$177 -> 250000
+K179: =SUM(K176:K178) -> 1 | L179: =SUM(L176:L178) -> 3000000
+B180= 'DEVELOPER FEE CALCULATION - 4% NEW CONSTRUCTION, SPECIAL NEEDS'
+C181= 'the sum of 15% of the project’s unadjusted eligible basis and 15% of the basis for non-residential costs included in the project allocated on a pro rata basis.' | L181: ='Sources & Uses'!E58 -> -4892263.54330367
+G182= 'Eligible Construction Related Basis' | H182= '15% of Eligible Construction Basis'
+C183= '15% of unadjusted eligible construction related basis' | F183= 0.15 | G183: ='Dev Budget'!Q119-'Dev Budget'!Q115 -> 286937159.754457 | H183: =G183*F183 -> 43040573.9631686
+C184= '15% of non-residential costs' | F184= 0.15 | G184: ='Dev Budget'!V119 -> 0 | H184: =G184*F184 -> 0
+C185= 'Total Calculated Developer Fee on Basis ' | H185: =SUM(H183:H184) -> 43040573.9631686
+C187= 'All developer fees in excess of the greater of the following shall be deferred or contributed as equity to the project:'
+C188= '15% of the project’s unadjusted eligible basis, up to two million five hundred\nthousand dollars ($2,800,000);' | G188= 2800000 | H188: =MIN(G188,H183) -> 2800000 | I188= '(a)'
+C189= 'one million dollars ($1,000,000) plus 5% of the project’s unadjusted eligible basis in excess of six million six hundred sixty six thousand six hundred sixty seven dollars ($6,666,667).'
+D190= 'Unadjusted Eligible Basis >$6,666,667' | H190: ='Dev Budget'!Q119+'Dev Budget'!P119-'Dev Budget'!P115-'Dev Budget'!Q115-6666667 -> 280270492.754457
+D191= '7% of Unadjusted Eligible Basis >$6,666,667' | H191: =H190*7% -> 19618934.492812
+D192= 'Plus $1,000,000' | H192: =H191+1000000 -> 20618934.492812 | I192= '(b)'
+D194= 'Maximum / Greater of (a) and (b)' | H194: =MAX(H192,H188) -> 20618934.492812 | I194= '(c )'
+D195= 'Lesser of $6M or (c )' | G195= 6000000 | H195: =MIN(H194,G195) -> 6000000
+D197= 'Total Calculated Developer Fee on Basis' | H197: =H164 -> 43040573.9631686
+D198= 'Paid Developer Fee' | H198: =IFERROR(H195,0) -> 6000000
+D199= 'Deferred or Contributed as equity' | H199: =H197-H198 -> 37040573.9631686
+B202= 'OTHER'
+D203= 'Development Fee Max up front' | G203: ='Dev Budget'!$H$113/MIN('LIHTC & Dev Fee'!E174,MAX('LIHTC & Dev Fee'!H171,'LIHTC & Dev Fee'!H167)) -> 0.5
+D206= 'LIHTC equity timing (moved from Program)'
+D207= '     Total State Credits' | F207: =IF('Master Inputs'!$E$180>0.3,"30% max","") -> None
+D208= 'Contribution timeline'
+D209= '     LIHTC equity at Construction' | G209: =SUM(G210:G211) -> 0.5
+D210= '          Close' | G210: ='Flow of Funds'!I10 -> 0.15
+D211= '          TCO' | G211: ='Flow of Funds'!I14 -> 0.35
+D212= '     LIHTC equity at Perm' | G212: =1-G209 -> 0.5
+B215= 'LIHTC unit counts & applicable fraction'
+B216= 'Total LIHTC Units (including Mgr)' | C216: =SUM(C217:C218) -> 1017
+B217= 'Restricted LIHTC Units' | C217: ='Rent Builder'!G44 -> 1013
+B218= "Manager's Unit" | C218: ='Rent Builder'!F44 -> 4
+B219= 'Non-LIHTC Units' | C219: =Program!$E$64-SUM(C217:C218) -> 0
+B221= 'Applicable Fraction' | C221: =IF(C219=0,1,SUMPRODUCT('Rent Builder'!$G$12:$G$39,'Rent Builder'!$D$12:$D$39)/Program!C29) -> 1

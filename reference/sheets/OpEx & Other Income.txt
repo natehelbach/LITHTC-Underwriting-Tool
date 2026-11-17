@@ -1,0 +1,73 @@
+B2: =MI_ProjectName&"  |  OPEX & OTHER INCOME" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  OPEX & OTHER INCOME'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+C5= 'OPEX & OTHER INCOME'
+C6= '1. OPERATING EXPENSE BUDGET (base year)'
+C8= 'OPEX BUILDER SUMMARY  (live - detail on OpEx Builder tab)'
+C9= 'Units (Program!E64)' | I9: ='OpEx Builder'!$E$68 -> 1017
+C11= 'Category' | H11= 'Annual $' | I11= 'PUPA'
+C12: ='OpEx Builder'!D73 -> 'PEOPLE AND PAYROLL' | H12: ='OpEx Builder'!I73 -> 1315035.76313654 | I12: ='OpEx Builder'!J73 -> 1293.05384772521
+C13: ='OpEx Builder'!D88 -> 'MAINTENANCE - EXCLUDES ALL PAYROLL' | H13: ='OpEx Builder'!I88 -> 734405.125706718 | I13: ='OpEx Builder'!J88 -> 722.128933831581
+C14: ='OpEx Builder'!D134 -> 'UTILITIES' | H14: ='OpEx Builder'!I134 -> 1221946.63672087 | I14: ='OpEx Builder'!J134 -> 1201.52078340302
+C15: ='OpEx Builder'!D143 -> 'ADMINISTRATIVE' | H15: ='OpEx Builder'!I143 -> 389904.409005128 | I15: ='OpEx Builder'!J143 -> 383.386832846734
+C16: ='OpEx Builder'!D161 -> 'TAXES AND INSURANCE' | H16: ='OpEx Builder'!I161 -> 770198.368349923 | I16: ='OpEx Builder'!J161 -> 757.32386268429
+C17: ='OpEx Builder'!D164 -> 'MARKETING (INCLUDING DURING LEASE-UP)' | H17: ='OpEx Builder'!I164 -> 18252 | I17: ='OpEx Builder'!J164 -> 17.9469026548673
+C18: ='OpEx Builder'!D168 -> 'MANAGEMENT FEE' | H18: ='OpEx Builder'!I168 -> 629493.921972 | I18: ='OpEx Builder'!J168 -> 618.971408035398
+C19= 'OPEX CONTINGENCY' | G19: ='Master Inputs'!E83 -> '5%' | H19: =SUM(H12:H18)*$G$19 -> 253961.811244559 | I19: =SUM(I12:I18)*$G$19 -> 249.716628559055
+C20= 'Total OpEx (builder)' | H20: ='OpEx Builder'!I174 -> 5079236.22489118 | I20: =SUM(I12:I19) -> 5244.04919974016
+C22= 'FEDERAL MINIMUM LOOKUP'
+C23= 'Federal minimum $/unit (region / type / housing type)' | H23: =I23*Program!$E$64 -> 6407100 | I23= <openpyxl.worksheet.formula.ArrayFormula object at 0x000001D0333EC250>
+C24= 'Replacement Reserves' | H24: =I24*Program!$E$64 -> 305100 | I24: ='Master Inputs'!$E$86 -> 300
+C26= 'Resident Services' | H26: ='Master Inputs'!$E$89 -> 32100 | I26: ='Master Inputs'!$E$89/Program!$E$64 -> 31.5634218289086
+C27= 'Operating expense used ' | H27: =I27*Program!$E$64 -> 6407100 | I27: =IF('Master Inputs'!$E$81="Federal Minimum",I23,IF('Master Inputs'!$E$81="Calculated (OpEx Builder)",I20,MAX(I20,I23))) -> 6300
+C28= 'Overall Opex' | H28: =I28*Program!$E$64 -> 6744300 | I28: =I27+I24+I26 -> 6631.56342182891
+C29= 'Overall = OpEx used + reserves + resident services (property tax, monitoring & trustee are below NOI too, OCF rows 50-52)'
+C34= '3. OTHER INCOME'
+D36= 'COMMERCIAL INCOME'
+D37= 'Use' | E37= 'Spaces' | F37= 'Rent / Sq ft' | G37= 'Vacancy' | H37= 'Parking ratio'
+D38= 'Parking' | E38: =IF('Master Inputs'!$E$46>0,'Master Inputs'!$E$46,ROUNDUP(Program!C22/350+Program!C20/350+Program!C18/350+Program!C16/350,0)) -> 711 | H38: =E38/SUM(Program!E46:E56) -> 0.350246305418719
+D39= 'AT&T antenna'
+D40= 'Storage' | E40: =IF('Master Inputs'!$E$101>0,'Master Inputs'!$E$101,ROUNDUP('Initial Screen'!G18/200,0)) -> 330
+D41= 'Laundry'
+D44= 'OTHER INCOME'
+D45= 'Type' | F45= 'Monthly/ Unit' | G45= 'Vacancy'
+D46= 'Vending machines'
+D47= 'Manager unit(s) RUBS reimbursement'
+D48= 'Master Service - Internet'
+D49= 'Annual Interest Income'
+D50= 'Misc (applications, late, termination)'
+C53= 'Explanation of Additional Income' | G53= 'Affordable Units' | H53: =SUM(Program!E46:E50) -> 2026
+C55= 'For Residential Uses'
+D56= 'Income' | F56= 'Annual gross' | G56= 'Vacancy' | H56= 'Annual effective'
+C57= 1 | D57= 'Master Service Internet' | F57: ='Unit Mix Summary'!G46 -> 732240 | G57: =Sensitivities!$C$30 -> 0.25 | H57: =F57*(1-G57) -> 549180
+C58= 2 | D58= 'Common Laundry' | F58: ='Unit Mix Summary'!H39 -> 122040 | G58: ='Master Inputs'!$E$105 -> 0.05 | H58: =F58*(1-G58) -> 115938
+C60= 'Non Residential Uses'
+C61= 1 | D61= 'Storage' | F61: ='OpEx & Other Income'!E40*Sensitivities!$C$24*12 -> 158400 | G61: =Sensitivities!$C$31 -> 0.25 | H61: =F61*(1-G61) -> 118800
+C62= 2 | D62= 'Existing cell phone tower' | F62: ='Unit Mix Summary'!H37 -> 0 | G62: ='Unit Mix Summary'!I37 -> 0 | H62: =F62*(1-G62) -> 0
+C63= 3 | D63= 'Podium Parking' | F63: ='Unit Mix Summary'!H36 -> 853200 | G63: =Sensitivities!$C$33 -> 1 | H63: =F63*(1-G63) -> 0
+D65= 'Total Additional Income' | F65: =SUM(F57:F63) -> 1865880 | H65: =SUM(H57:H63) -> 783918
+C68= '4. ANTENNA LEASE'
+C70= '3400 Broadway, Oakland, CA'
+C71= 'Antenna Lease Sale - Offer Tracker'
+D74= 'Offer:' | E74= 'Wireless PropCo (9/20/2023)'
+D75= 'Price'
+D77= 'Revenue' | E77= 'Monthly' | F77= 'Annually' | G77= 'Cap Rate' | H77= 'Value'
+D78= 'ATT' | E78: ='Master Inputs'!$E$96 -> 0 | F78: =E78*12 -> 0 | G78= 0.06 | H78: =IFERROR(F78/G78,0) -> 0
+D79= 'Dish' | E79= 0 | F79: =E79*12 -> 0 | G79= 0.058 | H79: =IFERROR(F79/G79,0) -> 0
+D80= 'Spec.' | E80= 0 | F80: =E80*12 -> 0 | G80= 0 | H80: =IFERROR(F80/G80,0) -> 0
+D81= 'Less: ATT Fee' | H81= -50000
+D82= 'Less: Transaction Costs' | H82= -6665.51724137925
+D83= 'Total' | E83: =SUM(E78:E82) -> 0 | F83: =SUM(F78:F82) -> 0 | G83: =F83/H83 -> 0 | H83: =SUM(H78:H82) -> -56665.5172413792
+D86= 'ANTENNA RENT ESCALATION '
+D87= 'Base rent ($/mo)' | E87: =MI_AntennaBase -> 0
+D88= 'Construction completion' | E88: =EDATE(MI_ConstrClose,MI_ConstrMonths) -> datetime.datetime(2028, 9, 1, 0, 0)
+D89= 'Lease-up completion / stabilization' | E89: =EDATE(MI_ConstrClose,MI_ConstrMonths+MI_LeaseUpMonths) -> datetime.datetime(2029, 9, 1, 0, 0)
+D90= 'Antenna rent - lease-up period ($/mo)' | E90: =MI_AntennaBase*(1+MI_AntennaEsc)^INT(YEARFRAC(MI_AntennaBaseDate,E88)/MI_AntennaEscYears) -> 0
+D91= 'Antenna rent - stabilized operations ($/mo)' | E91: =MI_AntennaBase*(1+MI_AntennaEsc)^INT(YEARFRAC(MI_AntennaBaseDate,E89)/MI_AntennaEscYears) -> 0
+C94= '5. REFERENCE - 2026 INCOME-LIMIT INCREASE'
+D96= 'persons' | E96= 1 | F96= 1.5 | G96= 3
+D97= 'Type' | E97= 'studio' | F97= '1 bedroom' | G97= '2 bedroom'
+D98= '2026 income' | E98= 122500 | F98= 140000 | G98= 157500
+D99= '2025 income' | E99= 115800 | F99= 132350 | G99= 148900
+D100= 'increase' | E100: =(E98-E99)/E99 -> 0.0578583765112263 | F100: =(F98-F99)/F99 -> 0.0578012844729883 | G100: =(G98-G99)/G99 -> 0.0577568838146407
+D102= 'Number of units' | E102: ='Rent Builder'!$E$53 -> 102 | F102: ='Rent Builder'!$E$54 -> 796 | G102: ='Rent Builder'!$E$55 -> 115
+D104= 'Weighted Avg Increase' | E104: =SUMPRODUCT(E100:G100,E102:G102)/SUM(E102:G102) -> 0.0578019925797902

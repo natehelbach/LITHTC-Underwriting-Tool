@@ -1,0 +1,173 @@
+B2: =MI_ProjectName&"  |  CMFA APPLICATION" -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303  |  CMFA APPLICATION'
+B3: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+U5= '                    Application Number:_______     \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0'
+B7= 'APPLICATION FOR ASSISTANCE / FINANCING'
+B9= 'I.           APPLICANT PROFILE'
+B11= 'Borrower’s Name:' | H11: ='Data Port'!H24 -> '3400 Broadway LLC'
+B12= 'Street Address:' | H12: ='Data Port'!H82 -> '411 2nd Street'
+B13= 'City / State / Zip Code:' | H13: ='Data Port'!$H$69&", "&'Data Port'!$H$70&", "&'Data Port'!$H$71 -> 'Oakland, CA, 94607'
+B14= 'Point of Contact / Project Manager:' | H14: ='Data Port'!H72 -> 'Jeremy Harris' | Q14= 'Title:' | U14= 'Development Director'
+B15= 'Contact Phone:' | H15: ='Data Port'!H73 -> 8584495270 | Q15= 'E-Mail:' | U15: ='Data Port'!H74 -> 'jeremy@owow.com'
+B16= 'Corporate Structure:           ☐ S Corporation         ☐ C Corporation         ☐ Partnership         ☐ 501(c)3        ☒ Other (LLC)'
+B17= 'Date of Incorporation:' | M17= 'State of Incorporation:'
+B18= 'Guarantor’s Name:' | H18: ='Data Port'!H24 -> '3400 Broadway LLC'
+B19= 'Street Address:' | H19: ='Data Port'!H82 -> '411 2nd Street'
+B20= 'City / State / Zip Code:' | H20: ='Data Port'!$H$69&", "&'Data Port'!$H$70&", "&'Data Port'!$H$71 -> 'Oakland, CA, 94607'
+B21= 'Contact Name:' | H21= 'Danny Haber' | Q21= 'Title:' | U21= 'Managing Partner'
+B22= 'Contact Phone:' | H22= 6319217522 | Q22= 'E-Mail:' | U22= 'danny@owow.com'
+B24= 'II.          TYPE OF ACTIVITY (Check Appropriate Box or Boxes)'
+B26= '☐ Nonprofit / Public Benefit' | I26= '☒ Affordable Housing' | R26= '☐ Manufacturing' | X26= '/ Pollution' | AA26= 'Control'
+B27= '☐ Charitable Housing Program' | I27= '☐ Government' | R27= '☐ Other'
+B29= '*For CFD financing through the CMFA BOLD program, refer to the application under the BOLD Program tab on the CMFA website.'
+B31= 'III.         FINANCING INFORMATION'
+B33= 'Maximum Amount of Bonds:' | E33: ="$" & TEXT('Data Port'!$H$371*1.05,"#,##0") & " – Tax-exempt bonds" & CHAR(10) & "$" & TEXT('Data Port'!$H$393*1.05,"#,##0") & " – Taxable bonds" & CHAR(10) -> '$95,281,200 – Tax-exempt bonds\n$166,004,286 – Taxable bonds\n' | P33= 'Anticipated Issuance Date:' | X33: ='Data Port'!E8 -> datetime.datetime(2027, 2, 18, 0, 0)
+B34= 'Scheduled Maturity of Bonds:' | E34= 'TBD' | P34= 'CDLAC Application Date:' | X34: ='Data Port'!E6 -> datetime.datetime(2026, 5, 19, 0, 0)
+B35= 'Type of Financing:' | E35= '☒ New Money     ☐ Refunding' | P35= 'Volume Cap Required:' | X35= '$ TBD'
+B36= 'Type of Offering:' | E36= '☐ Public              ☒ Private'
+B37= 'Credit Enhancement:' | E37= '☐ Letter of Credit               ☐ Bond Insurance             ☐ Other               ☐ None'
+B38= 'Expected Rating on Bonds:' | E38= 'TBD'
+B39= 'Collateral / Security:' | E39= 'TBD'
+B40= 'IV.         PROJECT SITE LOCATION'
+B42= 'Street Address:' | C42: ='Data Port'!E25 -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303'
+B43= 'City:' | C43: ='Data Port'!$H$35&", "&'Data Port'!$H$70&", "&'Data Port'!$H$37 -> 'Los Angeles, CA, 94611' | M43= 'County:' | S43: ='Data Port'!H36 -> 'Los Angeles'
+B44= 'State:' | C44= 'CA' | M44= 'Zip Code:' | S44: ='Data Port'!E37 -> 94611
+B45= 'Current No. of Employees at this site:' | G45= 0 | M45= 'Full-Time Jobs Created / Retained:' | W45= 0
+B47= 'V.          PROJECT  DESCRIPTION'
+B49= '☒ New Construction                        ☒ Acquisition / Rehabilitation                      ☐ Portfolio (Charitable Housing Program)'
+B50= 'Provide Detailed Project Description:'
+B51: ="New construction of an " & 'Data Port'!H311 & ", " & 'Data Port'!H326 & "-unit apartment project in the " & 'Data Port'!H58 & ", " & 'Data Port'!H35 & ". Project is 100% affordable. Also includes the acquisition of an existing 5-story office building being retained and converted to residential units" -> 'New construction of an 21-story residential mixed-use buildling (17-stories of residential over 4-stories of parking), 2030-unit apartment project in the City of Los Angeles, Los Angeles. Project is 100% affordable. Also includes the acquisition of an existing 5-story office building being retained and converted to residential units'
+B52= 'Activity / Products Manufactured:\nPrimary activity will be residential apartments for rent.'
+B53= 'Provide Detailed Summary of Public Benefits Associated with Project:\n'
+B54: ="The " & 'CMFA application'!C42 &
+" project is a new development in " & 'CMFA application'!C43 &
+", CA, designed to deliver " & TEXT(VALUE('Data Port'!H326),"#,##0") &
+" affordable housing units on a " & TEXT(VALUE('Data Port'!H313),"0.00") &
+"-acre site, with an average Area Median Income (AMI) of " &
+TEXT(IF(ISNUMBER('Rent Builder'!$F$57),
+IF('Rent Builder'!$F$57>1,'Rent Builder'!$F$57/100,'Rent Builder'!$F$57),
+VALUE(SUBSTITUTE('Rent Builder'!$F$57,"%",""))/100),
+"0.0%") & ". " &
+"The project features an " &
+IF(('Initial Screen'!S38+'Initial Screen'!S36)=1,
+"1-story",
+TEXT('Initial Screen'!S38+'Initial Screen'!S36,"0")&"-story") &
+" building utilizing innovative construction methods: " & 'Initial Screen'!S38 & " stories of sustainable Type 4A mass timber construction atop a "& 'Initial Screen'!S36 & " stories of Type 1A concrete podium for parking. Additionally, it includes the acquisition of an existing 5-story office building and converting to affordable housing. " &
+"The financing plan leverages 4% Low-Income Housing Tax Credit (LIHTC) equity, tax-exempt bonds, and a permanent loan, ensuring the project is fully funded without the need for additional gap financing." -> 'The 21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303 project is a new development in Los Angeles, CA, 94611, CA, designed to deliver 2,030 affordable housing units on a 1.51-acre site, with an average Area Median Income (AMI) of 59.6%. The project features an 21-story building utilizing innovative construction methods: 17 stories of sustainable Type 4A mass timber construction atop a 4 stories of Type 1A concrete podium for parking. Additionally, it includes the acquisition of an existing 5-story office building and converting to affordable housing. The financing plan leverages 4% Low-Income Housing Tax Credit (LIHTC) equity, tax-exempt bonds, and a permanent loan, ensuring the project is fully funded without the need for additional gap financing.'
+B55: ="The units will serve households earning between " &
+TEXT(30/100,"0%") & " and " & TEXT(70/100,"0%") &
+" of AMI, averaging " & TEXT(IF(ISNUMBER('Rent Builder'!$F$57),
+IF('Rent Builder'!$F$57>1,'Rent Builder'!$F$57/100,'Rent Builder'!$F$57),
+VALUE(SUBSTITUTE('Rent Builder'!$F$57,"%",""))/100),
+"0.0%") & ". Residents will enjoy a comprehensive suite of amenities, including a community room, learning center, bike storage, gym, laundry facilities, a master lease for high-speed internet, landscaped outdoor spaces with BBQs, a rooftop deck, and " &
+TEXT('OpEx & Other Income'!E38,"0") & " off-street parking spaces. Located in " & 'Data Port'!H28 &
+" " &"Piedmont Avenue" & " neighborhood, residents will have direct access to food and entertainment. Onsite services will include instructor-led adult education, skill-building classes, and health and wellness programs to enhance community well-being." -> 'The units will serve households earning between 30% and 70% of AMI, averaging 59.6%. Residents will enjoy a comprehensive suite of amenities, including a community room, learning center, bike storage, gym, laundry facilities, a master lease for high-speed internet, landscaped outdoor spaces with BBQs, a rooftop deck, and 711 off-street parking spaces. Located in Preliminary Reservation Piedmont Avenue neighborhood, residents will have direct access to food and entertainment. Onsite services will include instructor-led adult education, skill-building classes, and health and wellness programs to enhance community well-being.'
+B56= "The location is exceptionally located in regards to transportation, situated within multiple bus stops and a rapid transit stops within ¼ a mile and the freeway is nearby for quick commuting. The project is near enough to downtown and has quick access to public and adult schools, pharmacies, and grocery stores. The Project is part of a revitalization district and this development is poised to support the city's growth and renewal."
+B58= 'Provide Description of Borrower and/or its Affiliate:\n'
+B59= '3400 Broadway LLC is an affordable housing company within oWOW LLC. oWOW LLC is a vertically integrated developer, architect, and contractor dedicated to creating sustainable urban living solutions and American Housing Company builds off that infrastructure to build affordable housing.  Our mission is to address the growing demand for workforce and affordable housing that can scale effectively across cities throughout the United States. To date, oWOW has successfully delivered 489 homes across five projects and is currently developing 558 additional homes, with a robust pipeline of 2,000 more in the works.\n\nOur award-winning developments set a new standard by building faster and at nearly half the cost of traditional methods—allowing us to double the number of units for the same investment. Utilizing advanced mass timber construction, we’ve achieved industry milestones, including completing the second-tallest mass timber building in the U.S., one of the most sustainable structures of its kind.\n\noWOW brings deep expertise in site acquisition, planning, entitlements, community engagement, design, and construction management. As both a licensed architect and general contractor for all of our projects, we manage every aspect of the development process in-house.\n Additionally, our strong track record in securing funding and positioning projects for long-term financial success ensures our developments deliver lasting value to the communities we serve.'
+B61= 'VI.         SUMMARY OF PROJECT  COSTS'
+B62= 'For Affordable Housing, please use Construction Costs'
+B63= 'Source of Funds' | H63= 'Amount' | O63= 'Summary of Project Costs' | Z63= 'Amount'
+B64= 'Tax-Exempt Bond Proceeds' | H64: ='Data Port'!H371*1.05 -> 95281200 | O64= 'Land Acquisition' | Z64: ='Data Port'!H1276*1.05-Z65 -> 2289000
+B65= 'Tax-Exempt Recycled Bonds Proceeds' | H65: ='Data Port'!H382*1.05 -> 9278659.54480905 | O65= 'Building Acquisition' | Z65: ='Dev Budget'!P14*1.05 -> 0
+B66= 'Taxable Loan' | H66: ='Data Port'!H393*1.05 -> 166004285.93296 | O66= 'New Construction' | Z66: =SUM('Data Port'!H1286:H1294,'Data Port'!H1306)*1.05 -> 237916064.894086
+B67= 'Deferred Developer Fee' | H67: ='Data Port'!H428*1.05 -> 42042602.661327 | O67= 'New Machinery / Equipment'
+B68= 'Cost Deferral' | H68: ='Data Port'!H417*1.05 -> 9435929.52647936 | O68= 'Used Machinery / Equipment'
+B69= 'Leasehold' | H69: ='Data Port'!H439*1.05 -> 0 | O69= 'Architectural & Engineering' | Z69: =SUM('Data Port'!H1298)*1.05 -> 5138793.45
+B70= 'Other*' | O70= 'Legal & Professional' | Z70: =('Data Port'!H1320+'Data Port'!H1321+'Data Port'!H1325)*1.05 -> 1899148.65
+B71= 'Other*' | O71= 'Permits' | Z71: =('Data Port'!H1338+'Data Port'!H1339+'Data Port'!H1340)*1.05 -> 17220337.05
+B72= 'Other*' | O72= 'Preconstruction financing holding costs' | Z72: ='Data Port'!H1282*1.05 -> 0
+B73= 'Other*' | O73= 'Construction interest' | Z73: ='Data Port'!H1301*1.05 -> 15093425.2790556
+B74= 'Other*' | O74= 'Post-construction interest reserves' | Z74: ='Data Port'!H1302*1.05 -> 10158617.9709444
+B75= 'Leasehold' | O75= 'Developer Fee' | Z75: ='Data Port'!H1350*1.05 -> 45192602.7
+B76= 'LIHTC Equity' | H76: ='Data Port'!H404*1.05 -> 45003815.5541077 | O76= 'Other* (reserves, other soft cost)' | Z76: =H78-SUM(Z64:AA75)-Z77 -> 27888470.7255971
+B77= 'Equity' | O77= 'Costs of Issuance' | Z77: =('Data Port'!H1304+'Data Port'!H1305+'Data Port'!H1307+'Data Port'!H1313+'Data Port'!H1315+'Data Port'!H1308+'Data Port'!H1318)*1.05 -> 4250032.5
+B78= 'Total Source of Funds' | H78: =SUM(H64:K77) -> 367046493.219684 | O78= 'Total Project Costs' | Z78: =SUM(Z64:AA77) -> 367046493.219684
+B80= '*Identify Other Sources:  Equity, Bank Financing, use of Federal, State, or Local Financing Programs, etc.'
+B81= 'VII.       FINANCING TEAM'
+B83= 'Bond Counsel (Required):' | F83= 'Jones Hall'
+B84= 'Street Address:' | F84= '475 Sansoe St STE 1700'
+B85= 'City / State / Zip Code:' | F85= 'San Francisco, CA 94111'
+B86= 'Contact Name:' | F86= 'Ron Lee' | Q86= 'Title:' | U86= 'Partner'
+B87= 'Contact Phone:' | F87= '415.391.5780 x 240' | Q87= 'E-Mail:' | U87= 'rlee@joneshall.com'
+B89= 'Financial Advisor:'
+B90= 'Street Address:'
+B91= 'City / State / Zip Code:'
+B92= 'Contact Name:' | Q92= 'Title:'
+B93= 'Contact Phone:' | Q93= 'E-Mail:'
+B95= 'Lender / Underwriter:' | F95: ='Data Port'!E362 -> 'JLL Real Estate Capital, LLC'
+B96= 'Street Address:' | F96: ='Data Port'!H497 -> '333 West Wacker Drive, Suite 2300'
+B97= 'City / State / Zip Code:' | F97: ='Data Port'!H498 -> 'Chicago, IL 60606'
+B98= 'Contact Name:' | F98: ='Data Port'!H499 -> 'CW Early' | Q98= 'Title:' | U98= 'Senior Vice President'
+B99= 'Contact Phone:' | F99: ='Data Port'!H500 -> '(312) 897-4000' | Q99= 'E-Mail:' | U99= 'C.W.Early@jll.com'
+B101= 'Lender / Underwriters Counsel:'
+B102= 'Street Address:'
+B103= 'City / State / Zip Code:'
+B104= 'Contact Name:' | Q104= 'Title:'
+B105= 'Contact Phone:' | Q105= 'E-Mail:'
+B107= 'Borrowers Counsel:' | F107= 'Sabelhaus & Strain PC'
+B108= 'Street Address:' | F108= '1724 10th  Street, Suite 110'
+B109= 'City / State / Zip Code:' | F109= 'Sacramento, CA 95811'
+B110= 'Contact Name:' | F110= 'Stephen A. Strain' | Q110= 'Title:' | U110= 'Partner'
+B111= 'Contact Phone:' | F111= '916.847.9355' | Q111= 'E-Mail:' | U111= 'sstrain@sabelhauslaw.com'
+B113= 'Non-Profit Partner for Charitable Housing Program :' | K113: ='Data Port'!H93 -> 'Central Valley Coalition for Affordable Housing'
+B114= 'Street Address:' | F114: ='Data Port'!H95 -> '3351 M Street, Ste. 100'
+B115= 'City / State / Zip Code:' | F115: ='Data Port'!H96&", "&'Data Port'!H97&", "&'Data Port'!H98 -> 'Merced, CA, 95348'
+B116= 'Contact Name:' | F116: ='Data Port'!H99 -> 'Christina Alley' | Q116= 'Title:' | U116: ='Data Port'!H105 -> 'CEO'
+B117= 'Contact Phone:' | F117: ='Data Port'!H100 -> '209.388.0782' | Q117= 'E-Mail:' | U117: ='Data Port'!H101 -> 'chris@centralvalleycoalition.com'
+B118= '  ADDITIONAL REQUIREMENTS'
+B119= 'ADDITIONAL REQUIREMENTS'
+B121= '1.    $2,500.00 Non-Refundable Application Fee made payable to the California Municipal Finance Authority.'
+B122= '2.    Bond counsel selection in Section VII is required.'
+B123= '3.    Provide description of Developer’s experience (including a summary of other multi-family housing development projects completed within the past five years).'
+B124= '4.    Financial Statements (or Annual Reports) for most recent three years and most recent quarterly statement.'
+B125= '5.    Provide Financial Forecast of the Project (including income statement, balance sheet, summary of cash flows, and forecasted sources and uses of financing).'
+B126= '6.    Section VIII required for Housing Applications only.'
+B127= '  CERTIFICATION'
+B128= 'CERTIFICATION'
+B130= 'I hereby represent that all the information contained within this document and attachments are true and correct to the best of my'
+B131= 'knowledge.'
+B133= 'Signature:                                              \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0                       ' | P133= 'Date:\xa0\xa0\xa0\xa0' | T133: =TODAY() -> datetime.datetime(2026, 11, 5, 0, 0)
+B134= 'Print Name:   Jeremy Harris\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0               Print Title:    Development Director\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0'
+B135= 'FOR MORE INFORMATION OR TO SUBMIT AN APPLICATION,'
+B136= 'PLEASE CONTACT:'
+B138= 'CALIFORNIA MUNICIPAL FINANCE AUTHORITY'
+B139= 'Attention: John P. Stoecker'
+B140= '2111 Palomar Airport Road, Suite 320'
+B141= 'Carlsbad, CA  92011'
+B142= 'Tel: (760) 930-1221 ● Fax: (760) 683-3390'
+B143= 'E-Mail:  jstoecker@cmfa-ca.com'
+B144= '  VIII.       HOUSING ADDENDUM (For Housing Applications Only)'
+B145= 'VIII.       HOUSING ADDENDUM (For Housing Applications Only)'
+B147= 'Project Name:' | D147: =$C$42 -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303'
+B148= 'Street Address:' | D148: =$C$42 -> '21101 Victory Blvd (Warner Square), Canoga Park (Los Angeles), CA 91303'
+B149= 'City:' | D149: ='Data Port'!H35 -> 'Los Angeles' | N149= 'County:' | T149: ='Data Port'!H36 -> 'Los Angeles'
+B150= 'State:' | D150= 'CA' | N150= 'Zip Code:' | T150: =S44 -> 94611
+B151= 'Land Owned / Date Acquired or Option:' | H151: ='Data Port'!E6 -> datetime.datetime(2026, 5, 19, 0, 0) | N151= 'Land Leased or Lease Option Date:'
+B152= 'Current Zoning of Project Site:' | H152: ='Data Port'!E349 -> '(WC) Uptown-SN-RIO; 1000 DUA'
+B153= 'Does Project Require a Zoning Change:' | H153= '☐ Yes         ☒ No'
+B154= 'If Yes, Describe Changes Required:'
+B155= 'CDLAC Housing Pool:' | H155= '☒ New Construction           ☐ Rural New Construction             ☐ Preservation\n☐ Other Rehabilitation        ☐ Black, Indigenous and People of Color (BIPOC)'
+B156= 'Number of Units:' | D156: ='Data Port'!H326 -> 2030 | H156= 'Restricted:' | J156: ='Data Port'!H328 -> 2026 | T156= 'Market:' | V156: ='Data Port'!H327 -> 0
+B157= '% of Restricted Units:' | D157: ='Data Port'!H329/'Data Port'!H328 -> 0.5 | H157= '% of Area Median Income for Low-Income Housing:' | V157: ="40/60% Federal   limit; " &
+TEXT(IF(ISNUMBER('Rent Builder'!$F$57),
+IF('Rent Builder'!$F$57>1,'Rent Builder'!$F$57/100,'Rent Builder'!$F$57),
+VALUE(SUBSTITUTE('Rent Builder'!$F$57,"%",""))/100),
+"0.0%") &" average AMI." -> '40/60% Federal   limit; 59.6% average AMI.'
+B158= 'Describe Amenities:' | D158= 'Gym, community room, dog park, rooftop deck, laundry facility onsite, parking.'
+B159= 'Describe Services:' | D159= 'Instructor-led adult educational, health and wellness, or skill building classes. Includes but is not limited to:  financial literacy, computer training, home-buyer education, GED, resume building, ESL, nutrition, exercise, health information/awareness, art, parenting, on-site food cultivation and preparation, and smoking cessation classes. \n\nHealth and wellness services and programs.  Such services and programs shall provide individualized support to tenants (not group classes) and need not be provided by licensed individuals or organizations.  Includes, but is not limited to visiting nurses programs, intergenerational visiting programs, or senior companion programs:'
+B161= 'Please provide a breakdown of the following information:'
+B162= 'No. of Units' | H162= '% of AMI' | U162= 'No. of Bedrooms'
+B163: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H163,'Rent Builder'!$I$12:$I$39,U163) -> 89 | H163= 0.3 | U163= 'Studio'
+B164: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H164,'Rent Builder'!$I$12:$I$39,U164) -> 13 | H164= 0.5 | U164= 'Studio'
+B165: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H165,'Rent Builder'!$I$12:$I$39,U165) -> 1 | H165= 0.3 | U165= '1 BR'
+B166: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H166,'Rent Builder'!$I$12:$I$39,U166) -> 89 | H166= 0.5 | U166= '1 BR'
+B167: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H167,'Rent Builder'!$I$12:$I$39,U167) -> 420 | H167= 0.6 | U167= '1 BR'
+B168: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H168,'Rent Builder'!$I$12:$I$39,U168) -> 286 | H168= 0.7 | U168= '1 BR'
+B169: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H169,'Rent Builder'!$I$12:$I$39,U169) -> 12 | H169= 0.3 | U169= '2 BR'
+B170: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H170,'Rent Builder'!$I$12:$I$39,U170) -> 0 | H170= 0.5 | U170= '2 BR '
+B171: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H171,'Rent Builder'!$I$12:$I$39,U171) -> 0 | H171= 0.6 | U171= '2 BR'
+B172: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H172,'Rent Builder'!$I$12:$I$39,U172) -> 103 | H172= 0.7 | U172= '2 BR'
+B173: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H173,'Rent Builder'!$I$12:$I$39,U173) -> 0 | H173= 0.3 | U173= '3 BR'
+B174: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H174,'Rent Builder'!$I$12:$I$39,U174) -> 0 | H174= 0.5 | U174= '3 BR'
+B175: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H175,'Rent Builder'!$I$12:$I$39,U175) -> 0 | H175= 0.6 | U175= '3 BR'
+B176: =SUMIFS('Rent Builder'!$G$12:$G$39,'Rent Builder'!$J$12:$J$39,H176,'Rent Builder'!$I$12:$I$39,U176) -> 0 | H176= 0.7 | U176= '3 BR'
