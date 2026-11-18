@@ -61,8 +61,10 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def do_GET(self):
-        if urllib.parse.urlparse(self.path).path != "/":
-            self._send(404, b"Not found", "text/plain")
+        # On Vercel every path is rewritten to api/index, and the path the
+        # function sees may be the rewritten one, so serve the page for any path.
+        if urllib.parse.urlparse(self.path).path == "/favicon.ico":
+            self._send(204, b"", "text/plain")
             return
         self._send(200, page(BASE))
 
