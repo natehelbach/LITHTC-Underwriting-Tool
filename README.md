@@ -8,7 +8,7 @@ The starting point and reference is the Site 8 model
 
 ```
 pip install openpyxl
-python -m uw.serve          # local app at http://localhost:8765: edit inputs, recalculate
+python -m uw.serve          # local app at http://localhost:8765: Inputs page -> Outputs page, Excel download
 python -m uw.report --open  # static HTML report -> out/site8.html
 python -m uw.verify         # check every ported tab against the Excel model
 python -m uw.verify --model # run the full Python model and compare to Excel
@@ -22,7 +22,9 @@ python -m uw.verify --model # run the full Python model and compare to Excel
 | `uw/sheets/*.py` | One module per Excel tab, same names and calculation order as the workbook |
 | `uw/engine.py` | Runs the modules to a fixed point (handles the Excel circular references) |
 | `uw/xl.py` | Excel-compatible functions (ROUND, PMT, IRR, EDATE, SUMIFS, ...) |
-| `uw/report.py`, `uw/serve.py` | HTML rendering and the local web app |
+| `uw/report.py`, `uw/serve.py` | Inputs and Outputs pages, and the web app routes |
+| `uw/excel_export.py` | Excel download: the source workbook with the scenario's inputs (and recalculated values) written in |
+| `data/<deal>/layout.json` | Number formats, labels and dropdowns from the workbook (`tools/extract_layout.py`) |
 | `tools/extract.py` | Pulls inputs and a verification snapshot out of an Excel model |
 | `reference/` | Source workbook, per-tab formula dumps, cross-tab interface map |
 | `PORTING.md` | How a tab is ported and verified |
@@ -39,6 +41,7 @@ deliberately once the port is complete.
 
 `api/index.py` serves the same app as `python -m uw.serve` as a Vercel Python
 function; `vercel.json` routes every path to it. The app is stateless: each
-Recalculate posts the full input set, so nothing is stored between requests.
+form post carries the full input set, so nothing is stored between requests.
+Routes: `/` inputs, `/outputs` summary and cash flows, `/excel` workbook download.
 Connect the GitHub repo in Vercel (Add New → Project → Import) with the default
 settings (Framework Preset: Other, no build command). Every push to `main` deploys.

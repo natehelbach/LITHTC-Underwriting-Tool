@@ -3,8 +3,8 @@
   "rewrites": [{ "source": "/(.*)", "destination": "/api/index" }],
   "functions": {
     "api/index.py": {
-      "includeFiles": "{uw/**,data/**}",
-      "excludeFiles": "{reference/**,tools/**,tests/**,out/**}"
+      "includeFiles": "{uw/**,data/**,reference/site8_source.xlsx}",
+      "excludeFiles": "{reference/sheets/**,reference/*.json,tools/**,tests/**,out/**}"
     }
   }
 }
