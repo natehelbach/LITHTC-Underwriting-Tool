@@ -23,6 +23,7 @@ python -m uw.verify --model # run the full Python model and compare to Excel
 | `uw/engine.py` | Runs the modules to a fixed point (handles the Excel circular references) |
 | `uw/xl.py` | Excel-compatible functions (ROUND, PMT, IRR, EDATE, SUMIFS, ...) |
 | `uw/report.py`, `uw/serve.py` | Inputs and Outputs pages, and the web app routes |
+| `uw/lookup.py` | Fill location inputs from an address: Census, HUD QCT/DDA, TCAC/HCD opportunity map, LA County Assessor, LA City ZIMAS, OpenStreetMap |
 | `uw/excel_export.py` | Excel download: the source workbook with the scenario's inputs (and recalculated values) written in |
 | `data/<deal>/layout.json` | Number formats, labels and dropdowns from the workbook (`tools/extract_layout.py`) |
 | `tools/extract.py` | Pulls inputs and a verification snapshot out of an Excel model |

@@ -116,6 +116,65 @@ def outputs_page(inputs: Inputs) -> bytes:
     return render_outputs(res, None if changed else SNAP, changed).encode()
 
 
+def apply_lookup(inputs: Inputs, lk) -> tuple[Inputs, dict]:
+    """Write lookup findings into a copy of the inputs; returns (inputs, {key: Found} applied).
+
+    Dropdown inputs only take values in their list; anything else is reported
+    as not filled so the model never gets a value its lookups can't handle.
+    """
+    new = inputs.copy()
+    fmts = layout(DEAL)["inputs"]
+    applied = {}
+    for key, f in lk.found.items():
+        if key not in BASE.values:
+            continue
+        row = next(r for r in BASE.rows if r["key"] == key)
+        if is_calculated(row):
+            continue
+        opts = fmts.get(str(row["row"]), {}).get("options")
+        v = f.value
+        if opts is not None:
+            match = next((o for o in opts if str(o).strip().lower() == str(v).strip().lower()), None)
+            if match is None:
+                lk.missing.append(f"{row['label']}: found \"{v}\" ({f.source}), which is not in the "
+                                  f"model's list; pick the closest option manually")
+                continue
+            v = match
+        base = BASE[key]
+        if isinstance(base, str) and not isinstance(v, str):
+            v = str(v)
+        elif isinstance(base, (int, float)) and isinstance(v, str):
+            try:
+                v = float(v.replace(",", ""))
+            except ValueError:
+                continue
+        new[key] = v
+        applied[key] = f
+    return new, applied
+
+
+def lookup_page(inputs: Inputs, problems: dict[str, str], address: str) -> bytes:
+    from uw.lookup import lookup
+    lk = lookup(address)
+    new, applied = apply_lookup(inputs, lk)
+    stale = {}
+    if lk.matched:
+        from uw.lookup import SITE_KEYS
+        stale = {k: "not found by the lookup; still the previous site's value"
+                 for k in SITE_KEYS if k in BASE.values and k not in applied
+                 and new[k] not in (None, "")}
+    problems = {k: m for k, m in problems.items() if k not in applied}
+    if problems:
+        return render_inputs(new, BASE, None, changed_keys(new), problems, None,
+                             lookup=lk, filled=applied, previous=inputs, stale=stale).encode()
+    try:
+        res, changed = run(new)
+    except Exception:  # noqa: BLE001 - still show what was found
+        res, changed = None, changed_keys(new)
+    return render_inputs(new, BASE, res, changed, lookup=lk, filled=applied,
+                         previous=inputs, stale=stale).encode()
+
+
 def excel_file(inputs: Inputs) -> tuple[bytes, str]:
     res, changed = run(inputs)
     name = f"Site 8 - 21101 Victory Blvd - Underwriting{' (scenario)' if changed else ''}.xlsx"
@@ -143,7 +202,7 @@ class Handler(BaseHTTPRequestHandler):
         """
         url = urllib.parse.urlparse(self.path)
         v = (form.get("_view") or urllib.parse.parse_qs(url.query).get("view") or [""])[0]
-        if v in ("inputs", "outputs", "excel"):
+        if v in ("inputs", "outputs", "excel", "lookup"):
             return v
         for header in ("x-vercel-original-path", "x-forwarded-uri", "x-original-url"):
             if self.headers.get(header):
@@ -155,9 +214,14 @@ class Handler(BaseHTTPRequestHandler):
                 return v
         return "inputs"
 
-    def _route(self, view: str, inputs: Inputs, problems: dict[str, str] | None = None):
+    def _route(self, view: str, inputs: Inputs, problems: dict[str, str] | None = None,
+               form: dict | None = None):
         if view == "favicon.ico":
             self._send(204, b"", "text/plain")
+            return
+        if view == "lookup":
+            address = ((form or {}).get("lookup_address") or [""])[0]
+            self._send(200, lookup_page(inputs, problems or {}, address))
             return
         if view != "inputs" and problems:
             n = len(problems)
@@ -185,7 +249,7 @@ class Handler(BaseHTTPRequestHandler):
         length = int(self.headers.get("Content-Length", 0))
         form = urllib.parse.parse_qs(self.rfile.read(length).decode(), keep_blank_values=True)
         inputs, problems = inputs_from_form(form)
-        self._route(self._view(form), inputs, problems)
+        self._route(self._view(form), inputs, problems, form)
 
     def log_message(self, *a):
         pass

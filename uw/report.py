@@ -264,6 +264,17 @@ nav.toc .cnt{color:var(--muted);float:right}
 .inputs [aria-invalid=true]{border-color:var(--neg);box-shadow:0 0 0 2px var(--neg);background:var(--card)}
 .errmsg{color:var(--neg);font-size:12px;margin-top:2px;text-align:right}
 button:disabled{opacity:.45;cursor:not-allowed}
+.finder .finder-row{display:flex;gap:8px;flex-wrap:wrap}
+.finder input{flex:1 1 320px;font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
+.finder .results{margin-top:12px}
+.finder table.found td,.finder table.found th{font-size:13px}
+.finder .neg{color:var(--neg)}
+.inputs [data-filled]{border-color:#2f6fb5;box-shadow:0 0 0 2px #2f6fb5}
+.inputs [data-stale]{border-color:#c46a00;box-shadow:0 0 0 2px #c46a00}
+.stale-msg{color:#b05f00;font-size:12px;text-align:right}
+p.stale-msg{text-align:left;font-size:13px}
+.src{color:#2f6fb5;font-size:11px;margin-top:2px;text-align:right;max-width:340px;margin-left:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (prefers-color-scheme:dark){.inputs [data-filled]{border-color:#7fb0e8;box-shadow:0 0 0 2px #7fb0e8}.src{color:#7fb0e8}}
 """
 
 JS = r"""
@@ -294,7 +305,10 @@ document.querySelectorAll('.errmsg').forEach(d=>{const el=d.parentNode.querySele
 document.addEventListener('input',ev=>{const t=ev.target;if(t.dataset&&t.dataset.srv){delete t.dataset.srv;
  const d=t.parentNode.querySelector('.errmsg');if(d)d.remove();}check();});
 document.addEventListener('change',check);check();
+const la=document.getElementById('lookup-address');
+if(la)la.addEventListener('keydown',ev=>{if(ev.key==='Enter'){ev.preventDefault();document.getElementById('lookup-btn').click();}});
 document.addEventListener('submit',ev=>{const b=ev.submitter;
+ if(b&&b.value==='lookup'){b.textContent='Looking up…';return;}
  if(b&&b.value!=='inputs'&&document.querySelector('.needs-valid:disabled')){ev.preventDefault();window.scrollTo(0,0);return;}
  if(b&&b.value==='outputs'&&!b.hidden){b.textContent='Calculating…';}});
 """
@@ -341,11 +355,60 @@ def required(base_value) -> bool:
     return base_value not in (None, "")
 
 
+def lookup_results(lk, filled: dict, inputs: Inputs, previous: Inputs | None,
+                   stale: dict | None = None) -> str:
+    labels = {r["key"]: r["label"] + (f" ({r['segment']})" if r.get("segment") else "")
+              for r in inputs.rows}
+    fmts = layout()["inputs"]
+    row_of = {r["key"]: r["row"] for r in inputs.rows}
+
+    def shown(key, v):
+        return fmt(v, fmts.get(str(row_of[key]), {}).get("fmt", "General"))
+
+    out = []
+    if lk.matched:
+        out.append(f"<p><strong>Matched:</strong> {esc(lk.matched)} · "
+                   f"{len(filled)} input{'s' if len(filled) != 1 else ''} filled</p>")
+    if filled:
+        rows = []
+        for k, f in filled.items():
+            old = previous[k] if previous is not None else None
+            same_v = old == inputs[k]
+            rows.append(f"<tr><td><a href='#f-{esc(k)}'>{esc(labels[k])}</a></td>"
+                        f"<td class=n><strong>{esc(shown(k, inputs[k]))}</strong></td>"
+                        f"<td class='n muted'>{'unchanged' if same_v else esc(shown(k, old))}</td>"
+                        f"<td class=muted>{esc(f.source)}{' · ' + esc(f.note) if f.note else ''}</td></tr>")
+        out.append("<div class=scroll><table class=found><thead><tr><th>Input</th><th>Found</th>"
+                   "<th>Was</th><th>Source</th></tr></thead><tbody>" + "".join(rows) + "</tbody></table></div>")
+    if lk.facts:
+        items = []
+        for label, v, src in lk.facts:
+            val = (f"<a href='{esc(v)}' target=_blank rel=noopener>{esc(v)}</a>"
+                   if v.startswith("http") else esc(v))
+            items.append(f"<li>{esc(label)}: {val} <span class=muted>({esc(src)})</span></li>")
+        out.append(f"<details><summary>Other site facts (not inputs)</summary><ul>{''.join(items)}</ul></details>")
+    if stale:
+        out.append("<p class=stale-msg><strong>Still from the previous site, check these "
+                   "(outlined in orange):</strong> " + ", ".join(
+                       f"<a href='#f-{esc(k)}'>{esc(labels[k])}</a> ({esc(shown(k, inputs[k]))})"
+                       for k in stale) + "</p>")
+    notes = [esc(m) for m in lk.missing] + [f"<span class=neg>{esc(e)}</span>" for e in lk.errors]
+    if notes:
+        out.append("<p class=muted><strong>Not filled:</strong></p><ul class=muted>"
+                   + "".join(f"<li>{n}</li>" for n in notes) + "</ul>")
+    return f"<div class=results>{''.join(out)}</div>"
+
+
 def render_inputs(inputs: Inputs, base: Inputs, res: ModelResult | None = None,
                   changed: set[str] | None = None, problems: dict[str, str] | None = None,
-                  error: str | None = None) -> str:
+                  error: str | None = None, lookup=None, filled: dict | None = None,
+                  previous: Inputs | None = None, stale: dict | None = None) -> str:
+    """Inputs page. `lookup` (uw.lookup.Lookup) and `filled` {key: Found} come from
+    an address lookup; filled fields are highlighted with their source."""
     changed = changed or set()
     problems = problems or {}
+    filled = filled or {}
+    stale = stale or {}
     sections: dict[str, list[str]] = {}
     for r, meta, v, calc in input_rows(inputs):
         key, f = r["key"], meta["fmt"]
@@ -355,7 +418,9 @@ def render_inputs(inputs: Inputs, base: Inputs, res: ModelResult | None = None,
                  + (" data-req=1" if required(bv) else "")
                  + (" data-num=1" if isinstance(bv, (int, float)) and not isinstance(bv, bool)
                     and not meta.get("options") else "")
-                 + (" aria-invalid=true" if key in problems else ""))
+                 + (" aria-invalid=true" if key in problems else "")
+                 + (" data-filled=1" if key in filled else "")
+                 + (" data-stale=1" if key in stale else ""))
         if calc:
             shown = res.get("Master Inputs", f"E{r['row']}") if res else v
             cell = f"<span class=calc title='Calculated in the model'>{esc(fmt(shown, f))}</span>"
@@ -380,6 +445,12 @@ def render_inputs(inputs: Inputs, base: Inputs, res: ModelResult | None = None,
         seg = f"<span class=seg>{esc(r['segment'])}</span>" if r.get("segment") else ""
         req = "<span class=req title='Required'>*</span>" if required(bv) and not calc else ""
         msg = f"<div class=errmsg>{esc(problems[key])}</div>" if key in problems else ""
+        if key in stale:
+            msg += "<div class=stale-msg>Not updated by the lookup: check this</div>"
+        if key in filled:
+            fd = filled[key]
+            msg += (f"<div class=src title='{esc(fd.note)}'>{esc(fd.source)}"
+                    f"{' · ' + esc(fd.note) if fd.note else ''}</div>")
         sections.setdefault(r["section"], []).append(
             f"<tr><td>{esc(r['label'])}{req}</td><td>{seg}</td><td class=v>{cell}{msg}</td></tr>")
 
@@ -401,7 +472,19 @@ def render_inputs(inputs: Inputs, base: Inputs, res: ModelResult | None = None,
                         for k, m in problems.items())
         banner = (f"<div class=alert role=alert{' id=srv-alert' if problems else ''}><strong>{esc(error or 'Outputs could not be calculated.')}"
                   f"</strong>{f'<ul>{items}</ul>' if items else ''}</div>")
-    body = (f"{banner}<div id=client-alert class=alert role=alert hidden></div>"
+    addr = lookup.address if lookup else (inputs["project_name"] or "")
+    finder = (
+        "<section class='card finder'><h3>Fill from an address</h3>"
+        "<p class=muted>Looks up the site in public data (US Census, HUD QCT/DDA, TCAC/HCD "
+        "opportunity map, LA County Assessor, LA City ZIMAS, OpenStreetMap) and fills the "
+        "location inputs below. Filled fields are outlined in blue with their source; review "
+        "them before calculating. Takes 10-40 seconds.</p>"
+        f"<div class=finder-row><input name=lookup_address id=lookup-address value='{esc(addr)}' "
+        "placeholder='Street address, city, state ZIP' autocomplete=street-address>"
+        "<button class='btn primary' id=lookup-btn name=_view value=lookup "
+        "formaction='/inputs'>Look up site</button></div>"
+        f"{lookup_results(lookup, filled, inputs, previous, stale) if lookup else ''}</section>")
+    body = (f"{banner}<div id=client-alert class=alert role=alert hidden></div>{finder}"
             f"<p class=muted>Every input from the Master Inputs tab. Yellow fields are editable; "
             f"grey values are calculated; <span class=req>*</span> marks inputs the model needs. "
             f"Percent fields accept 5 or 5%. <span id=changed-count></span></p>"
