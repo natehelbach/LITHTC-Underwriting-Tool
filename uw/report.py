@@ -256,25 +256,60 @@ nav.toc .cnt{color:var(--muted);float:right}
 .inputs .calc{display:block;text-align:right;background:var(--calc);border-radius:4px;padding:4px 8px;color:var(--muted)}
 .tag{font-size:11px;color:var(--muted);margin-left:6px}
 #changed-count{font-size:13px;color:var(--accent)}
+.req{color:var(--neg);margin-left:3px;font-weight:600}
+.alert{background:var(--card);border:1px solid var(--neg);border-left:4px solid var(--neg);border-radius:8px;padding:10px 14px;margin:0 0 14px}
+.alert strong{color:var(--neg)}
+.alert ul{margin:6px 0 0;padding-left:20px;columns:2 320px}
+.alert a{color:var(--fg)}
+.inputs [aria-invalid=true]{border-color:var(--neg);box-shadow:0 0 0 2px var(--neg);background:var(--card)}
+.errmsg{color:var(--neg);font-size:12px;margin-top:2px;text-align:right}
+button:disabled{opacity:.45;cursor:not-allowed}
 """
 
-JS = """
+JS = r"""
 const base=new Map();
 document.querySelectorAll('[data-base]').forEach(el=>base.set(el,el.dataset.base));
 function mark(){let n=0;base.forEach((b,el)=>{const c=el.value!==b;el.classList.toggle('changed',c);if(c)n++;});
  const s=document.getElementById('changed-count');if(s)s.textContent=n?n+' input'+(n>1?'s':'')+' changed from base case':'';}
 document.addEventListener('input',mark);document.addEventListener('change',mark);mark();
+const NUM=/^\(?-?\$?-?[\d,]*\.?\d+(e-?\d+)?%?\)?$/i;
+function check(){const bad=[];
+ document.querySelectorAll('[data-label]').forEach(el=>{
+  const v=el.value.trim();let m=null;
+  if(el.dataset.req&&v==='')m='required';
+  else if(el.dataset.num&&v!==''&&!NUM.test(v.replace(/\s/g,'')))m='must be a number';
+  else if(el.dataset.srv)m=el.dataset.srv;
+  if(m){el.setAttribute('aria-invalid','true');bad.push([el,m]);}else el.removeAttribute('aria-invalid');});
+ document.querySelectorAll('.needs-valid').forEach(b=>{b.disabled=bad.length>0;
+  b.title=bad.length?'Fix the inputs listed at the top first':'';});
+ const srv=document.getElementById('srv-alert');if(srv)srv.hidden=true;  // the live list below replaces it
+ const box=document.getElementById('client-alert');if(!box)return;
+ if(!bad.length){box.hidden=true;box.innerHTML='';return;}
+ const e=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ box.hidden=false;
+ box.innerHTML='<strong>'+bad.length+' input'+(bad.length>1?'s need':' needs')+
+  ' attention before outputs can be calculated:</strong><ul>'+
+  bad.map(([el,m])=>'<li><a href="#'+el.id+'">'+e(el.dataset.label)+'</a> — '+e(m)+'</li>').join('')+'</ul>';}
+document.querySelectorAll('.errmsg').forEach(d=>{const el=d.parentNode.querySelector('[data-label]');if(el)el.dataset.srv=d.textContent;});
+document.addEventListener('input',ev=>{const t=ev.target;if(t.dataset&&t.dataset.srv){delete t.dataset.srv;
+ const d=t.parentNode.querySelector('.errmsg');if(d)d.remove();}check();});
+document.addEventListener('change',check);check();
+document.addEventListener('submit',ev=>{const b=ev.submitter;
+ if(b&&b.value!=='inputs'&&document.querySelector('.needs-valid:disabled')){ev.preventDefault();window.scrollTo(0,0);return;}
+ if(b&&b.value==='outputs'&&!b.hidden){b.textContent='Calculating…';}});
 """
 
 
 def shell(title: str, active: str, body: str, form_open: str, actions: str, script=False) -> str:
-    tabs = (f"<button class='{'on' if active == 'inputs' else ''}' formaction='/inputs'>1 · Inputs</button>"
-            f"<button class='{'on' if active == 'outputs' else ''}' formaction='/outputs'>2 · Outputs</button>")
+    tabs = (f"<button class='{'on' if active == 'inputs' else ''}' name=_view value=inputs "
+            f"formaction='/inputs'>1 · Inputs</button>"
+            f"<button class='{'on' if active == 'outputs' else ''} needs-valid' name=_view value=outputs "
+            f"formaction='/outputs'>2 · Outputs</button>")
     return f"""<!doctype html>
 <html lang=en><head><meta charset=utf-8>
 <meta name=viewport content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title><style>{CSS}</style></head><body>
-{form_open}
+{form_open}{DEFAULT_BTN}
 <header class=top><div class=bar>
 <div class=title>{esc(title)}</div>
 <div class=tabs>{tabs}</div>
@@ -286,7 +321,11 @@ def shell(title: str, active: str, body: str, form_open: str, actions: str, scri
 </body></html>"""
 
 
-EXCEL_BTN = "<button class=btn formaction='/excel'>Download Excel</button>"
+EXCEL_BTN = ("<button class='btn needs-valid' name=_view value=excel formaction='/excel'>"
+             "Download Excel</button>")
+# First submit button in the form, so Enter in a field calculates outputs.
+DEFAULT_BTN = ("<button name=_view value=outputs formaction='/outputs' hidden "
+               "class=needs-valid tabindex=-1 aria-hidden=true></button>")
 
 
 # ---------------------------------------------------------------- inputs page
@@ -297,20 +336,33 @@ def input_rows(inputs: Inputs, deal="site8"):
         yield r, meta, inputs[r["key"]], is_calculated(r)
 
 
+def required(base_value) -> bool:
+    """An input is required when the base case has a value for it."""
+    return base_value not in (None, "")
+
+
 def render_inputs(inputs: Inputs, base: Inputs, res: ModelResult | None = None,
-                  changed: set[str] | None = None) -> str:
+                  changed: set[str] | None = None, problems: dict[str, str] | None = None,
+                  error: str | None = None) -> str:
     changed = changed or set()
+    problems = problems or {}
     sections: dict[str, list[str]] = {}
     for r, meta, v, calc in input_rows(inputs):
         key, f = r["key"], meta["fmt"]
         bv = base[key]
+        label = r["label"] + (f" ({r['segment']})" if r.get("segment") else "")
+        attrs = (f" id='f-{esc(key)}' data-label='{esc(label)}'"
+                 + (" data-req=1" if required(bv) else "")
+                 + (" data-num=1" if isinstance(bv, (int, float)) and not isinstance(bv, bool)
+                    and not meta.get("options") else "")
+                 + (" aria-invalid=true" if key in problems else ""))
         if calc:
             shown = res.get("Master Inputs", f"E{r['row']}") if res else v
             cell = f"<span class=calc title='Calculated in the model'>{esc(fmt(shown, f))}</span>"
         elif isinstance(bv, dt.datetime) or isinstance(v, dt.datetime):
             val = v.date().isoformat() if isinstance(v, dt.datetime) else ""
             bval = bv.date().isoformat() if isinstance(bv, dt.datetime) else ""
-            cell = (f"<input type=date name='{esc(key)}' value='{val}' data-base='{bval}'>")
+            cell = (f"<input type=date name='{esc(key)}' value='{val}' data-base='{bval}'{attrs}>")
         elif meta.get("options"):
             opts = list(meta["options"])
             if v not in opts and v not in (None, ""):
@@ -320,14 +372,16 @@ def render_inputs(inputs: Inputs, base: Inputs, res: ModelResult | None = None,
             o = "".join(f"<option value='{esc(input_text(x, f))}'"
                         f"{' selected' if x == v else ''}>"
                         f"{esc(fmt(x, f))}</option>" for x in opts)
-            cell = (f"<select name='{esc(key)}' data-base='{esc(input_text(bv, f))}'>{o}</select>")
+            cell = (f"<select name='{esc(key)}' data-base='{esc(input_text(bv, f))}'{attrs}>{o}</select>")
         else:
             txt = isinstance(bv, str) and not re.fullmatch(r"[-$\d.,%]+", bv or "")
             cell = (f"<input name='{esc(key)}' value='{esc(input_text(v, f))}' "
-                    f"data-base='{esc(input_text(bv, f))}'{' class=txt' if txt else ''}>")
+                    f"data-base='{esc(input_text(bv, f))}'{' class=txt' if txt else ''}{attrs}>")
         seg = f"<span class=seg>{esc(r['segment'])}</span>" if r.get("segment") else ""
+        req = "<span class=req title='Required'>*</span>" if required(bv) and not calc else ""
+        msg = f"<div class=errmsg>{esc(problems[key])}</div>" if key in problems else ""
         sections.setdefault(r["section"], []).append(
-            f"<tr><td>{esc(r['label'])}</td><td>{seg}</td><td class=v>{cell}</td></tr>")
+            f"<tr><td>{esc(r['label'])}{req}</td><td>{seg}</td><td class=v>{cell}{msg}</td></tr>")
 
     def anchor(s):
         return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
@@ -339,12 +393,22 @@ def render_inputs(inputs: Inputs, base: Inputs, res: ModelResult | None = None,
         f"<table class=inputs><thead><tr><th>Input</th><th>Detail</th><th>Value</th></tr></thead>"
         f"<tbody>{''.join(rows)}</tbody></table></section>"
         for s, rows in sections.items())
-    body = (f"<p class=muted>Every input from the Master Inputs tab. Yellow fields are editable; "
-            f"grey values are calculated. Percent fields accept 5 or 5%. "
-            f"<span id=changed-count></span></p>"
+    banner = ""
+    if error or problems:
+        labels = {r["key"]: r["label"] + (f" ({r['segment']})" if r.get("segment") else "")
+                  for r in inputs.rows}
+        items = "".join(f"<li><a href='#f-{esc(k)}'>{esc(labels.get(k, k))}</a> — {esc(m)}</li>"
+                        for k, m in problems.items())
+        banner = (f"<div class=alert role=alert{' id=srv-alert' if problems else ''}><strong>{esc(error or 'Outputs could not be calculated.')}"
+                  f"</strong>{f'<ul>{items}</ul>' if items else ''}</div>")
+    body = (f"{banner}<div id=client-alert class=alert role=alert hidden></div>"
+            f"<p class=muted>Every input from the Master Inputs tab. Yellow fields are editable; "
+            f"grey values are calculated; <span class=req>*</span> marks inputs the model needs. "
+            f"Percent fields accept 5 or 5%. <span id=changed-count></span></p>"
             f"<div class=layout><nav class=toc>{toc}</nav><div>{cards}</div></div>")
     actions = (f"<a class=btn href='/'>Reset to base case</a>{EXCEL_BTN}"
-               f"<button class='btn primary' formaction='/outputs'>Calculate outputs →</button>")
+               f"<button class='btn primary needs-valid' name=_view value=outputs "
+               f"formaction='/outputs'>Calculate outputs →</button>")
     return shell(f"{inputs['project_name']} · Inputs", "inputs", body,
                  "<form method=post action='/outputs'>", actions, script=True)
 

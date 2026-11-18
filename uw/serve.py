@@ -24,7 +24,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 from uw.engine import Inputs, Snapshot, run_model, same
 from uw.excel_export import build_xlsx, is_calculated
-from uw.report import layout, render_inputs, render_outputs
+from uw.report import layout, render_inputs, render_outputs, required
 
 DEAL = "site8"
 BASE = Inputs.load(DEAL)
@@ -62,22 +62,30 @@ def coerce(text: str, base, numfmt: str = "General"):
     return text
 
 
-def inputs_from_form(form: dict[str, list[str]]) -> Inputs:
+def inputs_from_form(form: dict[str, list[str]]) -> tuple[Inputs, dict[str, str]]:
+    """Inputs from a posted form, plus {key: problem} for inputs that are missing or invalid.
+
+    A field missing from the post keeps its base-case value; a field posted blank
+    is "missing" when the base case has a value for it (the model needs it).
+    """
     new = BASE.copy()
     fmts = layout(DEAL)["inputs"]
-    errors = []
+    problems: dict[str, str] = {}
     for r in BASE.rows:
         key = r["key"]
         if key not in form or is_calculated(r):
             continue
+        text = form[key][0]
+        if text.strip() == "" and required(BASE[key]):
+            new[key] = None
+            problems[key] = "required"
+            continue
         try:
-            new[key] = coerce(form[key][0], BASE[key],
-                              fmts.get(str(r["row"]), {}).get("fmt", "General"))
-        except ValueError as e:
-            errors.append(f"{r['label']}: {e}")
-    if errors:
-        raise ValueError("; ".join(errors))
-    return new
+            new[key] = coerce(text, BASE[key], fmts.get(str(r["row"]), {}).get("fmt", "General"))
+        except ValueError:
+            new[key] = text  # keep what was typed so it can be corrected
+            problems[key] = "must be a number" if isinstance(BASE[key], (int, float)) else "not valid"
+    return new, problems
 
 
 def changed_keys(inputs: Inputs) -> set[str]:
@@ -94,7 +102,10 @@ def run(inputs: Inputs):
     return (base_run() if not changed else run_model(inputs, DEAL, fallback=SNAP)), changed
 
 
-def inputs_page(inputs: Inputs) -> bytes:
+def inputs_page(inputs: Inputs, problems: dict[str, str] | None = None,
+                error: str | None = None) -> bytes:
+    if problems or error:  # don't run the model on inputs it can't use
+        return render_inputs(inputs, BASE, None, changed_keys(inputs), problems, error).encode()
     res, changed = run(inputs)
     return render_inputs(inputs, BASE, res, changed).encode()
 
@@ -124,35 +135,57 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(body)
 
-    def _route(self, inputs: Inputs):
-        # Vercel rewrites every path to api/index; unknown paths get the inputs page.
-        path = urllib.parse.urlparse(self.path).path.rstrip("/")
-        if path.endswith("/favicon.ico"):
+    def _view(self, form: dict) -> str:
+        """Which page: the button's _view field, else ?view=, else the URL path.
+
+        On Vercel every path is rewritten to /api/index before it reaches this
+        handler, so the path alone can't be relied on.
+        """
+        url = urllib.parse.urlparse(self.path)
+        v = (form.get("_view") or urllib.parse.parse_qs(url.query).get("view") or [""])[0]
+        if v in ("inputs", "outputs", "excel"):
+            return v
+        for header in ("x-vercel-original-path", "x-forwarded-uri", "x-original-url"):
+            if self.headers.get(header):
+                url = urllib.parse.urlparse(self.headers[header])
+                break
+        path = url.path.rstrip("/")
+        for v in ("outputs", "excel", "favicon.ico"):
+            if path.endswith("/" + v):
+                return v
+        return "inputs"
+
+    def _route(self, view: str, inputs: Inputs, problems: dict[str, str] | None = None):
+        if view == "favicon.ico":
             self._send(204, b"", "text/plain")
-        elif path.endswith("/outputs"):
-            self._send(200, outputs_page(inputs))
-        elif path.endswith("/excel"):
-            body, name = excel_file(inputs)
-            self._send(200, body, XLSX, name)
-        else:
-            self._send(200, inputs_page(inputs))
+            return
+        if view != "inputs" and problems:
+            n = len(problems)
+            self._send(200, inputs_page(inputs, problems,
+                       f"Outputs can't be calculated yet: {n} input{'s need' if n > 1 else ' needs'} "
+                       f"attention."))
+            return
+        try:
+            if view == "outputs":
+                self._send(200, outputs_page(inputs))
+            elif view == "excel":
+                body, name = excel_file(inputs)
+                self._send(200, body, XLSX, name)
+            else:
+                self._send(200, inputs_page(inputs, problems))
+        except Exception as e:  # noqa: BLE001 - tell the user, keep their inputs
+            self._send(200, inputs_page(inputs, None,
+                       f"The model could not calculate with these inputs ({type(e).__name__}: {e}). "
+                       f"Check the inputs you changed."))
 
     def do_GET(self):
-        self._route(BASE)
+        self._route(self._view({}), BASE)
 
     def do_POST(self):
         length = int(self.headers.get("Content-Length", 0))
         form = urllib.parse.parse_qs(self.rfile.read(length).decode(), keep_blank_values=True)
-        try:
-            inputs = inputs_from_form(form)
-        except ValueError as e:
-            self._send(400, f"Could not read these inputs: {e}".encode(), "text/plain; charset=utf-8")
-            return
-        try:
-            self._route(inputs)
-        except Exception as e:  # noqa: BLE001 - show the user what failed
-            self._send(500, f"Could not calculate with these inputs: {e}".encode(),
-                       "text/plain; charset=utf-8")
+        inputs, problems = inputs_from_form(form)
+        self._route(self._view(form), inputs, problems)
 
     def log_message(self, *a):
         pass
